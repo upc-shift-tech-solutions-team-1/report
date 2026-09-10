@@ -350,7 +350,7 @@ El Lean UX Process permite definir y validar la solución a partir de la compren
 #### 1.2.2.4. Lean UX Canvas
 
 <p align="center">
-  <img src="docs/assets/LeanUX .jpg" alt="LeanUX Canvas" width="1000">
+  <img src="/markdown/assets/images/LeanUX .jpg" alt="LeanUX Canvas" width="1000">
 </p>
 
 
