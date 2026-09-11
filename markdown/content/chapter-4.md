@@ -408,7 +408,7 @@ En esta sección se presentan los wireframes desarrollados para AutoService, los
 
 Se desarrollaron wireframes tanto para el flujo del administrador como para el cliente, considerando sus diferentes objetivos dentro del sistema.
 
-<div align= center><img src="docs/assets/chapter4-designUX/wireframes.png"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/wireframes.png"></div>
 
 <p>Trabajo hecho en figma - link: <a href="https://www.figma.com/design/rOJ6k8HLfI85lI8Xsik6TN/AUTOSERVICE-AW?node-id=2562-14849&t=wWO9xK4PqrC4tToK-1">https://www.figma.com/design/rOJ6k8HLfI85lI8Xsik6TN/AUTOSERVICE-AW?node-id=2562-14849&t=wWO9xK4PqrC4tToK-1</a><p>
 
@@ -419,15 +419,15 @@ Aunque los wireframes no incluyen color, se utilizó contraste mediante tamaños
 
 Repetición:
 Se mantuvo consistencia en la disposición de componentes como formularios, listas y botones, permitiendo que el usuario reconozca patrones de interacción a lo largo de las distintas pantallas.
-<div align= center><img src="docs/assets/chapter4-designUX/repetition-wireframe.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/repetition-wireframe.png" width="300"></div>
 
 Alineación:
 Los elementos fueron organizados siguiendo estructuras de grilla, garantizando orden y facilitando la lectura. Esto es evidente en pantallas como el dashboard y los formularios de registro.
-<div align= center><img src="docs/assets/chapter4-designUX/align-wireframe.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/align-wireframe.png" width="300"></div>
 
 Proximidad:
 Se agruparon elementos relacionados, como campos de formularios o información del vehículo, para mejorar la comprensión y reducir la carga cognitiva del usuario.
-<div align= center><img src="docs/assets/chapter4-designUX/proximity-wireframe.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/proximity-wireframe.png" width="300"></div>
 
 2. Elementos de Diseño Utilizados
 - Formularios estructurados (registro de vehículo, datos del cliente)
@@ -456,7 +456,7 @@ Panel Administrador:
 - Navegación lateral persistente
 - Módulos organizados por funcionalidad (vehículos, órdenes, tareas, personal, reportes)
 
-<div align= center><img src="docs/assets/chapter4-designUX/information-a.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/information-a.png" width="300"></div>
 Flujo de Registro de Vehículo:
 - Proceso dividido en pasos (stepper)
 - Separación de datos del cliente y del vehículo
@@ -464,7 +464,7 @@ Flujo de Registro de Vehículo:
 Panel Cliente:
 - Interfaz simplificada con acciones principales
 - Flujo directo para consultar estado o agendar cita
-<div align= center><img src="docs/assets/chapter4-designUX/panel-client-wireframe.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/panel-client-wireframe.png" width="300"></div>
 
 Los wireframes sirvieron como base estructural para el desarrollo de los mock-ups, donde posteriormente se incorporaron elementos visuales como color, tipografía e identidad gráfica. Gracias a esta fase previa, se logró validar la organización de la información y los flujos antes de avanzar al diseño de alta fidelidad.
 
@@ -505,9 +505,9 @@ Con esta información, el usuario obtiene visibilidad clara y en tiempo real sob
 
 <div align="center">
 
-![alt text](docs/assets/chapter4-designUX/wireflow-1.png)
+![alt text](/markdown/assets/images/chapter-4/wireflow-1.png)
 Wireflow Diagram - 1<br><br>
-<img src="docs/assets/chapter4-designUX/wireflow-diagram-1.png" width="600px">
+<img src="/markdown/assets/images/chapter-4/wireflow-diagram-1.png" width="600px">
 </div>
 
 <table>
@@ -539,9 +539,9 @@ Finalmente, el sistema procesa la solicitud y muestra una pantalla de confirmaci
 
 <div align="center">
 
-![alt text](docs/assets/chapter4-designUX/wireflow-2.png)
+![alt text](/markdown/assets/images/chapter-4/wireflow-2.png)
 Wireflow Diagram - 2<br><br>
-<img src="docs/assets/chapter4-designUX/wireflow-diagram-2.png" width="600px">
+<img src="/markdown/assets/images/chapter-4/wireflow-diagram-2.png" width="600px">
 </div>
 
 <table>
@@ -594,9 +594,9 @@ El sistema regresa a la vista de tareas y actualiza la lista mostrando la nueva 
 
 <div align="center">
 
-![alt text](docs/assets/chapter4-designUX/wireflow-3.png)
+![alt text](/markdown/assets/images/chapter-4/wireflow-3.png)
 Wireflow Diagram - 3<br><br>
-<img src="docs/assets/chapter4-designUX/wireflow-diagram-3.png" width="800px">
+<img src="/markdown/assets/images/chapter-4/wireflow-diagram-3.png" width="800px">
 </div>
 
 <table>
@@ -650,9 +650,9 @@ Volver al listado de vehículos</li>
 
 <div align="center">
 
-![alt text](docs/assets/chapter4-designUX/wireflow-4.png)
+![alt text](/markdown/assets/images/chapter-4/wireflow-4.png)
 Wireflow Diagram - 4<br><br>
-<img src="docs/assets/chapter4-designUX/wireflow-diagram-4.png" width="800px">
+<img src="/markdown/assets/images/chapter-4/wireflow-diagram-4.png" width="800px">
 </div>
 
 
@@ -700,9 +700,9 @@ La lista de tareas se actualiza automáticamente, reflejando la eliminación sin
 
 <div align="center">
 
-![alt text](docs/assets/chapter4-designUX/wireflow-5.png)
+![alt text](/markdown/assets/images/chapter-4/wireflow-5.png)
 Wireflow Diagram - 5<br><br>
-<img src="docs/assets/chapter4-designUX/wireflow-diagram-5.png" width="800px">
+<img src="/markdown/assets/images/chapter-4/wireflow-diagram-5.png" width="800px">
 </div>
 
 
@@ -733,9 +733,9 @@ Finalmente, el administrador es redirigido nuevamente al listado de personal, do
 
 <div align="center">
 
-![alt text](docs/assets/chapter4-designUX/wireflow-6.png)
+![alt text](/markdown/assets/images/chapter-4/wireflow-6.png)
 Wireflow Diagram - 6<br><br>
-<img src="docs/assets/chapter4-designUX/wireflow-diagram-6.png" width="800px">
+<img src="/markdown/assets/images/chapter-4/wireflow-diagram-6.png" width="800px">
 </div>
 
 
@@ -765,9 +765,9 @@ El flujo finaliza cuando el administrador obtiene la información necesaria y re
 
 <div align="center">
 
-![alt text](docs/assets/chapter4-designUX/wireflow-7.png)
+![alt text](/markdown/assets/images/chapter-4/wireflow-7.png)
 <p>Wireflow Diagram - 7</p><br><br>
-<img src="docs/assets/chapter4-designUX/wireflow-diagram-7.png" width="800px">
+<img src="/markdown/assets/images/chapter-4/wireflow-diagram-7.png" width="800px">
 </div>
 
 ## 4.6.3. Web Applications Mock-ups
@@ -777,7 +777,7 @@ El diseño de la aplicación se ha desarrollado bajo un enfoque desktop, conside
 Asimismo, se han diferenciado claramente dos tipos de usuarios: Administrador (staff del taller): enfocado en gestión operativa y el cliente: enfocado en consulta rápida y acciones simples.
 Esta segmentación permitió diseñar experiencias específicas según las necesidades de cada tipo de usuario.
 
-![alt text](docs/assets/chapter4-designUX/mockups-web.png)
+![alt text](/markdown/assets/images/chapter-4/mockups-web.png)
 URL del trabajo en Figma: 
 [Link del trabajo](https://www.figma.com/design/rOJ6k8HLfI85lI8Xsik6TN/AUTOSERVICE-AW?node-id=2084-72&t=apoFHJV5bqtx999h-1)
 
@@ -790,7 +790,7 @@ Durante el desarrollo de los mock-ups se aplicaron los siguientes principios fun
     <td>
       <strong>Contraste:</strong><br>
       El contraste fue utilizado para guiar la atención del usuario hacia los elementos más importantes de cada interfaz. Por ejemplo, los botones de acción primaria, como “Registrar vehículo”, “Crear orden” o “Consultar estado”, emplean un gradiente azul (#004AC6 – #2563EB), diferenciándose claramente de los elementos secundarios. Asimismo, los estados del sistema (Pendiente, En proceso, Completado) se representan mediante colores diferenciados acompañados de etiquetas textuales, lo que permite identificar rápidamente el estado sin depender únicamente del color. Esto mejora tanto la legibilidad como la accesibilidad.<br>
-      <div align="center"><img src="docs/assets/chapter4-designUX/contraste-ux.png" width="500"></div>
+      <div align="center"><img src="/markdown/assets/images/chapter-4/contraste-ux.png" width="500"></div>
     </td>
   </tr>
 
@@ -798,7 +798,7 @@ Durante el desarrollo de los mock-ups se aplicaron los siguientes principios fun
     <td>
       <strong>Repetición:</strong><br>
       La repetición se utilizó para generar consistencia visual y familiaridad a lo largo de toda la aplicación. Componentes como botones, tarjetas (cards), tablas, etiquetas de estado, barras de progreso y modales mantienen el mismo estilo, tamaño y comportamiento en todas las vistas. Por ejemplo, el mismo estilo de botones y etiquetas de estado se reutiliza en los módulos de Vehículos, Órdenes de trabajo, Tareas y Personal, permitiendo que el usuario reconozca patrones de interacción sin necesidad de reaprender. Además, se mantiene un único sistema de íconos con el mismo estilo visual (línea, grosor, tamaño), reforzando la coherencia del diseño.<br>
-      <div align="center"><img align="center" src="docs/assets/chapter4-designUX/repeticion-ux.png" width="500"></div>
+      <div align="center"><img align="center" src="/markdown/assets/images/chapter-4/repeticion-ux.png" width="500"></div>
     </td>
   </tr>
 
@@ -806,7 +806,7 @@ Durante el desarrollo de los mock-ups se aplicaron los siguientes principios fun
     <td>
       <strong>Alineación:</strong><br>
       La alineación fue aplicada mediante el uso de estructuras basadas en grid en el figma, garantizando orden y organización visual. Los elementos se distribuyen de manera consistente, ya sea en layouts con sidebar (panel administrador) o en layouts centrados (panel cliente). En pantallas como la Lista de vehículos o Órdenes de trabajo, las tablas presentan una alineación clara de columnas, lo que facilita la lectura de datos. En formularios, los campos están alineados verticalmente, permitiendo un flujo de lectura natural. Esta alineación contribuye a una interfaz más limpia, profesional y fácil de usar<br>
-      <div align="center"><img src="docs/assets/chapter4-designUX/align-ux.png" width="500"></div>
+      <div align="center"><img src="/markdown/assets/images/chapter-4/align-ux.png" width="500"></div>
     </td>
   </tr>
 
@@ -814,7 +814,7 @@ Durante el desarrollo de los mock-ups se aplicaron los siguientes principios fun
     <td>
       <strong>Proximidad:</strong><br>
       El principio de proximidad se utilizó para agrupar elementos relacionados y separar aquellos que cumplen funciones distintas. Esto reduce la carga cognitiva y mejora la comprensión de la interfaz. Por ejemplo, en la pantalla de Detalle del vehículo, la información se organiza en secciones claras: datos del cliente, datos del vehículo, orden de trabajo, tareas y progreso. Cada grupo está contenido en tarjetas (cards), lo que facilita la identificación de cada bloque de información. En el caso del cliente, en el Panel principal, los botones de acción (“Consultar estado” y “Agendar cita”) se agrupan visualmente, permitiendo una toma de decisión rápida
-      <div align="center"><img src="docs/assets/chapter4-designUX/proximity-ux.png" width="300"></div>
+      <div align="center"><img src="/markdown/assets/images/chapter-4/proximity-ux.png" width="300"></div>
     </td>
   </tr>
 </table>
@@ -823,18 +823,18 @@ Durante el desarrollo de los mock-ups se aplicaron los siguientes principios fun
 Los mock-ups incorporan elementos de diseño modernos y reutilizables, propios de aplicaciones web tipo SaaS, los cuales fueron seleccionados para mejorar la interacción y la claridad visual:
 
 - Botones: utilizados para acciones primarias y secundarias, con estados visuales (hover, focus, disabled) que brindan retroalimentación inmediata al usuario.
-<div align= center><img src="docs/assets/chapter4-designUX/button-hover.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/button-hover.png" width="300"></div>
 
 - Tarjetas (Cards): empleadas para agrupar información relacionada, especialmente en informacion de tecnicos, dashboards y vistas de detalle.
-<div align= center><img src="docs/assets/chapter4-designUX/cards.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/cards.png" width="300"></div>
 
 - Tablas: utilizadas para mostrar grandes volúmenes de datos estructurados (vehículos, órdenes, tareas), optimizando la escaneabilidad.
 - Etiquetas de estado (Tags): permiten identificar rápidamente el estado de procesos (pendiente, en proceso, completado).
 Barras de progreso: representan visualmente el avance de un servicio o conjunto de tareas.
-<div align= center><img src="docs/assets/chapter4-designUX/tags-status.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/tags-status.png" width="300"></div>
 
 - Modales: utilizados para acciones rápidas como crear, editar o confirmar eliminación, evitando cambios de contexto innecesarios.
-<div align= center><img src="docs/assets/chapter4-designUX/modal.png" width="300"></div>
+<div align= center><img src="/markdown/assets/images/chapter-4/modal.png" width="300"></div>
 
 
 3. Diseño Inclusivo
@@ -861,7 +861,7 @@ Panel Administrador:
 - Personal
 - Reportes
 </td>
-<td> <div align="center"><img src="docs/assets/chapter4-designUX/panel-admin.png" width="300"></div></td>
+<td> <div align="center"><img src="/markdown/assets/images/chapter-4/panel-admin.png" width="300"></div></td>
 </tr>
 
 <tr>
@@ -875,7 +875,7 @@ Panel principal (hub de acciones)
 
 Se priorizó una arquitectura minimalista, reduciendo opciones para facilitar la toma de decisiones.
 </td>
-<td><img src="docs/assets/chapter4-designUX/panel-client.png" width="300"></td>
+<td><img src="/markdown/assets/images/chapter-4/panel-client.png" width="300"></td>
 </tr>
 <table>
 
@@ -897,13 +897,13 @@ Este sistema garantiza coherencia visual, escalabilidad y mantenibilidad del pro
 En el Dashboard, se muestran métricas en tiempo real (vehículos en proceso, tareas pendientes).
 En el Detalle del vehículo, se presenta el progreso mediante barras y estados visibles.
 En el módulo cliente, el estado del vehículo (Pendiente, En proceso, Listo) se muestra de forma clara e inmediata.
-<div align="center"><img src="docs/assets/chapter4-designUX/dashboard-uh.png" width="300"></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/dashboard-uh.png" width="300"></div>
 
 - Correspondencia entre el sistema y el mundo real: Se utiliza lenguaje comprensible y cercano al usuario.
 
 Términos como “Vehículo”, “Tareas”, “Mecánico” y “Orden de trabajo” reflejan el contexto real de un taller.
 En el módulo cliente, se evita el uso de lenguaje técnico, facilitando la comprensión.
-<div align="center"><img src="docs/assets/chapter4-designUX/panel-admin.png" width="300"></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/panel-admin.png" width="300"></div>
 
 - Control y libertad del usuario: El usuario puede deshacer o cancelar acciones fácilmente.
 En formularios como “Registrar vehículo” o “Crear orden”, se incluye el botón “Cancelar”.
@@ -913,8 +913,8 @@ En la eliminación de tareas, se implementa un modal de confirmación para evita
 Validaciones en formularios (campos obligatorios, formatos correctos).
 Confirmación antes de eliminar tareas (HU-17).
 Restricción de acciones sin datos completos (ej. no crear orden sin vehículo).
-<div align="center"><img src="docs/assets/chapter4-designUX/prevent-bug1.png" width="300"></div>
-<div align="center"><img src="docs/assets/chapter4-designUX/prevent-bug2.png" width="300"></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/prevent-bug1.png" width="300"></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/prevent-bug2.png" width="300"></div>
 
 Los mock-ups desarrollados para reflejan una aplicación coherente, usable y alineada a estándares profesionales de diseño UX/UI. Se evidencia la correcta integración entre funcionalidad, estética y experiencia de usuario, logrando una solución clara tanto para la gestión interna del taller como para la interacción con clientes.
 
@@ -957,7 +957,7 @@ Los mock-ups desarrollados para reflejan una aplicación coherente, usable y ali
   </tr>
 </table>
 <p align="center">User flow - 1</p><br>
-<div><img src="docs/assets/chapter4-designUX/user-flow-1.jpg"></div>
+<div><img src="/markdown/assets/images/chapter-4/user-flow-1.jpg"></div>
 
 <table>
   <tr>
@@ -994,7 +994,7 @@ Si ocurre un error en el sistema al momento de confirmar la cita, se muestra un 
   </tr>
 </table>
 <p align="center">User flow - 2</p><br>
-<div align="center"><img src="docs/assets/chapter4-designUX/user-flow-2.jpg""></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/user-flow-2.jpg""></div>
 
 
 <table>
@@ -1031,7 +1031,7 @@ Si ocurre un error del sistema al momento de guardar la tarea, se notifica al us
   </tr>
 </table>
 <p align="center">User flow - 3</p><br>
-<div align="center"><img src="docs/assets/chapter4-designUX/user-flow-3.jpg""></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/user-flow-3.jpg""></div>
 
 
 <table>
@@ -1069,7 +1069,7 @@ El usuario puede abandonar el flujo antes de finalizar el registro, regresando a
   </tr>
 </table>
 <p align="center">User flow - 4</p><br>
-<div align="center"><img src="docs/assets/chapter4-designUX/user-flow-4.jpg""></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/user-flow-4.jpg""></div>
 
 <table>
   <tr>
@@ -1103,7 +1103,7 @@ Si ocurre un problema técnico durante la eliminación, el sistema muestra un me
   </tr>
 </table>
 <p align="center">User flow - 5</p><br>
-<div align="center"><img src="docs/assets/chapter4-designUX/user-flow-5.jpg""></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/user-flow-5.jpg""></div>
 
 
 <table>
@@ -1145,7 +1145,7 @@ Si el usuario no logra iniciar sesión, el sistema muestra un mensaje de error s
   </tr>
 </table>
 <p align="center">User flow - 6</p><br>
-<div align="center"><img src="docs/assets/chapter4-designUX/user-flow-6.jpg""></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/user-flow-6.jpg""></div>
 
 <table>
   <tr>
@@ -1180,7 +1180,7 @@ Finalmente, el sistema muestra la vista de detalle del vehículo, donde el admin
   </tr>
 </table>
 <p align="center">User flow - 7</p><br>
-<div align="center"><img src="docs/assets/chapter4-designUX/user-flow-7.jpg""></div>
+<div align="center"><img src="/markdown/assets/images/chapter-4/user-flow-7.jpg""></div>
 
 <p>URL de trabajo para los User Flow en miro: 
 [URL_aqui](https://miro.com/welcomeonboard/OE91Y1ZRRmR2R3lrOVJQZCtSRWZGL0d0NEduaC9SMHZYbWNQYjlpYjlzMXRiMHNaZ2JIaGVCMzE0bmw3U1N4MVRoaXhhd0FMUjJERzlUZVgvYXl4RXpSa0pvV09sVWYzaHkvMnNmemc4MWZGVVpoL3RiTWJXbms5UzhsdnQ1Y0p3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=686324343058)</p>
@@ -1197,26 +1197,96 @@ El video adjunto demuestra los principales flujos de interacción, evidenciando 
 
 <strong>Web Applications Prototyping</strong>
 
-![alt text](docs/assets/chapter4-designUX/screenshot-web-prototype.png)</div>
+![COMPLETAR FOTO](/markdown/assets/images/chapter-4/screenshot-web-prototype.png)</div>
 
-<p>Url de video: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d185_upc_edu_pe/IQA1Ayp44N2tTZ3f8Qg06ivwAWceAwrAwbUt4oEaa1BBGXw?e=EAr9YX">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d185_upc_edu_pe/IQA1Ayp44N2tTZ3f8Qg06ivwAWceAwrAwbUt4oEaa1BBGXw?e=EAr9YX</a></p>
+<p>Url de video: <a href="COMPLETAR LINK">COMPLETAR LINK</a></p>
 
 
 <div align="center">
 
 <strong>Mobile Applications Prototyping</strong>
 
-![alt text](docs/assets/chapter-4/mobile_app_proto.png)
+![COMPLETAR FOTO](/markdown/assets/images/chapter-4/screenshot-mobil-prototype.png)</div>
 
-![alt text](docs/assets/chapter4-designUX/screenshot-mobil-prototype.png)</div>
-
-<p>Url de video: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d185_upc_edu_pe/IQAkMAYXAVMXRqIAboIE6jKsAUqumaok8m0tsxRc5iGhvkY?e=MmRJh3">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d185_upc_edu_pe/IQAkMAYXAVMXRqIAboIE6jKsAUqumaok8m0tsxRc5iGhvkY?e=MmRJh3</a></p>
+<p>Url de video: <a href="COMPLETAR LINK">COMPLETAR LINK</a></p>
 
 # 4.8. Domain-Driven Software Architecture
 
 <p align="justify">
 La arquitectura de software de AutoService se fundamenta en los principios de Domain-Driven Design (DDD), permitiendo una traducción directa entre las necesidades operativas del negocio automotriz y la estructura del sistema técnico. Mediante la aplicación del Modelo C4, representamos la arquitectura en distintos niveles de abstracción, asegurando que la solución sea escalable, mantenible y esté estrictamente alineada con los contextos delimitados identificados durante el proceso de EventStorming.
 </p>
+
+#### Design-Level EventStorming
+
+<p align="justify">
+Para profundizar en la lógica de <b>AutoService</b>, realizamos una sesión de Design-Level Event Storming. Esta técnica nos permitió transitar desde una visión estratégica del negocio hacia un modelo táctico detallado, identificando no solo procesos técnicos, sino las capacidades de negocio críticas que garantizan la generación de valor. A diferencia de un enfoque tradicional centrado en la persistencia de datos (CRUD), nuestro modelado se enfoca en la orquestación de flujos de trabajo, la transparencia hacia el cliente y la eficiencia operativa.
+</p>
+
+<p align="justify">
+A través de este proceso, hemos redefinido nuestros dominios para asegurar que la arquitectura de software sea un reflejo fiel de la realidad operativa del taller, priorizando los siguientes contextos delimitados:
+</p>
+
+<ul>
+    <li>
+        <b>Workshop Operations (Service Lifecycle & Traceability):</b> Representa el núcleo del negocio. Este dominio no se limita a registrar órdenes, sino que gestiona el ciclo de vida completo de la reparación, asegurando la trazabilidad técnica y el cumplimiento de los workflows de diagnóstico y servicio.
+    </li>
+    <li>
+        <b>Customer Trust & Management:</b> Este contexto aborda directamente la problemática de la desconfianza del sector. Se encarga de la transparencia operacional mediante la gestión de evidencias técnicas (fotos/videos), la aprobación digital de costos adicionales y la comunicación en tiempo real del estado real del vehículo.
+    </li>
+    <li>
+        <b>Staff Coordination & Mechanic Workspace:</b> Enfocado en la continuidad operativa y la asignación dinámica de recursos. Permite una gestión fluida del personal técnico, evitando cuellos de botella y asegurando que cada mecánico cuente con las herramientas digitales necesarias para reportar su progreso sin fricciones.
+    </li>
+    <li>
+        <b>Fleet Management:</b> Especializado en el control técnico y el historial consolidado de las unidades atendidas. Su enfoque principal es la identificación de patrones de falla para transitar de un modelo de reparación reactivo a uno de mantenimiento preventivo y fidelización.
+    </li>
+    <li>
+        <b>Auth & Identity:</b> Un contexto de soporte que garantiza la seguridad y la correcta delimitación de responsabilidades dentro de la plataforma, protegiendo la integridad de la información del taller y del cliente.
+    </li>
+</ul>
+
+<p align="justify">
+Este refinamiento del dominio asegura que el sistema no sea una simple herramienta de registro, sino un ecosistema que facilita la validación técnica, la auditoría operativa y, fundamentalmente, la construcción de una relación de confianza duradera entre el taller y sus clientes.
+</p>
+
+<b>Step 1: Collect Domain Events (Big Picture)</b>
+<p align="justify">
+En esta fase inicial, realizamos una lluvia de ideas para identificar todos los Domain Events relevantes en el ciclo de vida del taller, desde el registro de la cuenta hasta el procesamiento de comprobantes. Los eventos se redactaron en tiempo pasado, enfocándonos exclusivamente en hechos significativos para el negocio sin preocuparnos por el orden cronológico.
+</p>
+
+<div align="center">
+
+![alt text](/markdown/assets/images/chapter-4/event_storming_s1.png)
+</div>
+
+<b>Step 2: Refine Domain Events</b>
+<p align="justify">
+Organizamos los eventos identificados en una línea de tiempo horizontal para establecer el flujo lógico de la plataforma. Durante este proceso, refinamos la secuencia y detectamos eventos faltantes, como la generación automática de códigos de seguimiento y el disparo de notificaciones, asegurando una narrativa coherente de la experiencia del usuario.
+</p>
+
+<div align="center">
+
+![alt text](/markdown/assets/images/chapter-4/event_storming_s2.png)
+</div>
+
+<b>Step 3: Track Causes (Process Modelling)</b>
+<p align="justify">
+En este paso, modelamos la causalidad de cada evento introduciendo <b>Actors</b> (quién realiza la acción), <b>Commands</b> (la acción ejecutada), <b>External Systems</b> y <b>Policies</b> (reglas automáticas). Esto nos permitió visualizar cómo interactúan los mecánicos y clientes con el sistema y qué procesos se disparan automáticamente tras un cambio de estado.
+</p>
+
+<div align="center">
+
+![alt text](/markdown/assets/images/chapter-4/event_storming_s3.png)
+</div>
+
+<b>Step 4: Find Aggregates & Bounded Contexts (Software Modelling)</b>
+<p align="justify">
+Finalmente, agrupamos los comandos y eventos alrededor de sus <b>Aggregates</b> (entidades principales de datos) para definir los <b>Bounded Contexts</b>. Esta segmentación estratégica establece los límites de responsabilidad para nuestro API RESTful, identificando módulos clave como <i>Workshop Operations</i>, <i>Staff Management</i> y <i>Billing</i>.
+</p>
+
+<div align="center">
+
+![alt text](/markdown/assets/images/chapter-4/event_storming_s4.png)
+</div>
 
 ## 4.8.1. Software Architecture Context Diagram
 
@@ -1226,7 +1296,7 @@ El diagrama de contexto representa el nivel más alto de abstracción de la solu
 
 <div align="center">
 
-![alt text](docs/assets/chapter-4/context_diagram_os.png)
+![alt text](/markdown/assets/images/chapter-4/context_diagram_os.png)
 </div>
 
 ## 4.8.2. Software Architecture Container Diagrams
@@ -1244,7 +1314,7 @@ A nivel de contenedores, la solución se descompone en aplicaciones independient
 
 <div align="center">
 
-![alt text](docs/assets/chapter-4/containers_diagram_os.png)
+![alt text](/markdown/assets/images/chapter-4/containers_diagram_os.png)
 </div>
 
 ## 4.8.3. Software Architecture Components Diagrams
@@ -1263,7 +1333,7 @@ Este diagrama profundiza en el contenedor API RESTful para exponer los bloques e
 
 <div align="center">
 
-![alt text](docs/assets/chapter-4/components_diagram_os.png)
+![alt text](/markdown/assets/images/chapter-4/components_diagram_os.png)
 </div>
 
 # 4.9. Software Object-Oriented Design
@@ -1318,7 +1388,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 #### Diagrama de Clases General - AutoService
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/bounded-contexts-dc.png" width="1000">
+<img src="/markdown/assets/images/chapter-4/bounded-contexts-dc.png" width="1000">
 </div>
 
 #### 1. Tenant Management Context
@@ -1337,7 +1407,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 - Los índices optimizan búsquedas frecuentes por tenant_id
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/tenant-management.png">
+<img src="/markdown/assets/images/chapter-4/tenant-management.png">
 </div>
 
 #### 2. Customer Management Context
@@ -1356,7 +1426,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 - El contexto expone puertos para crear, consultar, actualizar y eliminar clientes
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/customer-management.png">
+<img src="/markdown/assets/images/chapter-4/customer-management.png">
 </div>
 
 #### 3. Fleet Management Context
@@ -1375,7 +1445,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 - Los índices en plate y customer_id optimizan búsquedas operacionales
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/fleet-management.png">
+<img src="/markdown/assets/images/chapter-4/fleet-management.png">
 </div>
 
 #### 4. Staff Coordination Context
@@ -1394,7 +1464,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 - El contexto es consumido por workshop_operations para asignar tareas
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/staff-coordination.png">
+<img src="/markdown/assets/images/chapter-4/staff-coordination.png">
 </div>
 
 #### 5. Inventory Management Context
@@ -1413,7 +1483,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 - El contexto expone puertos para crear, consultar y actualizar ítems
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/inventory-management.png">
+<img src="/markdown/assets/images/chapter-4/inventory-management.png">
 </div>
 
 #### 6. IAM (Identity & Access Management) Context
@@ -1432,7 +1502,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 - El contexto integra con tenantmanagement durante el registro de nuevas cuentas
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/iam.png">
+<img src="/markdown/assets/images/chapter-4/iam.png">
 </div>
 
 #### 7. Workshop Operations Context (Core Domain)
@@ -1451,7 +1521,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 - El monto total de la orden se calcula desde los ítems y tareas relacionadas
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/workshop-operations.png" >
+<img src="/markdown/assets/images/chapter-4/workshop-operations.png" >
 </div>
 
 #### 8. Public Tracking Context (Read-Only Interface)
@@ -1470,7 +1540,7 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 - Facilita la transparencia operacional sin comprometer la seguridad de datos sensibles
 
 <div align="center">
-<img src="docs/assets/chapter-4/class-diagrams/public-tracking.png">
+<img src="/markdown/assets/images/chapter-4/public-tracking.png">
 </div>
 
 ## 4.9.2. Class Dictionary
