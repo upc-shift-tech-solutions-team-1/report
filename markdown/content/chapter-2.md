@@ -624,7 +624,7 @@ Muestra las expectativas, emociones y percepciones del cliente.
 ### 2.4. Big Picture EventStorming
 
 <p style="text-align: justify;">
-En esta sección se presenta el **Big Picture EventStorming**, una técnica colaborativa utilizada para explorar el dominio del negocio de manera visual y de alto nivel. A través de una línea de tiempo horizontal, el equipo ha identificado los eventos significativos (naranjas) que ocurren en el flujo de trabajo de un taller automotriz, las acciones que los desencadenan (comandos azules), los actores involucrados (amarillos) y las reglas de negocio automatizadas (políticas moradas).
+En esta sección se presenta el Big Picture EventStorming, una técnica colaborativa utilizada para explorar el dominio del negocio de manera visual y de alto nivel. A través de una línea de tiempo horizontal, el equipo ha identificado los eventos significativos (naranjas) que ocurren en el flujo de trabajo de un taller automotriz, las acciones que los desencadenan (comandos azules), los actores involucrados (amarillos) y las reglas de negocio automatizadas (políticas moradas).
 </p>
 
 <p style="text-align: justify;">
@@ -633,7 +633,7 @@ Este artefacto nos permite comprender la secuencia natural de los procesos, desd
 
 > **Nota:** El diagrama a continuación representa la interacción entre los User Personas (Carlos, Lucía y Ana) y el sistema propuesto, siguiendo una línea de tiempo de izquierda a derecha.
 
-![Big Picture EventStorming](docs/assets/chapter-2/big-picture-event-storming.png)
+![Big Picture EventStorming](/markdown/assets/images/chapter-2/big-picture-event-storming.png)
 
 #### Estructura del Flujo (Timeline)
 
