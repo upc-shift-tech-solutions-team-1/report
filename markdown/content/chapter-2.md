@@ -576,3 +576,25 @@ La tarea de <strong>"Realizar seguimiento al progreso del servicio"</strong> es 
 <p style="text-align: justify;">
 Existe una clara oportunidad para digitalizar la <strong>"Comunicación del estado"</strong>. Actualmente, esta tarea consume recursos del taller (tiempo de Carlos y Lucía) y genera insatisfacción en Ana. Al transformar esta tarea manual en una funcionalidad de consulta autónoma (Dashboard para clientes), se reduce la carga operativa para el taller y se satisface la necesidad de transparencia del cliente.</p>
 
+#### 2.3.3. User Journey Mapping
+
+##### Journey Map 1: Mechanic
+
+Representa el flujo de trabajo del mecánico desde la recepción del vehículo hasta la finalización del servicio.
+
+![Journey Map Mechanic](/markdown/assets/images/chapter-2/journey-map-1-mechanic.png)
+
+
+#### Journey Map 2: Workshop Manager
+
+Describe la gestión operativa del administrador del taller y la supervisión de procesos.
+
+![Journey Map Workshop Manager](/markdown/assets/images/chapter-2/journey-map-2-workshop-manager.png)
+
+
+#### Journey Map 3: Vehicle Owner
+
+Muestra la experiencia del cliente al solicitar, seguir y recibir un servicio automotriz.
+
+![Journey Map Vehicle Owner](/markdown/assets/images/chapter-2/journey-map-3-vehicle-owner.png)
+
