@@ -330,6 +330,60 @@ Para AutoService, se han implementado diversos sistemas de organización que res
 
 ## 4.3.2. Landing Page Mock-up
 
+**1. Header / Navbar**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/header-landing-mockup.png)
+
+**2. Hero Section**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/hero-section-mockup.png)
+
+**3. Key Features**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/key-features-mockup.png)
+
+**4. Problem + Solution Section**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/problem+solution-section-mockup.png)
+
+**5. Tools Section**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/tools-section-mockup.png)
+
+**6. How it works Section**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/how-it-works-mockup.png)
+
+**7. Additional Features/ Simplicity Section**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/simplicity-section-mockup.png)
+
+**8. Pricing Section**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/pricing-section-mockup.png)
+
+**9. Final Call To Action Section**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/final-call-to-action-mockup.png)
+
+**10. Footer Section**
+<br>
+
+![alt text](/markdown/assets/images/chapter-4/footer-section-mockup.png)
+
+**-Mobile Web Browser**
+
+![alt text](/markdown/assets/images/chapter-4/Mobile%20Web%20Browser%20Mockup.png)
+
 # 4.4. Mobile Applications UX/UI Design
 
 ## 4.4.1. Mobile Applications Wireframes
