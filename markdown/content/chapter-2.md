@@ -6,12 +6,9 @@
 
 <br>
 
+# 2.1. Competidores
 
-## Capítulo II: Requirements Elicitation & Analysis
-
-### 2.1. Competidores
-
-#### 2.1.1. Análisis Competitivo
+## 2.1.1. Análisis Competitivo
 
 ### Competitive Analysis Landscape
 
@@ -341,7 +338,7 @@ La plataforma permite a mecánicos y talleres gestionar clientes, vehículos, ó
 </table>
 </div>
 
-#### 2.1.2. Estrategias y tácticas frente a competidores
+## 2.1.2. Estrategias y tácticas frente a competidores
 
 <p align="justify">Nuestro producto adoptará una estrategia competitiva basada en la diferenciación a través de la transparencia del servicio y la integración del cliente en el proceso, respondiendo a las limitaciones actuales del mercado, donde predominan soluciones centradas únicamente en la gestión interna.</p>
 <ol>
@@ -437,11 +434,9 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
 
 </ol>
 
----
+# 2.2. Entrevistas
 
-### 2.2. Entrevistas
-
-#### 2.2.1. Diseño de entrevistas
+## 2.2.1. Diseño de entrevistas
 
 <strong>SEGMENTO 1: Mecánicos Independientes</strong>
 <ol>
@@ -469,7 +464,7 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
   <li>¿Qué funcionalidades consideras indispensables en un sistema de gestión para talleres?</li>
 </ol>
 
-#### 2.2.2. Registro de entrevistas
+## 2.2.2. Registro de entrevistas
 
 #### Entrevista 1: Técnico Independiente
 
@@ -489,11 +484,11 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
 
 #### Entrevista 9: Cliente - propietario de vehículos
 
-#### 2.2.3. Análisis de entrevistas
+## 2.2.3. Análisis de entrevistas
 
-### 2.3. Needfinding
+# 2.3. Needfinding
 
-#### 2.3.1. User Personas
+## 2.3.1. User Personas
 
 #### User Persona 1: Mechanic
 
@@ -515,9 +510,7 @@ Perfil de un cliente que busca servicios automotrices rápidos, confiables y con
 
 ![User Persona Vehicle Owner](/markdown/assets/images/chapter-2/user-persona-3-vehicle-owner.png)
 
-#### 2.3.2. User Task Matrix
-
-### 2.3.2. User Task Matrix
+## 2.3.2. User Task Matrix
 
 <p style="text-align: justify;">
 El User Task Matrix presenta de manera consolidada las tareas que realizan los tres User Personas identificados para el proyecto AutoService: Carlos Mendoza (Mecánico Independiente), Lucía Fernández (Administradora de Taller) y Ana Rojas (Cliente/Propietaria de vehículo).
@@ -576,9 +569,9 @@ La tarea de <strong>"Realizar seguimiento al progreso del servicio"</strong> es 
 <p style="text-align: justify;">
 Existe una clara oportunidad para digitalizar la <strong>"Comunicación del estado"</strong>. Actualmente, esta tarea consume recursos del taller (tiempo de Carlos y Lucía) y genera insatisfacción en Ana. Al transformar esta tarea manual en una funcionalidad de consulta autónoma (Dashboard para clientes), se reduce la carga operativa para el taller y se satisface la necesidad de transparencia del cliente.</p>
 
-#### 2.3.3. User Journey Mapping
+## 2.3.3. User Journey Mapping
 
-##### Journey Map 1: Mechanic
+#### Journey Map 1: Mechanic
 
 Representa el flujo de trabajo del mecánico desde la recepción del vehículo hasta la finalización del servicio.
 
@@ -598,7 +591,7 @@ Muestra la experiencia del cliente al solicitar, seguir y recibir un servicio au
 
 ![Journey Map Vehicle Owner](/markdown/assets/images/chapter-2/journey-map-3-vehicle-owner.png)
 
-#### 2.3.4. Empathy Mapping
+## 2.3.4. Empathy Mapping
 
 
 #### Empathy Map 1: Mechanic
@@ -621,79 +614,11 @@ Muestra las expectativas, emociones y percepciones del cliente.
 
 ![Empathy Map Vehicle Owner](/markdown/assets/images/chapter-2/empathy-map-3-vehicle-owner.png)
 
-### 2.4. Big Picture EventStorming
+## 2.3.5. As-is Scenario Mapping
 
-<p style="text-align: justify;">
-En esta sección se presenta el Big Picture EventStorming, una técnica colaborativa utilizada para explorar el dominio del negocio de manera visual y de alto nivel. A través de una línea de tiempo horizontal, el equipo ha identificado los eventos significativos (naranjas) que ocurren en el flujo de trabajo de un taller automotriz, las acciones que los desencadenan (comandos azules), los actores involucrados (amarillos) y las reglas de negocio automatizadas (políticas moradas).
-</p>
+(COMPLETAR)
 
-<p style="text-align: justify;">
-Este artefacto nos permite comprender la secuencia natural de los procesos, desde la configuración inicial del taller hasta el cierre financiero y la generación de reportes, exponiendo oportunidades de automatización y **"Hotspots"** (puntos de dolor) críticos en la comunicación entre el taller y el cliente.
-</p>
-
-> **Nota:** El diagrama a continuación representa la interacción entre los User Personas (Carlos, Lucía y Ana) y el sistema propuesto, siguiendo una línea de tiempo de izquierda a derecha.
-
-![Big Picture EventStorming](/markdown/assets/images/chapter-2/big-picture-event-storming.png)
-
-#### Estructura del Flujo (Timeline)
-
-<div style="text-align: justify; line-height: 1.6; margin-top: 1em; margin-bottom: 1.5em;">
-<p>Para facilitar la comprensión del modelo, el Event Storming se ha organizado en <strong>5 bloques lógicos</strong> que representan las fases del ciclo de vida del servicio:</p>
-
-<ol style="padding-left: 1.5em; margin-bottom: 1.5em;">
-  <li><strong>Onboarding & Registration (Izquierda):</strong><br>
-  Inicia con el <strong>System Admin</strong> registrando el taller (<code>Register Workshop</code> → <code>Workshop Account Created</code>). Se registran los actores clave: el <strong>Administrator</strong> o <strong>Mechanic</strong> registran clientes (<code>Client Registered</code>) y el <strong>Mechanic</strong> registra los vehículos (<code>Vehicle Registered</code>).<br>
-  <em>Hotspot identificado:</em> <code>Data scattered across notebooks</code> (Datos dispersos en cuadernos), reflejando la desorganización actual.</li>
-
-  <li><strong>Intake & Assessment (Centro-Superior):</strong><br>
-  El <strong>Mechanic</strong> crea la orden de trabajo (<code>Create Work Order</code> → <code>Work Order Created</code>). Se aplica una política automática: <code>Code Generation Policy</code> que genera un código de seguimiento (<code>Tracking Code Generated</code>). El mecánico detalla las tareas (<code>Add task</code> → <code>Task Added</code>) y el administrador asigna turnos (<code>Assign Shift</code>).<br>
-  <em>Hotspot identificado:</em> <code>Difficulty in estimating actual costs</code> (Dificultad para estimar costos reales), un problema que la digitalización busca resolver.</li>
-
-  <li><strong>Execution & Follow-up (Centro-Inferior):</strong><br>
-  El <strong>Mechanic</strong> inicia las tareas (<code>Start task</code> → <code>Task Started</code> → <code>Task Completed</code>). Se actualiza el estado del vehículo (<code>Update Vehicle Status</code> → <code>Vehicle Status Updated</code>).<br>
-  <strong>Punto Clave:</strong> Aquí interviene la política <code>Notify Client Policy</code>. Al cambiar el estado, el sistema envía una notificación (<code>Email/SMS System</code> → <code>Notification Sent</code>), manteniendo al cliente informado sin llamadas manuales.<br>
-  El <strong>Client</strong> puede consultar el estado ingresando su código (<code>Enter Tracking Code</code> → <code>Tracking Session Started</code>).<br>
-  <em>Hotspot identificado:</em> <code>The customer keeps calling to ask about the status</code> (El cliente llama constantemente), resolviendo la frustración de Ana.</li>
-
-  <li><strong>Closure & Billing (Derecha-Inferior):</strong><br>
-  El <strong>Mechanic</strong> completa la orden (<code>Complete Work Order</code> → <code>Work Order Completed</code>). El <strong>Administrator</strong> genera la factura (<code>Generate Invoice</code> → <code>Invoice Generated</code>). El <strong>Client</strong> procesa el pago (<code>Process Payment</code> → <code>Payment Processed</code>), interactuando con la <code>Payment Gateway</code>.<br>
-  <em>Hotspot identificado:</em> <code>Manual error in calculating totals</code> (Error manual en el cálculo de totales).</li>
-
-  <li><strong>Reports & Metrics (Derecha-Superior):</strong><br>
-  El <strong>Administrator</strong> visualiza métricas de productividad (<code>View Productivity Metrics</code> → <code>Workshop Productivity Calculated</code>). Se analizan tendencias de servicio (<code>Analyze Service Trends</code> → <code>Service Trends Analyzed</code>). Se generan reportes diarios de ingresos bajo la <code>Daily Closing Policy</code>.</li>
-</ol>
-
-#### Leyenda de Elementos
-
-<p>Para la correcta interpretación del diagrama, se han utilizado los estándares visuales de EventStorming:</p>
-<ul style="padding-left: 1.5em; margin-bottom: 1.5em;">
-  <li>🟧 <strong>Domain Events (Naranja):</strong> Hechos relevantes que ya ocurrieron en el negocio (ej. <code>Vehicle Status Updated</code>, <code>Invoice Generated</code>).</li>
-  <li>🟦 <strong>Commands (Azul):</strong> Acciones o decisiones que inician un proceso (ej. <code>Create Work Order</code>, <code>Process Payment</code>).</li>
-  <li>🟨 <strong>Actors (Amarillo):</strong> Usuarios o sistemas que ejecutan los comandos (System Admin, Mechanic, Administrator, Client).</li>
-  <li>🟪 <strong>Policies (Morado):</strong> Reglas de negocio o automatizaciones (ej. <code>Notify Client Policy</code>, <code>Code Generation Policy</code>).</li>
-  <li>🟥 <strong>External Systems (Rosa fuerte):</strong> Servicios de terceros integrados (Email/SMS System, Payment Gateway).</li>
-  <li>🔴 <strong>Hotspots (Rojo claro):</strong> Puntos de dolor o problemas identificados en el proceso actual.</li>
-</ul>
-
-#### Hotspots y Oportunidades de Mejora
-
-<p>Durante el modelado, detectamos áreas problemáticas en el proceso actual que justifican la existencia de nuestra solución <strong>AutoService</strong>:</p>
-<ol style="padding-left: 1.5em; margin-bottom: 1em;">
-  <li><strong>Falta de Transparencia (Bloque Execution):</strong><br>
-  <em>Problema:</em> El evento <code>Vehicle Status Updated</code> no llegaba al cliente, generando llamadas constantes.<br>
-  <em>Solución:</em> La política <code>Notify Client Policy</code> automatiza la comunicación.</li>
-
-  <li><strong>Desorganización Operativa (Bloque Onboarding/Intake):</strong><br>
-  <em>Problema:</em> Datos dispersos en cuadernos y dificultad para estimar costos.<br>
-  <em>Solución:</em> Centralización digital y cálculo automático basado en tareas registradas.</li>
-
-  <li><strong>Errores Administrativos (Bloque Closure):</strong><br>
-  <em>Problema:</em> Errores manuales al calcular totales de facturas.<br>
-  <em>Solución:</em> Generación automática de invoices basada en los servicios completados.</li>
-</ol>
-</div>
-
-### 2.5. Ubiquitous Language
+# 2.4. Ubiquitous Language
 
 <p style="text-align: justify;">
 Para garantizar una comunicación clara y sin ambigüedades entre los miembros del equipo de desarrollo y los stakeholders del negocio, se ha definido el siguiente glosario de términos (Ubiquitous Language). Estos términos representan los conceptos fundamentales del dominio de la gestión de talleres automotrices.
