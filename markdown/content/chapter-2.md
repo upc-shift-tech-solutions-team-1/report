@@ -621,3 +621,75 @@ Muestra las expectativas, emociones y percepciones del cliente.
 
 ![Empathy Map Vehicle Owner](/markdown/assets/images/chapter-2/empathy-map-3-vehicle-owner.png)
 
+### 2.4. Big Picture EventStorming
+
+<p style="text-align: justify;">
+En esta sección se presenta el **Big Picture EventStorming**, una técnica colaborativa utilizada para explorar el dominio del negocio de manera visual y de alto nivel. A través de una línea de tiempo horizontal, el equipo ha identificado los eventos significativos (naranjas) que ocurren en el flujo de trabajo de un taller automotriz, las acciones que los desencadenan (comandos azules), los actores involucrados (amarillos) y las reglas de negocio automatizadas (políticas moradas).
+</p>
+
+<p style="text-align: justify;">
+Este artefacto nos permite comprender la secuencia natural de los procesos, desde la configuración inicial del taller hasta el cierre financiero y la generación de reportes, exponiendo oportunidades de automatización y **"Hotspots"** (puntos de dolor) críticos en la comunicación entre el taller y el cliente.
+</p>
+
+> **Nota:** El diagrama a continuación representa la interacción entre los User Personas (Carlos, Lucía y Ana) y el sistema propuesto, siguiendo una línea de tiempo de izquierda a derecha.
+
+![Big Picture EventStorming](docs/assets/chapter-2/big-picture-event-storming.png)
+
+#### Estructura del Flujo (Timeline)
+
+<div style="text-align: justify; line-height: 1.6; margin-top: 1em; margin-bottom: 1.5em;">
+<p>Para facilitar la comprensión del modelo, el Event Storming se ha organizado en <strong>5 bloques lógicos</strong> que representan las fases del ciclo de vida del servicio:</p>
+
+<ol style="padding-left: 1.5em; margin-bottom: 1.5em;">
+  <li><strong>Onboarding & Registration (Izquierda):</strong><br>
+  Inicia con el <strong>System Admin</strong> registrando el taller (<code>Register Workshop</code> → <code>Workshop Account Created</code>). Se registran los actores clave: el <strong>Administrator</strong> o <strong>Mechanic</strong> registran clientes (<code>Client Registered</code>) y el <strong>Mechanic</strong> registra los vehículos (<code>Vehicle Registered</code>).<br>
+  <em>Hotspot identificado:</em> <code>Data scattered across notebooks</code> (Datos dispersos en cuadernos), reflejando la desorganización actual.</li>
+
+  <li><strong>Intake & Assessment (Centro-Superior):</strong><br>
+  El <strong>Mechanic</strong> crea la orden de trabajo (<code>Create Work Order</code> → <code>Work Order Created</code>). Se aplica una política automática: <code>Code Generation Policy</code> que genera un código de seguimiento (<code>Tracking Code Generated</code>). El mecánico detalla las tareas (<code>Add task</code> → <code>Task Added</code>) y el administrador asigna turnos (<code>Assign Shift</code>).<br>
+  <em>Hotspot identificado:</em> <code>Difficulty in estimating actual costs</code> (Dificultad para estimar costos reales), un problema que la digitalización busca resolver.</li>
+
+  <li><strong>Execution & Follow-up (Centro-Inferior):</strong><br>
+  El <strong>Mechanic</strong> inicia las tareas (<code>Start task</code> → <code>Task Started</code> → <code>Task Completed</code>). Se actualiza el estado del vehículo (<code>Update Vehicle Status</code> → <code>Vehicle Status Updated</code>).<br>
+  <strong>Punto Clave:</strong> Aquí interviene la política <code>Notify Client Policy</code>. Al cambiar el estado, el sistema envía una notificación (<code>Email/SMS System</code> → <code>Notification Sent</code>), manteniendo al cliente informado sin llamadas manuales.<br>
+  El <strong>Client</strong> puede consultar el estado ingresando su código (<code>Enter Tracking Code</code> → <code>Tracking Session Started</code>).<br>
+  <em>Hotspot identificado:</em> <code>The customer keeps calling to ask about the status</code> (El cliente llama constantemente), resolviendo la frustración de Ana.</li>
+
+  <li><strong>Closure & Billing (Derecha-Inferior):</strong><br>
+  El <strong>Mechanic</strong> completa la orden (<code>Complete Work Order</code> → <code>Work Order Completed</code>). El <strong>Administrator</strong> genera la factura (<code>Generate Invoice</code> → <code>Invoice Generated</code>). El <strong>Client</strong> procesa el pago (<code>Process Payment</code> → <code>Payment Processed</code>), interactuando con la <code>Payment Gateway</code>.<br>
+  <em>Hotspot identificado:</em> <code>Manual error in calculating totals</code> (Error manual en el cálculo de totales).</li>
+
+  <li><strong>Reports & Metrics (Derecha-Superior):</strong><br>
+  El <strong>Administrator</strong> visualiza métricas de productividad (<code>View Productivity Metrics</code> → <code>Workshop Productivity Calculated</code>). Se analizan tendencias de servicio (<code>Analyze Service Trends</code> → <code>Service Trends Analyzed</code>). Se generan reportes diarios de ingresos bajo la <code>Daily Closing Policy</code>.</li>
+</ol>
+
+#### Leyenda de Elementos
+
+<p>Para la correcta interpretación del diagrama, se han utilizado los estándares visuales de EventStorming:</p>
+<ul style="padding-left: 1.5em; margin-bottom: 1.5em;">
+  <li>🟧 <strong>Domain Events (Naranja):</strong> Hechos relevantes que ya ocurrieron en el negocio (ej. <code>Vehicle Status Updated</code>, <code>Invoice Generated</code>).</li>
+  <li>🟦 <strong>Commands (Azul):</strong> Acciones o decisiones que inician un proceso (ej. <code>Create Work Order</code>, <code>Process Payment</code>).</li>
+  <li>🟨 <strong>Actors (Amarillo):</strong> Usuarios o sistemas que ejecutan los comandos (System Admin, Mechanic, Administrator, Client).</li>
+  <li>🟪 <strong>Policies (Morado):</strong> Reglas de negocio o automatizaciones (ej. <code>Notify Client Policy</code>, <code>Code Generation Policy</code>).</li>
+  <li>🟥 <strong>External Systems (Rosa fuerte):</strong> Servicios de terceros integrados (Email/SMS System, Payment Gateway).</li>
+  <li>🔴 <strong>Hotspots (Rojo claro):</strong> Puntos de dolor o problemas identificados en el proceso actual.</li>
+</ul>
+
+#### Hotspots y Oportunidades de Mejora
+
+<p>Durante el modelado, detectamos áreas problemáticas en el proceso actual que justifican la existencia de nuestra solución <strong>AutoService</strong>:</p>
+<ol style="padding-left: 1.5em; margin-bottom: 1em;">
+  <li><strong>Falta de Transparencia (Bloque Execution):</strong><br>
+  <em>Problema:</em> El evento <code>Vehicle Status Updated</code> no llegaba al cliente, generando llamadas constantes.<br>
+  <em>Solución:</em> La política <code>Notify Client Policy</code> automatiza la comunicación.</li>
+
+  <li><strong>Desorganización Operativa (Bloque Onboarding/Intake):</strong><br>
+  <em>Problema:</em> Datos dispersos en cuadernos y dificultad para estimar costos.<br>
+  <em>Solución:</em> Centralización digital y cálculo automático basado en tareas registradas.</li>
+
+  <li><strong>Errores Administrativos (Bloque Closure):</strong><br>
+  <em>Problema:</em> Errores manuales al calcular totales de facturas.<br>
+  <em>Solución:</em> Generación automática de invoices basada en los servicios completados.</li>
+</ol>
+</div>
+
