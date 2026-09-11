@@ -110,9 +110,20 @@ Todos los componentes siguen estrictamente el Design System alojado en /design-s
 
 ### 4.1.3.1. iOS Mobile Style Guidelines
 
+(COMPLETAR)
+
 ### 4.1.3.2. Android Mobile Style Guidelines
 
+(COMPLETAR)
+
 # 4.2. Information Architecture
+
+<p align="justify">
+Esta sección detalla cómo se organiza, etiqueta y estructura la información dentro de la plataforma AutoService para garantizar que los diferentes segmentos de usuario puedan navegar intuitivamente. El objetivo es minimizar el esfuerzo cognitivo tanto del personal del taller al gestionar operaciones como del cliente final al consultar el estado de su vehículo.
+</p>
+<p align="justify">
+Para AutoService, se han implementado diversos sistemas de organización que responden a las necesidades operativas y de consulta del negocio:
+</p>
 
 ## 4.2.1. Organization Systems
 
