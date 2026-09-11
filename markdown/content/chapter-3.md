@@ -796,13 +796,13 @@ A continuación, se presenta el Product Backlog del proyecto. Las historias han 
 
 Para complementar la especificación detallada del Product Backlog y evidenciar su correcta trazabilidad en nuestra herramienta de gestión, a continuación se presenta la captura de pantalla del entorno de Jira Software. En dicha evidencia se aprecia el listado completo de las historias configuradas y listas para ser abordadas en sus respectivos ciclos de desarrollo, manteniendo el estricto orden de prioridad de negocio establecido y sus correspondientes estimaciones en Story Points.
 
-(COMPLETRA CON NUEVA IMAGEN DE JIRA)
+(COMPLETAR CON NUEVA IMAGEN DE JIRA)
 
 URL del tablero completo en Jira: (COMPLETAR CON NUEVO LINK DEL JIRA)
 
 # 3.4. Impact Mapping
 
-En esta sección se desarrolla el impact mapping, una técnica que permite visualizar la relación entre los objetivos del negocio, los actores involucrados, los impactos esperados y las funcionalidades del sistema. Esto facilita la alineación entre el desarrollo del producto y el valor que se busca generar. Se realiza en la plataforma UXPressia, acorde a las indicaciones del TF.
+En esta sección se desarrolla el impact mapping, una técnica que permite visualizar la relación entre los objetivos del negocio, los actores involucrados, los impactos esperados y las funcionalidades del sistema. Esto facilita la alineación entre el desarrollo del producto y el valor que se busca generar. 
 
 ![alt text](</markdown/assets/images/chapter-3/Impact Map AutoService.png>)
 
