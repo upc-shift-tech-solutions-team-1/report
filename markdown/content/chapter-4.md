@@ -89,6 +89,23 @@ Espaciado e iconografía
 
 ## 4.1.2. Web Style Guidelines
 
+<p align="justify"> Estas directrices definen los estándares visuales y de interacción específicos para las interfaces web (Landing Page y Web Application). Se han aplicado de forma consistente en el Panel de Control (versión desktop) y en todas las vistas administrativas. </p>
+
+Layout y estructura
+<p align="justify"> • Sistema de grid de 12 columnas con contenedor máximo de 1280 px.<br> • Sidebar fijo a la izquierda (240 px) para navegación principal.<br> • Área de contenido principal con padding lateral de 24 px.<br> • Tarjetas con fondo blanco, borde de 1 px (#E5E7EB), border-radius de 16 px y shadow sutil. </p>
+
+Componentes principales
+<p align="justify">
+• Botones primarios: Fondo #0A2540, texto blanco, hover más oscuro, border-radius 8 px, altura mínima 48 px.<br> • Botones secundarios: Borde #0A2540, fondo transparente, texto oscuro.<br> • Tarjetas de métricas (KPI): Fondo blanco, ícono grande en la parte superior, números destacados en Poppins Bold.<br> • Tablas de vehículos: Encabezados con fondo #F8FAFC, filas con hover #F1F5F9, progress bars con color Secondary Teal.<br> • Estados de vehículos: Badges con border-radius completo, padding 4 px / 12 px y colores según estado (En proceso → teal, Pendiente → naranja, Completado → verde).<br> • Search bar: Fondo #F8FAFC, borde redondeado, ícono de lupa a la izquierda.<br> •	Usuario / Avatar: Círculo en la esquina superior derecha con foto y nombre. </p>
+Tipografía en web
+<p align="justify">
+• Títulos de sección: Poppins Semi-Bold (h1–h3).<br> • Texto de tarjetas y tablas: Inter Regular 16 px.<br> • Todos los tamaños se expresan en rem para mantener accesibilidad y escalabilidad.
+</p>
+Consistencia visual
+<p align="justify">
+Todos los componentes siguen estrictamente el Design System alojado en /design-system/. La paleta, tipografía y espaciados se mantienen idénticos en todas las vistas web, garantizando una experiencia unificada entre la Landing Page y la Web Application.
+</p>
+
 ## 4.1.3. Mobile Style Guidelines
 
 ### 4.1.3.1. iOS Mobile Style Guidelines
