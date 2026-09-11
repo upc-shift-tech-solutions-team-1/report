@@ -499,19 +499,19 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
 
 Perfil de un mecánico que trabaja en talleres automotrices y requiere una gestión eficiente de órdenes de servicio.
 
-![User Persona Mechanic](docs/assets/chapter-2/needfinding/user-persona-1-mechanic.png)
+![User Persona Mechanic](/markdown/assets/images/chapter-2/user-persona-1-mechanic.png)
 
 
 #### User Persona 2: Workshop Manager
 
 Perfil de un administrador de taller que gestiona operaciones, personal y flujo de trabajo.
 
-![User Persona Workshop Manager](docs/assets/chapter-2/needfinding/user-persona-2-workshop-manager.png)
+![User Persona Workshop Manager](/markdown/assets/images/chapter-2/user-persona-2-workshop-manager.png)
 
 
 #### User Persona 3: Vehicle Owner
 
 Perfil de un cliente que busca servicios automotrices rápidos, confiables y con seguimiento.
 
-![User Persona Vehicle Owner](docs/assets/chapter-2/needfinding/user-persona-3-vehicle-owner.png)
+![User Persona Vehicle Owner](/markdown/assets/images/chapter-2/user-persona-3-vehicle-owner.png)
 
