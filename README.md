@@ -13,7 +13,7 @@
 <h3 align="center"><strong>9100</strong></h3>
 <h4 align="center">Docente</h4>
 <h3 align="center"><strong>Sanchez Ponce, Alex Humberto</strong></h3>
-<h3 align="center"><strong>Informe del Trabajo Final</strong></h3>
+<h3 align="center"><strong>Informe de Trabajo Final</strong></h3>
 <h4 align="center">Equipo</h4>
 <h3 align="center"><strong>ShiftTech Solutions</strong></h3>
 <h4 align="center">Proyecto</h4>
@@ -22,7 +22,7 @@
 <br/>
 
 <div align="center">
-  <img src="./markdown/assets/images/AutoService.jpeg" alt="Logo producto" width="180">
+  <img src="./markdown/assets/images/AutoService.jpeg" alt="Auto Service" width="360">
 </div>
 
 <p align="center">
