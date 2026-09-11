@@ -445,6 +445,361 @@ A diferencia de un enfoque centrado únicamente en pantallas o acciones CRUD, la
 
 # 3.3. Product Backlog
 
+A continuación, se presenta el Product Backlog del proyecto. Las historias han sido priorizadas en función de su valor estratégico para el negocio, asegurando que los requerimientos de captación (Landing Page) y cimientos arquitectónicos encabecen la lista para ser abordados en el primer Sprint. Asimismo, y de acuerdo con las buenas prácticas evaluadas, las historias vinculadas a la autenticación y seguridad han sido relegadas a un nivel posterior, garantizando la entrega temprana de funcionalidades del core business.
+
+<div align="center">
+  <table style="margin: auto; text-align: left; width: 100%;">
+    <thead>
+      <tr>
+        <th style="text-align: left; width: 5%;"># Orden</th>
+        <th style="text-align: left; width: 7%;">Story Id</th>
+        <th style="width: 25%;">Título</th>
+        <th style="width: 505%;">Descripción</th>
+        <th style="text-align: left; width: 8%;">Story Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left;">1</td>
+        <td style="text-align: left;">US-01</td>
+        <td>Visualizar landing page</td>
+        <td>Como usuario potencial, quiero acceder a la landing page, para conocer el producto y sus beneficios.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">2</td>
+        <td style="text-align: left;">US-02</td>
+        <td>Visualizar beneficios del sistema</td>
+        <td>Como usuario potencial, quiero ver los beneficios del sistema, para entender su valor.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">3</td>
+        <td style="text-align: left;">US-03</td>
+        <td>Acceder a la plataforma desde CTA</td>
+        <td>Como usuario potencial, quiero hacer clic en un botón de acción, para acceder al sistema.</td>
+        <td style="text-align: left;">1</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">4</td>
+        <td style="text-align: left;">US-04</td>
+        <td>Visualizar landing responsive</td>
+        <td>Como usuario, quiero que la landing sea responsive, para poder verla desde mi celular.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">5</td>
+        <td style="text-align: left;">TS-01</td>
+        <td>Definir arquitectura del sistema</td>
+        <td>Como developer, quiero definir la arquitectura del sistema, para asegurar escalabilidad y mantenimiento.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">6</td>
+        <td style="text-align: left;">TS-04</td>
+        <td>Diseñar modelo de base de datos</td>
+        <td>Como developer, quiero definir el modelo de datos, para estructurar la información del sistema.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">7</td>
+        <td style="text-align: left;">TS-10</td>
+        <td>Configurar entorno de desarrollo</td>
+        <td>Como developer, quiero configurar el entorno, para trabajar de forma consistente.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">8</td>
+        <td style="text-align: left;">TS-11</td>
+        <td>Desplegar aplicación</td>
+        <td>Como developer, quiero desplegar la aplicación, para que sea accesible.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">9</td>
+        <td style="text-align: left;">US-08</td>
+        <td>Registrar vehículo</td>
+        <td>Como administrador, quiero registrar un vehículo, para gestionar su servicio.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">10</td>
+        <td style="text-align: left;">US-09</td>
+        <td>Crear orden de trabajo</td>
+        <td>Como administrador, quiero crear una orden de trabajo, para iniciar un servicio.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">11</td>
+        <td style="text-align: left;">US-10</td>
+        <td>Visualizar vehículos en el taller</td>
+        <td>Como administrador, quiero ver los vehículos activos, para conocer el estado del taller.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">12</td>
+        <td style="text-align: left;">US-23</td>
+        <td>Ingresar código de seguimiento</td>
+        <td>Como cliente, quiero ingresar un código, para consultar mi vehículo.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">13</td>
+        <td style="text-align: left;">US-24</td>
+        <td>Visualizar estado del vehículo</td>
+        <td>Como cliente, quiero ver el estado del vehículo, para conocer su progreso.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">14</td>
+        <td style="text-align: left;">US-11</td>
+        <td>Actualizar estado del vehículo</td>
+        <td>Como administrador, quiero actualizar el estado de un vehículo, para reflejar su progreso.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">15</td>
+        <td style="text-align: left;">US-12</td>
+        <td>Visualizar detalle del vehículo</td>
+        <td>Como administrador, quiero ver el detalle de un vehículo, para revisar información completa.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">16</td>
+        <td style="text-align: left;">US-25</td>
+        <td>Visualizar tareas del vehículo</td>
+        <td>Como cliente, quiero ver las tareas realizadas, para entender el trabajo.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">17</td>
+        <td style="text-align: left;">US-26</td>
+        <td>Visualizar fechas estimadas</td>
+        <td>Como cliente, quiero ver fechas estimadas, para saber cuándo estará listo.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">18</td>
+        <td style="text-align: left;">US-27</td>
+        <td>Visualizar costos del servicio</td>
+        <td>Como cliente, quiero ver el costo estimado, para conocer el precio del servicio.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">19</td>
+        <td style="text-align: left;">US-05</td>
+        <td>Iniciar sesión</td>
+        <td>Como usuario del sistema, quiero iniciar sesión, para acceder a mis funcionalidades.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">20</td>
+        <td style="text-align: left;">US-06</td>
+        <td>Acceso según rol</td>
+        <td>Como usuario, quiero ver funcionalidades según mi rol, para usar el sistema correctamente.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">21</td>
+        <td style="text-align: left;">US-07</td>
+        <td>Cerrar sesión</td>
+        <td>Como usuario, quiero cerrar sesión, para proteger mi cuenta.</td>
+        <td style="text-align: left;">1</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">22</td>
+        <td style="text-align: left;">US-13</td>
+        <td>Crear tareas para vehículo</td>
+        <td>Como administrador, quiero crear tareas para un vehículo, para definir los trabajos a realizar.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">23</td>
+        <td style="text-align: left;">US-14</td>
+        <td>Asignar estado a tarea</td>
+        <td>Como administrador, quiero definir el estado de una tarea, para controlar su progreso.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">24</td>
+        <td style="text-align: left;">US-15</td>
+        <td>Visualizar progreso por vehículo</td>
+        <td>Como administrador, quiero ver el progreso de un vehículo, para conocer el avance del servicio.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">25</td>
+        <td style="text-align: left;">US-16</td>
+        <td>Editar tareas</td>
+        <td>Como administrador, quiero editar tareas, para actualizar información del servicio.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">26</td>
+        <td style="text-align: left;">US-17</td>
+        <td>Eliminar tareas</td>
+        <td>Como administrador, quiero eliminar tareas, para corregir errores o cambios en el servicio.</td>
+        <td style="text-align: left;">1</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">27</td>
+        <td style="text-align: left;">US-18</td>
+        <td>Registrar mecánico</td>
+        <td>Como administrador, quiero registrar un mecánico, para gestionar el personal del taller.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">28</td>
+        <td style="text-align: left;">US-19</td>
+        <td>Visualizar lista de mecánicos</td>
+        <td>Como administrador, quiero ver todos los mecánicos registrados, para gestionar el equipo.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">29</td>
+        <td style="text-align: left;">US-20</td>
+        <td>Asignar tareas a mecánico</td>
+        <td>Como administrador, quiero asignar tareas a mecánicos, para distribuir el trabajo.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">30</td>
+        <td style="text-align: left;">US-21</td>
+        <td>Visualizar carga de trabajo</td>
+        <td>Como administrador, quiero ver la carga de trabajo de cada mecánico, para equilibrar tareas.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">31</td>
+        <td style="text-align: left;">US-22</td>
+        <td>Ver detalle de mecánico</td>
+        <td>Como administrador, quiero ver el detalle de un mecánico, para conocer su desempeño.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">32</td>
+        <td style="text-align: left;">US-28</td>
+        <td>Visualizar ingresos</td>
+        <td>Como administrador, quiero ver los ingresos del taller, para evaluar rendimiento.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">33</td>
+        <td style="text-align: left;">US-29</td>
+        <td>Visualizar servicios realizados</td>
+        <td>Como administrador, quiero ver los servicios realizados, para analizar actividad.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">34</td>
+        <td style="text-align: left;">US-30</td>
+        <td>Identificar trabajos frecuentes</td>
+        <td>Como administrador, quiero identificar trabajos frecuentes, para optimizar servicios.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">35</td>
+        <td style="text-align: left;">US-31</td>
+        <td>Visualizar métricas del sistema</td>
+        <td>Como administrador, quiero ver métricas generales, para tomar decisiones.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">36</td>
+        <td style="text-align: left;">US-32</td>
+        <td>Navegar interfaz intuitiva</td>
+        <td>Como usuario, quiero una interfaz clara, para usar el sistema fácilmente.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">37</td>
+        <td style="text-align: left;">US-33</td>
+        <td>Visualizar diseño consistente</td>
+        <td>Como usuario, quiero consistencia visual, para tener mejor experiencia.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">38</td>
+        <td style="text-align: left;">US-34</td>
+        <td>Usar sistema en móvil</td>
+        <td>Como usuario, quiero usar el sistema en mi celular, para acceder desde cualquier lugar.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">39</td>
+        <td style="text-align: left;">US-35</td>
+        <td>Visualizar información clara</td>
+        <td>Como usuario, quiero ver la información organizada, para entender rápidamente.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">40</td>
+        <td style="text-align: left;">TS-02</td>
+        <td>Implementar API REST</td>
+        <td>Como sistema, quiero exponer una API REST, para permitir comunicación con el frontend.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">41</td>
+        <td style="text-align: left;">TS-03</td>
+        <td>Estructurar backend modular</td>
+        <td>Como developer, quiero organizar el backend en módulos, para mejorar mantenibilidad.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">42</td>
+        <td style="text-align: left;">TS-05</td>
+        <td>Implementar persistencia de datos</td>
+        <td>Como sistema, quiero guardar la información, para mantener registros permanentes.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">43</td>
+        <td style="text-align: left;">TS-06</td>
+        <td>Gestionar relaciones entre entidades</td>
+        <td>Como sistema, quiero manejar relaciones entre entidades, para garantizar consistencia de datos.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">44</td>
+        <td style="text-align: left;">TS-07</td>
+        <td>Consumir APIs externas</td>
+        <td>Como sistema, quiero consumir APIs externas, para extender funcionalidades.</td>
+        <td style="text-align: left;">5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">45</td>
+        <td style="text-align: left;">TS-08</td>
+        <td>Manejar respuestas de API</td>
+        <td>Como sistema, quiero procesar respuestas de APIs, para utilizarlas correctamente.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">46</td>
+        <td style="text-align: left;">TS-09</td>
+        <td>Implementar manejo de errores</td>
+        <td>Como sistema, quiero manejar errores de integración, para evitar fallos críticos.</td>
+        <td style="text-align: left;">3</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">47</td>
+        <td style="text-align: left;">TS-12</td>
+        <td>Configurar hosting y dominio</td>
+        <td>Como developer, quiero configurar el hosting, para asegurar disponibilidad del sistema.</td>
+        <td style="text-align: left;">2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br>
+
+Para complementar la especificación detallada del Product Backlog y evidenciar su correcta trazabilidad en nuestra herramienta de gestión, a continuación se presenta la captura de pantalla del entorno de Jira Software. En dicha evidencia se aprecia el listado completo de las historias configuradas y listas para ser abordadas en sus respectivos ciclos de desarrollo, manteniendo el estricto orden de prioridad de negocio establecido y sus correspondientes estimaciones en Story Points.
+
+(COMPLETRA CON NUEVA IMAGEN DE JIRA)
+
+URL del tablero completo en Jira: (COMPLETAR CON NUEVO LINK DEL JIRA)
+
 # 3.4. Impact Mapping
 
 En esta sección se desarrolla el impact mapping, una técnica que permite visualizar la relación entre los objetivos del negocio, los actores involucrados, los impactos esperados y las funcionalidades del sistema. Esto facilita la alineación entre el desarrollo del producto y el valor que se busca generar. Se realiza en la plataforma UXPressia, acorde a las indicaciones del TF.
