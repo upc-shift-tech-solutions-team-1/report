@@ -693,3 +693,81 @@ Este artefacto nos permite comprender la secuencia natural de los procesos, desd
 </ol>
 </div>
 
+### 2.5. Ubiquitous Language
+
+<p style="text-align: justify;">
+Para garantizar una comunicación clara y sin ambigüedades entre los miembros del equipo de desarrollo y los stakeholders del negocio, se ha definido el siguiente glosario de términos (Ubiquitous Language). Estos términos representan los conceptos fundamentales del dominio de la gestión de talleres automotrices.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center; vertical-align: middle; ">Término<br>(Inglés)</th>
+      <th style="text-align: center; vertical-align: middle; ">Equivalente<br>(Español)</th>
+      <th style="text-align: left; vertical-align: middle; ">Definición</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;"><strong>Work Order</strong></td>
+      <td style="text-align: center;">Orden de Trabajo</td>
+      <td>Documento digital que registra la solicitud de servicio de un vehículo, incluyendo los trabajos a realizar, los costos estimados y el estado actual del proceso.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Service Request</strong></td>
+      <td style="text-align: center;">Solicitud de Servicio</td>
+      <td>Petición inicial realizada por el cliente para el mantenimiento o reparación de su vehículo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Mechanic / Technician</strong></td>
+      <td style="text-align: center;">Mecánico / Técnico</td>
+      <td>Usuario del sistema encargado de ejecutar las tareas técnicas de reparación y diagnóstico en los vehículos.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Workshop Administrator</strong></td>
+      <td style="text-align: center;">Administrador del Taller</td>
+      <td>Usuario responsable de gestionar las órdenes de trabajo, asignar tareas al personal, controlar inventarios y gestionar la facturación.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Vehicle</strong></td>
+      <td style="text-align: center;">Vehículo</td>
+      <td>El objeto físico (auto, moto, camión) que ingresa al taller para recibir servicio. Se asocia a un cliente específico.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Diagnostic</strong></td>
+      <td style="text-align: center;">Diagnóstico</td>
+      <td>Evaluación técnica realizada por el mecánico para identificar fallas o necesidades de mantenimiento en el vehículo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Quote / Budget</strong></td>
+      <td style="text-align: center;">Cotización / Presupuesto</td>
+      <td>Estimación de costos detallada que se presenta al cliente antes de iniciar la reparación.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Maintenance History</strong></td>
+      <td style="text-align: center;">Historial de Mantenimiento</td>
+      <td>Registro cronológico de todos los servicios, reparaciones y cambios de piezas realizados a un vehículo a lo largo del tiempo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Status</strong></td>
+      <td style="text-align: center;">Estado</td>
+      <td>Indicador del progreso de una Orden de Trabajo (ej. Pendiente, En Proceso, Listo, Entregado).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Spare Part</strong></td>
+      <td style="text-align: center;">Repuesto</td>
+      <td>Pieza o componente de inventario que se utiliza para reemplazar piezas dañadas durante la reparación.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Client / Customer</strong></td>
+      <td style="text-align: center;">Cliente</td>
+      <td>Usuario final propietario del vehículo que contrata los servicios del taller.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"><strong>Staff</strong></td>
+      <td style="text-align: center;">Personal</td>
+      <td>Conjunto de mecánicos y personal de apoyo que labora en el taller.</td>
+    </tr>
+  </tbody>
+</table>
+
