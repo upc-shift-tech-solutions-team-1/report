@@ -22,7 +22,7 @@
 <br/>
 
 <div align="center">
-  <img src="./markdown/assets/images/logo-producto.png" alt="Logo producto" width="180">
+  <img src="./markdown/assets/images/AutoService.jpeg" alt="Logo producto" width="180">
 </div>
 
 <p align="center">
