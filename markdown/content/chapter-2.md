@@ -469,7 +469,57 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
   <li>¿Qué funcionalidades consideras indispensables en un sistema de gestión para talleres?</li>
 </ol>
 
+#### 2.2.2. Registro de entrevistas
 
+#### Entrevista 1: Técnico Independiente
+
+- **Nombre:** Fray Diaz Palomino
+- **Edad:** 38
+- **Residencia:** Ayacucho, Huamanga 
+- **Ocupación:** Técnico Mecánico Automotriz  
+
+- **Inicio:** 0:33  
+- **Duración:** 8:30  
+
+**Link:**  
+[Ver video]()
+
+---
+**Resumen:**
+<p style="text-align: justify;">
+El entrevistado Gurmecindo de 55 años con aproximadamente 35 años de experiencia, residente en San Juan Bautista, Ayacucho. Su trabajo se centra en la reparación de motores y mantenimiento general de vehículos. En su día a día, realiza diversas tareas mecánicas dependiendo de las fallas que presentan los autos. Actualmente, gestiona la información de sus clientes y vehículos de forma manual, utilizando cuadernos y actas de control donde registra datos como la hora de ingreso, la placa y el tipo de trabajo. En cuanto a la comunicación, suele llamar a los clientes cuando el vehículo está listo o también recibe llamadas de ellos para consultar el estado. Señala que sus clientes confían en su servicio debido a la garantía y puntualidad que ofrece, y sí mantiene un historial de trabajos de manera escrita. Frente a la propuesta de una plataforma digital, muestra una actitud positiva y considera que es necesaria en la actualidad para mejorar la gestión, destacando como funcionalidad importante la incorporación de herramientas como escáner automotriz para diagnosticar fallas electrónicas, lo que facilitaría y modernizaría su trabajo diario.
+</p>
+
+---
+
+**Evidencia:**
+
+![Entrevista Administrador Taller](docs/assets/chapter-2/interview-technical-1.png)
+
+#### Entrevista 2: Técnico Independiente
+
+- **Nombre:** Gurmencindo Ventura
+- **Edad:** 55
+- **Residencia:** Ayaacucho, Huamanga - San Juan Bautista
+- **Ocupación:** Técnico Automotriz  
+
+- **Inicio:** 0:38  
+- **Duración:** 5:29  
+
+**Link:**  
+[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d185_upc_edu_pe/IQC3R-wNkI7tQZ07-wGLrqBvAUckZJvae4x3Gvydyx-kgVk?e=MSpswt)
+
+---
+**Resumen:**
+<p style="text-align: justify;">
+El entrevistado Gurmecindo de 55 años con aproximadamente 35 años de experiencia, residente en San Juan Bautista, Ayacucho. Su trabajo se centra en la reparación de motores y mantenimiento general de vehículos. En su día a día, realiza diversas tareas mecánicas dependiendo de las fallas que presentan los autos. Actualmente, gestiona la información de sus clientes y vehículos de forma manual, utilizando cuadernos y actas de control donde registra datos como la hora de ingreso, la placa y el tipo de trabajo. En cuanto a la comunicación, suele llamar a los clientes cuando el vehículo está listo o también recibe llamadas de ellos para consultar el estado. Señala que sus clientes confían en su servicio debido a la garantía y puntualidad que ofrece, y sí mantiene un historial de trabajos de manera escrita. Frente a la propuesta de una plataforma digital, muestra una actitud positiva y considera que es necesaria en la actualidad para mejorar la gestión, destacando como funcionalidad importante la incorporación de herramientas como escáner automotriz para diagnosticar fallas electrónicas, lo que facilitaría y modernizaría su trabajo diario.
+</p>
+
+---
+
+**Evidencia:**
+
+![Entrevista Administrador Taller](docs/assets/chapter-2/interview-technical-2.png)
 
 
 
