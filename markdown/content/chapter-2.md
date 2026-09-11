@@ -466,25 +466,45 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
 
 ## 2.2.2. Registro de entrevistas
 
-#### Entrevista 1: Técnico Independiente
+#### Entrevista 1: Técnico Independiente 
+
+(COMPLETAR)
 
 #### Entrevista 2: Técnico Independiente
 
+(COMPLETAR)
+
 #### Entrevista 3: Técnico Independiente
+
+(COMPLETAR)
 
 #### Entrevista 4: Administrador de Taller Automotriz
 
+(COMPLETAR)
+
 #### Entrevista 5: Administrador y Encargado de Logística de Taller Automotriz
+
+(COMPLETAR)
 
 #### Entrevista 6: Administrador y Encargado de Logística de Taller Automotriz
 
+(COMPLETAR)
+
 #### Entrevista 7: Cliente - propietario de vehículo
+
+(COMPLETAR)
 
 #### Entrevista 8: Cliente - propietario de vehículos
 
+(COMPLETAR)
+
 #### Entrevista 9: Cliente - propietario de vehículos
 
+(COMPLETAR)
+
 ## 2.2.3. Análisis de entrevistas
+
+(COMPLETAR)
 
 # 2.3. Needfinding
 
