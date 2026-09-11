@@ -341,5 +341,105 @@ La plataforma permite a mecánicos y talleres gestionar clientes, vehículos, ó
 </table>
 </div>
 
+#### 2.1.2. Estrategias y tácticas frente a competidores
+
+<p align="justify">Nuestro producto adoptará una estrategia competitiva basada en la diferenciación a través de la transparencia del servicio y la integración del cliente en el proceso, respondiendo a las limitaciones actuales del mercado, donde predominan soluciones centradas únicamente en la gestión interna.</p>
+<ol>
+<li>Diferenciarnos mediante la transparencia del servicio
+
+  <p align="justify">Muchos sistemas actuales se enfocan en la gestión interna del taller, dejando de lado la experiencia del cliente y generando incertidumbre durante el proceso del servicio.
+  Para aprovechar esta oportunidad, AutoService se centrará en brindar visibilidad completa al cliente sobre el estado de su vehículo.</p>
+  <ul>
+    <li>Implementar seguimiento en tiempo real del vehículo</li>
+    <li>Mostrar estados claros del servicio (pendiente, en proceso, finalizado)</li>
+    <li>Visualizar trabajos realizados y costos asociados</li>
+    <li>Incorporar notificaciones automáticas al cliente</li>
+  </ul>
+</li>
+
+<li>Generar una experiencia simple e intuitiva para el usuario
+
+  <p align="justify">Algunas soluciones del mercado pueden resultar complejas o poco accesibles para usuarios con bajo nivel tecnológico, dificultando su adopción.
+  AutoService prioriza la facilidad de uso para garantizar una rápida implementación y aceptación.</p>
+  
+  <ul>
+  <li>Diseño de interfaz clara y amigable</li>
+  <li>Navegación sencilla y estructurada</li>
+  <li>Acceso rápido a funciones principales</li>
+  <li>Optimización para dispositivos móviles</li>
+  </ul>
+</li>
+
+<li>Facilitar la digitalización de talleres pequeños y medianos
+
+  <p align="justify">Muchos talleres enfrentan barreras para adoptar herramientas digitales debido a costos o complejidad.
+AutoService busca reducir estas barreras y fomentar la digitalización del sector.</p>
+  
+  <ul>
+  <li>Plan gratuito para nuevos usuarios</li>
+  <li>Planes escalables según el crecimiento del taller</li>
+  <li>Capacitación básica y guías de uso</li>
+  <li>Implementación rápida sin necesidad de conocimientos técnicos</li>
+  </ul>
+</li>
+
+
+<li>Aprovechar el crecimiento de la digitalización en el sector automotriz
+
+  <p align="justify">El mercado presenta una tendencia creciente hacia el uso de herramientas digitales para la gestión de negocios.
+AutoService se posiciona como una solución moderna alineada a esta transformación.</p>
+  
+  <ul>
+  <li>Promoción del uso de tecnología en talleres</li>
+  <li>Difusión en redes sociales y canales digitales</li>
+  <li>Demostraciones del sistema en entornos reales</li>
+  <li>Enfoque en beneficios como eficiencia y control</li>
+  </ul>
+</li>
+
+
+<li>Fortalecer la confianza del cliente final
+
+  <p align="justify">Uno de los principales problemas del sector es la desconfianza del cliente debido a la falta de información.
+Se busca transformar esta percepción mediante transparencia y comunicación.</p>
+  
+  <ul>
+  <li>Acceso del cliente al sistema mediante código único</li>
+  <li>Información clara y detallada del servicio</li>
+  <li>Reducción de dependencia de llamadas o mensajes</li>
+  <li>(Futuro) evidencia visual del trabajo realizado</li>
+  </ul>
+</li>
+
+<li>Diferenciarnos por el valor ofrecido y no solo por funcionalidades
+
+  <p align="justify">Más allá de ofrecer herramientas de gestión, AutoService se enfoca en brindar una experiencia completa tanto para el taller como para el cliente.</p>
+  
+  <ul>
+  <li>Integración del cliente en el proceso</li>
+  <li>Mejora de la comunicación entre ambas partes</li>
+  <li>Enfoque en confianza y transparencia</li>
+  <li>Evolución continua del sistema con nuevas funcionalidades</li>
+  </ul>
+</li>
+
+<li>Aprovechamiento de la baja digitalización en LATAM
+
+  Captar talleres que aún no usan sistemas digitales
+  
+  <ul>
+  <li>Campañas educativas (“digitaliza tu taller”)</li>
+  <li>Demostraciones prácticas</li>
+  <li>Uso de redes sociales y WhatsApp</li>
+
+  </ul>
+</li>
+
+</ol>
+
+---
+
+
+
 
 
