@@ -492,15 +492,86 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
 
 #### Entrevista 7: Cliente - propietario de vehículo
 
-(COMPLETAR)
+- **Nombre:** Ruiz Soto 
+- **Edad:** 22
+- **Residencia:** Surco, Lima  
+- **Ocupación:** Estudiante universitario 
+
+- **Inicio:** 0:19  
+- **Duración:** 6:10  
+
+**Link:**  
+[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQD34wnwqC1UTqmtkiimZ9bTAQlobl2cCT_U6dtMNHFkxK0?e=pir8eY)
+
+---
+
+**Resumen:**
+<p style="text-align: justify;">
+El entrevistado es Ruiz Soto, un estudiante universitario de 22 años que reside en Surco y cuenta con vehículo propio, el cual lleva al taller de forma mensual para asegurar su correcto funcionamiento y evitar inconvenientes. Al elegir un taller, prioriza principalmente la rapidez y la confianza, incluso por encima del precio, ya que busca soluciones eficientes y seguras sin riesgos de cambios indebidos de piezas. Valora experiencias donde el diagnóstico y la reparación se realizan el mismo día, pero ha tenido frustraciones relacionadas con retrasos en la entrega y falta de cumplimiento en los plazos prometidos. Considera que la rapidez es un factor clave, aunque está dispuesto a pagar más si el servicio es de calidad. Además, muestra un alto interés en el uso de tecnología, como aplicaciones que le permitan monitorear el estado de su vehículo en tiempo real, lo que optimizaría su tiempo. Finalmente, destaca la importancia de mejorar la comunicación constante con el mecánico y la transparencia en los costos como aspectos clave para una mejor experiencia en los talleres automotrices.
+</p>
+
+---
+
+**Evidencia:**
+
+![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg3-interview1.png)
+
 
 #### Entrevista 8: Cliente - propietario de vehículos
 
-(COMPLETAR)
+- **Nombre:** David Paredes
+- **Edad:** 19  
+- **Residencia:** Lima  
+- **Ocupación:** Estudiante universitario 
+
+- **Inicio:** 0:00
+- **Duración:** 7:07  
+
+**Link:**  
+[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQBUsq3hJD19RY_Zf01ldhmoAWi8KgK42tI6wkexLNDYrHk?e=Ii8o7Z&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+---
+
+**Resumen:**
+<p style="text-align: justify;">
+El entrevistado David Paredes, un estudiante universitario de 19 años que, aunque no posee vehículo propio, participa activamente en el mantenimiento del auto de su familia. Señala que suelen llevarlo al taller cada 2 o 3 meses o antes de viajes largos para revisiones preventivas. Al elegir un taller, prioriza principalmente la confianza en el mecánico y la calidad del servicio, seguido de la cercanía y la rapidez. Valora experiencias donde el diagnóstico es rápido, transparente y bien explicado, pero ha tenido frustraciones por demoras innecesarias y falta de cumplimiento en los tiempos. Considera que la calidad es más importante que la rapidez, ya que busca soluciones duraderas. Además, muestra interés en el uso de plataformas web para monitorear el estado del vehículo en tiempo real, destacando que mejorarían la transparencia, la comunicación y la percepción del servicio, siendo este último aspecto —la comunicación constante entre cliente y mecánico— una de las mejoras que más le gustaría ver en los talleres.
+</p>
+
+---
+
+**Evidencia:**
+
+<img src="../assets/images/chapter-2/interviews/seg3-interview2.png" width="900">
+
 
 #### Entrevista 9: Cliente - propietario de vehículos
 
-(COMPLETAR)
+- **Nombre:** Fabio Vallejo  
+- **Edad:** 24  
+- **Residencia:** Surco, Lima  
+- **Ocupación:** Estudiante universitario 
+
+- **Inicio:** 0:00  
+- **Duración:** 4:58  
+
+**Link:**  
+[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQCPYRO8qbgiTqb_NZx3bnVtAcnAqAm31JG9Gs1fPsKmD8I?e=GszCof&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+---
+
+**Resumen:**
+<p style="text-align: justify;">
+El entrevistado, en calidad de cliente y propietario de un vehículo, relata su experiencia al llevar su auto a un taller mecánico debido a un ruido inusual, lo que derivó en el cambio de pastillas y revisión general de frenos. Durante el servicio, la comunicación se realizó principalmente a través de WhatsApp, donde ocasionalmente recibía fotos o videos; sin embargo, menciona que esta comunicación no era constante, teniendo que consultar por iniciativa propia el estado del vehículo.
+Expresa que una de sus principales preocupaciones durante el proceso fue la incertidumbre respecto al tiempo de entrega y el costo final del servicio, especialmente ante la posibilidad de que se detectaran fallas adicionales que incrementaran el precio. Asimismo, señala haber experimentado desconfianza en ocasiones anteriores, cuando consideró que algunas recomendaciones del taller podrían no haber sido completamente necesarias, situación agravada por su limitado conocimiento técnico.
+En cuanto a soluciones, muestra una actitud positiva hacia el uso de herramientas digitales, indicando que le resultaría muy útil poder visualizar el progreso de la reparación en tiempo real, evitando la necesidad de constante. Además, le gustaría acceder a información clara sobre la etapa del servicio, costos estimados y aprobaciones de trabajos adicionales.
+Finalmente, menciona sentirse cómodo utilizando aplicaciones digitales, siempre que sean fáciles de usar y aporten valor relevante. Frente a la propuesta de una plataforma integral, afirma que la utilizaría, destacando como funcionalidades clave las notificaciones, evidencias visuales (fotos y videos), detalle de costos y un historial organizado de los servicios realizados a su vehículo.
+</p>
+
+---
+
+**Evidencia:**
+
+![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg3-interview3.png)
 
 ## 2.2.3. Análisis de entrevistas
 
