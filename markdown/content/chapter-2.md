@@ -468,15 +468,80 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
 
 #### Entrevista 1: Técnico Independiente 
 
-(COMPLETAR)
+- **Nombre:** Fray Diaz Palomino
+- **Edad:** 38
+- **Residencia:** Ayacucho, Huamanga 
+- **Ocupación:** Técnico Mecánico Automotriz  
+
+- **Inicio:** 0:06  
+- **Duración:** 6:48  
+
+**Link:**  
+[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202315640_upc_edu_pe/IQDD61CMtcCfTJyBp1u5JUzaARg_dDkSoR-TJvv6vOsPBOY)
+
+---
+**Resumen:**
+<p style="text-align: justify;">
+El entrevistado Gurmecindo de 55 años con aproximadamente 35 años de experiencia, residente en San Juan Bautista, Ayacucho. Su trabajo se centra en la reparación de motores y mantenimiento general de vehículos. En su día a día, realiza diversas tareas mecánicas dependiendo de las fallas que presentan los autos. Actualmente, gestiona la información de sus clientes y vehículos de forma manual, utilizando cuadernos y actas de control donde registra datos como la hora de ingreso, la placa y el tipo de trabajo. En cuanto a la comunicación, suele llamar a los clientes cuando el vehículo está listo o también recibe llamadas de ellos para consultar el estado. Señala que sus clientes confían en su servicio debido a la garantía y puntualidad que ofrece, y sí mantiene un historial de trabajos de manera escrita. Frente a la propuesta de una plataforma digital, muestra una actitud positiva y considera que es necesaria en la actualidad para mejorar la gestión, destacando como funcionalidad importante la incorporación de herramientas como escáner automotriz para diagnosticar fallas electrónicas, lo que facilitaría y modernizaría su trabajo diario.
+</p>
+
+---
+
+**Evidencia:**
+
+![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg1-interview1.png)
 
 #### Entrevista 2: Técnico Independiente
 
-(COMPLETAR)
+- **Nombre:** Gurmencindo Ventura
+- **Edad:** 55
+- **Residencia:** Ayaacucho, Huamanga - San Juan Bautista
+- **Ocupación:** Técnico Automotriz  
+
+- **Inicio:** 6:49 
+- **Duración:** 7:38  
+
+**Link:**  
+[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202315640_upc_edu_pe/IQDD61CMtcCfTJyBp1u5JUzaARg_dDkSoR-TJvv6vOsPBOY)
+
+---
+**Resumen:**
+<p style="text-align: justify;">
+El entrevistado Gurmecindo de 55 años con aproximadamente 35 años de experiencia, residente en San Juan Bautista, Ayacucho. Su trabajo se centra en la reparación de motores y mantenimiento general de vehículos. En su día a día, realiza diversas tareas mecánicas dependiendo de las fallas que presentan los autos. Actualmente, gestiona la información de sus clientes y vehículos de forma manual, utilizando cuadernos y actas de control donde registra datos como la hora de ingreso, la placa y el tipo de trabajo. En cuanto a la comunicación, suele llamar a los clientes cuando el vehículo está listo o también recibe llamadas de ellos para consultar el estado. Señala que sus clientes confían en su servicio debido a la garantía y puntualidad que ofrece, y sí mantiene un historial de trabajos de manera escrita. Frente a la propuesta de una plataforma digital, muestra una actitud positiva y considera que es necesaria en la actualidad para mejorar la gestión, destacando como funcionalidad importante la incorporación de herramientas como escáner automotriz para diagnosticar fallas electrónicas, lo que facilitaría y modernizaría su trabajo diario.
+</p>
+
+---
+
+**Evidencia:**
+
+![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg1-interview2.png)
+
 
 #### Entrevista 3: Técnico Independiente
 
-(COMPLETAR)
+- **Nombre:** Antenor Ayala 
+- **Edad:** 33
+- **Residencia:** Ayaacucho, Huamanga  
+- **Ocupación:** Técnico Mecánico Automotriz  
+
+- **Inicio:**   14:28
+- **Duración:** 5:29 
+
+**Link:**  
+[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202315640_upc_edu_pe/IQDD61CMtcCfTJyBp1u5JUzaARg_dDkSoR-TJvv6vOsPBOY)
+
+---
+**Resumen:**
+<p style="text-align: justify;">
+El entrevistado Antenor Ayala, un mecánico automotriz de 33 años residente en Huamanga, con aproximadamente 5 años de experiencia en el rubro. Describe que su trabajo diario varía entre resolver fallas simples y complejas, comenzando con la recepción del cliente y el diagnóstico del problema, el cual a veces difiere de lo que el cliente cree. Lleva el registro de los trabajos de forma manual en un cuaderno, lo que puede generar desorganización. Señala que uno de los principales problemas que enfrenta es la gestión de clientes, ya que existen diferentes tipos de comportamientos y expectativas, además de que reconoce que en ocasiones pueden ocurrir errores humanos debido al cansancio o problemas personales. En cuanto a la comunicación, indica que antes tenía dificultades por no informar adecuadamente los cambios realizados, lo que generaba desconfianza, pero ahora busca mejorar avisando previamente o mostrando evidencias como fotos o videos. También menciona que algunos clientes llaman con mucha frecuencia mientras que otros son más independientes. Finalmente, muestra una actitud muy positiva hacia la implementación de una plataforma digital, ya que considera que le ayudaría a organizar mejor sus tareas, mejorar la comunicación, aumentar la confianza con los clientes y gestionar aspectos como horarios, inventario e historial de trabajos, lo que optimizaría su desempeño diario.
+</p>
+
+---
+
+**Evidencia:**
+
+![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg1-interview3.png)
+
 
 #### Entrevista 4: Administrador de Taller Automotriz
 
@@ -575,7 +640,45 @@ Finalmente, menciona sentirse cómodo utilizando aplicaciones digitales, siempre
 
 ## 2.2.3. Análisis de entrevistas
 
-(COMPLETAR)
+<div style="text-align: justify; line-height: 1.6;">
+<p>Tras realizar las entrevistas a los representantes de los segmentos objetivo, se procedió a analizar la información recolectada para identificar patrones de comportamiento, necesidades latentes y puntos de dolor (pain points) comunes. Este análisis cuantitativo y cualitativo sirve de base fundamental para la construcción de los arquetipos de usuario (User Personas) en la siguiente sección.</p>
+
+<h4>A. Segmento: Mecánicos Independientes</h4>
+<p><strong>Muestra:</strong> entrevistados (Fray Díaz, Gumercindo Ventura, Antenor Ayala).</p>
+<ul style="padding-left: 1.5em;">
+  <li><strong>Gestión de Información (100% Manual):</strong> La totalidad de los mecánicos entrevistados gestiona la información de clientes y vehículos mediante métodos analógicos (cuadernos, actas de control o comprobantes simples). No existe un historial digital centralizado, lo que dificulta el seguimiento de mantenimientos preventivos.</li>
+  <li><strong>Comunicación Reactiva (100%):</strong> La comunicación con el cliente se limita a llamadas telefónicas o mensajes de WhatsApp esporádicos, generalmente iniciados por el cliente para preguntar "¿cómo va mi auto?". Esto interrumpe la labor técnica del mecánico.</li>
+  <li><strong>Interés en Digitalización (100%):</strong> Todos mostraron una actitud positiva hacia una plataforma digital. Destacan como necesidades prioritarias: la organización de la agenda, el recordatorio automático de servicios y la generación de historiales para mejorar la confianza del cliente.</li>
+  <li><strong>Nivel Tecnológico:</strong> Bajo/Medio. Utilizan smartphones para comunicación básica (WhatsApp/Yape), pero muestran resistencia a sistemas complejos. Requieren interfaces extremadamente simples.</li>
+</ul>
+
+<h4>B. Segmento: Administradores de Taller (PYMES)</h4>
+<p><strong>Muestra:</strong> entrevistados (Juan Calisaya, Sebastián Rojas).</p>
+<ul style="padding-left: 1.5em;">
+  <li><strong>Desorganización Operativa (100%):</strong> Ambos administradores reportan caos en la asignación de tareas. La coordinación entre mecánicos, almacén y recepción se realiza verbalmente o mediante pizarras físicas, generando cuellos de botella y dependencia excesiva del administrador.</li>
+  <li><strong>Falta de Visibilidad en Tiempo Real (100%):</strong> No tienen forma rápida de saber el estado exacto de cada vehículo sin interrumpir al mecánico. Esto genera retrasos en la atención y presión por parte de los clientes.</li>
+  <li><strong>Control Financiero Deficiente (100%):</strong> El registro de ingresos, egresos e inventario es básico (Excel o papel), lo que impide un análisis real de la rentabilidad del taller y genera errores manuales en la facturación.</li>
+  <li><strong>Necesidad de Control:</strong> Buscan herramientas que les permitan delegar supervisión, controlar el inventario de repuestos y generar reportes de desempeño del personal.</li>
+</ul>
+
+<h4>C. Segmento: Clientes (Propietarios de Vehículos)</h4>
+<p><strong>Muestra:</strong> Inferido de las entrevistas a proveedores de servicio (Puntos de dolor mencionados por mecánicos y administradores sobre sus clientes).</p>
+<ul style="padding-left: 1.5em;">
+  <li><strong>Ansiedad e Incertidumbre (Alta Frecuencia):</strong> El principal punto de dolor identificado es la falta de transparencia. Los clientes llaman constantemente porque no saben si su auto está siendo atendido, si faltan repuestos o cuándo estará listo.</li>
+  <li><strong>Desconfianza (Media/Alta):</strong> Existe escepticismo sobre los costos y los trabajos realizados. Los clientes valorarían enormemente la evidencia visual (fotos/videos) y un desglose claro de costos antes y después del servicio.</li>
+  <li><strong>Preferencia por la Autogestión:</strong> Se identifica una oportunidad clara: los clientes prefieren consultar el estado de su vehículo por sí mismos a través de un código o enlace, evitando tener que llamar al taller.</li>
+</ul>
+
+<h4>Conclusiones del Análisis</h4>
+<p>El análisis revela una brecha significativa entre la operación actual (manual, desorganizada y opaca) y las expectativas del mercado (digital, transparente y eficiente). Se confirman las siguientes hipótesis clave para el desarrollo de <strong>AutoService</strong>:</p>
+<ol style="padding-left: 1.5em;">
+  <li>La digitalización del <strong>Historial de Mantenimiento</strong> es la funcionalidad más valorada por los mecánicos para fidelizar clientes.</li>
+  <li>La implementación de un sistema de <strong>Seguimiento en Tiempo Real</strong> (vía código único) reducirá drásticamente la carga administrativa de llamadas entrantes.</li>
+  <li>La <strong>Transparencia</strong> (notificaciones automáticas y detalle de costos) es el factor diferenciador que aumentará la confianza del cliente final.</li>
+</ol>
+</div>
+
+---
 
 # 2.3. Needfinding
 
