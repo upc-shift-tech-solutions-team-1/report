@@ -798,7 +798,7 @@ Para complementar la especificación detallada del Product Backlog y evidenciar 
 
 (COMPLETAR CON NUEVA IMAGEN DE JIRA)
 
-URL del tablero completo en Jira: (COMPLETAR CON NUEVO LINK DEL JIRA)
+URL del tablero completo en Jira: [Ver Product Backlog de ShiftTech Solutions en Jira](https://upc-team-r1plce2k.atlassian.net/jira/software/projects/SS/boards/2/backlog?atlOrigin=eyJpIjoiZmUwMTVhZTg4NjY1NDM2ZDk3MzA5MzYzOWM2ZDcxZjYiLCJwIjoiaiJ9)
 
 # 3.4. Impact Mapping
 
