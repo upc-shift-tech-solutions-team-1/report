@@ -25,8 +25,8 @@
       <!-- Integrante 1 -->
       <tr>
         <td style="padding: 20px; border: 1px solid #ddd; width: 70%; vertical-align: middle; text-align: left;">
-          <strong></strong><br><br>
-          <i></i>
+          <strong>Flores Eusebio, Angel Thyago</strong><br><br>
+          <i>Soy estudiante de la carrera de Ingenieria de Software. Mis principales fortalezas para este trabajo son la capacidad de trabajar en equipo y mi eficiente organizacion de tiempo. Actualmente interesado en las areas de Analisis de Datos y desarrollo de aplicaciones moviles. Me encuentro en constante aprendizaje de nuevas tecnologias y siempre busco poner en practica lo aprendido.</i>
         </td>
         <td style="padding: 10px; border: 1px solid #ddd; width: 30%; text-align: center; vertical-align: middle;">
           <img src="docs/assets/image.png" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
