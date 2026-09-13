@@ -29,7 +29,7 @@
           <i>Soy estudiante de la carrera de Ingenieria de Software. Mis principales fortalezas para este trabajo son la capacidad de trabajar en equipo y mi eficiente organizacion de tiempo. Actualmente interesado en las areas de Analisis de Datos y desarrollo de aplicaciones moviles. Me encuentro en constante aprendizaje de nuevas tecnologias y siempre busco poner en practica lo aprendido.</i>
         </td>
         <td style="padding: 10px; border: 1px solid #ddd; width: 30%; text-align: center; vertical-align: middle;">
-          <img src="docs/assets/image.png" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+          <img src="/markdown/assets/images/chapter-1/foto-reporte-angel.jpeg" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
         </td>
       </tr>
       <!-- Integrante 2 -->
