@@ -796,7 +796,16 @@ A continuación, se presenta el Product Backlog del proyecto. Las historias han 
 
 Para complementar la especificación detallada del Product Backlog y evidenciar su correcta trazabilidad en nuestra herramienta de gestión, a continuación se presenta la captura de pantalla del entorno de Jira Software. En dicha evidencia se aprecia el listado completo de las historias configuradas y listas para ser abordadas en sus respectivos ciclos de desarrollo, manteniendo el estricto orden de prioridad de negocio establecido y sus correspondientes estimaciones en Story Points.
 
-(COMPLETAR CON NUEVA IMAGEN DE JIRA)
+<div align="center">
+
+![alt text](/markdown/assets/images/chapter-1/backlog-1.png)
+
+![alt text](/markdown/assets/images/chapter-1/backlog-2.png)
+
+![alt text](/markdown/assets/images/chapter-1/backlog-3.png)
+
+![alt text](/markdown/assets/images/chapter-1/backlog-4.png)
+</div>
 
 URL del tablero completo en Jira: [Ver Product Backlog de ShiftTech Solutions en Jira](https://upc-team-r1plce2k.atlassian.net/jira/software/projects/SS/boards/2/backlog?atlOrigin=eyJpIjoiZmUwMTVhZTg4NjY1NDM2ZDk3MzA5MzYzOWM2ZDcxZjYiLCJwIjoiaiJ9)
 
