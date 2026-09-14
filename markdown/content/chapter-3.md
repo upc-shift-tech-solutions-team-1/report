@@ -8,7 +8,22 @@
 
 # 3.1. To-Be Scenario Mapping
 
-(COMPLETAR)
+El To-Be Scenario Mapping es un artefacto de diseño centrado en el usuario que proyecta el escenario futuro ideal una vez implementada la solución tecnológica de AutoService tanto en su plataforma web como en su aplicación móvil. Mediante la descomposición del recorrido en fases secuenciales y dimensiones de experiencia, este mapa ilustra la interacción optimizada de mecánicos independientes, administradores de taller y propietarios de vehículos en un entorno completamente digitalizado.
+
+El propósito principal de esta representación es evidenciar cómo las funcionalidades del sistema resuelven de raíz las fricciones diagnosticadas en el escenario actual (As-Is). Al sustituir los métodos analógicos por el registro móvil en tiempo real, el cálculo automatizado de presupuestos, el control digital de inventario y la consulta autónoma mediante códigos de seguimiento, se define la visión estratégica del producto. De este modo, se validan las hipótesis de valor orientadas a erradicar la desconfianza del cliente y maximizar la eficiencia operativa del taller automotriz.
+
+## To-Be Scennario 1: Mechanic
+
+![](/markdown/assets/images/chapter-3/to-be-scenario/tobe-mechanic.png)
+
+### To-Be Scennario 2: Workshop Manager
+
+![](/markdown/assets/images/chapter-3/to-be-scenario/tobe-workshop-manager.png)
+
+### To-Be Scennario 3: Vehicle Owner
+
+![](/markdown/assets/images/chapter-3/to-be-scenario/tobe-vehicle-owner.png)
+
 
 # 3.2. User Stories
 
