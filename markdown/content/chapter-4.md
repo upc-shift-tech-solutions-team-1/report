@@ -108,13 +108,160 @@ Todos los componentes siguen estrictamente el Design System alojado en /design-s
 
 ## 4.1.3. Mobile Style Guidelines
 
+<p align="justify">
+Las directrices para las aplicaciones móviles de AutoService mantienen la misma identidad visual y los principios de confianza, profesionalismo, transparencia y claridad definidos para la Landing Page y la Web Application. Sin embargo, la experiencia móvil no busca reproducir literalmente la interfaz desktop, sino adaptar la jerarquía de información, navegación y componentes a los patrones de interacción propios de cada sistema operativo.
+</p>
+
+<p align="justify">
+La paleta de colores, los estados visuales, la terminología funcional y la estructura de los principales procesos se mantienen consistentes entre Web, Android e iOS. Las diferencias se concentran principalmente en la forma de navegación, distribución del contenido, dimensiones táctiles, comportamiento de componentes y convenciones de interacción de cada plataforma.
+</p>
+
 ### 4.1.3.1. iOS Mobile Style Guidelines
 
-(COMPLETAR)
+<p align="justify">
+La propuesta para iOS sigue los principios de diseño de la plataforma y prioriza interfaces simples, jerarquías visuales claras y navegación predecible. AutoService conserva su identidad visual, pero adapta sus componentes a patrones familiares para usuarios de dispositivos Apple, evitando trasladar directamente estructuras propias de una aplicación Web.
+</p>
+
+Layout y estructura
+
+<p align="justify">
+• Las vistas utilizan una estructura vertical optimizada para pantallas móviles, respetando las Safe Areas del dispositivo y evitando que información o controles importantes queden debajo de elementos del sistema.<br>
+• El contenido principal mantiene márgenes laterales consistentes entre 16 pt y 20 pt, permitiendo una lectura cómoda y suficiente espacio para interacción táctil.<br>
+• Las funciones principales se organizan mediante navegación jerárquica y una Tab Bar inferior cuando el rol del usuario necesita acceso frecuente a varios módulos.<br>
+• Las pantallas de detalle utilizan navegación hacia adelante y retorno mediante el gesto estándar de swipe desde el borde izquierdo o mediante el control Back correspondiente.<br>
+• La información extensa de vehículos, órdenes y servicios se presenta mediante tarjetas, listas agrupadas y secciones progresivas en lugar de tablas extensas propias de la versión Web.<br>
+• Los formularios se organizan verticalmente y muestran únicamente los campos necesarios para cada acción, reduciendo la carga cognitiva en pantallas pequeñas.
+</p>
+
+Componentes principales
+
+<p align="justify">
+• Navigation Bar: Se utiliza en la parte superior para mostrar el título de la pantalla, acciones contextuales y navegación hacia el nivel anterior.<br>
+• Tab Bar: Se emplea para acceder a los módulos principales según el rol del usuario. El Administrador puede acceder a funciones como Dashboard, Vehicles, Work Orders e Inventory, mientras que el Mecánico accede principalmente a Workspace y Work Orders.<br>
+• Botones primarios: Utilizan Primary Blue (#0A2540) como color principal de acción, con texto blanco y una superficie táctil suficientemente amplia para evitar errores de selección.<br>
+• Botones secundarios: Utilizan estilos de menor jerarquía visual, manteniendo el azul corporativo mediante texto o bordes cuando corresponda.<br>
+• Tarjetas: Vehículos, órdenes, tareas, métricas y resúmenes económicos se representan mediante tarjetas con fondo claro, jerarquía tipográfica y espaciado interno consistente.<br>
+• Progress Indicators: El progreso del mantenimiento utiliza Secondary Teal (#00BFA5) para transmitir avance y continuidad del servicio.<br>
+• Status Badges: Los estados conservan la semántica visual definida para la Web: progreso mediante teal, situaciones que requieren atención mediante Accent Orange (#FF6B00) y procesos completados mediante Success Green (#10B981).<br>
+• Sheets y Alerts: Las acciones que requieren confirmación, como cerrar sesión, cancelar una acción o aprobar una operación importante, utilizan diálogos o presentaciones modales antes de ejecutar cambios definitivos.<br>
+• Campos de entrada: Se presentan en una sola columna, con etiquetas claras, validación inmediata y teclado contextual según el tipo de información solicitada.
+</p>
+
+Tipografía en iOS
+
+<p align="justify">
+La aplicación conserva la jerarquía tipográfica definida en el Design System de AutoService. Los títulos mantienen un peso Semi-Bold o Bold y el contenido utiliza una tipografía de alta legibilidad. La escala se adapta al entorno móvil y evita trasladar directamente los tamaños de encabezado utilizados en la versión Web.
+</p>
+
+<p align="justify">
+• Títulos principales: 28–34 pt, utilizados para identificar vistas y secciones importantes.<br>
+• Títulos secundarios: 20–24 pt para tarjetas, grupos y encabezados internos.<br>
+• Texto principal: 16–17 pt para contenido y datos operativos.<br>
+• Texto secundario: 13–15 pt para descripciones, fechas, estados e información complementaria.<br>
+• La interfaz debe permitir escalabilidad tipográfica mediante Dynamic Type, evitando tamaños rígidos que dificulten la accesibilidad.
+</p>
+
+Interacción y accesibilidad
+
+<p align="justify">
+• Los controles interactivos mantienen un área táctil mínima aproximada de 44 × 44 pt.<br>
+• Las acciones destructivas o irreversibles requieren confirmación antes de ejecutarse.<br>
+• Los elementos gráficos no dependen únicamente del color; los estados se acompañan de etiquetas textuales o iconos reconocibles.<br>
+• Se mantiene contraste suficiente entre fondos, textos y controles según la jerarquía visual de AutoService.<br>
+• Los iconos utilizan representaciones familiares para acciones como vehículos, órdenes, tareas, inventario, perfil y navegación.<br>
+• Los estados de carga, error y ausencia de información son comunicados explícitamente al usuario y no mediante pantallas vacías.
+</p>
+
+Consistencia visual
+
+<p align="justify">
+La versión iOS conserva la misma identidad de AutoService utilizada en la Web, especialmente en colores, estados, terminología y jerarquía de información. No obstante, adopta patrones propios de iOS para que las interacciones sean naturales para el usuario. Por esta razón, la consistencia entre plataformas se entiende como consistencia funcional y de marca, y no como una reproducción visual exacta de cada pantalla.
+</p>
+
 
 ### 4.1.3.2. Android Mobile Style Guidelines
 
-(COMPLETAR)
+<p align="justify">
+La aplicación Android de AutoService adopta los principios de Material Design 3 y se implementa mediante Jetpack Compose. La interfaz conserva el lenguaje visual de la aplicación Web, pero reorganiza las funcionalidades en componentes y patrones de navegación adecuados para dispositivos móviles. El objetivo es mantener la misma propuesta de valor y funcionalidades principales, reduciendo la complejidad visual de la versión desktop.
+</p>
+
+Layout y estructura
+
+<p align="justify">
+• Las pantallas utilizan una estructura basada en Scaffold, permitiendo organizar de forma consistente Top App Bar, contenido principal y Bottom Navigation.<br>
+• El contenido mantiene márgenes laterales de aproximadamente 16 dp a 24 dp dependiendo de la densidad de información de cada pantalla.<br>
+• Se utiliza un sistema de espaciado basado en múltiplos de 8 dp para mantener consistencia entre componentes, tarjetas, formularios y secciones.<br>
+• Los módulos principales se presentan mediante Bottom Navigation cuando requieren acceso frecuente, mientras que las acciones secundarias se integran dentro de cada módulo.<br>
+• Las tablas utilizadas en la aplicación Web se transforman en listas o tarjetas verticales para mejorar la lectura y manipulación en pantallas móviles.<br>
+• Las vistas de detalle presentan la información mediante bloques jerarquizados, permitiendo consultar progresivamente datos técnicos, tareas, estados, costos y evidencias sin saturar la pantalla.
+</p>
+
+Componentes principales
+
+<p align="justify">
+• Top App Bar: Presenta el nombre de la sección actual y las acciones globales o contextuales necesarias para el usuario.<br>
+• Navigation Bar: Permite cambiar rápidamente entre las secciones principales definidas según el rol autenticado. Para el Administrador se priorizan Dashboard, Vehicles, Work Orders e Inventory; para el Mecánico se priorizan Workspace y Work Orders.<br>
+• Botones primarios: Mantienen el azul corporativo como color de mayor jerarquía y utilizan un área táctil amplia para las acciones principales de cada flujo.<br>
+• Botones secundarios: Utilizan menor peso visual y se reservan para acciones alternativas, navegación o cancelación.<br>
+• Cards: Se utilizan para representar vehículos, órdenes de trabajo, tareas, indicadores, inventario y resúmenes, reemplazando estructuras demasiado densas de la Web.<br>
+• Text Fields: Los formularios utilizan campos claramente etiquetados, validación visible y tipos de teclado acordes con información como correo electrónico, contraseñas o datos técnicos.<br>
+• Progress Indicators: Las operaciones que requieren espera muestran indicadores de carga visibles, evitando que el usuario interprete que la aplicación dejó de responder.<br>
+• Empty States: Cuando una sección no contiene información se comunica mediante un título y una explicación breve, en lugar de mostrar únicamente una pantalla vacía.<br>
+• Error States: Los errores de carga o comunicación se muestran de manera explícita y, cuando corresponde, incluyen una acción de reintento.<br>
+• Confirmation Dialogs: Se utilizan para acciones sensibles como cerrar sesión, eliminar información o confirmar operaciones que puedan afectar el estado del servicio.
+</p>
+
+Paleta y estados visuales
+
+<p align="justify">
+La aplicación Android conserva la paleta principal establecida para AutoService. Primary Blue (#0A2540) representa las acciones principales y elementos de mayor jerarquía; Secondary Teal (#00BFA5) comunica progreso y continuidad; Accent Orange (#FF6B00) se utiliza para advertencias o situaciones que requieren atención; Success Green (#10B981) representa tareas y servicios completados; Neutral Gray (#F4F4F5), Dark Gray (#1F2937) y White (#FFFFFF) permiten construir superficies limpias y mantener suficiente contraste.
+</p>
+
+<p align="justify">
+Los colores de estado siempre se acompañan de información textual o iconográfica para evitar que el significado dependa exclusivamente de la percepción del color.
+</p>
+
+Tipografía en Android
+
+<p align="justify">
+La jerarquía tipográfica mantiene la intención definida en el Design System general, pero utiliza una escala adaptada a dispositivos móviles y a los componentes de Material Design 3.
+</p>
+
+<p align="justify">
+• Headline: Utilizado para títulos principales de pantallas y procesos.<br>
+• Title: Utilizado en tarjetas, módulos y encabezados secundarios.<br>
+• Body: Utilizado para información operativa, descripciones y contenido de lectura continua.<br>
+• Label: Utilizado para botones, estados, campos de formulario y elementos de navegación.<br>
+• Los tamaños deben permitir escalabilidad según las preferencias de accesibilidad configuradas en el dispositivo.
+</p>
+
+Interacción y accesibilidad
+
+<p align="justify">
+• Los elementos interactivos mantienen áreas táctiles de al menos 48 × 48 dp cuando corresponde.<br>
+• Los iconos de navegación y acciones incluyen etiquetas o descripciones semánticas cuando aportan información que no se encuentra representada mediante texto visible.<br>
+• Los indicadores de carga comunican su estado mediante propiedades semánticas para mejorar la experiencia con tecnologías de asistencia.<br>
+• Las etiquetas de Bottom Navigation combinan iconografía y texto para facilitar el reconocimiento de cada módulo.<br>
+• Los formularios muestran mensajes de error próximos al campo o acción que originó el problema.<br>
+• Las acciones destructivas o de cierre de sesión utilizan diálogos de confirmación antes de ejecutarse.<br>
+• Se contemplan estados Loading, Empty, Error y Success para comunicar claramente la situación de cada operación.
+</p>
+
+Experiencia según rol
+
+<p align="justify">
+La navegación móvil se adapta al rol autenticado. El Administrador dispone de una estructura orientada al control general del taller, gestión de vehículos, órdenes e inventario. El Mecánico utiliza una experiencia simplificada centrada en su workspace, tareas y órdenes asignadas. El Cliente accede a una experiencia enfocada en el seguimiento del vehículo, progreso del servicio, costos, evidencias y acciones relacionadas con su atención.
+</p>
+
+<p align="justify">
+Esta diferenciación permite reducir elementos innecesarios en cada contexto y conservar la misma lógica de permisos y responsabilidades presente en la aplicación Web.
+</p>
+
+Consistencia visual
+
+<p align="justify">
+Los componentes Android reutilizan un conjunto común de estilos, colores, espaciados, botones, campos, tarjetas, estados y patrones de navegación. De esta forma, los distintos Bounded Contexts mantienen una apariencia uniforme aunque sean desarrollados de manera independiente. La aplicación móvil conserva la identidad de AutoService y la misma funcionalidad central de la aplicación Web, pero adapta cada flujo a una experiencia táctil, vertical y centrada en tareas.
+</p>
 
 # 4.2. Information Architecture
 
