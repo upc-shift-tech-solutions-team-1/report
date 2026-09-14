@@ -212,7 +212,7 @@ Para AutoService, se han implementado diversos sistemas de organización que res
       <td style="border: 1px solid #ddd; padding: 8px;">
         workshop software, mechanic SaaS, vehicle tracking, taller digital, gestión automotriz
       </td>
-      <td style="border: 1px solid #ddd; padding: 8px;">InnovaTech Studio</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">ShiftTech Solutions</td>
     </tr>
     <tr>
       <td style="border: 1px solid #ddd; padding: 8px;">Web Application (Dashboard)</td>
@@ -221,7 +221,7 @@ Para AutoService, se han implementado diversos sistemas de organización que res
         Panel de control operativo para gestión integral de servicios automotrices.
       </td>
       <td style="border: 1px solid #ddd; padding: 8px;">app, workshop, management, ERP, automotive.</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">InnovaTech Studio</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">ShiftTech Solutions</td>
     </tr>
   </tbody>
 </table>
