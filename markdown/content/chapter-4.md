@@ -1692,6 +1692,197 @@ Los diagramas de clases muestran los elementos de implementación de cada bounde
 
 ## 4.9.2. Class Dictionary
 
+<p align="justify">
+El Class Dictionary de AutoService documenta los principales elementos
+orientados a objetos presentes en la implementación actual del backend.
+La solución está desarrollada con ASP.NET Core y organizada siguiendo
+principios de Domain-Driven Design (DDD), separando responsabilidades en
+Bounded Contexts y en capas de Domain, Application, Infrastructure e
+Interfaces.
+</p>
+
+<p align="justify">
+Para cada elemento se especifica su tipo, sus atributos u operaciones más
+representativas y su responsabilidad dentro de la solución. El diccionario
+se basa en las clases e interfaces implementadas actualmente en el RESTful API
+de AutoService, por lo que conserva los nombres técnicos y estructuras
+existentes en el código fuente.
+</p>
+
+### Tenant Management
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `Workshop` | Aggregate Root | `Id`, `Name`, `TenantId` | Representa un taller dentro de AutoService y funciona como límite principal del tenant. Genera un identificador único con formato `WS-XXXX` utilizado para separar la información correspondiente a cada taller. |
+| `IWorkshopRepository` | Repository Interface | Hereda `AddAsync()`, `FindByIdAsync()`, `Update()`, `Remove()` y `ListAsync()` de `IBaseRepository<Workshop>` | Define el contrato de persistencia para los aggregates `Workshop`. |
+| `IWorkshopService` | Service Interface | `CreateAsync()` | Define la operación necesaria para registrar un nuevo taller. |
+| `WorkshopService` | Application Service | `CreateAsync()` | Coordina la creación del taller utilizando `IWorkshopRepository` y `IUnitOfWork`. |
+| `WorkshopRepository` | Repository Implementation | Operaciones CRUD heredadas de `BaseRepository<Workshop>` | Implementa la persistencia del taller mediante Entity Framework Core. |
+
+</div>
+
+### Customer Management
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `Customer` | Aggregate Root | `Id`, `WorkshopId`, `FullName`, `Dni`, `Email`, `Phone`, `Update()` | Representa un cliente registrado dentro de un taller y almacena su información de identificación y contacto. |
+| `ICustomerRepository` | Repository Interface | Operaciones CRUD heredadas de `IBaseRepository<Customer>` | Define el contrato de persistencia para los aggregates `Customer`. |
+| `ICustomerService` | Service Interface | `CreateAsync()`, `ListAsync()`, `GetByIdAsync()`, `UpdateAsync()`, `DeleteAsync()` | Define las operaciones disponibles para la gestión de clientes. |
+| `CustomerService` | Application Service | `CreateAsync()`, `ListAsync()`, `GetByIdAsync()`, `UpdateAsync()`, `DeleteAsync()` | Coordina el registro, consulta, actualización y eliminación de clientes. |
+| `CustomerRepository` | Repository Implementation | Operaciones CRUD heredadas de `BaseRepository<Customer>` | Implementa la persistencia de clientes mediante Entity Framework Core. |
+| `CustomerController` | REST Controller | `CreateCustomer()`, `GetAllCustomers()`, `GetCustomerById()`, `UpdateCustomer()`, `DeleteCustomer()` | Expone mediante endpoints REST las operaciones correspondientes a Customer Management. |
+
+</div>
+
+### Fleet Management
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `Vehicle` | Aggregate Root | `Id`, `Plate`, `Brand`, `Model`, `Year`, `Color`, `Status`, `Image`, `CustomerId`, `Update()` | Representa un vehículo registrado en AutoService y relaciona sus datos técnicos con el cliente propietario. |
+| `IVehicleRepository` | Repository Interface | Operaciones CRUD heredadas de `IBaseRepository<Vehicle>` | Define el contrato de persistencia para los aggregates `Vehicle`. |
+| `IVehicleService` | Service Interface | `CreateAsync()`, `ListAsync()`, `GetByIdAsync()`, `UpdateAsync()`, `DeleteAsync()` | Define las operaciones disponibles para gestionar vehículos. |
+| `VehicleService` | Application Service | Creación, consulta, actualización y eliminación de vehículos | Coordina la lógica de aplicación relacionada con la gestión de vehículos. |
+| `VehicleRepository` | Repository Implementation | Operaciones CRUD heredadas de `BaseRepository<Vehicle>` | Implementa la persistencia de vehículos mediante Entity Framework Core. |
+| `VehiclesController` | REST Controller | `CreateVehicle()`, `GetAllVehicles()`, `GetVehicleById()`, `UpdateVehicle()` y operación de eliminación | Expone las funcionalidades de Fleet Management mediante el REST API. |
+
+</div>
+
+### Identity and Access Management
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `User` | Aggregate Root | `Id`, `Email`, `PasswordHash`, `Role`, `WorkshopId`, `UpdatePassword()` | Representa a un usuario autenticado de la plataforma y almacena su correo, rol y taller asociado. `PasswordHash` se encuentra excluido de la serialización JSON. |
+| `IUserRepository` | Repository Interface | `FindByEmailAsync()` y operaciones CRUD heredadas | Define la persistencia de usuarios y la búsqueda de cuentas mediante correo electrónico. |
+| `IAuthService` | Service Interface | `SignUpAsync()`, `SignInAsync()` | Define las operaciones de registro y autenticación de usuarios. |
+| `AuthService` | Application Service | `SignUpAsync()`, `SignInAsync()` | Coordina la creación de cuentas, validación de credenciales y generación del token JWT. |
+| `UserRepository` | Repository Implementation | Persistencia y consulta de usuarios por correo electrónico | Implementa el acceso a los datos de usuarios mediante Entity Framework Core. |
+| `AuthController` | REST Controller | `SignIn()`, `SignUp()`, `RegisterWorkshop()` | Expone los endpoints de autenticación. `RegisterWorkshop()` crea un taller y posteriormente registra la cuenta administrativa asociada. |
+
+</div>
+
+### Inventory Management
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `InventoryItem` | Aggregate Root | `Id`, `Sku`, `Name`, `Category`, `Brand`, `QualityTier`, `Specification`, `Presentation`, `UnitMeasure`, `PurchasePrice`, `UnitPrice`, `Stock`, `MinStock`, `Image` | Representa un repuesto, material o elemento de inventario administrado por el taller. |
+| `InventoryItem` | Domain Behaviour | `SalePrice`, `ProfitPerUnit`, `MarginPercentage`, `InventoryCostValue`, `PotentialSalesValue`, `PotentialProfitValue` | Calcula valores económicos derivados del inventario, como margen, utilidad y valorización del stock. |
+| `InventoryItem` | Domain Behaviour | `Update()`, `DecreaseStock()`, `AddStock()`, `ConsumeStock()` | Controla la actualización de datos del producto y las variaciones de stock, validando cantidades y disponibilidad. |
+| `IInventoryItemRepository` | Repository Interface | Operaciones CRUD heredadas de `IBaseRepository<InventoryItem>` | Define el contrato de persistencia para los elementos de inventario. |
+| `IInventoryItemService` | Service Interface | `CreateAsync()`, `ListAsync()`, `GetByIdAsync()`, `UpdateAsync()`, `DeleteAsync()`, `ConsumeStockAsync()`, `ReceiveStockAsync()` | Define las operaciones relacionadas con mantenimiento de inventario, consumo y recepción de stock. |
+| `InventoryItemService` | Application Service | CRUD, consumo y recepción de stock | Coordina la gestión de inventario y los movimientos de existencias. |
+| `InventoryItemRepository` | Repository Implementation | Operaciones CRUD heredadas de `BaseRepository<InventoryItem>` | Implementa la persistencia de los elementos de inventario mediante Entity Framework Core. |
+| `InventoryItemsController` | REST Controller | Creación, consulta, actualización, recepción de stock y eliminación | Expone las funcionalidades de Inventory Management mediante endpoints REST. |
+
+</div>
+
+### Staff Coordination
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `Mechanic` | Aggregate Root | `Id`, `FullName`, `Specialty`, `Email`, `MaxCapacity`, `Password`, `WorkshopId`, `Update()` | Representa un Mecánico perteneciente a un taller y almacena datos relacionados con identidad, especialidad y capacidad operativa. |
+| `IMechanicRepository` | Repository Interface | `FindByEmailAsync()` y operaciones CRUD heredadas | Define las operaciones de persistencia y búsqueda de Mecánicos por correo electrónico. |
+| `IMechanicService` | Service Interface | `CreateAsync()`, `ListAsync()`, `GetByIdAsync()`, `UpdateAsync()`, `DeleteAsync()` | Define las operaciones disponibles para administrar al personal técnico. |
+| `MechanicService` | Application Service | `CreateAsync()`, `ListAsync()`, `GetByIdAsync()`, `UpdateAsync()`, `DeleteAsync()` | Coordina la gestión de Mecánicos y sincroniza la creación de sus credenciales con el contexto IAM. |
+| `MechanicRepository` | Repository Implementation | CRUD y búsqueda por correo electrónico | Implementa la persistencia de Mecánicos mediante Entity Framework Core. |
+| `MechanicsController` | REST Controller | `CreateMechanic()`, `GetAllMechanics()`, `GetMechanicById()`, `UpdateMechanic()`, `DeleteMechanic()` | Expone mediante REST las operaciones correspondientes a Staff Coordination. |
+
+</div>
+
+### Workshop Operations
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `WorkOrder` | Aggregate Root | `Id`, `WorkshopId`, `TrackingCode`, `VehicleId`, `CustomerId`, `MechanicId`, `Description`, `Status`, `Price`, `EstimatedDate`, `StartDate` | Representa la orden de trabajo principal asociada al servicio de un vehículo y relaciona taller, cliente, vehículo y Mecánico. |
+| `WorkOrder` | Domain Behaviour | `TasksCompleted`, `SparePartsChecked`, `DiagnosisValidated`, `CleaningDone`, `FinalTestDone` | Mantiene los indicadores utilizados para validar el cumplimiento del servicio antes de finalizar una orden. |
+| `WorkOrder` | Domain Behaviour | `Update()`, `UpdateChecklist()`, `UpdateStatus()` | Permite actualizar datos generales, checklist de control y estado operativo de la orden. |
+| `Task` | Domain Aggregate | `Id`, `WorkOrderId`, `MechanicId`, `Description`, `Status`, `Priority`, `EstimatedTime` | Representa una actividad específica de diagnóstico o mantenimiento asociada a una orden de trabajo. |
+| `Task` | Financial Domain Behaviour | `LaborCost`, `LaborPrice`, `MaterialsPurchaseCost`, `MaterialsCost`, `TotalCost`, `TotalInternalCost`, `GrossProfit`, `MarginPercentage` | Mantiene los datos financieros de mano de obra y materiales y calcula rentabilidad, costos y márgenes de una tarea. |
+| `Task` | Technical Domain Behaviour | `TechnicalDiagnosis`, `CustomerExplanation`, `InternalObservation`, `EvidenceRegistered`, `AdminReviewStatus`, `PatchTechnicalData()` | Registra diagnóstico técnico, explicación para el cliente, observaciones internas, evidencias y estado de revisión administrativa. |
+| `Task` | Domain Behaviour | `Update()`, `UpdateMaterialsCost()`, `AddPart()` | Permite actualizar la tarea, sus costos de materiales y los repuestos asociados. |
+| `TaskPart` | Entity | `Id`, `TaskId`, `InventoryItemId`, `Name`, `Brand`, `QualityTier`, `Quantity`, `PurchasePrice`, `UnitPrice` | Representa un repuesto o elemento de inventario utilizado dentro de una tarea específica. |
+| `TaskPart` | Financial Domain Behaviour | `TotalCost`, `TotalSale`, `GrossProfit` | Calcula costo total, valor de venta y utilidad generada por un repuesto utilizado en una tarea. |
+| `IWorkOrderRepository` | Repository Interface | `FindByWorkshopIdAsync()` y operaciones CRUD heredadas | Define las operaciones de persistencia para órdenes de trabajo y consultas filtradas por taller. |
+| `ITaskRepository` | Repository Interface | `ListWithPartsAsync()`, `FindByIdWithPartsAsync()`, `FindByWorkOrderIdAsync()`, `FindByMechanicIdAsync()` | Define consultas de tareas incluyendo repuestos asociados, orden de trabajo y asignación a Mecánicos. |
+| `IWorkOrderService` | Service Interface | `CreateAsync()`, `ListAsync()`, `ListByTenantIdAsync()`, `GetByIdAsync()`, `UpdateAsync()`, `DeleteAsync()` | Define las operaciones del ciclo de vida de una orden de trabajo. |
+| `ITaskService` | Service Interface | `CreateAsync()`, `ListAsync()`, `ListByWorkOrderIdAsync()`, `ListByMechanicIdAsync()`, `GetByIdAsync()`, `UpdateAsync()`, `PatchStatusAsync()`, `DeleteAsync()` | Define las operaciones de ciclo de vida, asignación y actualización técnica de las tareas. |
+| `WorkOrderService` | Application Service | Creación, listado, filtrado por tenant, consulta, actualización y eliminación | Coordina los casos de uso asociados a órdenes de trabajo mediante repository y Unit of Work. |
+| `TaskService` | Application Service | CRUD, consulta por orden/Mecánico, actualización técnica y gestión de repuestos | Coordina la lógica asociada a las tareas operativas del taller. |
+| `WorkOrderRepository` | Repository Implementation | Persistencia y consultas de órdenes por taller | Implementa la persistencia de órdenes de trabajo mediante Entity Framework Core. |
+| `TaskRepository` | Repository Implementation | Persistencia y consultas de tareas con sus repuestos asociados | Implementa la persistencia de tareas mediante Entity Framework Core. |
+| `WorkOrdersController` | REST Controller | `CreateWorkOrder()`, `GetWorkOrders()`, `GetWorkOrder()`, `UpdateWorkOrder()` | Expone las principales operaciones de Work Orders mediante endpoints autenticados. |
+| `TasksController` | REST Controller | `CreateTask()`, `GetTasks()`, `UpdateTask()`, `PatchTask()`, `DeleteTask()` | Expone las operaciones relacionadas con tareas, diagnóstico técnico y asignación de repuestos. |
+| `FinancialSummaryController` | REST Controller | `GetSummary()` | Calcula y expone indicadores financieros del taller como ingresos proyectados, ingresos realizados, costos operativos, utilidad bruta, margen y rentabilidad por orden. |
+
+</div>
+
+### Public Tracking
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `TrackingController` | REST Controller / Read Model Coordinator | `GetOrderByCode()`, `GetVehicle()`, `GetTasksByOrder()`, `GetCustomer()`, `GetWorkshop()` | Proporciona la interfaz pública de seguimiento del servicio combinando información proveniente de Work Orders, Vehicles, Tasks, Customers y Workshops. No define un aggregate independiente, sino que construye una vista de lectura con datos provenientes de otros Bounded Contexts. |
+
+</div>
+
+### Shared Kernel and Persistence
+
+<div style="overflow-x: auto;">
+
+| Elemento | Tipo | Atributos / Operaciones principales | Responsabilidad |
+|---|---|---|---|
+| `IBaseRepository<TEntity>` | Generic Repository Interface | `AddAsync()`, `FindByIdAsync()`, `Update()`, `Remove()`, `ListAsync()` | Define operaciones CRUD genéricas reutilizadas por los repositories de los distintos Bounded Contexts. |
+| `BaseRepository<TEntity>` | Generic Repository Implementation | Implementación genérica de CRUD con Entity Framework Core | Proporciona la implementación base reutilizable para los repositories específicos de cada dominio. |
+| `IUnitOfWork` | Interface | `CompleteAsync()` | Define el contrato para confirmar en una sola operación los cambios realizados sobre el contexto de persistencia. |
+| `UnitOfWork` | Infrastructure Service | `CompleteAsync()` | Ejecuta `SaveChangesAsync()` y persiste los cambios realizados mediante Entity Framework Core. |
+| `AppDbContext` | EF Core DbContext | `Mechanics`, `InventoryItems`, `Customers`, `Vehicles`, `WorkOrders`, `Tasks`, `TaskParts`, `Users`, `Workshops`, `OnModelCreating()` | Actúa como contexto central de persistencia. Configura tablas, claves, propiedades, relaciones y convenciones de nombres utilizadas por la base de datos relacional. |
+
+</div>
+
+<p align="justify">
+La implementación actual de AutoService utiliza aggregates y entidades de
+dominio para representar los principales conceptos del negocio. Las
+interfaces Repository permiten separar la lógica de dominio del mecanismo de
+persistencia, mientras que `BaseRepository<TEntity>` y `UnitOfWork`
+centralizan operaciones comunes realizadas mediante Entity Framework Core.
+</p>
+
+<p align="justify">
+Los Application Services coordinan los casos de uso entre Domain e
+Infrastructure, mientras que los REST Controllers exponen las capacidades de
+cada Bounded Context para ser consumidas por las aplicaciones Web y Mobile.
+Esta separación permite mantener responsabilidades claramente definidas y
+facilita la evolución independiente de cada contexto funcional.
+</p>
+
+<p align="justify">
+Public Tracking presenta una particularidad respecto de los demás contextos,
+ya que no define un aggregate propio. Su responsabilidad consiste en construir
+una vista pública de consulta utilizando información existente en Workshop
+Operations, Fleet Management, Customer Management y Tenant Management.
+</p>
+
+<p align="justify">
+En la implementación actual, conceptos como roles, estados, prioridades,
+categorías de inventario y niveles de calidad se representan principalmente
+mediante valores de tipo `string`. Por este motivo, el presente Class
+Dictionary refleja la estructura existente en el código y no incorpora enums
+o Value Objects que todavía no forman parte de la implementación actual.
+</p>
 # 4.10. Database Design
 
 ## 4.10.1. Relational/Non-Relational Database Diagram
