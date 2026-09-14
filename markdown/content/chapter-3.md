@@ -445,369 +445,393 @@ A diferencia de un enfoque centrado únicamente en pantallas o acciones CRUD, la
 
 # 3.3. Product Backlog
 
-A continuación, se presenta el Product Backlog del proyecto. Las historias han sido priorizadas en función de su valor estratégico para el negocio, asegurando que los requerimientos de captación (Landing Page) y cimientos arquitectónicos encabecen la lista para ser abordados en el primer Sprint. Asimismo, y de acuerdo con las buenas prácticas evaluadas, las historias vinculadas a la autenticación y seguridad han sido relegadas a un nivel posterior, garantizando la entrega temprana de funcionalidades del core business.
+<p>
+El Product Backlog de AutoService reúne y prioriza las historias de usuario
+definidas para los principales actores de la plataforma:
+<b>Administrador</b>, <b>Mecánico</b> y <b>Cliente</b>.
+La priorización considera el valor generado para la operación del taller,
+las dependencias funcionales entre módulos, la trazabilidad del servicio,
+la transparencia hacia el Cliente y la necesidad de mantener paridad
+funcional entre la aplicación Web y las aplicaciones móviles.
+</p>
+
+<p>
+Las historias se encuentran ordenadas de acuerdo con la secuencia de valor
+del producto. En primer lugar se consideran los mecanismos de acceso y
+experiencia por rol; posteriormente se priorizan las funciones esenciales
+para registrar vehículos, administrar órdenes, coordinar Mecánicos y
+ejecutar servicios. A continuación se incorporan las funcionalidades de
+seguimiento para el Cliente, control financiero, reportes, comunicación y
+configuración del taller.
+</p>
+
+<p>
+La estimación se expresa mediante <b>Story Points</b> utilizando una escala
+relativa basada en complejidad, esfuerzo técnico, integración y nivel de
+incertidumbre. Estas estimaciones constituyen una referencia para la
+planificación de los Sprints y pueden ajustarse durante el refinamiento del
+backlog.
+</p>
 
 <div align="center">
-  <table style="margin: auto; text-align: left; width: 100%;">
-    <thead>
-      <tr>
-        <th style="text-align: left; width: 5%;"># Orden</th>
-        <th style="text-align: left; width: 7%;">Story Id</th>
-        <th style="width: 25%;">Título</th>
-        <th style="width: 505%;">Descripción</th>
-        <th style="text-align: left; width: 8%;">Story Points</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left;">1</td>
-        <td style="text-align: left;">US-01</td>
-        <td>Visualizar landing page</td>
-        <td>Como usuario potencial, quiero acceder a la landing page, para conocer el producto y sus beneficios.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">2</td>
-        <td style="text-align: left;">US-02</td>
-        <td>Visualizar beneficios del sistema</td>
-        <td>Como usuario potencial, quiero ver los beneficios del sistema, para entender su valor.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">3</td>
-        <td style="text-align: left;">US-03</td>
-        <td>Acceder a la plataforma desde CTA</td>
-        <td>Como usuario potencial, quiero hacer clic en un botón de acción, para acceder al sistema.</td>
-        <td style="text-align: left;">1</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">4</td>
-        <td style="text-align: left;">US-04</td>
-        <td>Visualizar landing responsive</td>
-        <td>Como usuario, quiero que la landing sea responsive, para poder verla desde mi celular.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">5</td>
-        <td style="text-align: left;">TS-01</td>
-        <td>Definir arquitectura del sistema</td>
-        <td>Como developer, quiero definir la arquitectura del sistema, para asegurar escalabilidad y mantenimiento.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">6</td>
-        <td style="text-align: left;">TS-04</td>
-        <td>Diseñar modelo de base de datos</td>
-        <td>Como developer, quiero definir el modelo de datos, para estructurar la información del sistema.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">7</td>
-        <td style="text-align: left;">TS-10</td>
-        <td>Configurar entorno de desarrollo</td>
-        <td>Como developer, quiero configurar el entorno, para trabajar de forma consistente.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">8</td>
-        <td style="text-align: left;">TS-11</td>
-        <td>Desplegar aplicación</td>
-        <td>Como developer, quiero desplegar la aplicación, para que sea accesible.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">9</td>
-        <td style="text-align: left;">US-08</td>
-        <td>Registrar vehículo</td>
-        <td>Como administrador, quiero registrar un vehículo, para gestionar su servicio.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">10</td>
-        <td style="text-align: left;">US-09</td>
-        <td>Crear orden de trabajo</td>
-        <td>Como administrador, quiero crear una orden de trabajo, para iniciar un servicio.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">11</td>
-        <td style="text-align: left;">US-10</td>
-        <td>Visualizar vehículos en el taller</td>
-        <td>Como administrador, quiero ver los vehículos activos, para conocer el estado del taller.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">12</td>
-        <td style="text-align: left;">US-23</td>
-        <td>Ingresar código de seguimiento</td>
-        <td>Como cliente, quiero ingresar un código, para consultar mi vehículo.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">13</td>
-        <td style="text-align: left;">US-24</td>
-        <td>Visualizar estado del vehículo</td>
-        <td>Como cliente, quiero ver el estado del vehículo, para conocer su progreso.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">14</td>
-        <td style="text-align: left;">US-11</td>
-        <td>Actualizar estado del vehículo</td>
-        <td>Como administrador, quiero actualizar el estado de un vehículo, para reflejar su progreso.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">15</td>
-        <td style="text-align: left;">US-12</td>
-        <td>Visualizar detalle del vehículo</td>
-        <td>Como administrador, quiero ver el detalle de un vehículo, para revisar información completa.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">16</td>
-        <td style="text-align: left;">US-25</td>
-        <td>Visualizar tareas del vehículo</td>
-        <td>Como cliente, quiero ver las tareas realizadas, para entender el trabajo.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">17</td>
-        <td style="text-align: left;">US-26</td>
-        <td>Visualizar fechas estimadas</td>
-        <td>Como cliente, quiero ver fechas estimadas, para saber cuándo estará listo.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">18</td>
-        <td style="text-align: left;">US-27</td>
-        <td>Visualizar costos del servicio</td>
-        <td>Como cliente, quiero ver el costo estimado, para conocer el precio del servicio.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">19</td>
-        <td style="text-align: left;">US-05</td>
-        <td>Iniciar sesión</td>
-        <td>Como usuario del sistema, quiero iniciar sesión, para acceder a mis funcionalidades.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">20</td>
-        <td style="text-align: left;">US-06</td>
-        <td>Acceso según rol</td>
-        <td>Como usuario, quiero ver funcionalidades según mi rol, para usar el sistema correctamente.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">21</td>
-        <td style="text-align: left;">US-07</td>
-        <td>Cerrar sesión</td>
-        <td>Como usuario, quiero cerrar sesión, para proteger mi cuenta.</td>
-        <td style="text-align: left;">1</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">22</td>
-        <td style="text-align: left;">US-13</td>
-        <td>Crear tareas para vehículo</td>
-        <td>Como administrador, quiero crear tareas para un vehículo, para definir los trabajos a realizar.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">23</td>
-        <td style="text-align: left;">US-14</td>
-        <td>Asignar estado a tarea</td>
-        <td>Como administrador, quiero definir el estado de una tarea, para controlar su progreso.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">24</td>
-        <td style="text-align: left;">US-15</td>
-        <td>Visualizar progreso por vehículo</td>
-        <td>Como administrador, quiero ver el progreso de un vehículo, para conocer el avance del servicio.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">25</td>
-        <td style="text-align: left;">US-16</td>
-        <td>Editar tareas</td>
-        <td>Como administrador, quiero editar tareas, para actualizar información del servicio.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">26</td>
-        <td style="text-align: left;">US-17</td>
-        <td>Eliminar tareas</td>
-        <td>Como administrador, quiero eliminar tareas, para corregir errores o cambios en el servicio.</td>
-        <td style="text-align: left;">1</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">27</td>
-        <td style="text-align: left;">US-18</td>
-        <td>Registrar mecánico</td>
-        <td>Como administrador, quiero registrar un mecánico, para gestionar el personal del taller.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">28</td>
-        <td style="text-align: left;">US-19</td>
-        <td>Visualizar lista de mecánicos</td>
-        <td>Como administrador, quiero ver todos los mecánicos registrados, para gestionar el equipo.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">29</td>
-        <td style="text-align: left;">US-20</td>
-        <td>Asignar tareas a mecánico</td>
-        <td>Como administrador, quiero asignar tareas a mecánicos, para distribuir el trabajo.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">30</td>
-        <td style="text-align: left;">US-21</td>
-        <td>Visualizar carga de trabajo</td>
-        <td>Como administrador, quiero ver la carga de trabajo de cada mecánico, para equilibrar tareas.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">31</td>
-        <td style="text-align: left;">US-22</td>
-        <td>Ver detalle de mecánico</td>
-        <td>Como administrador, quiero ver el detalle de un mecánico, para conocer su desempeño.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">32</td>
-        <td style="text-align: left;">US-28</td>
-        <td>Visualizar ingresos</td>
-        <td>Como administrador, quiero ver los ingresos del taller, para evaluar rendimiento.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">33</td>
-        <td style="text-align: left;">US-29</td>
-        <td>Visualizar servicios realizados</td>
-        <td>Como administrador, quiero ver los servicios realizados, para analizar actividad.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">34</td>
-        <td style="text-align: left;">US-30</td>
-        <td>Identificar trabajos frecuentes</td>
-        <td>Como administrador, quiero identificar trabajos frecuentes, para optimizar servicios.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">35</td>
-        <td style="text-align: left;">US-31</td>
-        <td>Visualizar métricas del sistema</td>
-        <td>Como administrador, quiero ver métricas generales, para tomar decisiones.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">36</td>
-        <td style="text-align: left;">US-32</td>
-        <td>Navegar interfaz intuitiva</td>
-        <td>Como usuario, quiero una interfaz clara, para usar el sistema fácilmente.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">37</td>
-        <td style="text-align: left;">US-33</td>
-        <td>Visualizar diseño consistente</td>
-        <td>Como usuario, quiero consistencia visual, para tener mejor experiencia.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">38</td>
-        <td style="text-align: left;">US-34</td>
-        <td>Usar sistema en móvil</td>
-        <td>Como usuario, quiero usar el sistema en mi celular, para acceder desde cualquier lugar.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">39</td>
-        <td style="text-align: left;">US-35</td>
-        <td>Visualizar información clara</td>
-        <td>Como usuario, quiero ver la información organizada, para entender rápidamente.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">40</td>
-        <td style="text-align: left;">TS-02</td>
-        <td>Implementar API REST</td>
-        <td>Como sistema, quiero exponer una API REST, para permitir comunicación con el frontend.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">41</td>
-        <td style="text-align: left;">TS-03</td>
-        <td>Estructurar backend modular</td>
-        <td>Como developer, quiero organizar el backend en módulos, para mejorar mantenibilidad.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">42</td>
-        <td style="text-align: left;">TS-05</td>
-        <td>Implementar persistencia de datos</td>
-        <td>Como sistema, quiero guardar la información, para mantener registros permanentes.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">43</td>
-        <td style="text-align: left;">TS-06</td>
-        <td>Gestionar relaciones entre entidades</td>
-        <td>Como sistema, quiero manejar relaciones entre entidades, para garantizar consistencia de datos.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">44</td>
-        <td style="text-align: left;">TS-07</td>
-        <td>Consumir APIs externas</td>
-        <td>Como sistema, quiero consumir APIs externas, para extender funcionalidades.</td>
-        <td style="text-align: left;">5</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">45</td>
-        <td style="text-align: left;">TS-08</td>
-        <td>Manejar respuestas de API</td>
-        <td>Como sistema, quiero procesar respuestas de APIs, para utilizarlas correctamente.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">46</td>
-        <td style="text-align: left;">TS-09</td>
-        <td>Implementar manejo de errores</td>
-        <td>Como sistema, quiero manejar errores de integración, para evitar fallos críticos.</td>
-        <td style="text-align: left;">3</td>
-      </tr>
-      <tr>
-        <td style="text-align: left;">47</td>
-        <td style="text-align: left;">TS-12</td>
-        <td>Configurar hosting y dominio</td>
-        <td>Como developer, quiero configurar el hosting, para asegurar disponibilidad del sistema.</td>
-        <td style="text-align: left;">2</td>
-      </tr>
-    </tbody>
-  </table>
+
+<table style="margin: auto; text-align: left; width: 100%; border-collapse: collapse;">
+<thead>
+<tr>
+<th style="width: 6%;"># Orden</th>
+<th style="width: 8%;">Story Id</th>
+<th style="width: 23%;">Título</th>
+<th style="width: 53%;">Descripción</th>
+<th style="width: 10%;">Story Points</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td><b>US-01</b></td>
+<td>Acceder de forma segura al sistema</td>
+<td>Como Administrador, Mecánico o Cliente, quiero iniciar sesión de forma segura para acceder únicamente a las funciones que corresponden a mi participación en el servicio automotriz.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><b>US-02</b></td>
+<td>Acceder a una experiencia según rol operativo</td>
+<td>Como Administrador, Mecánico o Cliente, quiero ingresar a una experiencia diferenciada según mi rol para evitar confusión y utilizar solo las funciones necesarias para mi participación.</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><b>US-03</b></td>
+<td>Crear cuenta según tipo de participación</td>
+<td>Como Administrador o Cliente, quiero crear una cuenta según mi tipo de participación para que la plataforma configure desde el inicio una experiencia adecuada a mis necesidades.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td><b>US-20</b></td>
+<td>Registrar vehículo con datos técnicos y propietario</td>
+<td>Como Administrador, quiero registrar un vehículo con datos técnicos y propietario para iniciar correctamente la trazabilidad del servicio.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td><b>US-22</b></td>
+<td>Registrar problema reportado por el Cliente</td>
+<td>Como Administrador, quiero registrar el problema reportado por el Cliente para que el taller tenga contexto inicial antes del diagnóstico técnico.</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td><b>US-29</b></td>
+<td>Gestionar personal técnico del taller</td>
+<td>Como Administrador, quiero gestionar el personal técnico del taller para conocer especialidades, disponibilidad y capacidad operativa antes de asignar servicios.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td><b>US-30</b></td>
+<td>Asignar Mecánico según disponibilidad y especialidad</td>
+<td>Como Administrador, quiero asignar tareas a un Mecánico según disponibilidad, especialidad y carga para evitar sobrecarga y mejorar continuidad del servicio.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td><b>US-23</b></td>
+<td>Registrar diagnóstico técnico del vehículo</td>
+<td>Como Mecánico, quiero registrar el diagnóstico técnico del vehículo para sustentar las tareas necesarias y mejorar la transparencia del servicio.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td><b>US-24</b></td>
+<td>Gestionar tareas de mantenimiento verificables</td>
+<td>Como Administrador o Mecánico, quiero registrar y actualizar tareas de mantenimiento con estado y tiempo estimado para controlar el avance real del servicio.</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td><b>US-25</b></td>
+<td>Consultar orden de trabajo con progreso de tareas</td>
+<td>Como Administrador o Mecánico, quiero consultar una orden de trabajo con progreso y tareas completadas para controlar el avance antes de continuar con el servicio.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td><b>US-32</b></td>
+<td>Consultar y actualizar tareas asignadas desde workspace</td>
+<td>Como Mecánico, quiero consultar mis tareas asignadas y actualizar su estado desde un workspace propio para mantener sincronizado el avance real del servicio con el Administrador.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td><b>US-16</b></td>
+<td>Visualizar panel operativo del taller</td>
+<td>Como Administrador, quiero visualizar un panel de control con vehículos activos, servicios en proceso, completados e ingresos para tomar decisiones rápidas sobre la operación del taller.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td><b>US-17</b></td>
+<td>Monitorear vehículos activos desde el panel</td>
+<td>Como Administrador, quiero visualizar vehículos activos con porcentaje de avance para identificar rápidamente servicios pendientes, en proceso o completados.</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td><b>US-19</b></td>
+<td>Consultar y filtrar vehículos registrados</td>
+<td>Como Administrador, quiero consultar, buscar y filtrar vehículos registrados por placa, propietario o estado para dar seguimiento operativo a cada servicio activo.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td><b>US-21</b></td>
+<td>Consultar detalle técnico del vehículo</td>
+<td>Como Administrador, quiero consultar el detalle técnico de un vehículo para revisar estado actual, problema reportado, diagnóstico y tareas de mantenimiento.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td><b>US-04</b></td>
+<td>Acceder al seguimiento mediante código seguro</td>
+<td>Como Cliente, quiero acceder al seguimiento de mi vehículo mediante un código seguro para consultar el avance del servicio sin depender de llamadas constantes al taller.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>17</td>
+<td><b>US-05</b></td>
+<td>Monitorear avances reales de reparación</td>
+<td>Como Cliente, quiero monitorear el avance real de reparación de mi vehículo mediante etapas visibles y porcentaje de progreso para reducir incertidumbre durante el servicio.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>18</td>
+<td><b>US-06</b></td>
+<td>Visualizar detalle operativo del servicio</td>
+<td>Como Cliente, quiero visualizar el detalle operativo del servicio para comprender qué trabajos se realizan, qué tareas siguen pendientes y por qué mi vehículo se encuentra en determinada etapa.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>19</td>
+<td><b>US-07</b></td>
+<td>Consultar fecha estimada de entrega actualizada</td>
+<td>Como Cliente, quiero consultar la fecha y hora estimada de entrega de mi vehículo según el avance real del servicio para organizar mi disponibilidad.</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>20</td>
+<td><b>US-08</b></td>
+<td>Identificar al Mecánico responsable del servicio</td>
+<td>Como Cliente, quiero identificar al Mecánico asignado a mi vehículo para saber quién está atendiendo mi servicio y aumentar mi confianza en el taller.</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>21</td>
+<td><b>US-09</b></td>
+<td>Consultar historial de avances del servicio</td>
+<td>Como Cliente, quiero consultar el historial de avances de mi servicio en una línea de tiempo para conocer qué etapas fueron completadas y cuándo ocurrieron.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>22</td>
+<td><b>US-10</b></td>
+<td>Consultar resumen económico y fecha del servicio</td>
+<td>Como Cliente, quiero consultar un resumen económico con costo total, desglose y fecha estimada para entender el monto final antes de pagar el servicio.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>23</td>
+<td><b>US-11</b></td>
+<td>Seleccionar y confirmar método de pago</td>
+<td>Como Cliente, quiero seleccionar y confirmar el método de pago más conveniente para cerrar correctamente la atención de mi vehículo.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>24</td>
+<td><b>US-36</b></td>
+<td>Aprobar costos adicionales antes de ejecutar reparaciones</td>
+<td>Como Cliente, quiero aprobar digitalmente costos adicionales antes de ejecutar reparaciones no contempladas para evitar conflictos posteriores.</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>25</td>
+<td><b>US-12</b></td>
+<td>Consultar notificaciones y documentos del servicio</td>
+<td>Como Cliente, quiero consultar notificaciones y documentos asociados al servicio para mantenerme informado sobre hitos, diagnósticos y presupuestos.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>26</td>
+<td><b>US-13</b></td>
+<td>Agendar mantenimiento preventivo</td>
+<td>Como Cliente, quiero agendar mantenimiento preventivo seleccionando servicio, fecha, horario y vehículo para asegurar atención oportuna sin coordinación manual.</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>27</td>
+<td><b>US-14</b></td>
+<td>Consultar asistente virtual de ayuda</td>
+<td>Como Cliente, quiero consultar un asistente virtual con accesos rápidos para resolver dudas sobre estado, costos, tiempo estimado o última revisión sin interrumpir al taller.</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>28</td>
+<td><b>US-15</b></td>
+<td>Gestionar perfil y cuenta del Cliente</td>
+<td>Como Cliente, quiero gestionar mi perfil, datos de contacto, secciones personales y seguridad de cuenta para mantener actualizada mi información dentro de AutoService.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>29</td>
+<td><b>US-26</b></td>
+<td>Editar o cancelar tareas conservando trazabilidad</td>
+<td>Como Administrador o Mecánico, quiero editar o cancelar tareas de una orden con justificación operativa para mantener actualizado el servicio sin perder trazabilidad.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>30</td>
+<td><b>US-27</b></td>
+<td>Detectar órdenes con riesgo de retraso</td>
+<td>Como Administrador, quiero detectar órdenes con riesgo de retraso para intervenir antes de incumplir fechas comprometidas con el Cliente.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>31</td>
+<td><b>US-28</b></td>
+<td>Validar reparación antes de entrega</td>
+<td>Como Administrador, quiero validar tareas, evidencias y checklist de calidad antes de cerrar una reparación para asegurar consistencia del servicio y evitar reclamos.</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>32</td>
+<td><b>US-31</b></td>
+<td>Consultar desempeño de un Mecánico</td>
+<td>Como Administrador, quiero consultar desempeño, efectividad y carga de un Mecánico para tomar mejores decisiones de asignación.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>33</td>
+<td><b>US-18</b></td>
+<td>Consultar ingresos semanales del taller</td>
+<td>Como Administrador, quiero consultar ingresos semanales para evaluar rendimiento económico reciente y tomar decisiones de gestión.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>34</td>
+<td><b>US-33</b></td>
+<td>Consultar informes estratégicos del taller</td>
+<td>Como Administrador, quiero consultar informes estratégicos para evaluar ingresos, servicios completados, vehículos activos y rendimiento operativo.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>35</td>
+<td><b>US-34</b></td>
+<td>Analizar tendencia semanal de servicios</td>
+<td>Como Administrador, quiero analizar la tendencia semanal de servicios para identificar días de mayor demanda y planificar mejor la carga del taller.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>36</td>
+<td><b>US-35</b></td>
+<td>Identificar servicios más frecuentes</td>
+<td>Como Administrador, quiero identificar los servicios más frecuentes para optimizar precios, inventario y asignación de Mecánicos especializados.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>37</td>
+<td><b>US-37</b></td>
+<td>Alertar repuesto crítico faltante</td>
+<td>Como Administrador o Mecánico, quiero recibir alerta cuando falte un repuesto crítico para evitar que la reparación quede bloqueada sin seguimiento.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>38</td>
+<td><b>US-38</b></td>
+<td>Centralizar comunicación del servicio</td>
+<td>Como Administrador o Cliente, quiero centralizar comunicaciones del servicio para reducir pérdida de información y mantener confianza durante la reparación.</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>39</td>
+<td><b>US-39</b></td>
+<td>Auditar timeline de cambios de una orden</td>
+<td>Como Administrador o Mecánico, quiero auditar el timeline de cambios de una orden para identificar quién actualizó estados, tareas, evidencias o costos y en qué momento.</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>40</td>
+<td><b>US-40</b></td>
+<td>Gestionar perfil y configuración administrativa</td>
+<td>Como Administrador, quiero gestionar mi perfil, configuración del taller, categorías, precios y seguridad para mantener la operación alineada con los servicios ofrecidos.</td>
+<td>8</td>
+</tr>
+
+</tbody>
+</table>
+
 </div>
 
 <br>
 
-Para complementar la especificación detallada del Product Backlog y evidenciar su correcta trazabilidad en nuestra herramienta de gestión, a continuación se presenta la captura de pantalla del entorno de Jira Software. En dicha evidencia se aprecia el listado completo de las historias configuradas y listas para ser abordadas en sus respectivos ciclos de desarrollo, manteniendo el estricto orden de prioridad de negocio establecido y sus correspondientes estimaciones en Story Points.
+<p>
+El orden presentado constituye la prioridad inicial del Product Backlog.
+Las historias relacionadas con autenticación, experiencia por rol,
+vehículos, órdenes de trabajo, tareas y coordinación del personal técnico
+conforman la base funcional de AutoService. Sobre esta base se incorporan
+las capacidades de seguimiento para el Cliente, transparencia económica,
+control de calidad, reportes y configuración administrativa.
+</p>
 
-<div align="center">
+<p>
+El Product Backlog será refinado de manera iterativa durante los Sprints.
+Las prioridades y estimaciones podrán modificarse según resultados de
+pruebas, validaciones con usuarios, dependencias técnicas y evidencia
+obtenida durante los experimentos del producto.
+</p>
 
-![alt text](/markdown/assets/images/chapter-1/backlog-1.png)
-
-![alt text](/markdown/assets/images/chapter-1/backlog-2.png)
-
-![alt text](/markdown/assets/images/chapter-1/backlog-3.png)
-
-![alt text](/markdown/assets/images/chapter-1/backlog-4.png)
-</div>
-
-URL del tablero completo en Jira: [Ver Product Backlog de ShiftTech Solutions en Jira](https://upc-team-r1plce2k.atlassian.net/jira/software/projects/SS/boards/2/backlog?atlOrigin=eyJpIjoiZmUwMTVhZTg4NjY1NDM2ZDk3MzA5MzYzOWM2ZDcxZjYiLCJwIjoiaiJ9)
+Falta imgs Jira
 
 # 3.4. Impact Mapping
 
