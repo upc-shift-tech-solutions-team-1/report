@@ -35,11 +35,11 @@
       <!-- Integrante 2 -->
       <tr>
         <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
-          <strong></strong><br><br>
-          <i></i><br>
+          <strong>Aquino Solorzano, Daniel Jonatan</strong><br><br>
+          <i>Estudiante de la carrera de Ingeniería de Software en el septimo ciclo. Me considero una persona responsable y puntual con sus trabajos. Tengo experiencia en el desarrollo FullStack de aplicaciones Web siguiendo diferentes tecnologías para el desarrollo.Así mismo tengo experiencia en el desarrollo de apps móviles, servicios de alojamiento en la nube y bases de datos.   </i><br>
         </td>
         <td style="padding: 10px; border: 1px solid #ddd; text-align: center; vertical-align: middle;">
-          <img src="docs/assets/image.png" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+          <img src="/markdown/assets/images/chapter-1/Daniel.jpeg" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
         </td>
       </tr>
       <!-- Integrante 3 -->
