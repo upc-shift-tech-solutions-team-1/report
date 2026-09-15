@@ -1883,6 +1883,7 @@ mediante valores de tipo `string`. Por este motivo, el presente Class
 Dictionary refleja la estructura existente en el código y no incorpora enums
 o Value Objects que todavía no forman parte de la implementación actual.
 </p>
+
 # 4.10. Database Design
 
 ## 4.10.1. Relational/Non-Relational Database Diagram
