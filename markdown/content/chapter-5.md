@@ -633,7 +633,7 @@ La siguiente tabla resume la distribución principal de responsabilidades consid
 | Daniel Jonatan | Configuración Web, Product Backlog y apoyo técnico | Authentication Web, Dashboard, Work Orders e integración con Backend |
 | Ángel Flores | Backend inicial y Database Design | RESTful API, Entity Framework Core, MySQL e integración |
 | Juan Sanchez | Repositorios, Mobile y documentación | Authentication Mobile, Shared UI, navegación, deployment y Chapter V |
-| Mario Fernandez | UX/UI Design y Landing Page | Landing Page, revisión visual y consistencia UX/UI |
+| Mario Fernandez | UX/UI Design y Landing Page | Implementación Android de Fleet e Inventory, 22 pruebas unitarias y validación manual en modo demo.  |
 | Brandon Soto | Mobile UX/UI y arquitectura | Módulos Web/Mobile, revisión funcional y validación UX/UI |
 
 La distribución de actividades busca mantener responsabilidades identificables sin impedir la colaboración entre integrantes cuando una tarea requiere participación de más de un área.
@@ -705,6 +705,66 @@ La Web Application se encuentra disponible públicamente en:
 https://autoservice-web-kappa.vercel.app
 
 ## 5.2.4. Implemented Native-Mobile Application Evidence
+### Fleet Management e Inventory Management — Android
+
+Mario Alonso Fernandez Seer implementó los módulos Fleet Management e
+Inventory Management utilizando Kotlin, Jetpack Compose y Material 3.
+
+Fleet Management permite listar y buscar vehículos por placa, marca, modelo
+o propietario, filtrar por estado, registrar vehículos, editar sus datos y
+consultar su detalle básico.
+
+Inventory Management permite consultar y buscar productos, filtrar por stock
+bajo, registrar y editar el catálogo, visualizar precios de compra y venta,
+calcular ganancia y margen, y registrar entradas de stock con confirmación.
+
+La implementación separa las entidades y validaciones de dominio, los
+repositorios de acceso a datos y la interfaz de usuario. Se reutiliza la
+infraestructura existente de Retrofit, Hilt y autenticación. Las pantallas
+incluyen estados de carga, error y listado vacío, además de recursos de texto
+en inglés y español.
+
+#### Validación realizada
+
+Se ejecutaron las tareas `:app:testDebugUnitTest :app:assembleDebug` en
+Android Studio, obteniendo `BUILD SUCCESSFUL` y 23 pruebas aprobadas:
+22 pruebas incorporadas para este aporte y una prueba preexistente.
+
+Las nuevas pruebas verifican validaciones de vehículos y productos,
+búsqueda, umbrales de stock, cálculos monetarios, recepción de existencias,
+comportamiento de los repositorios de demostración y serialización de
+solicitudes.
+
+En el emulador Pixel 8 se comprobó manualmente la creación y edición de
+vehículos, la creación de un producto y la recepción de cinco unidades,
+observándose el stock actualizado en pantalla.
+
+#### Alcance de las evidencias
+
+Las comprobaciones visuales se realizaron en el modo de demostración,
+disponible en la compilación debug. Este modo utiliza datos ficticios en
+memoria, no realiza solicitudes al servidor y reinicia los datos al salir.
+
+Durante los intentos iniciales de registro, el servidor configurado en la
+app devolvió HTTP 500. La validación de Fleet e Inventory con autenticación
+y persistencia real queda pendiente. Los resultados obtenidos no acreditan
+todavía una integración completa con el backend ni constituyen un
+experimento con usuarios.
+
+#### Código fuente
+
+- [Rama feature/fleet-inventory](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/tree/feature/fleet-inventory)
+- [Documentación del aporte](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/blob/feature/fleet-inventory/docs/fleet-inventory.md)
+
+Figura 1. Creación y edición de vehículos en el emulador, utilizando el modo demo.
+<img width="653" height="967" alt="image" src="https://github.com/user-attachments/assets/e61b7c6e-236e-47ec-97c5-dd275c1e5f22" />
+
+Figura 2. Producto registrado con cinco unidades de stock en el modo demo.
+<img width="620" height="963" alt="image" src="https://github.com/user-attachments/assets/2d06241f-8083-4dfe-abae-a70e5931b9fc" />
+
+Figura 3. Compilación exitosa y ejecución de 23 pruebas unitarias aprobadas.
+<img width="1481" height="412" alt="image" src="https://github.com/user-attachments/assets/8a5f42ef-ac76-4917-b186-55822fb57c31" />
+
 
 ## 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
