@@ -815,15 +815,15 @@ El As-Is Scenario Mapping es una técnica fundamental del diseño centrado en el
 El propósito principal de este mapeo es descubrir los puntos de dolor críticos (pain points), cuellos de botella e ineficiencias inherentes a los métodos manuales predominantes en el sector. Al plasmar la dependencia de libretas de papel, la constante interrupción por llamadas telefónicas, la dificultad en la estimación de costos y la incertidumbre en los tiempos de entrega, se establece una línea base sólida y empírica. Esto permite contrastar el escenario problemático actual con las soluciones que plantea el ecosistema digital de AutoService, justificando cada decisión de diseño y desarrollo orientada a optimizar la transparencia y la productividad operativa.
 
 
-### As-Is Scennario 1: Mechanic
+### As-Is Scenario 1: Mechanic
 
 ![](/markdown/assets/images/chapter-2/as-is-scenario/asis-mechanic.png)
 
-### As-Is Scennario 2: Workshop Manager
+### As-Is Scenario 2: Workshop Manager
 
 ![](/markdown/assets/images/chapter-2/as-is-scenario/asis-workshop-manager.png)
 
-### As-Is Scennario 3: Vehicle Owner
+### As-Is Scenario 3: Vehicle Owner
 
 ![](/markdown/assets/images/chapter-2/as-is-scenario/asis-vehicle-owner.png)
 
