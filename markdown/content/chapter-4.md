@@ -747,6 +747,130 @@ Los mock-ups fueron desarrollados en [Figma](https://www.figma.com/design/KkLYmg
 
 ## 4.4.4. Mobile Applications User Flow Diagrams
 
+En esta sección se presentan los User Flow Diagrams de la aplicación movil de AutoService. Cada diagrama corresponde a un objetivo de usuario definido en los wireflows y utiliza los mock-ups del entorno movil. Se representan tanto la ruta esperada (*happy path*) como las rutas alternativas (*unhappy paths*), indicando las condiciones que originan cada cambio.
+
+### User Flow Diagram 1 — Acceso, registro y redirección según rol
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador, Mecánico y Cliente. |
+| **User Stories** | US-01 a US-03. |
+| **User Goal** | Acceder de forma segura al espacio correspondiente al rol del usuario. |
+| **Happy Path** | El Administrador o Cliente puede crear una cuenta. El Mecánico accede con una cuenta previamente habilitada. Tras ingresar credenciales válidas, el sistema identifica el rol y dirige al usuario al panel administrativo, workspace o seguimiento, según corresponda. |
+| **Unhappy Path** | Si las credenciales son inválidas, se informa el error y el usuario puede corregirlas y volver a intentar. |
+
+![User Flow Diagram 1 - Acceso según rol](/markdown/assets/images/chapter-4/user-flow-autoservice-1.png)
+
+### User Flow Diagram 2 — Seguimiento seguro del servicio
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Cliente. |
+| **User Stories** | US-04 a US-09. |
+| **User Goal** | Consultar el progreso, la entrega estimada y el historial del servicio mediante un código seguro. |
+| **Happy Path** | El Cliente ingresa un código válido y accede a la orden asociada. Consulta el avance y la entrega estimada, revisa el detalle del servicio, identifica al Mecánico responsable y visualiza el historial de actualizaciones. |
+| **Unhappy Path** | Si el código no es válido, se muestra un mensaje sin revelar información de otras órdenes y se permite corregirlo e intentar nuevamente. |
+
+![User Flow Diagram 2 - Seguimiento del servicio](/markdown/assets/images/chapter-4/user-flow-autoservice-2.png)
+
+### User Flow Diagram 3 — Costos adicionales, documentos y pago
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Cliente. |
+| **User Stories** | US-10 a US-12 y US-36. |
+| **User Goal** | Revisar el costo del servicio, decidir sobre cargos adicionales, pagar y consultar el documento correspondiente. |
+| **Happy Path** | El Cliente consulta el resumen económico y la justificación de un costo adicional. Si lo aprueba, selecciona un método de pago, confirma la operación y accede al documento disponible. |
+| **Unhappy Paths** | Si rechaza el costo adicional, el flujo registra esa decisión y regresa al resumen. Si el pago no se completa, se comunica el resultado y se ofrece una opción de reintento. |
+
+![User Flow Diagram 3 - Costos y pago](/markdown/assets/images/chapter-4/user-flow-autoservice-3.png)
+
+### User Flow Diagram 4 — Mantenimiento, asistencia y perfil
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Cliente. |
+| **User Stories** | US-13 a US-15. |
+| **User Goal** | Acceder desde su espacio móvil a mantenimiento preventivo, ayuda o gestión de cuenta. |
+| **Happy Path** | El Cliente elige de manera independiente agendar un mantenimiento, consultar el asistente virtual o gestionar su perfil. Estas funciones son destinos alternativos desde su espacio principal, no pasos obligatorios de una misma secuencia. |
+| **Unhappy Path** | Si el horario elegido para el mantenimiento no está disponible, se informa la situación y se permite seleccionar otra fecha u hora. |
+
+![User Flow Diagram 4 - Autoservicio del Cliente](/markdown/assets/images/chapter-4/user-flow-autoservice-4.png)
+
+### User Flow Diagram 5 — Supervisión, reportes y configuración
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador. |
+| **User Stories** | US-16 a US-18, US-33 a US-35 y US-40. |
+| **User Goal** | Supervisar la operación del taller y acceder a indicadores, análisis o configuración. |
+| **Happy Path** | Desde el panel operativo, el Administrador consulta vehículos activos e ingresos o abre los informes estratégicos. Desde estos puede revisar tendencias y servicios frecuentes. La configuración se presenta como una ruta independiente. |
+| **Unhappy Path** | Si no existen datos para el período consultado, se muestra un estado vacío y se permite cambiar el período o los filtros. |
+
+![User Flow Diagram 5 - Supervisión administrativa](/markdown/assets/images/chapter-4/user-flow-autoservice-5.png)
+
+### User Flow Diagram 6 — Registro y consulta de vehículos
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador. |
+| **User Stories** | US-19 a US-22. |
+| **User Goal** | Consultar o registrar un vehículo y documentar el problema informado por el Cliente. |
+| **Happy Path** | El Administrador accede al listado, busca o registra un vehículo con los datos técnicos y del propietario, consulta su detalle y registra el problema reportado para iniciar su atención. |
+| **Unhappy Path** | Si la búsqueda no encuentra coincidencias, se muestra un estado vacío y se permite ajustar los filtros o realizar una nueva búsqueda. |
+
+![User Flow Diagram 6 - Gestión de vehículos](/markdown/assets/images/chapter-4/user-flow-autoservice-6.png)
+
+### User Flow Diagram 7 — Diagnóstico y ciclo de la orden
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Mecánico y Administrador, según la actividad. |
+| **User Stories** | US-23 a US-28. |
+| **User Goal** | Gestionar la orden desde el diagnóstico hasta la validación de la reparación. |
+| **Happy Path** | El Mecánico registra el diagnóstico. El personal autorizado crea o actualiza tareas y consulta el progreso de la orden. El Administrador supervisa los riesgos de retraso y, una vez completados los controles requeridos, valida la reparación para su entrega. |
+| **Unhappy Paths** | Una tarea no puede modificarse sin la justificación requerida. Si falta una aprobación o verificación de calidad, la entrega permanece bloqueada hasta resolverla. |
+
+![User Flow Diagram 7 - Órdenes y tareas](/markdown/assets/images/chapter-4/user-flow-autoservice-7.png)
+
+### User Flow Diagram 8 — Gestión y asignación del personal
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador. |
+| **User Stories** | US-29 a US-31. |
+| **User Goal** | Asignar una tarea a un Mecánico compatible y con capacidad disponible. |
+| **Happy Path** | El Administrador consulta el personal técnico, revisa especialidad, desempeño y carga de trabajo, selecciona un Mecánico disponible y confirma su asignación a la tarea. |
+| **Unhappy Path** | Si el Mecánico no tiene capacidad o no cumple la especialidad requerida, no se confirma la asignación y se solicita elegir otra opción. |
+
+![User Flow Diagram 8 - Coordinación del personal](/markdown/assets/images/chapter-4/user-flow-autoservice-8.png)
+
+### User Flow Diagram 9 — Ejecución de tareas y alerta de repuestos
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Mecánico. |
+| **User Stories** | US-32 y US-37. |
+| **User Goal** | Consultar tareas asignadas e informar un impedimento causado por la falta de un repuesto crítico. |
+| **Happy Path** | El Mecánico abre su workspace, consulta la tarea y registra la alerta de repuesto faltante. La incidencia queda asociada a la tarea, cuyo impedimento permanece visible para la coordinación del taller. |
+| **Unhappy Path** | Si la alerta no llega a registrarse, se informa el problema y se ofrece reintentar; la tarea no se presenta como resuelta. |
+
+![User Flow Diagram 9 - Workspace y repuesto faltante](/markdown/assets/images/chapter-4/user-flow-autoservice-9.png)
+
+### User Flow Diagram 10 — Comunicación y auditoría del servicio
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Cliente y Administrador para comunicación; Administrador y Mecánico autorizados para auditoría. |
+| **User Stories** | US-38 y US-39. |
+| **User Goal** | Registrar comunicaciones del servicio y consultar la trazabilidad interna de la orden de acuerdo con el rol. |
+| **Happy Path** | El Cliente o Administrador registra un mensaje asociado a la orden. De manera independiente, el Administrador o Mecánico autorizado consulta el timeline de cambios con sus responsables y fechas. El Cliente no accede a esta auditoría interna. |
+| **Unhappy Paths** | Si un mensaje no se registra, se comunica el error y se ofrece reintentar. Si un actor sin permisos intenta consultar la auditoría, se restringe el acceso y se lo devuelve a las funciones permitidas. |
+
+![User Flow Diagram 10 - Comunicación y auditoría](/markdown/assets/images/chapter-4/user-flow-autoservice-10.png)
+
+Los User Flow Diagrams fueron elaborados en [Figma](https://www.figma.com/design/KkLYmg0BnHdfFEopVka0Yy/Untitled?node-id=124-2.)
+
 # 4.5. Mobile Applications Prototyping
 
 ## 4.5.1. Android Mobile Applications Prototyping
