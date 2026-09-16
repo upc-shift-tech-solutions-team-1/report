@@ -573,6 +573,9 @@ Se aplicacion los siguiente criterios de diseño:
 
 ![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-8.png)
 
+Los wireframes fueron desarrollados en la plataforma [Figma](https://www.figma.com/design/KkLYmg0BnHdfFEopVka0Yy/AutoService-UX-UI?node-id=0-1&t=bOzvaRNnahGhcVqK-1). 
+
+
 ## 4.4.2. Mobile Applications Wireflow Diagrams
 
 En esta sección se presentan los wireflow diagrams correspondientes a la aplicación móvil de AutoService. Estos diagramas relacionan los wireframes de baja fidelidad definidos en la sección 4.4.1 y muestran los principales recorridos exitosos que pueden realizar los usuarios dentro de la aplicación.
@@ -711,6 +714,8 @@ Cada wireflow contiene dos representaciones complementarias:
 ![Mobile Screen Flow 10 - Comunicación y auditoría](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-10.png)
 
 ![Mobile Flow Diagram 10 - Comunicación y auditoría](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-10.png)
+
+Los wireflows fueron desarrollados en la plataforma [Figma](https://www.figma.com/design/KkLYmg0BnHdfFEopVka0Yy/AutoService-UX-UI?node-id=71-2&t=bOzvaRNnahGhcVqK-1). 
 
 ## 4.4.3. Mobile Applications Mock-ups
 
