@@ -575,6 +575,143 @@ Se aplicacion los siguiente criterios de diseño:
 
 ## 4.4.2. Mobile Applications Wireflow Diagrams
 
+En esta sección se presentan los wireflow diagrams correspondientes a la aplicación móvil de AutoService. Estos diagramas relacionan los wireframes de baja fidelidad definidos en la sección 4.4.1 y muestran los principales recorridos exitosos que pueden realizar los usuarios dentro de la aplicación.
+
+Cada wireflow contiene dos representaciones complementarias:
+
+- **Screen Flow:** presenta la secuencia de pantallas móviles involucradas en el recorrido.
+- **Flow Diagram:** representa de manera lógica las acciones realizadas desde el inicio hasta la finalización del proceso.
+
+### Wireflow Diagram 1 — Registro, autenticación y acceso según rol
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador y Mecanico |
+| **User Stories** | US-01, US-02 y US-03 |
+| **User Goal** | Crear una cuenta, iniciar sesión de forma segura y acceder al espacio correspondiente según el rol asociado a la cuenta. |
+| **Happy Path** | El usuario crea una cuenta seleccionando un tipo de participación permitido. Posteriormente, ingresa sus credenciales en la pantalla de inicio de sesión. El sistema valida su identidad, identifica automáticamente el rol asociado y lo redirige al espacio correspondiente. |
+
+![Mobile Screen Flow 1 - Registro, autenticación y acceso según rol](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-1.png)
+
+![Mobile Flow Diagram 1 - Registro, autenticación y acceso según rol](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-1.png)
+
+### Wireflow Diagram 2 — Seguimiento del servicio
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Cliente |
+| **User Stories** | US-04, US-05, US-06, US-07, US-08 y US-09 |
+| **User Goal** | Consultar el progreso del servicio, su fecha estimada de entrega, el detalle operativo, el Mecánico responsable y el historial de avances. |
+| **Happy Path** | El Cliente ingresa el código de seguimiento asociado a su servicio. El sistema valida el código y muestra el progreso de la reparación y la fecha estimada de entrega. El usuario puede consultar el detalle operativo, identificar al Mecánico responsable y revisar el historial cronológico de avances. |
+
+![Mobile Screen Flow 2 - Seguimiento del servicio](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-2.png)
+
+![Mobile Flow Diagram 2 - Seguimiento del servicio](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-2.png)
+
+### Wireflow Diagram 3 — Aprobación de costos y pago
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Cliente |
+| **User Stories** | US-10, US-11, US-12 y US-36 |
+| **User Goal** | Consultar el resumen económico del servicio, aprobar un costo adicional, seleccionar un método de pago y acceder al documento generado. |
+| **Happy Path** | El Cliente consulta el resumen económico del servicio y revisa el detalle de los conceptos cobrados. Cuando existe un costo adicional pendiente, lo aprueba antes de continuar. Después selecciona un método de pago, confirma la operación y consulta el comprobante o documento generado por el sistema. |
+
+![Mobile Screen Flow 3 - Aprobación de costos y pago](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-3.png)
+
+![Mobile Flow Diagram 3 - Aprobación de costos y pago](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-3.png)
+
+### Wireflow Diagram 4 — Servicios de autoservicio del Cliente
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Cliente |
+| **User Stories** | US-13, US-14 y US-15 |
+| **User Goal** | Utilizar las principales funciones de autoservicio disponibles en su espacio móvil. |
+| **Happy Path** | Desde su espacio principal, el Cliente puede acceder a tres recorridos exitosos: agendar un mantenimiento preventivo y recibir una confirmación, consultar el asistente virtual para obtener orientación o acceder a su perfil para gestionar la información de su cuenta. |
+
+![Mobile Screen Flow 4 - Servicios del Cliente](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-4.png)
+
+![Mobile Flow Diagram 4 - Servicios del Cliente](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-4.png)
+
+### Wireflow Diagram 5 — Panel operativo y análisis administrativo
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador |
+| **User Stories** | US-16, US-17, US-18, US-33, US-34, US-35 y US-40 |
+| **User Goal** | Supervisar el funcionamiento del taller, analizar indicadores operativos y acceder a la configuración administrativa. |
+| **Happy Path** | El Administrador ingresa al panel operativo y consulta los principales indicadores del taller. Desde este espacio puede revisar los vehículos activos, consultar los ingresos semanales y acceder a los informes estratégicos. También puede analizar la tendencia de servicios y los servicios más frecuentes. La configuración administrativa se encuentra disponible como una ruta independiente desde el panel principal. |
+
+![Mobile Screen Flow 5 - Panel operativo y análisis](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-5.png)
+
+![Mobile Flow Diagram 5 - Panel operativo y análisis](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-5.png)
+
+### Wireflow Diagram 6 — Gestión de vehículos
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador |
+| **User Stories** | US-19, US-20, US-21 y US-22 |
+| **User Goal** | Consultar los vehículos registrados, registrar un nuevo vehículo y documentar el problema informado por el Cliente. |
+| **Happy Path** | El Administrador abre la lista de vehículos y utiliza las opciones de búsqueda o filtrado. Para un vehículo nuevo, registra sus datos técnicos y la información del propietario. Después consulta el detalle técnico del vehículo y registra el problema reportado por el Cliente para iniciar la atención correspondiente. |
+
+![Mobile Screen Flow 6 - Gestión de vehículos](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-6.png)
+
+![Mobile Flow Diagram 6 - Gestión de vehículos](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-6.png)
+
+### Wireflow Diagram 7 — Gestión de órdenes y tareas
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador y Mecánico |
+| **User Stories** | US-23, US-24, US-25, US-26, US-27 y US-28 |
+| **User Goal** | Gestionar el ciclo operativo de una orden de trabajo desde el diagnóstico hasta la validación final de la reparación. |
+| **Happy Path** | El Mecánico registra el diagnóstico técnico del vehículo y se crean las tareas necesarias para la reparación. El progreso de la orden se actualiza de acuerdo con las tareas completadas. Durante la ejecución se pueden editar las tareas manteniendo su trazabilidad. El Administrador supervisa posibles riesgos de retraso y, cuando el trabajo concluye, realiza la validación de calidad antes de cerrar la orden. |
+
+![Mobile Screen Flow 7 - Gestión de órdenes y tareas](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-7.png)
+
+![Mobile Flow Diagram 7 - Gestión de órdenes y tareas](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-7.png)
+
+### Wireflow Diagram 8 — Coordinación del personal técnico
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Administrador |
+| **User Stories** | US-29, US-30 y US-31 |
+| **User Goal** | Consultar al personal técnico y asignar un Mecánico de acuerdo con su disponibilidad, capacidad y especialidad. |
+| **Happy Path** | El Administrador accede al listado de personal técnico y selecciona un Mecánico. A continuación, consulta su especialidad, desempeño, carga activa y capacidad disponible. Con esta información, asigna al Mecánico a una tarea compatible con su perfil y disponibilidad. |
+
+![Mobile Screen Flow 8 - Coordinación del personal](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-8.png)
+
+![Mobile Flow Diagram 8 - Coordinación del personal](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-8.png)
+
+### Wireflow Diagram 9 — Workspace del Mecánico y alerta de repuesto
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Mecánico |
+| **User Stories** | US-32 y US-37 |
+| **User Goal** | Consultar y actualizar las tareas asignadas, informando cuando un repuesto impide continuar con el trabajo. |
+| **Happy Path** | El Mecánico abre su workspace y consulta las tareas asignadas. Selecciona una tarea, revisa su información y actualiza su estado. Cuando identifica que falta un repuesto crítico, registra la alerta correspondiente. El sistema actualiza la tarea como bloqueada por repuesto y notifica al responsable del taller. |
+
+![Mobile Screen Flow 9 - Workspace del Mecánico](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-9.png)
+
+![Mobile Flow Diagram 9 - Workspace del Mecánico](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-9.png)
+
+### Wireflow Diagram 10 — Comunicación y auditoría de la orden
+
+| Campo | Descripción |
+|---|---|
+| **User Persona** | Cliente, Administrador y Mecánico, de acuerdo con los permisos de cada recorrido |
+| **User Stories** | US-38 y US-39 |
+| **User Goal** | Mantener centralizada la comunicación relacionada con el servicio y permitir que el personal autorizado consulte la trazabilidad de la orden. |
+| **Happy Path** | El Cliente o el Administrador registra una interacción relacionada con el servicio, la cual queda asociada a la orden correspondiente. De manera independiente, el Administrador o el Mecánico autorizado puede acceder al timeline interno de la orden y consultar los cambios registrados, sus responsables, fechas y detalles. |
+
+![Mobile Screen Flow 10 - Comunicación y auditoría](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-10.png)
+
+![Mobile Flow Diagram 10 - Comunicación y auditoría](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-10.png)
+
 ## 4.4.3. Mobile Applications Mock-ups
 
 ## 4.4.4. Mobile Applications User Flow Diagrams
