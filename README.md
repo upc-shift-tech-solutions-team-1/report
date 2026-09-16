@@ -45,8 +45,8 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
         <td align="center">Flores Eusebio, Angel Thyago</td>
       </tr>
       <tr>
-        <td align="center"></td>
-        <td align="center"></td>
+        <td align="center">U202217678</td>
+        <td align="center">Aquino Solorzano, Daniel Jonatan</td>
       </tr>
       <tr>
         <td align="center"></td>
