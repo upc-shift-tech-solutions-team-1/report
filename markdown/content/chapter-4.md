@@ -31,49 +31,49 @@ Branding y tono de comunicación
         <td style="padding: 12px; border: 1px solid #ddd; font-family: monospace; text-align: center;">#0A2540</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Representa confianza, profesionalismo y autoridad. Azul profundo que transmite estabilidad y seriedad, cualidades esenciales en un servicio técnico automotriz. Genera sensación de seguridad tanto para mecánicos como para clientes.</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Sidebar izquierdo, navbar, botones principales (CTA), encabezados del Panel de Control.</td>
-        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="./docs/assets/chapter-4/design-system/colors/#0A2540.png" alt="Primary Blue" width="60" height="60" style="border-radius: 8px;"></td>
+        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="/markdown/assets/images/chapter-4/primary-blue.png" alt="Primary Blue" width="60" height="60" style="border-radius: 8px;"></td>
       </tr>
       <tr>
         <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Secondary Teal</td>
         <td style="padding: 12px; border: 1px solid #ddd; font-family: monospace; text-align: center;">#00BFA5</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Simboliza progreso, eficiencia y modernidad. El turquesa verdoso evoca movimiento positivo y finalización exitosa. Ideal para indicar avance y estados positivos.</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Barra de progreso, badges “En curso”, indicadores de avance en tareas.</td>
-        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="./docs/assets/chapter-4/design-system/colors/#00BFA5.png" alt="Secondary Teal" width="60" height="60" style="border-radius: 8px;"></td>
+        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="/markdown/assets/images/chapter-4/secondary-teal.png" alt="Secondary Teal" width="60" height="60" style="border-radius: 8px;"></td>
       </tr>
       <tr>
         <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Accent Orange</td>
         <td style="padding: 12px; border: 1px solid #ddd; font-family: monospace; text-align: center;">#FF6B00</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Representa atención y urgencia. Color energético que capta la atención sin generar ansiedad. Reservado para elementos que requieren acción inmediata.</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Notificaciones de alta prioridad, alertas</td>
-        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="./docs/assets/chapter-4/design-system/colors/#FF6B00.png" alt="Accent Orange" width="60" height="60" style="border-radius: 8px;"></td>
+        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="/markdown/assets/images/chapter-4/accent-orange.png" alt="Accent Orange" width="60" height="60" style="border-radius: 8px;"></td>
       </tr>
       <tr>
         <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Neutral Gray</td>
         <td style="padding: 12px; border: 1px solid #ddd; font-family: monospace; text-align: center;">#F4F4F5</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Proporciona calma, orden y fondo limpio. Reduce la fatiga visual y permite que los elementos importantes resalten.</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Fondo general del dashboard, tarjetas KPI y contenedores secundarios.</td>
-        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="./docs/assets/chapter-4/design-system/colors/#F4F4F5.png" alt="Neutral Gray" width="60" height="60" style="border-radius: 8px;"></td>
+        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="/markdown/assets/images/chapter-4/neutral-gray.png" alt="Neutral Gray" width="60" height="60" style="border-radius: 8px;"></td>
       </tr>
       <tr>
         <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Dark Gray</td>
         <td style="padding: 12px; border: 1px solid #ddd; font-family: monospace; text-align: center;">#1F2937</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Color para texto secundario. Ofrece alto contraste con fondos claros garantizando excelente legibilidad.</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Cuerpo de texto, descripciones y etiquetas secundarias.</td>
-        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="./docs/assets/chapter-4/design-system/colors/#1F2937.png" alt="Dark Gray" width="60" height="60" style="border-radius: 8px;"></td>
+        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="/markdown/assets/images/chapter-4/dark-gray.png" alt="Dark Gray" width="60" height="60" style="border-radius: 8px;"></td>
       </tr>
       <tr>
         <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Success Green</td>
         <td style="padding: 12px; border: 1px solid #ddd; font-family: monospace; text-align: center;">#10B981</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Transmite éxito y completitud. Verde moderno que refuerza la sensación de logro al finalizar un servicio.</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Badges “Completado” y confirmaciones exitosas.</td>
-        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="./docs/assets/chapter-4/design-system/colors/#10B981.png" alt="Success Green" width="60" height="60" style="border-radius: 8px;"></td>
+        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="/markdown/assets/images/chapter-4/success-green.png" alt="Success Green" width="60" height="60" style="border-radius: 8px;"></td>
       </tr>
       <tr>
         <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">White</td>
         <td style="padding: 12px; border: 1px solid #ddd; font-family: monospace; text-align: center;">#FFFFFF</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Representa claridad y espacio. Se usa como fondo principal de tarjetas y modales para maximizar legibilidad y dar sensación de orden.</td>
         <td style="padding: 12px; border: 1px solid #ddd;">Tarjetas KPI, modales y secciones principales.</td>
-        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="./docs/assets/chapter-4/design-system/colors/#FFFFFF.png" alt="White" width="60" height="60" style="border: 1px solid #ddd; border-radius: 8px;"></td>
+        <td style="padding: 12px; border: 1px solid #ddd; text-align: center;"><img src="/markdown/assets/images/chapter-4/white.png" alt="White" width="60" height="60" style="border: 1px solid #ddd; border-radius: 8px;"></td>
       </tr>
     </tbody>
   </table>
