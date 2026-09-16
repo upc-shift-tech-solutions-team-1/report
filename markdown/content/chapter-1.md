@@ -233,7 +233,7 @@ El Lean UX Process permite definir y validar la solución a partir de la compren
 
 <p><strong>Visión / Estrategia:</strong></p>
 <ul>
-  <li>Plataforma web para:
+  <li>Plataforma web y movil para:
     <ul>
       <li>Centralizar información</li>
       <li>Gestionar procesos</li>
@@ -271,7 +271,7 @@ El Lean UX Process permite definir y validar la solución a partir de la compren
 
 <p><strong>Product Assumptions</strong></p>
 <ul>
-  <li>Plataforma web suficiente inicialmente</li>
+  <li>Despliegue de Plataforma web y movil</li>
   <li>Centralización mejora organización</li>
   <li>Seguimiento aumenta confianza</li>
   <li>Digitalización reduce errores</li>
@@ -282,7 +282,7 @@ El Lean UX Process permite definir y validar la solución a partir de la compren
 <ul>
   <li>Uso de tecnologías web (HTML, CSS, JS, APIs)</li>
   <li>Base de datos con múltiples tablas (15+)</li>
-  <li>Escalabilidad futura (móvil, IoT)</li>
+  <li>Escalabilidad futura (IoT)</li>
   <li>Integración con APIs externas</li>
 </ul>
 
