@@ -45,11 +45,11 @@
       <!-- Integrante 3 -->
       <tr>
         <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
-          <strong></strong><br><br>
-          <i></i>
+          <strong>Soto Palacios, Brandon Wilder</strong><br><br>
+          <i>Soy estudiante de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Tengo intereses en la tecnología y su constante evolución. Tengo conocimientos de programación en lenguajes como C++, Python, JavaScript, HTML y CSS. Soy un poco reservado, pero con muchas de ganas de aprender nuevas cosas.</i>
         </td>
         <td style="padding: 10px; border: 1px solid #ddd; text-align: center; vertical-align: middle;">
-          <img src="docs/assets/alan.png" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+          <img src="/markdown/assets/images/chapter-1/Brandon-Soto.jpg" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
         </td>
       </tr>
       <!-- Integrante 4 -->
