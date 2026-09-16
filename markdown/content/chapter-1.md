@@ -408,6 +408,15 @@ Empresas dedicadas al mantenimiento y reparación automotriz con mayor volumen d
 
 El crecimiento del sector automotriz y la necesidad de modernización de talleres generan una demanda creciente por soluciones digitales de gestión. Este segmento busca herramientas que les permitan optimizar operaciones y diferenciarse de la competencia mediante una mejor experiencia de servicio.
 
+## Usuario beneficiario: Cliente propietario del vehiculo
+
+El Cliente no constituye un segmento objetivo comercial de la plataforma, ya que la solucion se dirige inicialmente a mecanicos y administradores de talleres. Sin embargo, es un usuario beneficiario con acceso a funcionalidades de la aplicacion:
+- Consulta del avance del servicio
+- Consulta de fecha estimada de entrega
+- Consulta de costos y las comunicaciones relacionadas con su vehiculo.
+
+Esta visibilidad reduce la incertidumbre y fortalece la confianza entre el Cliente y el taller.
+
 
 ## Mercado al que apunta la solución
 
