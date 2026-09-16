@@ -1679,14 +1679,6 @@ El video adjunto demuestra los principales flujos de interacción, evidenciando 
 <p>Url de video: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQDnQcSvfW_sT6zS7q9HMmhTAXLIv4T8Eq0E3YClyohnE7w?e=ltgXHC&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQDnQcSvfW_sT6zS7q9HMmhTAXLIv4T8Eq0E3YClyohnE7w?e=ltgXHC&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D</a></p>
 
 
-<div align="center">
-
-<strong>Mobile Applications Prototyping</strong>
-
-![COMPLETAR FOTO](/markdown/assets/images/chapter-4/screenshot-mobil-prototype.png)</div>
-
-<p>Url de video: <a href="COMPLETAR LINK">COMPLETAR LINK</a></p>
-
 # 4.8. Domain-Driven Software Architecture
 
 <p align="justify">
