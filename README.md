@@ -49,8 +49,8 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
         <td align="center">Aquino Solorzano, Daniel Jonatan</td>
       </tr>
       <tr>
-        <td align="center"></td>
-        <td align="center"></td>
+        <td align="center">U202315640</td>
+        <td align="center">Soto Palacios, Brandon Wilder</td>
       </tr>
       <tr>
         <td align="center"></td>
