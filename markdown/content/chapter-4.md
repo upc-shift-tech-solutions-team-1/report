@@ -535,6 +535,29 @@ Para AutoService, se han implementado diversos sistemas de organización que res
 
 ## 4.4.1. Mobile Applications Wireframes
 
+En esta seccion se presentan los wireframes desarrollados para la aplicacion movil de AutoService. Su proposito es representar la estructura inicial de las pantallas, la jerarquia de la informacion, los controles principales y la navegacion prevista antes de aplicar el diseño visual definitivo y desarrollar los mock-ups.
+
+Los wireframes para el entorno movil fueron elaborados a partir de las user stories definidas. En total, se diseñaron 39 pantallas principales, que representan las funcionalidades comprendidas entre la US-01 y la US-40. 
+
+La propuesta contempla las necesidades de los tres perfiles principales del sistema: 
+- Administrados de taller: supervision operativa, gestion de vehiculos, ordenes de trabajo, tareas, personal tecnico, reportes y configuracion
+- Mecanico: consulta de tareas asignadas, registro del diagnostivo tecnico, actualizacion del trabajo y comunicacion de impedimentos.
+- Cliente: seguimiento del servicio, consulta de avances y costos, aprobacion de cargos adicionales, pagos y documentos.
+
+Cabe recalcar que el rol Cliente viene a ser un usuario benefeciado mas que un segmento objetivo debido a que recibe un impacto positivo directo del producto en este caso.
+
+Los wireframes fueron construidos para un entorno movil utilizando representaciones de baja fidelidad, se empleo una escala monocromatica compuesta por blanco, negro y tonalidades grises, evitando colores de marca, imagenes decorativas y elementos propios del diseño visual definitivo.
+
+Se aplicacion los siguiente criterios de diseño:
+
+- Distribucion vertical adaptada a dispositivos moviles.
+- Espaciado estructural
+- Margenes laterales
+- Jerarquia visual mediante titulos, subtitulosm tarjetas y agrupaciones.
+- Uso de listas, formularios, tarjetas, barras de progreso, indicadores, timelines y dialogos segun la naturaleza de cada funcionalidad.
+- Navegacion y contenido diferenciados de acuerdo con el rol del usuario.
+
+
 ## 4.4.2. Mobile Applications Wireflow Diagrams
 
 ## 4.4.3. Mobile Applications Mock-ups
