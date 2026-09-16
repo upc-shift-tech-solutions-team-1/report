@@ -557,6 +557,21 @@ Se aplicacion los siguiente criterios de diseño:
 - Uso de listas, formularios, tarjetas, barras de progreso, indicadores, timelines y dialogos segun la naturaleza de cada funcionalidad.
 - Navegacion y contenido diferenciados de acuerdo con el rol del usuario.
 
+![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-1.png)
+
+![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-2.png)
+
+![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-3.png)
+
+![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-4.png)
+
+![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-5.png)
+
+![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-6.png)
+
+![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-7.png)
+
+![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-8.png)
 
 ## 4.4.2. Mobile Applications Wireflow Diagrams
 
