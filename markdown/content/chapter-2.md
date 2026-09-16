@@ -31,10 +31,10 @@
   <tr>
     <td rowspan="2" style="vertical-align: middle; font-weight: bold;">Perfil</td>
     <td>Overview</td>
-    <td><i>AutoService es una plataforma web tipo SaaS diseñada para digitalizar la gestión de talleres automotrices y mejorar la transparencia del servicio mediante el seguimiento en tiempo real del estado de los vehículos.
+    <td><i>AutoService es una plataforma web y movil tipo SaaS diseñada para digitalizar la gestión de talleres automotrices y mejorar la transparencia del servicio mediante el seguimiento en tiempo real del estado de los vehículos.
 La plataforma permite a mecánicos y talleres gestionar clientes, vehículos, órdenes de trabajo y pagos en un entorno centralizado, mientras que el cliente final puede acceder al sistema para visualizar el progreso de su vehículo, los trabajos realizados y los costos asociados.</i></td>
     <td><i>Shopmonkey es una plataforma digital de gestión para talleres automotrices basada en la nube, diseñada para centralizar y optimizar las operaciones del negocio en un solo sistema. Permite a los talleres administrar procesos clave como la programación de citas, gestión de clientes, órdenes de trabajo, facturación, inventario y comunicación con clientes</i></td>
-    <td><i>Esta plataforma permiten registrar clientes, vehículos, órdenes de trabajo, inventario y pagos, centralizando la información en un solo sistema accesible desde cualquier dispositivo. Se caracterizan por ser herramientas prácticas, enfocadas en digitalizar procesos básicos del taller y reemplazar métodos tradicionales como cuadernos o Excel.</i></td>
+    <td><i>App taller mecanico es que plataforma permite registrar clientes, vehículos, órdenes de trabajo, inventario y pagos, centralizando la información en un solo sistema accesible desde cualquier dispositivo. Se caracterizan por ser herramientas prácticas, enfocadas en digitalizar procesos básicos del taller y reemplazar métodos tradicionales como cuadernos o Excel.</i></td>
     <td><i>AutoLeap es un software de gestión para talleres automotrices basado en la nube que permite administrar de forma integral las operaciones del negocio, incluyendo órdenes de trabajo, clientes, inventario, facturación, comunicación y reportes</i></td>
   </tr>
   <tr>
