@@ -727,6 +727,22 @@ Para transformar las estructuras monocromáticas de los wireframes en interfaces
 
 Los mock-ups mantienen una jerarquía clara entre información, estado y acción principal. También representan visualmente situaciones como carga, ausencia de datos, error y confirmación en las pantallas donde son pertinentes. Los estados se comunican mediante texto e iconografía además del color. Estas representaciones permiten evaluar la claridad de la interfaz, pero no constituyen todavía un prototipo interactivo ni demuestran que las funcionalidades estén implementadas.
 
+![alt text](/markdown/assets/images/chapter-4/mockups-movil-autoservice-1.png)
+
+![alt text](/markdown/assets/images/chapter-4/mockups-movil-autoservice-2.png)
+
+![alt text](/markdown/assets/images/chapter-4/mockups-movil-autoservice-3.png)
+
+![alt text](/markdown/assets/images/chapter-4/mockups-movil-autoservice-4.png)
+
+![alt text](/markdown/assets/images/chapter-4/mockups-movil-autoservice-5.png)
+
+![alt text](/markdown/assets/images/chapter-4/mockups-movil-autoservice-6.png)
+
+![alt text](/markdown/assets/images/chapter-4/mockups-movil-autoservice-7.png)
+
+![alt text](/markdown/assets/images/chapter-4/mockups-movil-autoservice-8.png)
+
 Los mock-ups fueron desarrollados en [Figma](https://www.figma.com/design/KkLYmg0BnHdfFEopVka0Yy/AutoService-UX-UI?node-id=95-2&t=Q03gDvYFOia2LWX1-1).
 
 ## 4.4.4. Mobile Applications User Flow Diagrams
