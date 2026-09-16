@@ -719,6 +719,16 @@ Los wireflows fueron desarrollados en la plataforma [Figma](https://www.figma.co
 
 ## 4.4.3. Mobile Applications Mock-ups
 
+Los mock-ups de la aplicación móvil de AutoService representan la propuesta visual de alta fidelidad para dispositivos moviles. Se elaboraron a partir de los wireframes y las User Stories definidas previamente. En total, se diseñaron 39 pantallas que cubren de la US-01 a la US-40.
+
+Las pantallas se organizaron según las necesidades de cada rol. El Administrador dispone de vistas para supervisar el taller y gestionar vehículos, órdenes, tareas, personal técnico y reportes. El Mecánico cuenta con una experiencia centrada en sus tareas y el trabajo asignado. El Cliente accede al seguimiento del servicio, información económica y acciones relacionadas con su atención. La navegación y las acciones visibles se adaptan a las responsabilidades de cada perfil.
+
+Para transformar las estructuras monocromáticas de los wireframes en interfaces Android, se aplicaron los Style Guidelines. El azul corporativo (#0A2540) identifica las acciones principales; el teal (#00BFA5), el progreso; el naranja (#FF6B00), las situaciones que requieren atención; y el verde (#10B981), los estados completados. Los fondos blancos y grises favorecen la lectura. Se emplearon Poppins en los títulos e Inter en el contenido, junto con espaciados consistentes, tarjetas, formularios y listas verticales adecuados para una pantalla táctil.
+
+Los mock-ups mantienen una jerarquía clara entre información, estado y acción principal. También representan visualmente situaciones como carga, ausencia de datos, error y confirmación en las pantallas donde son pertinentes. Los estados se comunican mediante texto e iconografía además del color. Estas representaciones permiten evaluar la claridad de la interfaz, pero no constituyen todavía un prototipo interactivo ni demuestran que las funcionalidades estén implementadas.
+
+Los mock-ups fueron desarrollados en [Figma](https://www.figma.com/design/KkLYmg0BnHdfFEopVka0Yy/AutoService-UX-UI?node-id=95-2&t=Q03gDvYFOia2LWX1-1).
+
 ## 4.4.4. Mobile Applications User Flow Diagrams
 
 # 4.5. Mobile Applications Prototyping
