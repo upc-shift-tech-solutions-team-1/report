@@ -846,7 +846,12 @@ pruebas, validaciones con usuarios, dependencias técnicas y evidencia
 obtenida durante los experimentos del producto.
 </p>
 
-Falta imgs Jira
+Link del Jira: https://upc-team-r1plce2k.atlassian.net/jira/software/projects/SS/boards/2/backlog?atlOrigin=eyJpIjoiNDhjMGRmYzVhNWZiNGI4ODg2YTIxZWJhNjk1Mzc3ZGYiLCJwIjoiaiJ9
+
+![](/markdown/assets/images/chapter-3/jira-autoservice-1.png)
+![](/markdown/assets/images/chapter-3/jira-autoservice-2.png)
+![](/markdown/assets/images/chapter-3/jira-autoservice-3.png)
+![](/markdown/assets/images/chapter-3/jira-autoservice-4.png)
 
 # 3.4. Impact Mapping
 
