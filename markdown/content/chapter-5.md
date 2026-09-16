@@ -506,10 +506,173 @@ La arquitectura de producción resultante queda distribuida de la siguiente mane
 - **Railway:** alojamiento y persistencia de la base de datos MySQL.
 
 Esta separación permite desplegar y mantener cada componente de forma independiente, mientras que las conexiones configuradas entre los servicios permiten mantener la integración completa de AutoService en el entorno de producción.
-
 # 5.2. Product Implementation & Deployment
 
+La implementación de AutoService se organiza mediante Sprints orientados a convertir los requerimientos definidos en el Product Backlog en incrementos funcionales del producto.
+
+Durante cada Sprint, el equipo distribuye actividades relacionadas con documentación, UX/UI Design, desarrollo de la Landing Page, Web Application, Native Mobile Application, RESTful API, persistencia, integración y deployment.
+
+El seguimiento de las actividades se realiza considerando las responsabilidades asignadas a los integrantes del equipo y el estado de avance de cada tarea. Las siguientes secciones presentan los Sprint Backlogs utilizados para organizar la implementación de AutoService y posteriormente las evidencias de los productos desarrollados.
+
 ## 5.2.1. Sprint Backlogs
+
+Los Sprint Backlogs de AutoService agrupan las actividades priorizadas por el equipo para cada iteración del proyecto.
+
+Cada Sprint considera tanto tareas técnicas de implementación como actividades de documentación, diseño, integración y validación. Esta distribución permite que los diferentes productos de AutoService evolucionen de manera coordinada y que las funcionalidades desarrolladas mantengan consistencia con los requerimientos y artefactos definidos previamente.
+
+Para la organización del trabajo se consideran los siguientes integrantes:
+
+| Integrante | Responsabilidad principal dentro del proyecto |
+|---|---|
+| Daniel Jonatan | Desarrollo de funcionalidades Web y apoyo en integración de módulos. |
+| Ángel Flores | Desarrollo Backend, persistencia e integración de servicios. |
+| Juan Sanchez | Native Mobile Application, autenticación, componentes compartidos, documentación técnica y apoyo en deployment. |
+| Mario Fernandez | UX/UI Design, Landing Page y apoyo en documentación del producto. |
+| Brandon Soto | Desarrollo de funcionalidades Web/Mobile, validación funcional y documentación. |
+
+### Sprint 1
+
+**Sprint Goal:** establecer la base funcional y documental de AutoService, definir la arquitectura inicial de los productos y preparar los principales artefactos requeridos para comenzar la implementación.
+
+**Duración referencial:** 24 de agosto de 2026 al 6 de septiembre de 2026.
+
+Durante este Sprint se priorizó la configuración inicial de los repositorios, la elaboración y actualización de los artefactos de Requirements Specification, el diseño UX/UI y la preparación técnica de la Landing Page, Web Application, Native Mobile Application y RESTful API.
+
+| ID | Actividad | Tipo | Responsable | Story Points | Estado |
+|---|---|---|---|---:|---|
+| S1-01 | Revisar y actualizar el Problem Statement y los Target Segments | Documentation | Mario Fernandez | 2 | Done |
+| S1-02 | Actualizar User Stories y Acceptance Criteria del Product Backlog | Documentation | Juan Sanchez | 3 | Done |
+| S1-03 | Organizar el Product Backlog de acuerdo con prioridades del producto | Planning | Daniel Jonatan | 3 | Done |
+| S1-04 | Elaborar Wireframes principales de la Web Application | UX/UI Design | Mario Fernandez | 5 | Done |
+| S1-05 | Elaborar Wireframes principales de la Native Mobile Application | UX/UI Design | Brandon Soto | 5 | Done |
+| S1-06 | Definir componentes visuales y criterios generales de Style Guide | UX/UI Design | Mario Fernandez | 3 | Done |
+| S1-07 | Configurar repositorios GitHub para los productos del proyecto | Configuration | Juan Sanchez | 3 | Done |
+| S1-08 | Configurar estructura inicial de la Web Application con Vue.js y Vite | Web Development | Daniel Jonatan | 5 | Done |
+| S1-09 | Configurar estructura inicial del Backend con ASP.NET Core | Backend Development | Ángel Flores | 5 | Done |
+| S1-10 | Configurar estructura inicial de la Native Mobile Application con Kotlin y Jetpack Compose | Mobile Development | Juan Sanchez | 5 | Done |
+| S1-11 | Preparar estructura y contenido inicial de la Landing Page | Web Development | Mario Fernandez | 3 | Done |
+| S1-12 | Definir modelo relacional inicial para AutoService | Database Design | Ángel Flores | 5 | Done |
+| S1-13 | Elaborar diagramas de arquitectura y componentes iniciales | Software Architecture | Brandon Soto | 5 | Done |
+| S1-14 | Actualizar capítulos de Requirements Specification y UX/UI Design del Project Report | Documentation | Juan Sanchez | 5 | Done |
+
+**Total estimado del Sprint:** 57 Story Points.
+
+#### Reuniones y coordinación del Sprint 1
+
+La coordinación del Sprint se estructuró mediante reuniones breves enfocadas en planificación, revisión de avances y resolución de dependencias entre los diferentes productos.
+
+| Reunión | Participantes | Objetivo | Resultado esperado |
+|---|---|---|---|
+| Sprint Planning | Todo el equipo | Revisar las prioridades iniciales y distribuir actividades del Sprint. | Sprint Goal y responsabilidades definidas. |
+| Design Coordination | Mario Fernandez, Brandon Soto, Juan Sanchez | Revisar Wireframes, componentes visuales y navegación de Web y Mobile. | Criterios visuales comunes entre productos. |
+| Backend Integration Meeting | Ángel Flores, Daniel Jonatan, Juan Sanchez | Revisar estructura de RESTful API y necesidades de Web y Mobile. | Contratos iniciales de integración definidos. |
+| Documentation Review | Todo el equipo | Revisar avance del Project Report y artefactos pendientes. | Correcciones y responsabilidades documentales distribuidas. |
+| Sprint Review | Todo el equipo | Presentar el incremento desarrollado durante el Sprint. | Validación del avance e identificación de pendientes. |
+| Sprint Retrospective | Todo el equipo | Identificar problemas de coordinación y oportunidades de mejora. | Mejor distribución de tareas para el siguiente Sprint. |
+
+---
+
+### Sprint 2
+
+**Sprint Goal:** implementar e integrar los principales componentes funcionales de AutoService y disponer de una primera versión desplegada de la Web Application, RESTful API y base de datos.
+
+**Duración referencial:** 7 de septiembre de 2026 al 20 de septiembre de 2026.
+
+Este Sprint se orienta principalmente a la integración de los productos, implementación de funcionalidades, configuración de autenticación y preparación de los entornos cloud necesarios para ejecutar AutoService fuera del entorno local.
+
+| ID | Actividad | Tipo | Responsable | Story Points | Estado |
+|---|---|---|---|---:|---|
+| S2-01 | Implementar flujo de Authentication en la Web Application | Web Development | Daniel Jonatan | 5 | Done |
+| S2-02 | Implementar dashboard principal para Workshop Administrator | Web Development | Daniel Jonatan | 5 | Done |
+| S2-03 | Integrar módulos de Customers y Vehicles en Web | Web Development | Brandon Soto | 5 | In Progress |
+| S2-04 | Integrar módulo de Work Orders en Web | Web Development | Daniel Jonatan | 5 | In Progress |
+| S2-05 | Implementar endpoints de Authentication en la RESTful API | Backend Development | Ángel Flores | 5 | Done |
+| S2-06 | Implementar persistencia mediante Entity Framework Core y MySQL | Backend Development | Ángel Flores | 5 | Done |
+| S2-07 | Implementar endpoints iniciales de Customers, Vehicles y Work Orders | Backend Development | Ángel Flores | 8 | In Progress |
+| S2-08 | Implementar Login y Register en la Native Mobile Application | Mobile Development | Juan Sanchez | 5 | Done |
+| S2-09 | Implementar Shared UI Components para Mobile | Mobile Development | Juan Sanchez | 5 | Done |
+| S2-10 | Configurar navegación autenticada y basada en roles en Mobile | Mobile Development | Juan Sanchez | 5 | Done |
+| S2-11 | Actualizar enlaces de la Landing Page hacia la Web Application | Landing Page | Mario Fernandez | 2 | Done |
+| S2-12 | Preparar Landing Page para su nuevo deployment | Landing Page | Mario Fernandez | 3 | In Progress |
+| S2-13 | Configurar MySQL de producción en Railway | Deployment | Juan Sanchez | 3 | Done |
+| S2-14 | Configurar RESTful API en Render mediante Docker | Deployment | Juan Sanchez | 5 | Done |
+| S2-15 | Configurar Web Application en Vercel | Deployment | Juan Sanchez | 5 | Done |
+| S2-16 | Configurar Environment Variables de producción | Deployment | Juan Sanchez | 3 | Done |
+| S2-17 | Validar comunicación Web → RESTful API → MySQL | Integration Testing | Ángel Flores / Juan Sanchez | 5 | Done |
+| S2-18 | Validar Authentication desde la Web Application desplegada | Integration Testing | Daniel Jonatan / Juan Sanchez | 3 | Done |
+| S2-19 | Documentar Software Configuration Management | Documentation | Juan Sanchez | 5 | Done |
+| S2-20 | Documentar evidencias de Web, Backend y Swagger | Documentation | Juan Sanchez | 5 | Done |
+| S2-21 | Revisar consistencia entre UX/UI Design y productos implementados | UX/UI Validation | Mario Fernandez / Brandon Soto | 3 | In Progress |
+| S2-22 | Revisar funcionalidades pendientes de la Native Mobile Application | Mobile Validation | Brandon Soto / Juan Sanchez | 3 | In Progress |
+
+**Total estimado del Sprint:** 98 Story Points.
+
+#### Reuniones y coordinación del Sprint 2
+
+Durante este Sprint las reuniones se concentraron principalmente en resolver dependencias de integración entre Web, Mobile, Backend y Database, además de coordinar el deployment de los productos.
+
+| Reunión | Participantes | Objetivo | Resultado esperado |
+|---|---|---|---|
+| Sprint Planning | Todo el equipo | Seleccionar las funcionalidades prioritarias y organizar las tareas de implementación. | Sprint Backlog distribuido entre los integrantes. |
+| Web-Backend Integration Meeting | Daniel Jonatan, Ángel Flores, Juan Sanchez | Revisar endpoints, Authentication y estructuras utilizadas por el frontend. | Integración Web-Backend funcional. |
+| Mobile-Backend Coordination | Juan Sanchez, Ángel Flores, Brandon Soto | Revisar servicios requeridos por la Native Mobile Application. | Contratos de integración Mobile-Backend definidos. |
+| Deployment Coordination | Juan Sanchez, Ángel Flores | Configurar Railway, Render y Vercel. | Entorno cloud operativo. |
+| UX/UI Review | Mario Fernandez, Brandon Soto, Daniel Jonatan | Comparar interfaces implementadas con los Mock-ups y Wireframes. | Identificación de ajustes visuales pendientes. |
+| Documentation Review | Todo el equipo | Revisar avances del Chapter V y evidencias de implementación. | Secciones del Project Report actualizadas. |
+| Sprint Review | Todo el equipo | Presentar el incremento funcional y comprobar el estado de los productos. | Validación de funcionalidades desarrolladas. |
+| Sprint Retrospective | Todo el equipo | Revisar dificultades encontradas durante integración y deployment. | Acciones de mejora para el siguiente Sprint. |
+
+---
+
+### Resumen del avance por integrante
+
+La siguiente tabla resume la distribución principal de responsabilidades considerada durante los dos Sprints.
+
+| Integrante | Sprint 1 | Sprint 2 |
+|---|---|---|
+| Daniel Jonatan | Configuración Web, Product Backlog y apoyo técnico | Authentication Web, Dashboard, Work Orders e integración con Backend |
+| Ángel Flores | Backend inicial y Database Design | RESTful API, Entity Framework Core, MySQL e integración |
+| Juan Sanchez | Repositorios, Mobile y documentación | Authentication Mobile, Shared UI, navegación, deployment y Chapter V |
+| Mario Fernandez | UX/UI Design y Landing Page | Landing Page, revisión visual y consistencia UX/UI |
+| Brandon Soto | Mobile UX/UI y arquitectura | Módulos Web/Mobile, revisión funcional y validación UX/UI |
+
+La distribución de actividades busca mantener responsabilidades identificables sin impedir la colaboración entre integrantes cuando una tarea requiere participación de más de un área.
+
+---
+
+### Sprint Backlog Board Evidence
+
+Como apoyo visual para el seguimiento del Sprint Backlog, el equipo debe incorporar una evidencia del board utilizado para organizar las tareas del proyecto.
+
+> **PENDIENTE:** insertar captura actualizada del Sprint Backlog Board utilizado por el equipo en Jira, Miro o la herramienta de seguimiento seleccionada.
+
+<!--
+Cuando la captura esté disponible, guardarla en:
+
+../assets/chapter-5/sprint-backlog-board.png
+
+y reemplazar este comentario por:
+
+![Sprint Backlog Board](../assets/chapter-5/sprint-backlog-board.png)
+-->
+
+La evidencia visual debe permitir reconocer, como mínimo, las tareas organizadas por estado, por ejemplo `To Do`, `In Progress` y `Done`, así como la distribución de responsabilidades entre los integrantes.
+
+### Sprint Planning Evidence
+
+> **PENDIENTE:** incorporar evidencia del Sprint Planning o del espacio de coordinación utilizado por el equipo.
+
+<!--
+Ruta sugerida:
+
+../assets/chapter-5/sprint-planning-evidence.png
+
+Markdown futuro:
+
+![Sprint Planning Evidence](../assets/chapter-5/sprint-planning-evidence.png)
+-->
+
+Esta evidencia puede corresponder al board de planificación utilizado durante la distribución de tareas, siempre que permita complementar la información presentada en las tablas anteriores.
 
 ## 5.2.2. Implemented Landing Page Evidence
 
