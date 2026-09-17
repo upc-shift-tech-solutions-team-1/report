@@ -251,7 +251,9 @@ software</b>
         <td>
             <b>Soto Palacios, Brandon Wilder</b> <br/>
             <i>AV1</i>
-            <p></p>
+            <p>
+            En este primer avance del proyecto AutoService, contribuí en las bases principales del proyecto, además a travez de valores como respeto, integridad, seguridad y empatía realicé las entrevistas del segmento numero uno, de los mecánicos independientes. Posteriormente elaboré las correctar descripciones acorde al formato establecido, y sus adecuados análisis que recopilan información importante para el proyecto. Asimismo contribuí con la realización de módulos de customer management y customer trust del apartado de aplicación móvil, tod con los lineamientos establecidos por el equipo y el curso presente.
+            </p>
         </td>
     </tr>
     <tr>
@@ -293,7 +295,9 @@ sociales</b>
         <td>
             <b>Soto Palacios, Brandon Wilder</b> <br/>
             <i>AV1</i>
-            <p></p>
+            <p>
+            Para esta primera entrega del desarrollo de AutoService, se respeto el trabajo con lineamientos adecuados, esto incluye la realización y comunicación asertiva con el equipo de trabajo, con lo que conllevo la realización de los capítulos uno y dos del avance del reporte oficial. Además con las consignas claras se llevó a desarrollar las versiones preliminares de landing page, backend y frontend, posteriormente el desarrollo de la aplicación móvil inspirada en los trabajos previos y los objetivos establecidos. Conluyo este primer avance con satisfactoria realización y adecuada ejecución de labores.
+            </p>
         </td>
     </tr>
     <tr>
