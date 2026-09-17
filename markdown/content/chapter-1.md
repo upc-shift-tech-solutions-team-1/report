@@ -55,13 +55,16 @@
       <!-- Integrante 4 -->
       <tr>
         <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
-          <strong></strong><br><br>
-          <i></i>
+        <strong>Fernandez Seer, Mario Alonso</strong><br><br>
+<i>Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me interesa desarrollar soluciones prácticas que respondan a las necesidades de los usuarios. Me considero una persona creativa, analítica y atenta a los detalles, con disposición para aprender y colaborar en equipo. En AutoService participo en la implementación de los módulos móviles de gestión de vehículos e inventario, así como en sus pruebas unitarias y documentación.</i>
         </td>
         <td style="padding: 10px; border: 1px solid #ddd; text-align: center; vertical-align: middle;">
-          <img src="docs/assets/image.png" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+  <img src="https://github.com/user-attachments/assets/a9897a47-db9e-48fe-a716-bbf2d9f3d696" alt="Mario Alonso Fernandez Seer" width="150">
         </td>
       </tr>
+    
+
+
       <!-- Integrante 5 -->
       <tr>
         <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
