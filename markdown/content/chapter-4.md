@@ -875,7 +875,11 @@ Los User Flow Diagrams fueron elaborados en [Figma](https://www.figma.com/design
 
 ## 4.5.1. Android Mobile Applications Prototyping
 
+Link del video del prototipado en Android: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b781_upc_edu_pe/IQCWVehq_XzrTblO-CMGrbmVAcnRYgZcumEyxFdjF5TQsBk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=GAufUb 
+
 ## 4.5.2. iOS Mobile Applications Prototyping
+
+Link del video del prototipado en IOS: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b781_upc_edu_pe/IQDiUWaK_jtrRIaDHk1YPzwNAXl86jFy24gq0V_aTl0xVA4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZRetQT
 
 # 4.6. Web Applications UX/UI Design
 
