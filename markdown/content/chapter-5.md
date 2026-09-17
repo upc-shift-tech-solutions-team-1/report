@@ -62,6 +62,7 @@ La siguiente tabla presenta las principales herramientas y tecnologías utilizad
 | Database Deployment | Railway | Plataforma utilizada para alojar la instancia MySQL correspondiente al entorno de producción. | https://railway.com/ |
 | Backend Deployment | Render | Plataforma utilizada para desplegar y ejecutar la RESTful API mediante Docker. | https://render.com/ |
 | Web Deployment | Vercel | Plataforma utilizada para generar y publicar el production build de la Web Application. | https://vercel.com/ |
+| Mobile App Deployment | FireBase | Plataforma utilizada para generar el apk de la versión android de la aplicación. | https://firebase.google.com/ |
 
 Estas herramientas forman parte de un entorno integrado de trabajo. Git y GitHub permiten conservar la trazabilidad de los cambios realizados sobre los diferentes productos, mientras que Visual Studio Code y Android Studio proporcionan los entornos principales para la implementación del software.
 
