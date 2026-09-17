@@ -233,7 +233,7 @@ software</b>
         <td>
             <b>Aquino Solorzano, Daniel Jonatan</b> <br/>
             <i>AV1</i>
-            <p></p>
+            <p>Durante el ciclo de desarrollo de AutoService, ejercí la responsabilidad ética y el rigor profesional en múltiples etapas críticas: gestioné el consentimiento informado y la privacidad de los participantes al realizar las entrevistas del segmento Vehicle Owners, garantizando una recolección íntegra de requerimientos sin sesgos intencionales; mantuve la transparencia y autoría técnica veraz del equipo al consolidar y subir los GitHub Collaboration Insights; aseguré la integridad en la entrega de software al configurar el despliegue restringido de los artefactos .apk mediante Firebase App Distribution solo a verificadores autorizados, evitando la exposición de versiones inestables; y apliqué estándares de calidad, mantenibilidad y desacoplamiento arquitectónico al modelar e implementar el Bounded Context "Mechanic" en la aplicación móvil, cumpliendo con el compromiso deontológico de entregar una solución técnica robusta, segura y alineada a las necesidades reales del dominio.</p>
         </td>
         <td rowspan="4">
             <i>AV1</i>
@@ -275,7 +275,7 @@ sociales</b>
         <td>
             <b>Aquino Solorzano, Daniel Jonatan</b> <br/>
             <i>AV1</i>
-            <p></p>
+            <p>A través del diseño de soluciones centrado en el usuario y la modelación técnica, evalué y sinteticé el impacto integral de AutoService en diversas dimensiones: en el ámbito social y de usabilidad, el mapeo de escenarios As-Is y To-Be junto con la grabación del prototipo interactivo en Figma permitieron mitigar la asimetría de información y la desconfianza habitual entre conductores y talleres mediante interfaces claras y accesibles; a nivel económico, la implementación del Bounded Context "Mechanic" en la app móvil optimiza la productividad operativa de los mecánicos, agiliza la gestión de órdenes de trabajo y previene pérdidas por diagnósticos ineficientes; y en los contextos ambiental y global, promover el mantenimiento preventivo oportuno mediante una plataforma digital ayuda a extender la vida útil de los vehículos, reduciendo las emisiones contaminantes generadas por fallas mecánicas desatendidas y eliminando el consumo innecesario de papel en la administración tradicional de los talleres.</p>
         </td>
         <td rowspan="4">
             <i>AV1</i>
