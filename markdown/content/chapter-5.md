@@ -508,6 +508,34 @@ La arquitectura de producción resultante queda distribuida de la siguiente mane
 
 Esta separación permite desplegar y mantener cada componente de forma independiente, mientras que las conexiones configuradas entre los servicios permiten mantener la integración completa de AutoService en el entorno de producción.
 
+
+#### Mobile Application Distribution with Firebase App Distribution
+
+La Mobile Application de AutoService se distribuye mediante el servicio de Firebase App Distribution, permitiendo la entrega y prueba continua del paquete instalable (APK) a verificadores autorizados sin requerir una publicación en tiendas públicas.
+
+El proceso de empaquetado se realiza en el entorno de desarrollo mediante Gradle y el Android SDK, compilando la aplicación en el módulo `app` y generando el binario ejecutable (`.apk`) correspondiente en la ruta de artefactos de salida del proyecto.
+
+La conexión con la RESTful API de AutoService se establece a nivel de configuración en el cliente móvil, referenciando la URL base del backend alojado en Render para consumir los endpoints de negocio y persistencia en lugar de un entorno `localhost`.
+
+Para la distribución de la versión:
+
+1. Se registró la aplicación en la consola de Firebase bajo el identificador de paquete configurado en el proyecto Android (`com.torquelab.autoservice`).
+2. Se cargó el artefacto compilado dentro del servicio de App Distribution, asociándole un número de versión (`versionCode`) y nombre de versión (`versionName`).
+3. Se asignaron los accesos a los verificadores mediante invitaciones directas por correo electrónico, las cuales permiten registrar sus dispositivos y gestionar la descarga a través de la interfaz web de Firebase o la herramienta App Tester.
+
+![Mobile App Distribution](/markdown/assets/chapter-5/firebase-mobile-distribution.png)
+
+La arquitectura de despliegue y consumo resultante queda integrada de la siguiente forma:
+
+- **Firebase App Distribution:** plataforma de distribución, versionado y entrega del instalador APK para Android.
+- **Render:** ejecución de la RESTful API desarrollada con ASP.NET Core y Docker.
+- **Railway:** alojamiento y persistencia de la base de datos MySQL.
+
+Este flujo de distribución desacopla el ciclo de despliegue móvil del backend, permitiendo a los evaluadores instalar la aplicación nativa en dispositivos físicos y consumir directamente los servicios e infraestructura en la nube configurados para AutoService.
+
+
+
+
 #### Landing Page Deployment with GitHub Pages
 
 La Landing Page de AutoService se encuentra desplegada mediante GitHub Pages a partir del repositorio oficial del producto:
