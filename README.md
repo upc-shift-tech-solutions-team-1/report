@@ -199,4 +199,99 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
     </tr>
     <tr>
 </table>
+
+# Student Outcome
+
+El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcome 4: <b> La capacidad de reconocer responsabilidades éticas y profesionales en
+situaciones de ingeniería y hacer juicios informados, que deben considerar el
+impacto de las soluciones de ingeniería en contextos globales, económicos,
+ambientales y sociales.:
+
+- <b>AV1</b>: Documentacion desde el capitulo del 1 al 5, despliegue de aplicacion web y movil.
+
+<table>
+    <tr>
+        <td align="center"><b>Criterio específico</b></td>
+        <td align="center"><b>Acciones realizadas</b></td>
+        <td align="center"><b>Conclusiones</b></td>
+    </tr>
+    <tr>
+        <td rowspan="4">
+            <b>4.c.1. Reconoce responsabilidad
+ética y profesional en
+situaciones de ingeniería de
+software</b>
+        </td>
+        <td>
+            <b>Aquino Solorzano, Daniel Jonatan</b> <br/>
+            <i>AV1</i>
+            <p></p>
+        </td>
+        <td rowspan="4">
+            <i>AV1</i>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Flores Eusebio, Angel Thyago</b> <br/>
+            <i>AV1</i>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Soto Palacios, Brandon Wilder</b> <br/>
+            <i>AV1</i>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Sanchez Cuadrado, Juan Antonio</b> <br/>
+            <i>AV1</i>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="4">
+            <b>4.c.2. Emite juicios informados
+considerando el impacto de las
+soluciones de ingeniería de
+software en contextos globales,
+económicos, ambientales y
+sociales</b>
+        </td>
+        <td>
+            <b>Aquino Solorzano, Daniel Jonatan</b> <br/>
+            <i>AV1</i>
+            <p></p>
+        </td>
+        <td rowspan="4">
+            <i>AV1</i>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Flores Eusebio, Angel Thyago</b> <br/>
+            <i>AV1</i>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Soto Palacios, Brandon Wilder</b> <br/>
+            <i>AV1</i>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Sanchez Cuadrado, Juan Antonio</b> <br/>
+            <i>AV1</i>
+            <p></p>
+        </td>
+    </tr>
+</table>
  
