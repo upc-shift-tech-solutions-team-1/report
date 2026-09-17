@@ -244,7 +244,7 @@ software</b>
         <td>
             <b>Flores Eusebio, Angel Thyago</b> <br/>
             <i>AV1</i>
-            <p></p>
+            <p>La refinación de los requisitos, el diseño UX/UI en Figma y el desarrollo de Workshop y Staff me permitieron reconocer que una interfaz funcional también debe ser clara y respetar las responsabilidades de cada rol. Durante el trabajo procuré mantener coherencia entre las User Stories, los prototipos y el frontend móvil, diferenciando las funcionalidades implementadas de las que aún dependen del backend. Esto reforzó la importancia de comunicar con transparencia el estado real del producto y de considerar el acceso adecuado a la información del taller.</p>
         </td>
     </tr>
     <tr>
@@ -288,7 +288,7 @@ sociales</b>
         <td>
             <b>Flores Eusebio, Angel Thyago</b> <br/>
             <i>AV1</i>
-            <p></p>
+            <p>Al diseñar los flujos móviles y desarrollar las funciones de órdenes, tareas y personal técnico, analicé cómo AutoService podría mejorar la coordinación del taller y la visibilidad del trabajo realizado. Una gestión más ordenada tiene el potencial de reducir reprocesos y favorecer la atención al cliente, con posibles beneficios económicos y un uso más eficiente de recursos. También consideré que la solución debe ser comprensible para usuarios con distintos niveles de experiencia digital. Estos impactos son potenciales y deberán comprobarse mediante validaciones con usuarios.</p>
         </td>
     </tr>
     <tr>
