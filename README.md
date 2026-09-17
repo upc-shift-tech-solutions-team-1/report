@@ -237,7 +237,7 @@ software</b>
         </td>
         <td rowspan="4">
             <i>AV1</i>
-            <p></p>
+            <p>El AV1 permitió al equipo reconocer que desarrollar AutoService exige más que construir interfaces y funcionalidades. La definición del modelo de negocio, el análisis de necesidades, la refinación de requisitos y el diseño de las experiencias web y móvil hicieron necesario considerar la privacidad de la información, los permisos de cada rol y la claridad de los procesos. Asimismo, el equipo identificó su responsabilidad de documentar con transparencia las decisiones tomadas y distinguir los prototipos de las funciones efectivamente implementadas. Estas prácticas constituyen una base para continuar el desarrollo y la validación del producto de manera profesional.</p>
         </td>
     </tr>
     <tr>
@@ -281,7 +281,7 @@ sociales</b>
         </td>
         <td rowspan="4">
             <i>AV1</i>
-            <p></p>
+            <p>El análisis de los segmentos, las User Stories y los flujos de AutoService permitió valorar el impacto potencial de la solución en administradores, mecánicos y clientes beneficiarios. Una mejor organización de órdenes, tareas y personal podría contribuir a reducir reprocesos, aprovechar mejor los recursos del taller y ofrecer mayor transparencia sobre los servicios. Al mismo tiempo, el equipo reconoció la importancia de diseñar experiencias accesibles para personas con distintos niveles de familiaridad digital y de adaptar la solución a diferentes contextos de uso. Estos beneficios económicos, sociales y ambientales son proyecciones del AV1, no resultados medidos; deberán contrastarse mediante pruebas y validaciones posteriores.</p>
         </td>
     </tr>
     <tr>
