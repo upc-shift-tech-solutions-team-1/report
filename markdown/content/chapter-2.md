@@ -543,18 +543,6 @@ El entrevistado Antenor Ayala, un mecánico automotriz de 33 años residente en 
 ![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg1-interview3.png)
 
 
-#### Entrevista 4: Administrador de Taller Automotriz
-
-(COMPLETAR)
-
-#### Entrevista 5: Administrador y Encargado de Logística de Taller Automotriz
-
-(COMPLETAR)
-
-#### Entrevista 6: Administrador y Encargado de Logística de Taller Automotriz
-
-(COMPLETAR)
-
 #### Entrevista 7: Cliente - propietario de vehículo
 
 - **Nombre:** Ruiz Soto 
