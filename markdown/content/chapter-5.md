@@ -520,10 +520,10 @@ La conexión con la RESTful API de AutoService se establece a nivel de configura
 Para la distribución de la versión:
 
 1. Se registró la aplicación en la consola de Firebase bajo el identificador de paquete configurado en el proyecto Android (`com.torquelab.autoservice`).
-2. Se cargó el artefacto compilado dentro del servicio de App Distribution, asociándole un número de versión (`versionCode`) y nombre de versión (`versionName`).
+2. Se cargó el artefacto compilado dentro del servicio de App Distribution, asociándole un número de versión y nombre de versión.
 3. Se asignaron los accesos a los verificadores mediante invitaciones directas por correo electrónico, las cuales permiten registrar sus dispositivos y gestionar la descarga a través de la interfaz web de Firebase o la herramienta App Tester.
 
-![Mobile App Distribution](/markdown/assets/chapter-5/firebase-mobile-distribution.png)
+![Mobile App Distribution](/markdown/assets/chapter-5/firebase-mobile-distribution.png.png)
 
 La arquitectura de despliegue y consumo resultante queda integrada de la siguiente forma:
 
