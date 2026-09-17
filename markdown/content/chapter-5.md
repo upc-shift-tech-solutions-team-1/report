@@ -89,7 +89,7 @@ Los productos de AutoService se mantienen en repositorios independientes según 
 
 | Producto | Repositorio GitHub |
 |---|---|
-| Landing Page |  |
+| Landing Page | https://github.com/upc-shift-tech-solutions-team-1/LandingPage-AutoService.git |
 | Web Application | https://github.com/upc-shift-tech-solutions-team-1/autoservice-web.git |
 | RESTful API | https://github.com/upc-shift-tech-solutions-team-1/autoservice-backend.git |
 | Native Mobile Application | https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile.git |
@@ -506,6 +506,32 @@ La arquitectura de producción resultante queda distribuida de la siguiente mane
 - **Railway:** alojamiento y persistencia de la base de datos MySQL.
 
 Esta separación permite desplegar y mantener cada componente de forma independiente, mientras que las conexiones configuradas entre los servicios permiten mantener la integración completa de AutoService en el entorno de producción.
+
+#### Landing Page Deployment with GitHub Pages
+
+La Landing Page de AutoService se encuentra desplegada mediante GitHub Pages a partir del repositorio oficial del producto:
+
+https://github.com/upc-shift-tech-solutions-team-1/LandingPage-AutoService
+
+Debido a que la Landing Page está desarrollada principalmente con HTML, CSS y JavaScript, GitHub Pages permite publicar directamente los archivos estáticos almacenados en el repositorio sin requerir un servidor de aplicación adicional.
+
+Para el deployment se configuró GitHub Pages utilizando la branch `main` y el directorio `/(root)` como fuente de publicación. De esta manera, el archivo `index.html` ubicado en la raíz del repositorio funciona como punto de entrada del sitio.
+
+![GitHub Pages Deployment Configuration](../assets/chapter-5/deployment-github-pages-configuration.png)
+
+La configuración mantiene el deployment vinculado directamente con el repositorio GitHub. Por ello, cuando se incorporan nuevos cambios en la branch `main`, GitHub Pages genera nuevamente la versión publicada de la Landing Page.
+
+Después de configurar la fuente de publicación, GitHub Pages completó correctamente el proceso de build and deployment y habilitó el sitio mediante HTTPS.
+
+![GitHub Pages Live Deployment](../assets/chapter-5/deployment-github-pages-live.png)
+
+La Landing Page se encuentra disponible públicamente en:
+
+**Landing Page:**  
+https://upc-shift-tech-solutions-team-1.github.io/LandingPage-AutoService/
+
+Esta configuración permite mantener una relación directa entre el código fuente versionado y el sitio publicado, facilitando que futuras actualizaciones de contenido, funcionalidades o recursos multimedia puedan incorporarse mediante nuevos commits y reflejarse posteriormente en el entorno público.
+
 # 5.2. Product Implementation & Deployment
 
 La implementación de AutoService se organiza mediante Sprints orientados a convertir los requerimientos definidos en el Product Backlog en incrementos funcionales del producto.
@@ -640,11 +666,7 @@ La distribución de actividades busca mantener responsabilidades identificables 
 
 ---
 
-### Sprint Backlog Board Evidence
 
-Como apoyo visual para el seguimiento del Sprint Backlog, el equipo debe incorporar una evidencia del board utilizado para organizar las tareas del proyecto.
-
-> **PENDIENTE:** insertar captura actualizada del Sprint Backlog Board utilizado por el equipo en Jira, Miro o la herramienta de seguimiento seleccionada.
 
 <!--
 Cuando la captura esté disponible, guardarla en:
@@ -656,11 +678,7 @@ y reemplazar este comentario por:
 ![Sprint Backlog Board](../assets/chapter-5/sprint-backlog-board.png)
 -->
 
-La evidencia visual debe permitir reconocer, como mínimo, las tareas organizadas por estado, por ejemplo `To Do`, `In Progress` y `Done`, así como la distribución de responsabilidades entre los integrantes.
 
-### Sprint Planning Evidence
-
-> **PENDIENTE:** incorporar evidencia del Sprint Planning o del espacio de coordinación utilizado por el equipo.
 
 <!--
 Ruta sugerida:
@@ -672,9 +690,39 @@ Markdown futuro:
 ![Sprint Planning Evidence](../assets/chapter-5/sprint-planning-evidence.png)
 -->
 
-Esta evidencia puede corresponder al board de planificación utilizado durante la distribución de tareas, siempre que permita complementar la información presentada en las tablas anteriores.
+
 
 ## 5.2.2. Implemented Landing Page Evidence
+
+La Landing Page de AutoService fue implementada como el principal punto de presentación pública del producto. Su propósito es comunicar la propuesta de valor de la solución, presentar sus principales características y proporcionar acceso hacia la Web Application.
+
+La interfaz fue desarrollada utilizando HTML, CSS y JavaScript, incorporando una estructura responsive que permite adaptar la visualización a diferentes tamaños de pantalla. Asimismo, se utilizan recursos visuales, iconografía y componentes asociados con la identidad de AutoService y TorqueLab.
+
+La Landing Page organiza la información del producto mediante diferentes secciones orientadas a presentar la solución, sus funcionalidades, información sobre el producto y el equipo responsable de su desarrollo. También incorpora elementos preparados para internationalization mediante identificadores `data-i18n`, permitiendo gestionar contenido en diferentes idiomas desde la lógica implementada en JavaScript.
+
+La navegación principal incluye un acceso hacia la Web Application de AutoService. Los botones asociados con Login y acceso al producto fueron actualizados para dirigir al entorno Web actualmente desplegado en Vercel:
+
+https://autoservice-web-kappa.vercel.app/login
+
+De esta manera, la Landing Page funciona como punto de entrada al ecosistema AutoService y permite que un usuario pueda conocer la propuesta del producto antes de acceder a las funcionalidades operativas de la plataforma.
+
+La versión implementada fue publicada mediante GitHub Pages y se encuentra accesible públicamente mediante HTTPS.
+
+![Implemented AutoService Landing Page](../assets/chapter-5/landing-page-live-evidence.png)
+
+La evidencia anterior permite comprobar que la Landing Page se encuentra disponible en un entorno público, mantiene sus estilos y recursos visuales, y se encuentra integrada con la Web Application mediante sus enlaces de navegación.
+
+Actualmente, los espacios correspondientes a los videos **About-the-Product** y **About-the-Team** se mantienen identificados temporalmente como `PENDIENTE`, debido a que los recursos audiovisuales definitivos serán incorporados posteriormente. La estructura necesaria para dichos contenidos se conserva dentro de la Landing Page para permitir su integración en una actualización posterior.
+
+La Landing Page se encuentra disponible en:
+
+**Landing Page:**  
+https://upc-shift-tech-solutions-team-1.github.io/LandingPage-AutoService/
+
+El código fuente correspondiente se encuentra en:
+
+**GitHub Repository:**  
+https://github.com/upc-shift-tech-solutions-team-1/LandingPage-AutoService
 
 ### 5.2.3 Implemented Frontend-Web Application Evidence
 
