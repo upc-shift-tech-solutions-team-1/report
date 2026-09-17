@@ -286,7 +286,7 @@ sociales</b>
         <td>
             <b>Flores Eusebio, Angel Thyago</b> <br/>
             <i>AV1</i>
-            <p></p>
+            <p>Al diseñar los flujos móviles y desarrollar las funciones de órdenes, tareas y personal técnico, analicé cómo AutoService podría mejorar la coordinación del taller y la visibilidad del trabajo realizado. Una gestión más ordenada tiene el potencial de reducir reprocesos y favorecer la atención al cliente, con posibles beneficios económicos y un uso más eficiente de recursos. También consideré que la solución debe ser comprensible para usuarios con distintos niveles de experiencia digital. Estos impactos son potenciales y deberán comprobarse mediante validaciones con usuarios.</p>
         </td>
     </tr>
     <tr>
