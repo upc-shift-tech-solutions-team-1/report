@@ -970,4 +970,3 @@ El uso consistente de Conventional Commits permitió mantener la trazabilidad de
 
 ![evidence2](/markdown/assets/chapter-5/insight-evidence-2.png)
 
-# 5.3. Video About-the-Product
