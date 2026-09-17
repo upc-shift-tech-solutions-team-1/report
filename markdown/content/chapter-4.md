@@ -2217,3 +2217,93 @@ o Value Objects que todavía no forman parte de la implementación actual.
 # 4.10. Database Design
 
 ## 4.10.1. Relational/Non-Relational Database Diagram
+
+##### Diagrama de Base de Datos General - AutoService
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/global-database-diagram.png" width="1000">
+</div>
+
+<p align="justify;">
+El diagrama general muestra cómo se conectan los datos de los distintos bounded contexts mediante claves foráneas y cómo se garantiza la integridad referencial entre los módulos principales.
+</p>
+
+##### 1. Tenant Management Context
+
+<p align="justify;">
+Gestiona el registro y configuración de talleres (tenants) como entidades centrales en la plataforma SaaS. Cada taller tiene un workshop_id único, información corporativa y una dirección principal.
+</p>
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/db-tenant-management.png" width="600">
+</div>
+
+##### 2. Customer Management Context
+
+<p align="justify;">
+Administra clientes asociados a talleres específicos con datos de identificación personal, contacto y múltiples direcciones registradas. Cada cliente está vinculado a un workshop_id para garantizar multitenencia.
+</p>
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/db-customer-management.png" width="600">
+</div>
+
+##### 3. Fleet Management Context
+
+<p align="justify;">
+Registra información técnica de vehículos como placa, marca, modelo, año y color. Cada vehículo pertenece a un cliente y puede tener un historial de servicios asociados.
+</p>
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/db-fleet-management.png" width="600">
+</div>
+
+##### 4. Staff Coordination Context
+
+<p align="justify;">
+Organiza mecánicos por taller con información de contacto, especialidades y horarios de disponibilidad. Permite gestionar turnos y evitar solapamientos de asignaciones.
+</p>
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/db-staff-coordination.png" width="600">
+</div>
+
+##### 5. Inventory Management Context
+
+<p align="justify;">
+Centraliza el control de repuestos e insumos con categorización, proveedores, SKU únicos y control de stock. Genera códigos de referencia para integración con órdenes de trabajo.
+</p>
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/db-inventory-management.png" width="600">
+</div>
+
+##### 6. IAM (Identity & Access Management) Context
+
+<p align="justify;">
+Gestiona usuarios, roles, permisos y credenciales para autenticación y autorización. Cada usuario está vinculado a un taller específico asegurando el aislamiento multi-tenant.
+</p>
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/db-iam.png" width="600">
+</div>
+
+##### 7. Workshop Operations Context (Core Domain)
+
+<p align="justify;">
+Núcleo operativo del sistema. Gestiona órdenes de trabajo (WorkOrder), tareas técnicas (Task), cambios de estado y auditoría de operaciones. Integra datos de vehículos, clientes, mecánicos e ítems de inventario.
+</p>
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/db-workshop-operations.png" width="1000">
+</div>
+
+##### 8. Public Tracking Context (Read-Only)
+
+<p align="justify;">
+Proporciona una interfaz pública sin autenticación para que clientes finales consulten el progreso de reparaciones. Consume datos desde Fleet Management, Customer Management y Workshop Operations sin exponer información sensible.
+</p>
+
+<div align="center">
+<img src="/markdown/assets/images/chapter-4/db-public-tracking.png" width="600">
+</div>
