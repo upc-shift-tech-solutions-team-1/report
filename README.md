@@ -256,9 +256,11 @@ software</b>
     </tr>
     <tr>
         <td>
-            <b>Sanchez Cuadrado, Juan Antonio</b> <br/>
-            <i>AV1</i>
-            <p></p>
+                      <b>Sanchez Cuadrado, Juan Antonio</b> <br/>
+<i>AV1</i>
+<p>
+Participé en la elaboración y revisión de la documentación técnica del proyecto AutoService desde los capítulos 1 al 5, procurando mantener coherencia entre los requerimientos, el diseño, la implementación y las evidencias presentadas. Asimismo, participé en la integración y configuración de los productos del proyecto, incluyendo la aplicación Web, la aplicación móvil, la RESTful API y los servicios de despliegue. Durante este proceso consideré prácticas profesionales como el uso responsable del control de versiones, la protección de credenciales mediante variables de entorno, la validación de los cambios antes de integrarlos y la documentación transparente de funcionalidades implementadas y pendientes.
+</p>
         </td>
     </tr>
     <tr>
@@ -296,10 +298,10 @@ sociales</b>
     </tr>
     <tr>
         <td>
-           <b>Sanchez Cuadrado, Juan Antonio</b> <br/>
+         <b>Sanchez Cuadrado, Juan Antonio</b> <br/>
 <i>AV1</i>
 <p>
-Participé en la elaboración y revisión de la documentación técnica del proyecto AutoService desde los capítulos 1 al 5, procurando mantener coherencia entre los requerimientos, el diseño, la implementación y las evidencias presentadas. Asimismo, participé en la integración y configuración de los productos del proyecto, incluyendo la aplicación Web, la aplicación móvil, la RESTful API y los servicios de despliegue. Durante este proceso consideré prácticas profesionales como el uso responsable del control de versiones, la protección de credenciales mediante variables de entorno, la validación de los cambios antes de integrarlos y la documentación transparente de funcionalidades implementadas y pendientes.
+Durante el desarrollo de AutoService participé en decisiones relacionadas con la integración y despliegue de la solución, evaluando alternativas para la aplicación Web, la RESTful API, la base de datos y la aplicación móvil. Se consideraron aspectos como disponibilidad, costo de los servicios cloud, facilidad de mantenimiento, seguridad de la información y accesibilidad para los usuarios. También se buscó que la solución permita digitalizar procesos habituales de los talleres automotrices, reduciendo la dependencia de registros manuales y facilitando el acceso centralizado a información de clientes, vehículos, órdenes de trabajo, mecánicos e inventario.
 </p>
         </td>
     </tr>
