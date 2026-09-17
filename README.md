@@ -210,10 +210,7 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
 
 # Student Outcome
 
-El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcome 4: <b> La capacidad de reconocer responsabilidades éticas y profesionales en
-situaciones de ingeniería y hacer juicios informados, que deben considerar el
-impacto de las soluciones de ingeniería en contextos globales, económicos,
-ambientales y sociales.:
+El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcome 4: <b>La capacidad de reconocer responsabilidades éticas y profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.</b>
 
 - <b>AV1</b>: Documentacion desde el capitulo del 1 al 5, despliegue de aplicacion web y movil.
 
@@ -224,90 +221,87 @@ ambientales y sociales.:
         <td align="center"><b>Conclusiones</b></td>
     </tr>
     <tr>
-        <td rowspan="4">
-            <b>4.c.1. Reconoce responsabilidad
-ética y profesional en
-situaciones de ingeniería de
-software</b>
+        <td rowspan="5">
+            <b>4.c.1. Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software</b>
         </td>
         <td>
-            <b>Aquino Solorzano, Daniel Jonatan</b> <br/>
+            <b>Aquino Solorzano, Daniel Jonatan</b><br/>
             <i>AV1</i>
             <p>Durante el ciclo de desarrollo de AutoService, ejercí la responsabilidad ética y el rigor profesional en múltiples etapas críticas: gestioné el consentimiento informado y la privacidad de los participantes al realizar las entrevistas del segmento Vehicle Owners, garantizando una recolección íntegra de requerimientos sin sesgos intencionales; mantuve la transparencia y autoría técnica veraz del equipo al consolidar y subir los GitHub Collaboration Insights; aseguré la integridad en la entrega de software al configurar el despliegue restringido de los artefactos .apk mediante Firebase App Distribution solo a verificadores autorizados, evitando la exposición de versiones inestables; y apliqué estándares de calidad, mantenibilidad y desacoplamiento arquitectónico al modelar e implementar el Bounded Context "Mechanic" en la aplicación móvil, cumpliendo con el compromiso deontológico de entregar una solución técnica robusta, segura y alineada a las necesidades reales del dominio.</p>
         </td>
-        <td rowspan="4">
+        <td rowspan="5">
             <i>AV1</i>
             <p>El AV1 permitió al equipo reconocer que desarrollar AutoService exige más que construir interfaces y funcionalidades. La definición del modelo de negocio, el análisis de necesidades, la refinación de requisitos y el diseño de las experiencias web y móvil hicieron necesario considerar la privacidad de la información, los permisos de cada rol y la claridad de los procesos. Asimismo, el equipo identificó su responsabilidad de documentar con transparencia las decisiones tomadas y distinguir los prototipos de las funciones efectivamente implementadas. Estas prácticas constituyen una base para continuar el desarrollo y la validación del producto de manera profesional.</p>
         </td>
     </tr>
     <tr>
         <td>
-            <b>Flores Eusebio, Angel Thyago</b> <br/>
+            <b>Flores Eusebio, Angel Thyago</b><br/>
             <i>AV1</i>
             <p>La refinación de los requisitos, el diseño UX/UI en Figma y el desarrollo de Workshop y Staff me permitieron reconocer que una interfaz funcional también debe ser clara y respetar las responsabilidades de cada rol. Durante el trabajo procuré mantener coherencia entre las User Stories, los prototipos y el frontend móvil, diferenciando las funcionalidades implementadas de las que aún dependen del backend. Esto reforzó la importancia de comunicar con transparencia el estado real del producto y de considerar el acceso adecuado a la información del taller.</p>
         </td>
     </tr>
     <tr>
         <td>
-            <b>Soto Palacios, Brandon Wilder</b> <br/>
+            <b>Soto Palacios, Brandon Wilder</b><br/>
             <i>AV1</i>
-            <p>
-            En este primer avance del proyecto AutoService, contribuí en las bases principales del proyecto, además a travez de valores como respeto, integridad, seguridad y empatía realicé las entrevistas del segmento numero uno, de los mecánicos independientes. Posteriormente elaboré las correctar descripciones acorde al formato establecido, y sus adecuados análisis que recopilan información importante para el proyecto. Asimismo contribuí con la realización de módulos de customer management y customer trust del apartado de aplicación móvil, tod con los lineamientos establecidos por el equipo y el curso presente.
-            </p>
+            <p>En este primer avance del proyecto AutoService, contribuí en las bases principales del proyecto, además a travez de valores como respeto, integridad, seguridad y empatía realicé las entrevistas del segmento numero uno, de los mecánicos independientes. Posteriormente elaboré las correctar descripciones acorde al formato establecido, y sus adecuados análisis que recopilan información importante para el proyecto. Asimismo contribuí con la realización de módulos de customer management y customer trust del apartado de aplicación móvil, tod con los lineamientos establecidos por el equipo y el curso presente.</p>
         </td>
     </tr>
     <tr>
         <td>
-                      <b>Sanchez Cuadrado, Juan Antonio</b> <br/>
-<i>AV1</i>
-<p>
-Participé en la elaboración y revisión de la documentación técnica del proyecto AutoService desde los capítulos 1 al 5, procurando mantener coherencia entre los requerimientos, el diseño, la implementación y las evidencias presentadas. Asimismo, participé en la integración y configuración de los productos del proyecto, incluyendo la aplicación Web, la aplicación móvil, la RESTful API y los servicios de despliegue. Durante este proceso consideré prácticas profesionales como el uso responsable del control de versiones, la protección de credenciales mediante variables de entorno, la validación de los cambios antes de integrarlos y la documentación transparente de funcionalidades implementadas y pendientes.
-</p>
+            <b>Sanchez Cuadrado, Juan Antonio</b><br/>
+            <i>AV1</i>
+            <p>Participé en la elaboración y revisión de la documentación técnica del proyecto AutoService desde los capítulos 1 al 5, procurando mantener coherencia entre los requerimientos, el diseño, la implementación y las evidencias presentadas. Asimismo, participé en la integración y configuración de los productos del proyecto, incluyendo la aplicación Web, la aplicación móvil, la RESTful API y los servicios de despliegue. Durante este proceso consideré prácticas profesionales como el uso responsable del control de versiones, la protección de credenciales mediante variables de entorno, la validación de los cambios antes de integrarlos y la documentación transparente de funcionalidades implementadas y pendientes.</p>
         </td>
     </tr>
     <tr>
-        <td rowspan="4">
-            <b>4.c.2. Emite juicios informados
-considerando el impacto de las
-soluciones de ingeniería de
-software en contextos globales,
-económicos, ambientales y
-sociales</b>
+        <td>
+            <b>Fernandez Seer, Mario Alonso</b><br/>
+            <i>AV1</i>
+            <p>Participé en la implementación de los módulos Fleet Management e Inventory Management de la aplicación Android. Incorporé 22 pruebas unitarias y comprobé los flujos de registro y edición de vehículos, creación de productos y recepción de existencias en modo demo. Como parte de mi responsabilidad profesional, distinguí los resultados obtenidos con datos de demostración de la integración real con el servidor, que quedó pendiente de validación. Esto permite presentar evidencias verificables y comunicar las limitaciones del avance sin atribuir resultados a pruebas que todavía no se han realizado.</p>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="5">
+            <b>4.c.2. Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales</b>
         </td>
         <td>
-            <b>Aquino Solorzano, Daniel Jonatan</b> <br/>
+            <b>Aquino Solorzano, Daniel Jonatan</b><br/>
             <i>AV1</i>
             <p>A través del diseño de soluciones centrado en el usuario y la modelación técnica, evalué y sinteticé el impacto integral de AutoService en diversas dimensiones: en el ámbito social y de usabilidad, el mapeo de escenarios As-Is y To-Be junto con la grabación del prototipo interactivo en Figma permitieron mitigar la asimetría de información y la desconfianza habitual entre conductores y talleres mediante interfaces claras y accesibles; a nivel económico, la implementación del Bounded Context "Mechanic" en la app móvil optimiza la productividad operativa de los mecánicos, agiliza la gestión de órdenes de trabajo y previene pérdidas por diagnósticos ineficientes; y en los contextos ambiental y global, promover el mantenimiento preventivo oportuno mediante una plataforma digital ayuda a extender la vida útil de los vehículos, reduciendo las emisiones contaminantes generadas por fallas mecánicas desatendidas y eliminando el consumo innecesario de papel en la administración tradicional de los talleres.</p>
         </td>
-        <td rowspan="4">
+        <td rowspan="5">
             <i>AV1</i>
             <p>El análisis de los segmentos, las User Stories y los flujos de AutoService permitió valorar el impacto potencial de la solución en administradores, mecánicos y clientes beneficiarios. Una mejor organización de órdenes, tareas y personal podría contribuir a reducir reprocesos, aprovechar mejor los recursos del taller y ofrecer mayor transparencia sobre los servicios. Al mismo tiempo, el equipo reconoció la importancia de diseñar experiencias accesibles para personas con distintos niveles de familiaridad digital y de adaptar la solución a diferentes contextos de uso. Estos beneficios económicos, sociales y ambientales son proyecciones del AV1, no resultados medidos; deberán contrastarse mediante pruebas y validaciones posteriores.</p>
         </td>
     </tr>
     <tr>
         <td>
-            <b>Flores Eusebio, Angel Thyago</b> <br/>
+            <b>Flores Eusebio, Angel Thyago</b><br/>
             <i>AV1</i>
             <p>Al diseñar los flujos móviles y desarrollar las funciones de órdenes, tareas y personal técnico, analicé cómo AutoService podría mejorar la coordinación del taller y la visibilidad del trabajo realizado. Una gestión más ordenada tiene el potencial de reducir reprocesos y favorecer la atención al cliente, con posibles beneficios económicos y un uso más eficiente de recursos. También consideré que la solución debe ser comprensible para usuarios con distintos niveles de experiencia digital. Estos impactos son potenciales y deberán comprobarse mediante validaciones con usuarios.</p>
         </td>
     </tr>
     <tr>
         <td>
-            <b>Soto Palacios, Brandon Wilder</b> <br/>
+            <b>Soto Palacios, Brandon Wilder</b><br/>
             <i>AV1</i>
-            <p>
-            Para esta primera entrega del desarrollo de AutoService, se respeto el trabajo con lineamientos adecuados, esto incluye la realización y comunicación asertiva con el equipo de trabajo, con lo que conllevo la realización de los capítulos uno y dos del avance del reporte oficial. Además con las consignas claras se llevó a desarrollar las versiones preliminares de landing page, backend y frontend, posteriormente el desarrollo de la aplicación móvil inspirada en los trabajos previos y los objetivos establecidos. Conluyo este primer avance con satisfactoria realización y adecuada ejecución de labores.
-            </p>
+            <p>Para esta primera entrega del desarrollo de AutoService, se respeto el trabajo con lineamientos adecuados, esto incluye la realización y comunicación asertiva con el equipo de trabajo, con lo que conllevo la realización de los capítulos uno y dos del avance del reporte oficial. Además con las consignas claras se llevó a desarrollar las versiones preliminares de landing page, backend y frontend, posteriormente el desarrollo de la aplicación móvil inspirada en los trabajos previos y los objetivos establecidos. Conluyo este primer avance con satisfactoria realización y adecuada ejecución de labores.</p>
         </td>
     </tr>
     <tr>
         <td>
-         <b>Sanchez Cuadrado, Juan Antonio</b> <br/>
-<i>AV1</i>
-<p>
-Durante el desarrollo de AutoService participé en decisiones relacionadas con la integración y despliegue de la solución, evaluando alternativas para la aplicación Web, la RESTful API, la base de datos y la aplicación móvil. Se consideraron aspectos como disponibilidad, costo de los servicios cloud, facilidad de mantenimiento, seguridad de la información y accesibilidad para los usuarios. También se buscó que la solución permita digitalizar procesos habituales de los talleres automotrices, reduciendo la dependencia de registros manuales y facilitando el acceso centralizado a información de clientes, vehículos, órdenes de trabajo, mecánicos e inventario.
-</p>
+            <b>Sanchez Cuadrado, Juan Antonio</b><br/>
+            <i>AV1</i>
+            <p>Durante el desarrollo de AutoService participé en decisiones relacionadas con la integración y despliegue de la solución, evaluando alternativas para la aplicación Web, la RESTful API, la base de datos y la aplicación móvil. Se consideraron aspectos como disponibilidad, costo de los servicios cloud, facilidad de mantenimiento, seguridad de la información y accesibilidad para los usuarios. También se buscó que la solución permita digitalizar procesos habituales de los talleres automotrices, reduciendo la dependencia de registros manuales y facilitando el acceso centralizado a información de clientes, vehículos, órdenes de trabajo, mecánicos e inventario.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Fernandez Seer, Mario Alonso</b><br/>
+            <i>AV1</i>
+            <p>Durante la implementación de Fleet e Inventory consideré la importancia de validar los datos de vehículos y productos, mostrar las existencias disponibles y calcular precios y márgenes de forma consistente. Estas funciones pueden apoyar decisiones de compra y reducir errores en la gestión del taller. Desde una perspectiva social, la claridad de la información puede facilitar el trabajo del personal y la atención al cliente; desde una perspectiva ambiental, un mejor control del inventario podría ayudar a evitar compras innecesarias y desperdicios. Estos beneficios son potenciales y requieren validación con usuarios y datos reales. También incorporé textos en español e inglés para facilitar la adaptación de la interfaz a distintos usuarios.</p>
         </td>
     </tr>
 </table>
- 
