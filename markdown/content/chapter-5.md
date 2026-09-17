@@ -955,4 +955,19 @@ La documentación proporcionada mediante Swagger/OpenAPI funciona como referenci
 
 ## 5.2.7. Team Collaboration Insights
 
+Durante la implementación de la solución, el trabajo colaborativo del equipo estuvo orientado principalmente a la consolidación de diversos artefactos como el Mobile Application y el Report. El desarrollo del App Web y el Backend se replicó de proyectos anteriores, por lo que esta sección se basará plenamente en mostrar evidencias del trabajo colaborativo para la aplicación móvil y el reporte de documentación.
+
+La estrategia GitFlow, implementada en el desarrollo del Mobile App, continuó utilizándose para organizar el desarrollo, permitiendo que cada integrante trabajara sobre ramas independientes destinadas a laimplementación de nuevas funcionalidades y ajustes finales de la interfaz de usuario. Todos los cambios fueron integrados mediante Pull Requests revisados antes de incorporarse a las ramas principales del proyecto.
+
+El uso consistente de Conventional Commits permitió mantener la trazabilidad de todas las modificaciones realizadas durante el desarrollo del proyecto.
+
+
+#### Evidencia 1: Gráfico de contribuciones por integrante del equipo para la app móvil
+
+![evidence1](/markdown/assets/chapter-5/insight-evidence-1.png)
+
+#### Evidencia 2: Gráfico de contribuciones por integrante del equipo para el reporte
+
+![evidence2](/markdown/assets/chapter-5/insight-evidence-2.png)
+
 # 5.3. Video About-the-Product
