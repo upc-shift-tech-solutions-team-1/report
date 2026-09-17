@@ -53,6 +53,14 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
         <td align="center">Soto Palacios, Brandon Wilder</td>
       </tr>
       <tr>
+        <td align="center">U202319404</td>
+        <td align="center">Sanchez Cuadrado, Juan Antonio</td>
+      </tr>
+      <tr>
+        <td align="center">U202317807</td>
+        <td align="center">Fernández, Mario Alonso</td>
+      </tr>
+      <tr>
         <td align="center"></td>
         <td align="center"></td>
       </tr>
