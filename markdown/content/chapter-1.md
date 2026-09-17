@@ -62,17 +62,14 @@
   <img src="https://github.com/user-attachments/assets/a9897a47-db9e-48fe-a716-bbf2d9f3d696" alt="Mario Alonso Fernandez Seer" width="150">
         </td>
       </tr>
-    
-
-
       <!-- Integrante 5 -->
       <tr>
         <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
-          <strong></strong><br><br>
-          <i></i>
+          <strong>Sanchez Cuadrado, Juan Antonio</strong><br><br>
+          <i>Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me considero una persona responsable, organizada y comprometida con el desarrollo de soluciones tecnológicas. Tengo experiencia en desarrollo de aplicaciones web y móviles, integración con servicios RESTful, control de versiones con Git y GitHub, y trabajo con tecnologías como Kotlin, Jetpack Compose, Vue.js y ASP.NET Core. En AutoService participo principalmente en la integración de la aplicación móvil, autenticación, componentes compartidos, conexión con el backend y documentación técnica del proyecto.</i>
         </td>
         <td style="padding: 10px; border: 1px solid #ddd; text-align: center; vertical-align: middle;">
-          <img src="docs/assets/image.png" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+          <img src="/markdown/assets/images/chapter-1/juan.png" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
         </td>
       </tr>
     </tbody>
