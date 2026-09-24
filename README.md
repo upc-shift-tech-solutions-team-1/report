@@ -71,142 +71,150 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
 <h3 align="center"><strong>Periodo 202620</strong></h3>
 <h3 align="center"><strong>Septiembre 2026</strong></h3>
 
-<div align="center">
-
-# Indice general
-
-</div>
-
-# Part I: As-Is Software Project
-
-## Capítulo I: Introducción
-- 1.1. Startup Profile
-  - 1.1.1. Descripción de la Startup
-  - 1.1.2. Perfiles de integrantes del equipo
-- 1.2. Solution Profile
-  - 1.2.1. Antecedentes y problemática
-  - 1.2.2. Lean UX Process.
-    - 1.2.2.1. Lean UX Problem Statements.
-    - 1.2.2.2. Lean UX Assumptions.
-    - 1.2.2.3. Lean UX Hypothesis Statements.
-    - 1.2.2.4. Lean UX Canvas.
-- 1.3. Segmentos objetivo.
-
-## Capítulo II: Requirements Elicitation & Analysis
-- 2.1. Competidores.
-  - 2.1.1. Análisis competitivo.
-  - 2.1.2. Estrategias y tácticas frente a competidores.
-- 2.2. Entrevistas.
-  - 2.2.1. Diseño de entrevistas.
-  - 2.2.2. Registro de entrevistas.
-  - 2.2.3. Análisis de entrevistas.
-- 2.3. Needfinding.
-  - 2.3.1. User Personas.
-  - 2.3.2. User Task Matrix.
-  - 2.3.3. User Journey Mapping.
-  - 2.3.4. Empathy Mapping.
-  - 2.3.5. As-is Scenario Mapping.
-- 2.4. Ubiquitous Language.
-
-## Capítulo III: Requirements Specification
-- 3.1. To-Be Scenario Mapping.
-- 3.2. User Stories.
-- 3.3. Product Backlog.
-- 3.4. Impact Mapping.
-
-## Capítulo IV: Product Design
-- 4.1. Style Guidelines.
-  - 4.1.1. General Style Guidelines.
-  - 4.1.2. Web Style Guidelines.
-  - 4.1.3. Mobile Style Guidelines.
-    - 4.1.3.1. iOS Mobile Style Guidelines.
-    - 4.1.3.2. Android Mobile Style Guidelines.
-- 4.2. Information Architecture.
-  - 4.2.1. Organization Systems.
-  - 4.2.2. Labeling Systems.
-  - 4.2.3. SEO Tags and Meta Tags
-  - 4.2.4. Searching Systems.
-  - 4.2.5. Navigation Systems.
-- 4.3. Landing Page UI Design.
-  - 4.3.1. Landing Page Wireframe.
-  - 4.3.2. Landing Page Mock-up.
-- 4.4. Mobile Applications UX/UI Design.
-  - 4.4.1. Mobile Applications Wireframes.
-  - 4.4.2. Mobile Applications Wireflow Diagrams.
-  - 4.4.3. Mobile Applications Mock-ups.
-  - 4.4.4. Mobile Applications User Flow Diagrams.
-- 4.5. Mobile Applications Prototyping.
-  - 4.5.1. Android Mobile Applications Prototyping.
-  - 4.5.2. iOS Mobile Applications Prototyping.
-- 4.6. Web Applications UX/UI Design.
-  - 4.6.1. Web Applications Wireframes.
-  - 4.6.2. Web Applications Wireflow Diagrams.
-  - 4.6.3. Web Applications Mock-ups.
-  - 4.6.4. Web Applications User Flow Diagrams.
-- 4.7. Web Applications Prototyping.
-- 4.8. Domain-Driven Software Architecture.
-  - 4.8.1. Software Architecture Context Diagram.
-  - 4.8.2. Software Architecture Container Diagrams.
-  - 4.8.3. Software Architecture Components Diagrams.
-- 4.9. Software Object-Oriented Design.
-  - 4.9.1. Class Diagrams.
-  - 4.9.2. Class Dictionary.
-- 4.10. Database Design.
-  - 4.10.1. Relational/Non-Relational Database Diagram.
-
-## Capítulo V: Product Implementation
-- 5.1. Software Configuration Management.
-  - 5.1.1. Software Development Environment Configuration.
-  - 5.1.2. Source Code Management.
-  - 5.1.3. Source Code Style Guide & Conventions.
-  - 5.1.4. Software Deployment Configuration.
-- 5.2. Product Implementation & Deployment.
-  - 5.2.1. Sprint Backlogs.
-  - 5.2.2. Implemented Landing Page Evidence
-  - 5.2.3. Implemented Frontend-Web Application Evidence
-  - 5.2.4. Acuerdo de Servicio - SaaS
-  - 5.2.5. Implemented Native-Mobile Application Evidence
-  - 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
-  - 5.2.7. RESTful API documentation
-  - 5.2.8. Team Collaboration Insights
-- 5.3. Video About-the-Product.
-
-
 # Registro de Versiones del informe
 
-<table>
-    <tr>
-        <td align="center"><b>Versión</b></td>
-        <td align="center"><b>Fecha</b></td>
-        <td align="center"><b>Autor</b></td>
-        <td align="center"><b>Descripción de la modificación</b></td>
-    </tr>
-    <tr>
-        <td align="center">1</td>
-        <td align="center">16/09/26</td>
-        <td>
-            <ul>
-                <li>Sanchez Cuadrado, Juan Antonio </li>
-                <li>Flores Eusebio, Angel Thyago</li>
-                <li>Soto Palacios, Brandon Wilder</li>
-                <li>Aquino Solorzano, Daniel Jonatan </li>
-                <li>Fernández, Mario Alonso</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Capítulo I: Introducción</li>
-                <li>Capítulo II: Requirements Elicitation & Analysis.</li>
-                <li>Capítulo III: Requirements Specification.</li>
-                <li>Capítulo IV: Product Design.</li>
-                <li>Capítulo V: Product Implementation.</li>
-                <li>Conclusiones</li>
-                <li>Bibliografía</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-</table>
+| Versión | Fecha | Autor | Descripción de la modificación |
+|---|---|---|---|
+| 1 | 16/09/26 | Sanchez Cuadrado, Juan Antonio | **AV1:** Documentación de los capítulos del informe, integración de la aplicación móvil, configuración de despliegues y elaboración de evidencias técnicas del proyecto AutoService. |
+| 1 | 16/09/26 | Flores Eusebio, Angel Thyago | **AV1:** |
+| 1 | 16/09/26 | Soto Palacios, Brandon Wilder | **AV1:** |
+| 1 | 16/09/26 | Aquino Solorzano, Daniel Jonatan | **AV1:** |
+| 1 | 16/09/26 | Fernández, Mario Alonso | **AV1:** |
+
+# Project Report Collaboration Insights
+
+El informe del proyecto AutoService se desarrolla de manera colaborativa mediante GitHub, utilizando control de versiones para mantener la trazabilidad de los cambios realizados por los integrantes del equipo.
+
+**Project Report Repository:**
+
+https://github.com/upc-shift-tech-solutions-team-1/report
+
+## AV1
+
+Durante el AV1, el equipo utilizó el repositorio público del Project Report para trabajar de manera colaborativa sobre la documentación de AutoService. El historial de Git permitió mantener trazabilidad sobre las modificaciones realizadas y evidenciar la participación de los integrantes durante la elaboración y actualización de los capítulos del informe.
+
+### Contributors
+
+La siguiente evidencia corresponde a los analíticos de contribución del repositorio del informe durante el desarrollo del AV1.
+
+![AV1 Report Contributors](./markdown/assets/report-collaboration/av1/av1-report-contributors.png)
+
+Los analíticos permiten observar la participación de los integrantes mediante contribuciones realizadas al repositorio. Esta evidencia complementa el Registro de Versiones del Informe y permite verificar que la documentación fue desarrollada de manera colaborativa.
+
+### Commit History
+
+La siguiente evidencia muestra parte del historial de commits realizados sobre el repositorio del Project Report durante el AV1.
+
+![AV1 Report Commits](./markdown/assets/report-collaboration/av1/av1-report-commits.png)
+
+Asimismo, se conserva una segunda evidencia del historial con el objetivo de mostrar una mayor parte de las modificaciones registradas durante la entrega.
+
+![AV1 Report Commit History](./markdown/assets/report-collaboration/av1/av1-report-commit-history.png)
+
+El historial permite identificar los autores, mensajes de commit y modificaciones incorporadas durante el desarrollo del informe. El uso de Git y GitHub permitió mantener trazabilidad de los cambios y conservar evidencia de la colaboración del equipo durante el AV1.
+
+## Trabajo Parcial
+
+> PENDIENTE: incorporar al finalizar el Trabajo Parcial las evidencias actualizadas de colaboración, commits, branches y Pull Requests realizados durante esta entrega.
+
+# Contenido
+
+- [Registro de Versiones del informe](#registro-de-versiones-del-informe)
+- [Project Report Collaboration Insights](#project-report-collaboration-insights)
+- [Student Outcome](#student-outcome)
+
+- [Part I: As-Is Software Project](./markdown/content/chapter-1.md)
+
+  - [Capítulo I: Introducción](./markdown/content/chapter-1.md)
+    - [1.1. Startup Profile](./markdown/content/chapter-1.md#11-startup-profile)
+      - [1.1.1. Descripción de la Startup](./markdown/content/chapter-1.md#111-descripción-de-la-startup)
+      - [1.1.2. Perfiles de integrantes del equipo](./markdown/content/chapter-1.md#112-perfiles-de-integrantes-del-equipo)
+    - [1.2. Solution Profile](./markdown/content/chapter-1.md#12-solution-profile)
+      - [1.2.1. Antecedentes y problemática](./markdown/content/chapter-1.md#121-antecedentes-y-problemática)
+      - [1.2.2. Lean UX Process](./markdown/content/chapter-1.md#122-lean-ux-process)
+        - [1.2.2.1. Lean UX Problem Statements](./markdown/content/chapter-1.md#1221-lean-ux-problem-statements)
+        - [1.2.2.2. Lean UX Assumptions](./markdown/content/chapter-1.md#1222-lean-ux-assumptions)
+        - [1.2.2.3. Lean UX Hypothesis Statements](./markdown/content/chapter-1.md#1223-lean-ux-hypothesis-statements)
+        - [1.2.2.4. Lean UX Canvas](./markdown/content/chapter-1.md#1224-lean-ux-canvas)
+    - [1.3. Segmentos objetivo](./markdown/content/chapter-1.md#13-segmentos-objetivo)
+
+  - [Capítulo II: Requirements Elicitation & Analysis](./markdown/content/chapter-2.md)
+    - [2.1. Competidores](./markdown/content/chapter-2.md#21-competidores)
+      - [2.1.1. Análisis competitivo](./markdown/content/chapter-2.md#211-análisis-competitivo)
+      - [2.1.2. Estrategias y tácticas frente a competidores](./markdown/content/chapter-2.md#212-estrategias-y-tácticas-frente-a-competidores)
+    - [2.2. Entrevistas](./markdown/content/chapter-2.md#22-entrevistas)
+      - [2.2.1. Diseño de entrevistas](./markdown/content/chapter-2.md#221-diseño-de-entrevistas)
+      - [2.2.2. Registro de entrevistas](./markdown/content/chapter-2.md#222-registro-de-entrevistas)
+      - [2.2.3. Análisis de entrevistas](./markdown/content/chapter-2.md#223-análisis-de-entrevistas)
+    - [2.3. Needfinding](./markdown/content/chapter-2.md#23-needfinding)
+      - [2.3.1. User Personas](./markdown/content/chapter-2.md#231-user-personas)
+      - [2.3.2. User Task Matrix](./markdown/content/chapter-2.md#232-user-task-matrix)
+      - [2.3.3. User Journey Mapping](./markdown/content/chapter-2.md#233-user-journey-mapping)
+      - [2.3.4. Empathy Mapping](./markdown/content/chapter-2.md#234-empathy-mapping)
+      - [2.3.5. As-is Scenario Mapping](./markdown/content/chapter-2.md#235-as-is-scenario-mapping)
+    - [2.4. Ubiquitous Language](./markdown/content/chapter-2.md#24-ubiquitous-language)
+
+  - [Capítulo III: Requirements Specification](./markdown/content/chapter-3.md)
+    - [3.1. To-Be Scenario Mapping](./markdown/content/chapter-3.md#31-to-be-scenario-mapping)
+    - [3.2. User Stories](./markdown/content/chapter-3.md#32-user-stories)
+    - [3.3. Product Backlog](./markdown/content/chapter-3.md#33-product-backlog)
+    - [3.4. Impact Mapping](./markdown/content/chapter-3.md#34-impact-mapping)
+
+  - [Capítulo IV: Product Design](./markdown/content/chapter-4.md)
+    - [4.1. Style Guidelines](./markdown/content/chapter-4.md#41-style-guidelines)
+      - [4.1.1. General Style Guidelines](./markdown/content/chapter-4.md#411-general-style-guidelines)
+      - [4.1.2. Web Style Guidelines](./markdown/content/chapter-4.md#412-web-style-guidelines)
+      - [4.1.3. Mobile Style Guidelines](./markdown/content/chapter-4.md#413-mobile-style-guidelines)
+    - [4.2. Information Architecture](./markdown/content/chapter-4.md#42-information-architecture)
+    - [4.3. Landing Page UI Design](./markdown/content/chapter-4.md#43-landing-page-ui-design)
+    - [4.4. Mobile Applications UX/UI Design](./markdown/content/chapter-4.md#44-mobile-applications-uxui-design)
+    - [4.5. Mobile Applications Prototyping](./markdown/content/chapter-4.md#45-mobile-applications-prototyping)
+    - [4.6. Web Applications UX/UI Design](./markdown/content/chapter-4.md#46-web-applications-uxui-design)
+    - [4.7. Web Applications Prototyping](./markdown/content/chapter-4.md#47-web-applications-prototyping)
+    - [4.8. Domain-Driven Software Architecture](./markdown/content/chapter-4.md#48-domain-driven-software-architecture)
+    - [4.9. Software Object-Oriented Design](./markdown/content/chapter-4.md#49-software-object-oriented-design)
+    - [4.10. Database Design](./markdown/content/chapter-4.md#410-database-design)
+
+  - [Capítulo V: Product Implementation](./markdown/content/chapter-5.md)
+    - [5.1. Software Configuration Management](./markdown/content/chapter-5.md#51-software-configuration-management)
+      - [5.1.1. Software Development Environment Configuration](./markdown/content/chapter-5.md#511-software-development-environment-configuration)
+      - [5.1.2. Source Code Management](./markdown/content/chapter-5.md#512-source-code-management)
+      - [5.1.3. Source Code Style Guide & Conventions](./markdown/content/chapter-5.md#513-source-code-style-guide--conventions)
+      - [5.1.4. Software Deployment Configuration](./markdown/content/chapter-5.md#514-software-deployment-configuration)
+    - [5.2. Product Implementation & Deployment](./markdown/content/chapter-5.md#52-product-implementation--deployment)
+      - [5.2.1. Sprint Backlogs](./markdown/content/chapter-5.md#521-sprint-backlogs)
+      - [5.2.2. Implemented Landing Page Evidence](./markdown/content/chapter-5.md#522-implemented-landing-page-evidence)
+      - [5.2.3. Implemented Frontend-Web Application Evidence](./markdown/content/chapter-5.md#523-implemented-frontend-web-application-evidence)
+      - [5.2.4. Acuerdo de Servicio - SaaS](./markdown/content/chapter-5.md#524-acuerdo-de-servicio---saas)
+      - [5.2.5. Implemented Native-Mobile Application Evidence](./markdown/content/chapter-5.md#525-implemented-native-mobile-application-evidence)
+      - [5.2.6. Implemented RESTful API and/or Serverless Backend Evidence](./markdown/content/chapter-5.md#526-implemented-restful-api-andor-serverless-backend-evidence)
+      - [5.2.7. RESTful API Documentation](./markdown/content/chapter-5.md#527-restful-api-documentation)
+      - [5.2.8. Team Collaboration Insights](./markdown/content/chapter-5.md#528-team-collaboration-insights)
+    - [5.3. Video About-the-Product](./markdown/content/chapter-5.md#53-video-about-the-product)
+
+- [Part II: Verification, Validation & Pipeline](./markdown/content/chapter-6.md)
+
+  - [Capítulo VI: Product Verification & Validation](./markdown/content/chapter-6.md)
+    - [6.1. Testing Suites & Validation](./markdown/content/chapter-6.md#61-testing-suites--validation)
+      - [6.1.1. Core Entities Unit Tests](./markdown/content/chapter-6.md#611-core-entities-unit-tests)
+      - [6.1.2. Core Integration Tests](./markdown/content/chapter-6.md#612-core-integration-tests)
+      - [6.1.3. Core Behavior-Driven Development](./markdown/content/chapter-6.md#613-core-behavior-driven-development)
+      - [6.1.4. Core System Tests](./markdown/content/chapter-6.md#614-core-system-tests)
+
+  - [Capítulo VII: DevOps Practices](./markdown/content/chapter-7.md)
+    - [7.1. Continuous Integration](./markdown/content/chapter-7.md#71-continuous-integration)
+      - [7.1.1. Tools and Practices](./markdown/content/chapter-7.md#711-tools-and-practices)
+      - [7.1.2. Build & Test Suite Pipeline Components](./markdown/content/chapter-7.md#712-build--test-suite-pipeline-components)
+    - [7.2. Continuous Delivery](./markdown/content/chapter-7.md#72-continuous-delivery)
+      - [7.2.1. Tools and Practices](./markdown/content/chapter-7.md#721-tools-and-practices)
+      - [7.2.2. Stages Deployment Pipeline Components](./markdown/content/chapter-7.md#722-stages-deployment-pipeline-components)
+    - [7.3. Continuous Deployment](./markdown/content/chapter-7.md#73-continuous-deployment)
+      - [7.3.1. Tools and Practices](./markdown/content/chapter-7.md#731-tools-and-practices)
+      - [7.3.2. Production Deployment Pipeline Components](./markdown/content/chapter-7.md#732-production-deployment-pipeline-components)
+
+- [Conclusiones](./markdown/content/Conclusiones.md)
+- [Bibliografía](./markdown/content/Bibliografía.md)
+- [Anexos](./markdown/content/Anexos.md)
 
 # Student Outcome
 
