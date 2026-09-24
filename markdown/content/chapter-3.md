@@ -12,17 +12,17 @@ El To-Be Scenario Mapping es un artefacto de diseño centrado en el usuario que 
 
 El propósito principal de esta representación es evidenciar cómo las funcionalidades del sistema resuelven de raíz las fricciones diagnosticadas en el escenario actual (As-Is). Al sustituir los métodos analógicos por el registro móvil en tiempo real, el cálculo automatizado de presupuestos, el control digital de inventario y la consulta autónoma mediante códigos de seguimiento, se define la visión estratégica del producto. De este modo, se validan las hipótesis de valor orientadas a erradicar la desconfianza del cliente y maximizar la eficiencia operativa del taller automotriz.
 
-## To-Be Scenario 1: Mechanic
+## To-Be Scennario 1: Mechanic
 
-![To-Be Scenario - Mechanic](../assets/images/chapter-3/to-be-scenario/tobe-mechanic.png)
+![](/markdown/assets/images/chapter-3/to-be-scenario/tobe-mechanic.png)
 
-## To-Be Scenario 2: Workshop Manager
+### To-Be Scennario 2: Workshop Manager
 
-![To-Be Scenario - Workshop Manager](../assets/images/chapter-3/to-be-scenario/tobe-workshop-manager.png)
+![](/markdown/assets/images/chapter-3/to-be-scenario/tobe-workshop-manager.png)
 
-## To-Be Scenario 3: Vehicle Owner
+### To-Be Scennario 3: Vehicle Owner
 
-![To-Be Scenario - Vehicle Owner](../assets/images/chapter-3/to-be-scenario/tobe-vehicle-owner.png)
+![](/markdown/assets/images/chapter-3/to-be-scenario/tobe-vehicle-owner.png)
 
 
 # 3.2. User Stories
@@ -855,17 +855,8 @@ Link del Jira: https://upc-team-r1plce2k.atlassian.net/jira/software/projects/SS
 
 # 3.4. Impact Mapping
 
-En esta sección se presenta el **Impact Mapping** de AutoService, una técnica que permite relacionar de manera visual el objetivo principal del producto con los actores involucrados, los impactos esperados en cada uno de ellos y las funcionalidades que contribuyen a alcanzar dicho objetivo.
-
-El propósito de este artefacto es asegurar que las decisiones de diseño e implementación no se enfoquen únicamente en desarrollar funcionalidades aisladas, sino en generar valor real para los segmentos objetivo del sistema. En el caso de AutoService, el mapa permite vincular la propuesta de valor del producto con la mejora de la gestión operativa del taller, la transparencia del servicio y la experiencia del cliente.
-
-A partir de este análisis, se identifican como actores principales al **Administrador del taller**, el **Mecánico** y el **Cliente**. Cada uno de ellos participa de forma distinta en la solución: el Administrador requiere visibilidad y control sobre la operación; el Mecánico necesita herramientas que faciliten la ejecución y actualización del servicio; y el Cliente demanda transparencia, seguimiento y confianza durante el proceso de mantenimiento o reparación de su vehículo.
-
-Asimismo, el Impact Mapping permite evidenciar que las funcionalidades priorizadas —como la autenticación por rol, la gestión de vehículos, órdenes de trabajo, tareas, seguimiento del servicio, dashboard operativo y consulta del estado del vehículo— responden directamente a impactos esperados en eficiencia, organización, trazabilidad y satisfacción del usuario.
+En esta sección se desarrolla el impact mapping, una técnica que permite visualizar la relación entre los objetivos del negocio, los actores involucrados, los impactos esperados y las funcionalidades del sistema. Esto facilita la alineación entre el desarrollo del producto y el valor que se busca generar. 
 
 ![alt text](</markdown/assets/images/chapter-3/Impact Map AutoService.png>)
-
-En conjunto, este artefacto valida que el desarrollo de AutoService se encuentra alineado con el objetivo de transformar digitalmente la gestión de talleres automotrices, reduciendo ineficiencias operativas y fortaleciendo la confianza entre el taller y sus clientes.
-
 
 ---

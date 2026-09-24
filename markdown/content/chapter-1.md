@@ -19,121 +19,61 @@
 
 
 ## 1.1.2. Perfiles de integrantes del equipo
-
 <div align="center">
-<table style="margin: auto; width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
-
-  <!-- Integrante 1 -->
-  <tr>
-    <td style="padding: 20px; border: 1px solid #ddd; width: 70%; vertical-align: middle; text-align: left;">
-      <strong>Flores Eusebio, Angel Thyago</strong><br>
-      <strong>Código:</strong> U20231B781<br>
-      <strong>Carrera:</strong> Ingeniería de Software<br><br>
-
-      <i>
-        Soy estudiante de la carrera de Ingeniería de Software. Mis principales fortalezas para este trabajo son la capacidad de trabajar en equipo y mi eficiente organización del tiempo. Actualmente estoy interesado en las áreas de Análisis de Datos y desarrollo de aplicaciones móviles. Me encuentro en constante aprendizaje de nuevas tecnologías y siempre busco poner en práctica lo aprendido.
-      </i>
-    </td>
-
-    <td style="padding: 10px; border: 1px solid #ddd; width: 30%; text-align: center; vertical-align: middle;">
-      <img
-        src="../assets/images/chapter-1/foto-reporte-angel.jpeg"
-        alt="Angel Thyago Flores Eusebio"
-        width="150"
-        style="border-radius: 10px; border: 1px solid #ccc;"
-      >
-    </td>
-  </tr>
-
-  <!-- Integrante 2 -->
-  <tr>
-    <td style="padding: 20px; border: 1px solid #ddd; width: 70%; vertical-align: middle; text-align: left;">
-      <strong>Aquino Solorzano, Daniel Jonatan</strong><br>
-      <strong>Código:</strong> U202217678<br>
-      <strong>Carrera:</strong> Ingeniería de Software<br><br>
-
-      <i>
-        Soy estudiante de la carrera de Ingeniería de Software. Me considero una persona responsable y puntual con sus trabajos. Tengo experiencia en el desarrollo Full Stack de aplicaciones web utilizando diferentes tecnologías. Asimismo, tengo experiencia en el desarrollo de aplicaciones móviles, servicios de alojamiento en la nube y bases de datos.
-      </i>
-    </td>
-
-    <td style="padding: 10px; border: 1px solid #ddd; width: 30%; text-align: center; vertical-align: middle;">
-      <img
-        src="../assets/images/chapter-1/Daniel.jpeg"
-        alt="Daniel Jonatan Aquino Solorzano"
-        width="150"
-        style="border-radius: 10px; border: 1px solid #ccc;"
-      >
-    </td>
-  </tr>
-
-  <!-- Integrante 3 -->
-  <tr>
-    <td style="padding: 20px; border: 1px solid #ddd; width: 70%; vertical-align: middle; text-align: left;">
-      <strong>Soto Palacios, Brandon Wilder</strong><br>
-      <strong>Código:</strong> U202315640<br>
-      <strong>Carrera:</strong> Ingeniería de Software<br><br>
-
-      <i>
-        Soy estudiante de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Tengo interés en la tecnología y su constante evolución. Cuento con conocimientos de programación en lenguajes y tecnologías como C++, Python, JavaScript, HTML y CSS. Me considero una persona reservada, con disposición para aprender nuevas tecnologías y colaborar en el desarrollo del proyecto.
-      </i>
-    </td>
-
-    <td style="padding: 10px; border: 1px solid #ddd; width: 30%; text-align: center; vertical-align: middle;">
-      <img
-        src="../assets/images/chapter-1/Brandon-Soto.jpg"
-        alt="Brandon Wilder Soto Palacios"
-        width="150"
-        style="border-radius: 10px; border: 1px solid #ccc;"
-      >
-    </td>
-  </tr>
-
-  <!-- Integrante 4 -->
-  <tr>
-    <td style="padding: 20px; border: 1px solid #ddd; width: 70%; vertical-align: middle; text-align: left;">
-      <strong>Fernandez Seer, Mario Alonso</strong><br>
-      <strong>Código:</strong> U202317807<br>
-      <strong>Carrera:</strong> Ingeniería de Software<br><br>
-
-      <i>
-        Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me interesa desarrollar soluciones prácticas que respondan a las necesidades de los usuarios. Me considero una persona creativa, analítica y atenta a los detalles, con disposición para aprender y colaborar en equipo. En AutoService participo en la implementación de los módulos móviles de gestión de vehículos e inventario, así como en sus pruebas unitarias y documentación.
-      </i>
-    </td>
-
-    <td style="padding: 10px; border: 1px solid #ddd; width: 30%; text-align: center; vertical-align: middle;">
-      <img
-        src="https://github.com/user-attachments/assets/a9897a47-db9e-48fe-a716-bbf2d9f3d696"
-        alt="Mario Alonso Fernandez Seer"
-        width="150"
-        style="border-radius: 10px; border: 1px solid #ccc;"
-      >
-    </td>
-  </tr>
-
-  <!-- Integrante 5 -->
-  <tr>
-    <td style="padding: 20px; border: 1px solid #ddd; width: 70%; vertical-align: middle; text-align: left;">
-      <strong>Sanchez Cuadrado, Juan Antonio</strong><br>
-      <strong>Código:</strong> U202319404<br>
-      <strong>Carrera:</strong> Ingeniería de Software<br><br>
-
-      <i>
-        Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me considero una persona responsable, organizada y comprometida con el desarrollo de soluciones tecnológicas. Tengo experiencia en desarrollo de aplicaciones web y móviles, integración con servicios RESTful, control de versiones con Git y GitHub, y trabajo con tecnologías como Kotlin, Jetpack Compose, Vue.js y ASP.NET Core. En AutoService participo principalmente en la integración de la aplicación móvil, autenticación, componentes compartidos, conexión con el backend y documentación técnica del proyecto.
-      </i>
-    </td>
-
-    <td style="padding: 10px; border: 1px solid #ddd; width: 30%; text-align: center; vertical-align: middle;">
-      <img
-        src="../assets/images/chapter-1/juan.png"
-        alt="Juan Antonio Sanchez Cuadrado"
-        width="150"
-        style="border-radius: 10px; border: 1px solid #ccc;"
-      >
-    </td>
-  </tr>
-
-</table>
+  <table style="margin: auto; width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+    <tbody>
+      <!-- Integrante 1 -->
+      <tr>
+        <td style="padding: 20px; border: 1px solid #ddd; width: 70%; vertical-align: middle; text-align: left;">
+          <strong>Flores Eusebio, Angel Thyago</strong><br><br>
+          <i>Soy estudiante de la carrera de Ingenieria de Software. Mis principales fortalezas para este trabajo son la capacidad de trabajar en equipo y mi eficiente organizacion de tiempo. Actualmente interesado en las areas de Analisis de Datos y desarrollo de aplicaciones moviles. Me encuentro en constante aprendizaje de nuevas tecnologias y siempre busco poner en practica lo aprendido.</i>
+        </td>
+        <td style="padding: 10px; border: 1px solid #ddd; width: 30%; text-align: center; vertical-align: middle;">
+          <img src="/markdown/assets/images/chapter-1/foto-reporte-angel.jpeg" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+        </td>
+      </tr>
+      <!-- Integrante 2 -->
+      <tr>
+        <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
+          <strong>Aquino Solorzano, Daniel Jonatan</strong><br><br>
+          <i>Estudiante de la carrera de Ingeniería de Software en el septimo ciclo. Me considero una persona responsable y puntual con sus trabajos. Tengo experiencia en el desarrollo FullStack de aplicaciones Web siguiendo diferentes tecnologías para el desarrollo.Así mismo tengo experiencia en el desarrollo de apps móviles, servicios de alojamiento en la nube y bases de datos.   </i><br>
+        </td>
+        <td style="padding: 10px; border: 1px solid #ddd; text-align: center; vertical-align: middle;">
+          <img src="/markdown/assets/images/chapter-1/Daniel.jpeg" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+        </td>
+      </tr>
+      <!-- Integrante 3 -->
+      <tr>
+        <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
+          <strong>Soto Palacios, Brandon Wilder</strong><br><br>
+          <i>Soy estudiante de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Tengo intereses en la tecnología y su constante evolución. Tengo conocimientos de programación en lenguajes como C++, Python, JavaScript, HTML y CSS. Soy un poco reservado, pero con muchas de ganas de aprender nuevas cosas.</i>
+        </td>
+        <td style="padding: 10px; border: 1px solid #ddd; text-align: center; vertical-align: middle;">
+          <img src="/markdown/assets/images/chapter-1/Brandon-Soto.jpg" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+        </td>
+      </tr>
+      <!-- Integrante 4 -->
+      <tr>
+        <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
+        <strong>Fernandez Seer, Mario Alonso</strong><br><br>
+<i>Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me interesa desarrollar soluciones prácticas que respondan a las necesidades de los usuarios. Me considero una persona creativa, analítica y atenta a los detalles, con disposición para aprender y colaborar en equipo. En AutoService participo en la implementación de los módulos móviles de gestión de vehículos e inventario, así como en sus pruebas unitarias y documentación.</i>
+        </td>
+        <td style="padding: 10px; border: 1px solid #ddd; text-align: center; vertical-align: middle;">
+  <img src="https://github.com/user-attachments/assets/a9897a47-db9e-48fe-a716-bbf2d9f3d696" alt="Mario Alonso Fernandez Seer" width="150">
+        </td>
+      </tr>
+      <!-- Integrante 5 -->
+      <tr>
+        <td style="padding: 20px; border: 1px solid #ddd; vertical-align: middle; text-align: left;">
+          <strong>Sanchez Cuadrado, Juan Antonio</strong><br><br>
+          <i>Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me considero una persona responsable, organizada y comprometida con el desarrollo de soluciones tecnológicas. Tengo experiencia en desarrollo de aplicaciones web y móviles, integración con servicios RESTful, control de versiones con Git y GitHub, y trabajo con tecnologías como Kotlin, Jetpack Compose, Vue.js y ASP.NET Core. En AutoService participo principalmente en la integración de la aplicación móvil, autenticación, componentes compartidos, conexión con el backend y documentación técnica del proyecto.</i>
+        </td>
+        <td style="padding: 10px; border: 1px solid #ddd; text-align: center; vertical-align: middle;">
+          <img src="/markdown/assets/images/chapter-1/juan.png" alt="" width="150" style="border-radius: 10px; border: 1px solid #ccc;">
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 
