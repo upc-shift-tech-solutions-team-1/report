@@ -10,7 +10,7 @@
 
 La gestión de configuración de software de AutoService comprende las decisiones, herramientas y convenciones utilizadas por el equipo para mantener la consistencia de los productos digitales durante su ciclo de vida.
 
-La solución está conformada por una Landing Page, una Web Application, una Native Mobile Application, una RESTful API y una base de datos relacional. Debido a ello, se utilizan diferentes tecnologías y herramientas para actividades de gestión del proyecto, diseño UX/UI, desarrollo, documentación, control de versiones, pruebas y deployment.
+La solución está conformada por una Landing Page, una Web Application, una Native Mobile Application, una RESTful API y una base de datos relacional. Debido a ello, se utilizan diferentes tecnologías y herramientas para actividades de gestión del proyecto, diseño UX/UI, desarrollo, documentación, control de versiones, pruebas y despliegue.
 
 Las siguientes secciones describen el entorno de desarrollo utilizado por el equipo, la estrategia de gestión del código fuente y las convenciones adoptadas para mantener un estilo consistente entre los diferentes productos de AutoService.
 
@@ -94,7 +94,7 @@ Los productos de AutoService se mantienen en repositorios independientes según 
 | Web Application | https://github.com/upc-shift-tech-solutions-team-1/autoservice-web.git |
 | RESTful API | https://github.com/upc-shift-tech-solutions-team-1/autoservice-backend.git |
 | Native Mobile Application | https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile.git |
-| Project Report |  |
+| Project Report | https://github.com/upc-shift-tech-solutions-team-1/report.git |
 
 La separación de los productos en diferentes repositorios permite mantener ciclos de desarrollo independientes y reduce el acoplamiento entre el frontend, backend, aplicación mobile y documentación.
 
@@ -132,7 +132,7 @@ En la Native Mobile Application, este esquema permite desarrollar funcionalidade
 
 En los repositorios Web y Backend, `main` representa actualmente la fuente estable utilizada por los respectivos servicios de producción. Vercel utiliza `main` como fuente para la Web Application y Render utiliza `main` como fuente para la RESTful API.
 
-En el caso específico del Project Report, el equipo trabaja directamente sobre `main` y realiza commits pequeños y descriptivos. Esto permite mantener una secuencia clara de las modificaciones documentales realizadas durante cada avance académico.
+En el caso específico del Project Report, a partir del Trabajo Parcial el equipo adopta también GitFlow. La branch `main` representa la versión estable del informe correspondiente a cada entrega, mientras que `develop` funciona como branch de integración. Las modificaciones se realizan en branches `feature/*` y posteriormente se incorporan mediante Pull Request hacia `develop`. Para esta entrega se utiliza, entre otras, la branch `feature/tp-report-baseline` para realizar correcciones y preparar la estructura del informe antes de integrar los nuevos capítulos de pruebas y DevOps.
 
 ### Pull Requests
 
@@ -417,21 +417,22 @@ Las convenciones descritas toman como referencia las guías oficiales de las pri
 | Gherkin | https://cucumber.io/docs/gherkin/ |
 | REST API / HTTP | https://developer.mozilla.org/docs/Web/HTTP |
 
-### 5.1.4 Software Deployment Configuration
+## 5.1.4. Software Deployment Configuration
 
-La arquitectura de deployment de AutoService se encuentra distribuida entre distintos servicios cloud, seleccionados según la responsabilidad de cada componente de la solución.
+La arquitectura de despliegue de AutoService se encuentra distribuida entre distintos servicios cloud, seleccionados según la responsabilidad de cada componente de la solución.
 
-La Web Application se encuentra desplegada mediante Vercel, la RESTful API se ejecuta como un Docker-based Web Service en Render y la base de datos relacional MySQL se encuentra alojada en Railway.
+La Landing Page se encuentra publicada mediante GitHub Pages, la Web Application está desplegada mediante Vercel, la RESTful API se ejecuta como un Web Service basado en Docker en Render y la base de datos relacional MySQL se encuentra alojada en Railway.
 
 Esta distribución permite mantener separadas las responsabilidades de presentación, lógica de aplicación y persistencia. La Web Application se comunica con la RESTful API mediante HTTPS, mientras que el backend establece la conexión con la base de datos MySQL mediante el acceso público TCP configurado en Railway.
 
 Los valores sensibles, como credenciales de base de datos, connection strings y el JWT Secret, se administran mediante Environment Variables y no se almacenan directamente dentro de los repositorios públicos.
 
+
 #### Database Deployment with Railway
 
 Railway se utiliza para alojar la base de datos MySQL de producción requerida por AutoService.
 
-El servicio de base de datos funciona de manera independiente al backend y dispone de almacenamiento persistente mediante un volume, permitiendo conservar la información de la aplicación entre diferentes deployments.
+El servicio de base de datos funciona de manera independiente al backend y dispone de almacenamiento persistente mediante un volume, permitiendo conservar la información de la aplicación entre diferentes despliegues.
 
 La configuración de Railway incluye las variables necesarias para establecer la conexión con MySQL, entre ellas el nombre de la base de datos, usuario, contraseña, host y port. Los valores sensibles permanecen protegidos dentro del sistema de Environment Variables proporcionado por la plataforma.
 
@@ -470,7 +471,7 @@ La variable `ConnectionStrings__DefaultConnection` permite que Entity Framework 
 
 ![Render Backend Live Deployment](../assets/chapter-5/deployment-render-backend-live.png)
 
-Después del deployment, Render expone la RESTful API mediante un endpoint HTTPS público.
+Después del despliegue, Render expone la RESTful API mediante un endpoint HTTPS público.
 
 Durante el inicio de la aplicación, ASP.NET Core utiliza la configuración del entorno de producción para establecer la conexión con MySQL y aplicar las migrations requeridas mediante Entity Framework Core.
 
@@ -482,7 +483,7 @@ https://autoservice-backend-cnbd.onrender.com
 
 La Web Application de AutoService se encuentra desplegada mediante Vercel utilizando como fuente el repositorio GitHub del frontend y la branch `main`.
 
-El proyecto es reconocido por Vercel como una aplicación basada en Vite. Durante cada production deployment, la plataforma instala las dependencias, ejecuta el build de producción y publica los archivos generados dentro del directorio `dist`.
+El proyecto es reconocido por Vercel como una aplicación basada en Vite. Durante cada despliegue de producción, la plataforma instala las dependencias, ejecuta el build de producción y publica los archivos generados dentro del directorio `dist`.
 
 La dirección de la RESTful API se proporciona mediante la Environment Variable:
 
@@ -502,7 +503,7 @@ https://autoservice-web-kappa.vercel.app
 
 La arquitectura de producción resultante queda distribuida de la siguiente manera:
 
-- **Vercel:** deployment de la Web Application desarrollada con Vue.js y Vite.
+- **Vercel:** despliegue de la Web Application desarrollada con Vue.js y Vite.
 - **Render:** ejecución de la RESTful API desarrollada con ASP.NET Core y Docker.
 - **Railway:** alojamiento y persistencia de la base de datos MySQL.
 
@@ -544,13 +545,13 @@ https://github.com/upc-shift-tech-solutions-team-1/LandingPage-AutoService
 
 Debido a que la Landing Page está desarrollada principalmente con HTML, CSS y JavaScript, GitHub Pages permite publicar directamente los archivos estáticos almacenados en el repositorio sin requerir un servidor de aplicación adicional.
 
-Para el deployment se configuró GitHub Pages utilizando la branch `main` y el directorio `/(root)` como fuente de publicación. De esta manera, el archivo `index.html` ubicado en la raíz del repositorio funciona como punto de entrada del sitio.
+Para el despliegue se configuró GitHub Pages utilizando la branch `main` y el directorio `/(root)` como fuente de publicación. De esta manera, el archivo `index.html` ubicado en la raíz del repositorio funciona como punto de entrada del sitio.
 
 ![GitHub Pages Deployment Configuration](../assets/chapter-5/deployment-github-pages-configuration.png)
 
-La configuración mantiene el deployment vinculado directamente con el repositorio GitHub. Por ello, cuando se incorporan nuevos cambios en la branch `main`, GitHub Pages genera nuevamente la versión publicada de la Landing Page.
+La configuración mantiene el despliegue vinculado directamente con el repositorio GitHub. Por ello, cuando se incorporan nuevos cambios en la branch `main`, GitHub Pages genera nuevamente la versión publicada de la Landing Page.
 
-Después de configurar la fuente de publicación, GitHub Pages completó correctamente el proceso de build and deployment y habilitó el sitio mediante HTTPS.
+Después de configurar la fuente de publicación, GitHub Pages completó correctamente el proceso de construcción y despliegue y habilitó el sitio mediante HTTPS.
 
 ![GitHub Pages Live Deployment](../assets/chapter-5/deployment-github-pages-live.png)
 
@@ -565,7 +566,7 @@ Esta configuración permite mantener una relación directa entre el código fuen
 
 La implementación de AutoService se organiza mediante Sprints orientados a convertir los requerimientos definidos en el Product Backlog en incrementos funcionales del producto.
 
-Durante cada Sprint, el equipo distribuye actividades relacionadas con documentación, UX/UI Design, desarrollo de la Landing Page, Web Application, Native Mobile Application, RESTful API, persistencia, integración y deployment.
+Durante cada Sprint, el equipo distribuye actividades relacionadas con documentación, UX/UI Design, desarrollo de la Landing Page, Web Application, Native Mobile Application, RESTful API, persistencia, integración y despliegue.
 
 El seguimiento de las actividades se realiza considerando las responsabilidades asignadas a los integrantes del equipo y el estado de avance de cada tarea. Las siguientes secciones presentan los Sprint Backlogs utilizados para organizar la implementación de AutoService y posteriormente las evidencias de los productos desarrollados.
 
@@ -581,7 +582,7 @@ Para la organización del trabajo se consideran los siguientes integrantes:
 |---|---|
 | Daniel Jonatan | Desarrollo de funcionalidades Web y apoyo en integración de módulos. |
 | Ángel Flores | Desarrollo Backend, persistencia e integración de servicios. |
-| Juan Sanchez | Native Mobile Application, autenticación, componentes compartidos, documentación técnica y apoyo en deployment. |
+| Juan Sanchez | Native Mobile Application, autenticación, componentes compartidos, documentación técnica y apoyo en despliegue. |
 | Mario Fernandez | UX/UI Design, Landing Page y apoyo en documentación del producto. |
 | Brandon Soto | Desarrollo de funcionalidades Web/Mobile, validación funcional y documentación. |
 
@@ -648,7 +649,7 @@ Este Sprint se orienta principalmente a la integración de los productos, implem
 | S2-09 | Implementar Shared UI Components para Mobile | Mobile Development | Juan Sanchez | 5 | Done |
 | S2-10 | Configurar navegación autenticada y basada en roles en Mobile | Mobile Development | Juan Sanchez | 5 | Done |
 | S2-11 | Actualizar enlaces de la Landing Page hacia la Web Application | Landing Page | Mario Fernandez | 2 | Done |
-| S2-12 | Preparar Landing Page para su nuevo deployment | Landing Page | Mario Fernandez | 3 | In Progress |
+| S2-12 | Preparar Landing Page para su nuevo despliegue | Landing Page | Mario Fernandez | 3 | In Progress |
 | S2-13 | Configurar MySQL de producción en Railway | Deployment | Juan Sanchez | 3 | Done |
 | S2-14 | Configurar RESTful API en Render mediante Docker | Deployment | Juan Sanchez | 5 | Done |
 | S2-15 | Configurar Web Application en Vercel | Deployment | Juan Sanchez | 5 | Done |
@@ -664,7 +665,7 @@ Este Sprint se orienta principalmente a la integración de los productos, implem
 
 #### Reuniones y coordinación del Sprint 2
 
-Durante este Sprint las reuniones se concentraron principalmente en resolver dependencias de integración entre Web, Mobile, Backend y Database, además de coordinar el deployment de los productos.
+Durante este Sprint las reuniones se concentraron principalmente en resolver dependencias de integración entre Web, Mobile, Backend y Database, además de coordinar el despliegue de los productos.
 
 | Reunión | Participantes | Objetivo | Resultado esperado |
 |---|---|---|---|
@@ -675,7 +676,7 @@ Durante este Sprint las reuniones se concentraron principalmente en resolver dep
 | UX/UI Review | Mario Fernandez, Brandon Soto, Daniel Jonatan | Comparar interfaces implementadas con los Mock-ups y Wireframes. | Identificación de ajustes visuales pendientes. |
 | Documentation Review | Todo el equipo | Revisar avances del Chapter V y evidencias de implementación. | Secciones del Project Report actualizadas. |
 | Sprint Review | Todo el equipo | Presentar el incremento funcional y comprobar el estado de los productos. | Validación de funcionalidades desarrolladas. |
-| Sprint Retrospective | Todo el equipo | Revisar dificultades encontradas durante integración y deployment. | Acciones de mejora para el siguiente Sprint. |
+| Sprint Retrospective | Todo el equipo | Revisar dificultades encontradas durante integración y despliegue. | Acciones de mejora para el siguiente Sprint. |
 
 ---
 
@@ -687,7 +688,7 @@ La siguiente tabla resume la distribución principal de responsabilidades consid
 |---|---|---|
 | Daniel Jonatan | Configuración Web, Product Backlog y apoyo técnico | Authentication Web, Dashboard, Work Orders e integración con Backend |
 | Ángel Flores | Backend inicial y Database Design | RESTful API, Entity Framework Core, MySQL e integración |
-| Juan Sanchez | Repositorios, Mobile y documentación | Authentication Mobile, Shared UI, navegación, deployment y Chapter V |
+| Juan Sanchez | Repositorios, Mobile y documentación | Authentication Mobile, Shared UI, navegación, despliegue y Chapter V |
 | Mario Fernandez | UX/UI Design y Landing Page | Implementación Android de Fleet e Inventory, 22 pruebas unitarias y validación manual en modo demo.  |
 | Brandon Soto | Mobile UX/UI y arquitectura | Módulos Web/Mobile, revisión funcional y validación UX/UI |
 
@@ -753,7 +754,7 @@ El código fuente correspondiente se encuentra en:
 **GitHub Repository:**  
 https://github.com/upc-shift-tech-solutions-team-1/LandingPage-AutoService
 
-### 5.2.3 Implemented Frontend-Web Application Evidence
+## 5.2.3. Implemented Frontend-Web Application Evidence
 
 La Web Application de AutoService fue implementada utilizando Vue.js y Vite como interfaz principal para la gestión operativa del taller.
 
@@ -781,7 +782,27 @@ La Web Application se encuentra disponible públicamente en:
 **Web Application:**  
 https://autoservice-web-kappa.vercel.app
 
-## 5.2.4. Implemented Native-Mobile Application Evidence
+## 5.2.4. Acuerdo de Servicio - SaaS
+
+AutoService incorpora un Acuerdo de Servicio SaaS publicado mediante la sección **Terms and Conditions** de la Landing Page. Este documento establece las condiciones generales de acceso y uso de la plataforma, así como las responsabilidades asociadas con las cuentas de usuario, uso autorizado, suscripciones, disponibilidad del servicio, tratamiento de datos, seguridad, propiedad intelectual, suspensión del servicio y modificaciones futuras de los términos.
+
+El acuerdo se encuentra disponible en inglés y español para mantener coherencia con el soporte internacionalizado de la Landing Page. El usuario puede cambiar entre ambos idiomas mediante los controles EN y ES disponibles en la parte superior de la página.
+
+La versión publicada corresponde al **SaaS Agreement v1.0**, con fecha de vigencia **24 de septiembre de 2026**.
+
+La integración se realizó mediante un enlace permanente desde el footer de la Landing Page hacia la página pública `terms.html`, permitiendo que cualquier usuario pueda consultar los términos antes o durante el uso del producto.
+
+La página se encuentra desplegada públicamente mediante GitHub Pages en:
+
+https://upc-shift-tech-solutions-team-1.github.io/LandingPage-AutoService/terms.html
+
+La siguiente evidencia muestra la versión pública del Acuerdo de Servicio SaaS ejecutándose desde GitHub Pages:
+
+![AutoService SaaS Terms and Conditions](../assets/chapter-5/saas-terms-and-conditions-live.png)
+
+La implementación fue desarrollada utilizando GitFlow mediante la branch `feature/saas-agreement`, integrada posteriormente hacia `develop` y publicada mediante `release/v1.1.0` hacia `main`. De esta forma, el Acuerdo SaaS queda integrado como parte de la versión pública de AutoService.
+
+## 5.2.5. Implemented Native-Mobile Application Evidence
 ### Fleet Management e Inventory Management — Android
 
 Mario Alonso Fernandez Seer implementó los módulos Fleet Management e
@@ -843,7 +864,7 @@ Figura 3. Compilación exitosa y ejecución de 23 pruebas unitarias aprobadas.
 <img width="1481" height="412" alt="image" src="https://github.com/user-attachments/assets/8a5f42ef-ac76-4917-b186-55822fb57c31" />
 
 
-## 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
+## 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
 
 El backend de AutoService fue implementado como una RESTful API utilizando ASP.NET Core y Entity Framework Core.
 
@@ -899,7 +920,7 @@ https://autoservice-backend-cnbd.onrender.com
 https://autoservice-backend-cnbd.onrender.com/api/v1
 
 
-## 5.2.6. RESTful API Documentation
+## 5.2.7. RESTful API Documentation
 
 La RESTful API de AutoService se encuentra documentada mediante Swagger utilizando OpenAPI Specification.
 
@@ -953,7 +974,7 @@ https://autoservice-backend-cnbd.onrender.com/swagger/v1/swagger.json
 
 La documentación proporcionada mediante Swagger/OpenAPI funciona como referencia centralizada para la integración de la Web Application y la Native Mobile Application con el backend de AutoService, permitiendo mantener una definición consistente de los servicios disponibles, sus parámetros, estructuras de datos y respuestas esperadas.
 
-## 5.2.7. Team Collaboration Insights
+## 5.2.8. Team Collaboration Insights
 
 Durante la implementación de la solución, el trabajo colaborativo del equipo estuvo orientado principalmente a la consolidación de diversos artefactos como el Mobile Application y el Report. El desarrollo del App Web y el Backend se replicó de proyectos anteriores, por lo que esta sección se basará plenamente en mostrar evidencias del trabajo colaborativo para la aplicación móvil y el reporte de documentación.
 
@@ -969,4 +990,6 @@ El uso consistente de Conventional Commits permitió mantener la trazabilidad de
 #### Evidencia 2: Gráfico de contribuciones por integrante del equipo para el reporte
 
 ![evidence2](/markdown/assets/chapter-5/insight-evidence-2.png)
+# 5.3. Video About-the-Product
 
+> PENDIENTE: incorporar la descripción, evidencia, duración y enlaces del video About-the-Product correspondiente al Trabajo Parcial.
