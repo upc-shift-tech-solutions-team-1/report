@@ -555,7 +555,7 @@ El entrevistado Antenor Ayala, un mecánico automotriz de 33 años residente en 
 ![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg1-interview3.png)
 
 
-#### Entrevista 7: Cliente - propietario de vehículo
+#### Entrevista 4: Cliente - propietario de vehículo
 
 - **Nombre:** Ruiz Soto 
 - **Edad:** 22
@@ -582,7 +582,7 @@ El entrevistado es Ruiz Soto, un estudiante universitario de 22 años que reside
 ![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg3-interview1.png)
 
 
-#### Entrevista 8: Cliente - propietario de vehículos
+#### Entrevista 5: Cliente - propietario de vehículos
 
 - **Nombre:** David Paredes
 - **Edad:** 19  
@@ -609,7 +609,7 @@ El entrevistado David Paredes, un estudiante universitario de 19 años que, aunq
 <img src="../assets/images/chapter-2/interviews/seg3-interview2.png" width="900">
 
 
-#### Entrevista 9: Cliente - propietario de vehículos
+#### Entrevista 6: Cliente - propietario de vehículos
 
 - **Nombre:** Fabio Vallejo  
 - **Edad:** 24  
