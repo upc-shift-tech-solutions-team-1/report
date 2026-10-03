@@ -535,27 +535,28 @@ Para AutoService, se han implementado diversos sistemas de organización que res
 
 ## 4.4.1. Mobile Applications Wireframes
 
-En esta seccion se presentan los wireframes desarrollados para la aplicacion movil de AutoService. Su proposito es representar la estructura inicial de las pantallas, la jerarquia de la informacion, los controles principales y la navegacion prevista antes de aplicar el diseño visual definitivo y desarrollar los mock-ups.
+En esta sección se presentan los wireframes desarrollados para la aplicación móvil de AutoService. Su propósito es representar la estructura inicial de las pantallas, la jerarquía de la información, los controles principales y la navegación prevista antes de aplicar el diseño visual definitivo y desarrollar los mock-ups.
 
-Los wireframes para el entorno movil fueron elaborados a partir de las user stories definidas. En total, se diseñaron 39 pantallas principales, que representan las funcionalidades comprendidas entre la US-01 y la US-40. 
+Los wireframes para el entorno móvil fueron elaborados a partir de las User Stories definidas. En total, se diseñaron 39 pantallas principales que dan soporte a las funcionalidades comprendidas entre la US-01 y la US-42. La cantidad de pantallas no corresponde de manera directa a la cantidad de User Stories, ya que una misma interfaz puede cubrir más de una historia relacionada.
 
-La propuesta contempla las necesidades de los tres perfiles principales del sistema: 
-- Administrados de taller: supervision operativa, gestion de vehiculos, ordenes de trabajo, tareas, personal tecnico, reportes y configuracion
-- Mecanico: consulta de tareas asignadas, registro del diagnostivo tecnico, actualizacion del trabajo y comunicacion de impedimentos.
-- Cliente: seguimiento del servicio, consulta de avances y costos, aprobacion de cargos adicionales, pagos y documentos.
+La propuesta contempla las necesidades de los tres perfiles principales del sistema:
 
-Cabe recalcar que el rol Cliente viene a ser un usuario benefeciado mas que un segmento objetivo debido a que recibe un impacto positivo directo del producto en este caso.
+- Administrador de taller: supervisión operativa, gestión de vehículos, órdenes de trabajo, tareas, personal técnico, reportes y configuración.
+- Mecánico: consulta de tareas asignadas, registro del diagnóstico técnico, actualización del trabajo y comunicación de impedimentos.
+- Cliente: seguimiento del servicio, consulta de avances y costos, aprobación de cargos adicionales, pagos y documentos.
 
-Los wireframes fueron construidos para un entorno movil utilizando representaciones de baja fidelidad, se empleo una escala monocromatica compuesta por blanco, negro y tonalidades grises, evitando colores de marca, imagenes decorativas y elementos propios del diseño visual definitivo.
+Cabe recalcar que el rol Cliente corresponde a un usuario beneficiado por la solución más que a un segmento objetivo principal, ya que recibe un impacto positivo directo mediante la transparencia y el seguimiento del servicio.
 
-Se aplicacion los siguiente criterios de diseño:
+Los wireframes fueron construidos para un entorno móvil utilizando representaciones de baja fidelidad. Se empleó una escala monocromática compuesta por blanco, negro y tonalidades grises, evitando colores de marca, imágenes decorativas y elementos propios del diseño visual definitivo.
 
-- Distribucion vertical adaptada a dispositivos moviles.
-- Espaciado estructural
-- Margenes laterales
-- Jerarquia visual mediante titulos, subtitulosm tarjetas y agrupaciones.
-- Uso de listas, formularios, tarjetas, barras de progreso, indicadores, timelines y dialogos segun la naturaleza de cada funcionalidad.
-- Navegacion y contenido diferenciados de acuerdo con el rol del usuario.
+Se aplicaron los siguientes criterios de diseño:
+
+- Distribución vertical adaptada a dispositivos móviles.
+- Espaciado estructural consistente.
+- Márgenes laterales adecuados para pantallas móviles.
+- Jerarquía visual mediante títulos, subtítulos, tarjetas y agrupaciones.
+- Uso de listas, formularios, tarjetas, barras de progreso, indicadores, timelines y diálogos según la naturaleza de cada funcionalidad.
+- Navegación y contenido diferenciados de acuerdo con el rol del usuario.
 
 ![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-1.png)
 
@@ -573,7 +574,7 @@ Se aplicacion los siguiente criterios de diseño:
 
 ![alt text](/markdown/assets/images/chapter-4/wireframes-autoservice-8.png)
 
-Los wireframes fueron desarrollados en la plataforma [Figma](https://www.figma.com/design/KkLYmg0BnHdfFEopVka0Yy/AutoService-UX-UI?node-id=0-1&t=bOzvaRNnahGhcVqK-1). 
+Los wireframes fueron desarrollados en la plataforma [Figma](https://www.figma.com/design/KkLYmg0BnHdfFEopVka0Yy/AutoService-UX-UI?node-id=0-1&t=bOzvaRNnahGhcVqK-1).
 
 
 ## 4.4.2. Mobile Applications Wireflow Diagrams
@@ -638,13 +639,13 @@ Cada wireflow contiene dos representaciones complementarias:
 ![Mobile Flow Diagram 4 - Servicios del Cliente](/markdown/assets/images/chapter-4/wireflow-b1-autoservice-4.png)
 
 ### Wireflow Diagram 5 — Panel operativo y análisis administrativo
-
 | Campo | Descripción |
 |---|---|
-| **User Persona** | Administrador |
-| **User Stories** | US-16, US-17, US-18, US-33, US-34, US-35 y US-40 |
-| **User Goal** | Supervisar el funcionamiento del taller, analizar indicadores operativos y acceder a la configuración administrativa. |
-| **Happy Path** | El Administrador ingresa al panel operativo y consulta los principales indicadores del taller. Desde este espacio puede revisar los vehículos activos, consultar los ingresos semanales y acceder a los informes estratégicos. También puede analizar la tendencia de servicios y los servicios más frecuentes. La configuración administrativa se encuentra disponible como una ruta independiente desde el panel principal. |
+| **User Persona** | Administrador. |
+| **User Stories** | US-16 a US-18, US-33 a US-35 y US-40 a US-42. |
+| **User Goal** | Supervisar la operación del taller y acceder a indicadores, análisis, perfil y configuración administrativa. |
+| **Happy Path** | Desde el panel operativo, el Administrador consulta vehículos activos e ingresos o abre los informes estratégicos. Desde estos puede revisar tendencias y servicios frecuentes. De manera independiente, puede acceder a la configuración para gestionar su perfil y los datos del taller, configurar categorías y precios de servicios o administrar las opciones de seguridad de su cuenta. |
+| **Unhappy Path** | Si no existen datos para el período consultado, se muestra un estado vacío y se permite cambiar el período o los filtros. Si una actualización de configuración contiene información inválida, la plataforma informa el error y conserva los valores previamente registrados. |
 
 ![Mobile Screen Flow 5 - Panel operativo y análisis](/markdown/assets/images/chapter-4/wireflow-a1-autoservice-5.png)
 
@@ -719,7 +720,7 @@ Los wireflows fueron desarrollados en la plataforma [Figma](https://www.figma.co
 
 ## 4.4.3. Mobile Applications Mock-ups
 
-Los mock-ups de la aplicación móvil de AutoService representan la propuesta visual de alta fidelidad para dispositivos moviles. Se elaboraron a partir de los wireframes y las User Stories definidas previamente. En total, se diseñaron 39 pantallas que cubren de la US-01 a la US-40.
+Los mock-ups de la aplicación móvil de AutoService representan la propuesta visual de alta fidelidad para dispositivos móviles. Se elaboraron a partir de los wireframes y las User Stories definidas previamente. En total, se diseñaron 39 pantallas que dan soporte a las funcionalidades comprendidas entre la US-01 y la US-42. Una misma pantalla puede representar más de una User Story cuando las funcionalidades pertenecen a un mismo flujo o módulo.
 
 Las pantallas se organizaron según las necesidades de cada rol. El Administrador dispone de vistas para supervisar el taller y gestionar vehículos, órdenes, tareas, personal técnico y reportes. El Mecánico cuenta con una experiencia centrada en sus tareas y el trabajo asignado. El Cliente accede al seguimiento del servicio, información económica y acciones relacionadas con su atención. La navegación y las acciones visibles se adaptan a las responsabilidades de cada perfil.
 
