@@ -2,33 +2,55 @@
 
 ## 7.1. Continuous Integration
 
-La estrategia de Continuous Integration de AutoService se implementa mediante GitHub Actions sobre el repositorio del backend. Su objetivo es validar automáticamente que los cambios incorporados al código fuente puedan restaurar sus dependencias, compilar correctamente y superar la suite automatizada de pruebas antes de continuar hacia etapas posteriores de integración y entrega.
+La estrategia de Continuous Integration de AutoService se implementa mediante GitHub Actions sobre el repositorio del backend y frontend. Su objetivo es validar automáticamente que los cambios incorporados al código fuente puedan restaurar sus dependencias, compilar correctamente y superar la suite automatizada de pruebas antes de continuar hacia etapas posteriores de integración y entrega.
 
 El workflow utilizado se encuentra definido en:
+
+Backend:
 
 ```text
 .github/workflows/ci.yml
 ```
 
+Frontend: 
+
+```text
+.github/workflows/vue-ci.yml
+```
+
+
 y recibe el nombre de:
+
+Backend:
 
 ```text
 Backend Continuous Integration
+```
+
+Frontend:
+
+```text
+Vue Continuous Integration
 ```
 
 El pipeline se ejecuta automáticamente ante cambios realizados mediante `push` sobre las ramas `main`, `develop` y cualquier rama que siga el patrón `feature/**`. Asimismo, se ejecuta ante Pull Requests cuyo destino sea `main` o `develop`.
 
 Esta configuración permite verificar tanto el trabajo realizado durante el desarrollo de nuevas funcionalidades como los cambios que se integran hacia las ramas principales del proyecto.
 
+Backend:
 ![Ejecución satisfactoria del pipeline de Continuous Integration](../assets/images/chapter-7/chapter-7-ci-github-actions-success.png)
-
 *Figura 7.1. Ejecución satisfactoria del workflow Backend Continuous Integration mediante GitHub Actions.*
+
+Frontend:
+![](/markdown/assets/images/chapter-7/frontend-continous-integration-success.png)
+*Figura 7.2. Ejecución satisfactoria del workflow Frontend Continuous Integration mediante GitHub Actions.*
+
 
 ### 7.1.1. Tools and Practices
 
-La principal herramienta empleada para Continuous Integration es **GitHub Actions**, integrada directamente con el repositorio GitHub del backend de AutoService.
+La principal herramienta empleada para Continuous Integration es **GitHub Actions**, integrada directamente con el repositorio GitHub del backend y Frontend de AutoService.
 
-El workflow utiliza un runner basado en `ubuntu-latest` y configura automáticamente el entorno requerido para compilar y verificar la solución ASP.NET Core.
+El workflow utiliza un runner basado en `ubuntu-latest` y configura automáticamente el entorno requerido para compilar y verificar la solución ASP.NET Core. Además de la version para Vue que utiliza la misma imagen de ubuntu.
 
 Las principales herramientas y prácticas utilizadas se resumen a continuación:
 
@@ -42,6 +64,7 @@ Las principales herramientas y prácticas utilizadas se resumen a continuación:
 | Pull Requests | Validación automática de cambios antes de su integración hacia `develop` o `main` |
 | Automated Testing | Ejecución automática de la suite de pruebas después de una compilación satisfactoria |
 | Least-Privilege Permissions | El workflow utiliza únicamente el permiso `contents: read` para acceder al código fuente |
+| Vue | El framwork de desarrollo para la partición Frontend |
 
 La automatización se activa mediante la siguiente configuración:
 
@@ -80,7 +103,7 @@ La ejecución utiliza:
 runs-on: ubuntu-latest
 ```
 
-y se compone de cinco etapas principales.
+y se compone de cinco etapas principales para el Backend.
 
 | Orden | Componente | Herramienta / comando | Propósito |
 |---:|---|---|---|
@@ -90,7 +113,18 @@ y se compone de cinco etapas principales.
 | 4 | Build solution | `dotnet build AutoServiceAW.sln --configuration Release --no-restore` | Compila la solución completa utilizando configuración `Release` |
 | 5 | Run automated tests | `dotnet test AutoServiceAW.sln --configuration Release --no-build --verbosity normal` | Ejecuta la suite automatizada de pruebas sobre la solución previamente compilada |
 
-El flujo del pipeline puede representarse de la siguiente manera:
+Y se compone de cinco etapas principales para el Frontend.
+
+| Orden | Componente | Herramienta / comando | Propósito |
+|---:|---|---|---|
+| 1 | Checkout repository| `actions/checkout@v4` | Obtiene el código fuente correspondiente al commit o Pull Request que activó el workflow.|
+| 2 | Setup Node.js | `actions/setup-node@v4` | Configura el entorno de ejecución Node.js (versión 22) dentro del runner y activa la memoria caché para acelerar las instalaciones. |
+| 3 | Install dependencies | `npm ci` | Realiza una instalación limpia y exacta de todas las dependencias del proyecto (Vue, Vite, PrimeVue, Selenium, etc.) basándose en el archivo package-lock.json. |
+| 4 |Run E2E tests | `npm run dev & npx wait-on` `npm run test:e2e` | Levanta el servidor local en segundo plano, espera a que esté disponible y ejecuta la suite automatizada de pruebas End-to-End simulando un navegador Chrome Headless. |
+| 5 | Build Vue app | `npx vite build` | Empaqueta y compila el código fuente de Vue en una carpeta con archivos estáticos (HTML/CSS/JS) optimizados listos para desplegarse en producción. |
+
+
+El flujo del pipeline puede representarse de la siguiente manera para el Backend:
 
 ```text
 Push / Pull Request
@@ -114,7 +148,32 @@ Run automated tests
 Continuous Integration validation
 ```
 
-La restauración de dependencias se realiza una sola vez mediante:
+Y para el Frontend:
+
+```text
+Push / Pull Request
+        |
+        v
+Checkout repository
+        |
+        v
+Setup Node.js 22
+        |
+        v
+Install dependencies
+        |
+        v
+Run E2E tests (Selenium + Vitest)
+        |
+        v
+Build Vue app (Vite)
+        |
+        v
+Continuous Integration validation
+```
+
+
+La restauración de dependencias en el Backend se realiza una sola vez mediante:
 
 ```bash
 dotnet restore AutoServiceAW.sln
@@ -141,6 +200,38 @@ La solución utilizada por el pipeline incluye tanto el proyecto principal del b
 La evidencia presentada en la Figura 7.1 muestra una ejecución real del workflow `Backend Continuous Integration` finalizada con estado `Success`, confirmando que el job `Build and Test` completó satisfactoriamente el proceso automatizado de integración.
 
 En consecuencia, el pipeline proporciona una verificación repetible del backend ante cambios realizados en las principales ramas de desarrollo, reduciendo el riesgo de integrar código que no compile o que produzca fallos en la suite automatizada de pruebas.
+
+
+La instalación limpia de dependencias en el Frontend se realiza de manera determinista mediante:
+
+```bash
+npm ci
+```
+
+Este comando asegura que se instalen las versiones exactas estipuladas en el archivo package-lock.json, garantizando un entorno reproducible y evitando problemas de discrepancia de versiones durante la ejecución del pipeline.
+
+Posteriormente, la etapa Run E2E tests levanta el servidor de desarrollo en segundo plano y ejecuta la suite de pruebas End-to-End sobre Google Chrome en modo Headless (sin interfaz gráfica):
+
+```bash
+npm run dev &
+npx wait-on http://localhost:5173
+npm run test:e2e
+```
+
+Finalmente, la compilación de la aplicación se ejecuta mediante Vite:
+
+```bash
+npx vite build
+```
+
+Esto empaqueta el código fuente de Vue en un bundle de archivos estáticos optimizados (/dist), comprobando que no existan errores de compilación u optimización para producción.
+
+La configuración utilizada por el pipeline cubre la funcionalidad principal del frontend, interactuando directamente con el DOM y los componentes de PrimeVue. Por ello, la etapa Run E2E tests ejecuta la suite automatizada documentada en el Capítulo VI, cuya línea base actual corresponde a 5 pruebas automatizadas End-to-End ejecutadas satisfactoriamente (cubriendo los módulos de Mechanic y Workshop Operations).
+
+La evidencia presentada en la Figura 7.2 (cambia el número de figura según corresponda) muestra una ejecución real del workflow Vue Continuous Integration finalizada con estado Success, confirmando que el job Build and Run E2E Tests completó satisfactoriamente el proceso automatizado de integración.
+
+En consecuencia, este pipeline proporciona una verificación repetible del frontend ante cambios realizados en las principales ramas de desarrollo, reduciendo el riesgo de integrar código que rompa la interfaz de usuario, que no compile, o que produzca fallos funcionales en la suite automatizada de pruebas E2E.
+
 
 ## 7.2. Continuous Delivery
 
