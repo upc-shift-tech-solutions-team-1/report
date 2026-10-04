@@ -240,6 +240,10 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
         <td rowspan="5">
             <i>AV1</i>
             <p>El AV1 permitió al equipo reconocer que desarrollar AutoService exige más que construir interfaces y funcionalidades. La definición del modelo de negocio, el análisis de necesidades, la refinación de requisitos y el diseño de las experiencias web y móvil hicieron necesario considerar la privacidad de la información, los permisos de cada rol y la claridad de los procesos. Asimismo, el equipo identificó su responsabilidad de documentar con transparencia las decisiones tomadas y distinguir los prototipos de las funciones efectivamente implementadas. Estas prácticas constituyen una base para continuar el desarrollo y la validación del producto de manera profesional.</p>
+            <br/>
+<i>TP:</i>
+
+<p>El Trabajo Parcial permitió al equipo fortalecer su responsabilidad profesional mediante la incorporación de prácticas de verificación, seguridad y automatización sobre AutoService. La implementación de pruebas unitarias, de integración y de aceptación permitió comprobar comportamientos antes de considerar una funcionalidad como validada, mientras que los mecanismos de autenticación, autorización y protección de credenciales reforzaron el tratamiento responsable de la información. Asimismo, el equipo mantuvo transparencia al diferenciar las pruebas automatizadas de las especificaciones BDD aún pendientes de automatización y utilizó Continuous Integration para verificar los cambios antes de su incorporación, reforzando una cultura de calidad y trazabilidad durante el desarrollo.</p>
         </td>
     </tr>
     <tr>
@@ -261,6 +265,10 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Sanchez Cuadrado, Juan Antonio</b><br/>
             <i>AV1</i>
             <p>Participé en la elaboración y revisión de la documentación técnica del proyecto AutoService desde los capítulos 1 al 5, procurando mantener coherencia entre los requerimientos, el diseño, la implementación y las evidencias presentadas. Asimismo, participé en la integración y configuración de los productos del proyecto, incluyendo la aplicación Web, la aplicación móvil, la RESTful API y los servicios de despliegue. Durante este proceso consideré prácticas profesionales como el uso responsable del control de versiones, la protección de credenciales mediante variables de entorno, la validación de los cambios antes de integrarlos y la documentación transparente de funcionalidades implementadas y pendientes.</p>
+            <br/>
+<i>TP:</i>
+
+<p>Durante el Trabajo Parcial reforcé mi responsabilidad profesional mediante el desarrollo y validación del módulo Authentication & Access de AutoService. Implementé y revisé pruebas unitarias sobre Sign Up y Sign In, verificando el hashing seguro de contraseñas con BCrypt y la generación de JWT, además de pruebas de integración y Acceptance/System Tests para comprobar autenticación y autorización según roles. También documenté escenarios BDD en Gherkin, indicando de manera transparente que permanecen como especificaciones no automatizadas. Complementariamente, participé en la configuración de Continuous Integration del backend con GitHub Actions, incorporando build y ejecución automática de pruebas antes de integrar cambios, y manteniendo credenciales y secretos fuera del código fuente mediante Environment Variables.</p>
         </td>
     </tr>
     <tr>
@@ -281,7 +289,10 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
         </td>
         <td rowspan="5">
             <i>AV1</i>
-            <p>El análisis de los segmentos, las User Stories y los flujos de AutoService permitió valorar el impacto potencial de la solución en administradores, mecánicos y clientes beneficiarios. Una mejor organización de órdenes, tareas y personal podría contribuir a reducir reprocesos, aprovechar mejor los recursos del taller y ofrecer mayor transparencia sobre los servicios. Al mismo tiempo, el equipo reconoció la importancia de diseñar experiencias accesibles para personas con distintos niveles de familiaridad digital y de adaptar la solución a diferentes contextos de uso. Estos beneficios económicos, sociales y ambientales son proyecciones del AV1, no resultados medidos; deberán contrastarse mediante pruebas y validaciones posteriores.</p>
+            <p>El análisis de los segmentos, las User Stories y los flujos de AutoService permitió valorar el impacto potencial de la solución en administradores, mecánicos y clientes beneficiarios. Una mejor organización de órdenes, tareas y personal podría contribuir a reducir reprocesos, aprovechar mejor los recursos del taller y ofrecer mayor transparencia sobre los servicios. Al mismo tiempo, el equipo reconoció la importancia de diseñar experiencias accesibles para personas con distintos niveles de familiaridad digital y de adaptar la solución a diferentes contextos de uso. Estos beneficios económicos, sociales y ambientales son proyecciones del AV1, no resultados medidos; deberán contrastarse mediante pruebas y validaciones posteriores.</p>          
+<i>TP:</i>
+
+<p>Durante el Trabajo Parcial, el equipo amplió la evaluación del impacto de AutoService al considerar no solo las funcionalidades del producto, sino también la confiabilidad y sostenibilidad de su proceso de entrega. La automatización de pruebas y pipelines permite reducir errores manuales y detectar regresiones antes de llegar a producción, mientras que las decisiones sobre servicios cloud, contenedores y despliegue fueron tomadas considerando mantenibilidad, disponibilidad y costo operativo. Estas prácticas contribuyen a construir una solución más confiable para talleres y clientes, con mayor trazabilidad de los cambios y mejores condiciones para evolucionar el producto de manera controlada y sostenible.</p>
         </td>
     </tr>
     <tr>
@@ -303,6 +314,10 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Sanchez Cuadrado, Juan Antonio</b><br/>
             <i>AV1</i>
             <p>Durante el desarrollo de AutoService participé en decisiones relacionadas con la integración y despliegue de la solución, evaluando alternativas para la aplicación Web, la RESTful API, la base de datos y la aplicación móvil. Se consideraron aspectos como disponibilidad, costo de los servicios cloud, facilidad de mantenimiento, seguridad de la información y accesibilidad para los usuarios. También se buscó que la solución permita digitalizar procesos habituales de los talleres automotrices, reduciendo la dependencia de registros manuales y facilitando el acceso centralizado a información de clientes, vehículos, órdenes de trabajo, mecánicos e inventario.</p>
+            <br/>
+<i>TP:</i>
+
+<p>Durante el Trabajo Parcial evalué decisiones técnicas relacionadas con testing y DevOps considerando su impacto en la confiabilidad, seguridad, mantenibilidad y costo operativo de AutoService. La automatización de pruebas mediante Continuous Integration permite detectar regresiones antes de incorporar cambios, reduciendo el riesgo de desplegar funcionalidades defectuosas. Asimismo, la utilización de GitHub Actions, GitHub Releases, Docker y Render permitió establecer un flujo reproducible desde el código hasta producción, priorizando que únicamente cambios validados continúen hacia el despliegue. Estas decisiones contribuyen a disminuir errores manuales, proteger la información de los usuarios y mejorar la trazabilidad del desarrollo, aspectos relevantes para la sostenibilidad técnica y económica de la solución.</p>
         </td>
     </tr>
     <tr>
