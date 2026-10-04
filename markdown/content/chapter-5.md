@@ -962,7 +962,11 @@ La interfaz de Swagger incorpora la opción `Authorize`, mediante la cual puede 
 
 Esta capacidad permite utilizar Swagger no solo como documentación técnica, sino también como herramienta de validación durante el desarrollo e integración de los diferentes componentes de AutoService.
 
-![AutoService RESTful API Documentation](../assets/chapter-5/api-swagger-public-documentation.png)
+![AutoService RESTful API Documentation 1](../assets/chapter-5/api-swagger-public-documentation.png)
+
+![AutoService RESTful API Documentation 2](../assets/chapter-5/api-swagger-public-documentation-2.png)
+
+![AutoService RESTful API Documentation 2](../assets/chapter-5/api-swagger-public-documentation-3.png)
 
 La documentación interactiva de la API se encuentra disponible públicamente mediante el backend desplegado en Render.
 
