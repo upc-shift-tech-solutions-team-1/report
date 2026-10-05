@@ -69,7 +69,7 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
 </div>
 
 <h3 align="center"><strong>Periodo 202620</strong></h3>
-<h3 align="center"><strong>Septiembre 2026</strong></h3>
+<h3 align="center"><strong>Octubre 2026</strong></h3>
 
 # Registro de Versiones del informe
 
@@ -253,6 +253,10 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Flores Eusebio, Angel Thyago</b><br/>
             <i>AV1</i>
             <p>La refinación de los requisitos, el diseño UX/UI en Figma y el desarrollo de Workshop y Staff me permitieron reconocer que una interfaz funcional también debe ser clara y respetar las responsabilidades de cada rol. Durante el trabajo procuré mantener coherencia entre las User Stories, los prototipos y el frontend móvil, diferenciando las funcionalidades implementadas de las que aún dependen del backend. Esto reforzó la importancia de comunicar con transparencia el estado real del producto y de considerar el acceso adecuado a la información del taller.</p>
+            <br/>
+<i>TP:</i>
+
+<p>En mi participación en AutoService asumí responsabilidad profesional al documentar y validar el módulo con cuatro pruebas unitarias, una de integración, dos de sistema con Selenium y una especificación BDD, además de revisar la automatización de integración y despliegue. En el seguimiento público reconocí que facilitar la consulta del estado del vehículo debe equilibrarse con la protección de los datos. Por ello, identifiqué como mejora pendiente reforzar el control de acceso ante la posible modificación del identificador de seguimiento.</p>
         </td>
     </tr>
     <tr>
@@ -309,6 +313,10 @@ Durante el Trabajo Parcial asumí la revisión e implementación del flujo de Wo
             <b>Flores Eusebio, Angel Thyago</b><br/>
             <i>AV1</i>
             <p>Al diseñar los flujos móviles y desarrollar las funciones de órdenes, tareas y personal técnico, analicé cómo AutoService podría mejorar la coordinación del taller y la visibilidad del trabajo realizado. Una gestión más ordenada tiene el potencial de reducir reprocesos y favorecer la atención al cliente, con posibles beneficios económicos y un uso más eficiente de recursos. También consideré que la solución debe ser comprensible para usuarios con distintos niveles de experiencia digital. Estos impactos son potenciales y deberán comprobarse mediante validaciones con usuarios.</p>
+            <br/>
+<i>TP:</i>
+
+<p>Al evaluar la solución, consideré que el seguimiento remoto puede dar mayor transparencia al cliente y reducir consultas repetidas al taller, con posibles beneficios sociales y económicos. La consulta en línea también podría evitar algunos desplazamientos innecesarios, aunque ese impacto ambiental no fue medido. Además, la automatización de pruebas y despliegues ayuda a detectar errores antes de publicar cambios; a la vez, el acceso al servicio depende de la disponibilidad de las plataformas en la nube utilizadas. Estos aspectos permiten valorar beneficios y dependencias sin presentarlos como resultados cuantificados.</p>
         </td>
     </tr>
     <tr>
