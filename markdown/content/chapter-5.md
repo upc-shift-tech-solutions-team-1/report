@@ -919,6 +919,18 @@ https://autoservice-backend-cnbd.onrender.com
 **API Base URL:**  
 https://autoservice-backend-cnbd.onrender.com/api/v1
 
+### Work Orders & Tasks — Trabajo Parcial
+
+
+Como aporte al Trabajo Parcial, se incorporó al módulo Workshop Operations el endpoint `DELETE /api/v1/workorders/{id}`, definido en `WorkOrdersController`. Esta operación delega la eliminación de la orden al método `DeleteAsync` del servicio de aplicación, manteniendo la separación entre la interfaz REST y la lógica del módulo.
+
+El código de esta contribución se encuentra en la branch `feature/mario-work-orders-tasks-quality` del repositorio Backend:
+
+https://github.com/upc-shift-tech-solutions-team-1/autoservice-backend/tree/feature/mario-work-orders-tasks-quality
+
+Además, se incorporaron pruebas relacionadas con la actualización del diagnóstico y las evidencias técnicas de una tarea, el cierre de una orden con su checklist validado y los flujos HTTP de creación y consulta de órdenes. También se añadió una especificación Gherkin del ciclo de vida de órdenes y tareas. El detalle de estas pruebas y sus evidencias se presenta en el capítulo VI.
+
+Estas contribuciones deben distinguirse del backend actualmente desplegado: su disponibilidad en producción depende de la revisión e integración de la branch y del posterior despliegue. La incorporación del endpoint tampoco demuestra por sí sola la coherencia completa del módulo entre Backend, Web y Mobile, que requiere validación adicional.
 
 ## 5.2.7. RESTful API Documentation
 
@@ -962,7 +974,11 @@ La interfaz de Swagger incorpora la opción `Authorize`, mediante la cual puede 
 
 Esta capacidad permite utilizar Swagger no solo como documentación técnica, sino también como herramienta de validación durante el desarrollo e integración de los diferentes componentes de AutoService.
 
-![AutoService RESTful API Documentation](../assets/chapter-5/api-swagger-public-documentation.png)
+![AutoService RESTful API Documentation 1](../assets/chapter-5/api-swagger-public-documentation.png)
+
+![AutoService RESTful API Documentation 2](../assets/chapter-5/api-swagger-public-documentation-2.png)
+
+![AutoService RESTful API Documentation 2](../assets/chapter-5/api-swagger-public-documentation-3.png)
 
 La documentación interactiva de la API se encuentra disponible públicamente mediante el backend desplegado en Render.
 
@@ -992,4 +1008,6 @@ El uso consistente de Conventional Commits permitió mantener la trazabilidad de
 ![evidence2](/markdown/assets/chapter-5/insight-evidence-2.png)
 # 5.3. Video About-the-Product
 
-> PENDIENTE: incorporar la descripción, evidencia, duración y enlaces del video About-the-Product correspondiente al Trabajo Parcial.
+
+Duracion: 1:07
+Link del video: https://youtu.be/rQcNeHcAdvU

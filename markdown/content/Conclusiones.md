@@ -1,40 +1,35 @@
-## Conclusiones y Recomendaciones
+# Conclusiones y Recomendaciones
 
-<p align="justify">
-A continuación, se presentan las conclusiones derivadas del desarrollo de los primeros cinco capítulos del proyecto AutoService, así como las recomendaciones estratégicas para la continuidad de los siguientes Sprints:
-</p>
+## Conclusiones
 
-<p align="justify"><b>Conclusiones:</b></p>
-<ul style="text-align: justify; margin-top: 0.5em; margin-bottom: 1.5em; padding-left: 1.5em;">
-  <li style="margin-bottom: 0.8em;">
-    <strong>Implementación Integral de la Solución:</strong> Se logró desarrollar e integrar exitosamente una arquitectura compuesta por un frontend en Vue.js y un backend en ASP.NET Core, permitiendo la comunicación entre ambas capas mediante servicios REST y garantizando el funcionamiento integral de la plataforma AutoService.
-  </li>
-  <li style="margin-bottom: 0.8em;">
-    <strong>Arquitectura Escalable y Mantenible:</strong> La aplicación de Domain-Driven Design (DDD) y la organización mediante Bounded Contexts permitió estructurar adecuadamente los dominios del negocio, favoreciendo la mantenibilidad, modularidad y escalabilidad del sistema para futuras iteraciones.
-  </li>
-  <li style="margin-bottom: 0.8em;">
-    <strong>Persistencia y Gestión de Datos:</strong> La implementación de Entity Framework Core junto con las migraciones automáticas permitió establecer una capa de persistencia robusta, garantizando la correcta administración de la información y la evolución controlada de la base de datos del sistema.
-  </li>
-  <li style="margin-bottom: 0.8em;">
-    <strong>Madurez en la Gestión del Desarrollo:</strong> El uso de GitFlow, Pull Requests, Conventional Commits y documentación mediante Swagger/OpenAPI contribuyó a mantener un proceso de desarrollo colaborativo, organizado y alineado con buenas prácticas de ingeniería de software.
-  </li>
-</ul>
+A partir del desarrollo, integración, verificación y despliegue de AutoService, se obtuvieron las siguientes conclusiones:
 
-<p align="justify"><b>Recomendaciones:</b></p>
-<ul style="text-align: justify; margin-top: 0.5em; margin-bottom: 1.5em; padding-left: 1.5em;">
-  <li style="margin-bottom: 0.8em;">
-    <strong>Fortalecimiento de la Seguridad:</strong> Se recomienda implementar mecanismos avanzados de autenticación, autorización y gestión de roles para garantizar la protección de los recursos y la información administrada por la plataforma.
-  </li>
-  <li style="margin-bottom: 0.8em;">
-    <strong>Incorporación de Pruebas Automatizadas:</strong> Se sugiere ampliar la cobertura de pruebas unitarias, de integración y de aceptación con el fin de incrementar la confiabilidad del sistema y facilitar futuras tareas de mantenimiento.
-  </li>
-  <li style="margin-bottom: 0.8em;">
-    <strong>Monitoreo y Observabilidad:</strong> Resulta conveniente incorporar herramientas de monitoreo, registro de eventos y seguimiento de errores que permitan detectar incidencias de manera temprana y mejorar la estabilidad operativa de la solución.
-  </li>
-  <li style="margin-bottom: 0.8em;">
-    <strong>Evolución Funcional de la Plataforma:</strong> Se recomienda continuar incorporando funcionalidades orientadas al negocio, tales como reportes, notificaciones automáticas, indicadores de desempeño e historial detallado de servicios para aumentar el valor ofrecido a los usuarios.
-  </li>
-</ul>
+- **Integración de una solución multiplataforma:** AutoService consolida una solución compuesta por Landing Page, Web Application, Native Mobile Application y RESTful API. La arquitectura permite que los clientes Web y Mobile consuman los servicios proporcionados por el backend ASP.NET Core y accedan a la información persistida en MySQL.
 
+- **Aplicación de una arquitectura modular y orientada al dominio:** La organización del backend mediante bounded contexts y la separación entre Domain, Application, Infrastructure e Interfaces permitió distribuir las responsabilidades del sistema de manera estructurada. Esta organización favorece la mantenibilidad del código y facilita la evolución independiente de los diferentes módulos del negocio.
 
----
+- **Verificación automatizada del backend:** La implementación de pruebas unitarias, de integración y de aceptación permitió establecer una línea base automatizada de **31 pruebas ejecutadas satisfactoriamente, con 0 pruebas fallidas y 0 omitidas**. Estas pruebas validan comportamientos de entidades y agregados del dominio, autenticación mediante JWT, integración de la interfaz REST y restricciones de autorización basadas en roles.
+
+- **Validación de autenticación y control de acceso:** Las pruebas desarrolladas comprobaron la generación de JWT, la incorporación de información como `email`, `role` y `WorkshopId`, así como la restricción de operaciones exclusivas para administradores. También se verificó que un usuario con rol `mechanic` no pueda ejecutar operaciones reservadas para el rol `admin`.
+
+- **Automatización mediante Continuous Integration:** GitHub Actions permite verificar automáticamente los cambios enviados a las principales ramas del repositorio. El pipeline de Continuous Integration restaura dependencias, compila la solución en configuración `Release` y ejecuta la suite automatizada de pruebas, proporcionando una validación repetible antes de integrar cambios.
+
+- **Implementación de Continuous Delivery:** El workflow de release permite generar versiones distribuibles del backend mediante tags basados en Semantic Versioning. La versión `v1.0.0` fue construida y publicada automáticamente mediante GitHub Actions, generando el artefacto `AutoServiceAW.zip` y su correspondiente GitHub Release.
+
+- **Implementación de Continuous Deployment:** El backend se encuentra desplegado mediante Render utilizando Docker y la branch `main` como fuente de producción. La configuración `After CI Checks Pass` permite que el deployment automático se realice después de que las validaciones de Continuous Integration finalicen satisfactoriamente.
+
+- **Infraestructura de producción desacoplada:** La solución utiliza Render para la ejecución de la RESTful API y Railway para la persistencia MySQL. Las credenciales y configuraciones sensibles se administran mediante Environment Variables, evitando incluir secretos directamente dentro del código fuente versionado.
+
+## Recomendaciones
+
+A partir del estado actual del proyecto se plantean las siguientes recomendaciones para continuar fortaleciendo AutoService:
+
+- **Automatizar completamente los escenarios BDD:** Actualmente se dispone de escenarios de autenticación especificados mediante Gherkin en `Authentication.feature`. Se recomienda incorporar sus correspondientes Step Definitions mediante una herramienta compatible con .NET para convertir estas especificaciones en pruebas BDD ejecutables dentro del pipeline.
+
+- **Incrementar progresivamente la cobertura funcional:** Aunque la suite actual proporciona una línea base de 31 pruebas automatizadas, se recomienda continuar incorporando pruebas sobre los demás bounded contexts y escenarios críticos del negocio, especialmente aquellos relacionados con órdenes de trabajo, inventario, gestión de mecánicos y tracking público.
+
+- **Completar la validación funcional del Native Mobile Application:** Se recomienda finalizar las pruebas del aplicativo Android contra la RESTful API desplegada en producción, verificando los flujos de autenticación, clientes, vehículos, mecánicos, inventario, órdenes de trabajo, tareas y tracking desde un dispositivo físico.
+
+- **Fortalecer el monitoreo del entorno productivo:** El backend dispone de un endpoint `/health` para comprobar su disponibilidad. Como evolución futura, se recomienda complementar esta verificación con mecanismos de observabilidad, registro centralizado de errores y alertas que permitan detectar incidencias de producción de manera temprana.
+
+- **Mantener el flujo controlado de releases:** Las futuras versiones del backend deberían continuar generándose desde estados estables de `main`, utilizando tags con Semantic Versioning y conservando la validación mediante GitHub Actions antes de cualquier deployment hacia producción.

@@ -464,6 +464,18 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
   <li>¿Qué funcionalidades consideras indispensables en un sistema de gestión para talleres?</li>
 </ol>
 
+<strong>SEGMENTO 3: Clientes - Propietarios de vehículos</strong>
+<ol>
+  <li>¿Podrías contarme sobre la última vez que llevaste tu vehículo a un taller? ¿Qué servicio necesitabas?</li>
+  <li>¿Durante el servicio, ¿cómo te informaban sobre el estado de tu vehículo?</li>
+  <li>¿Tuviste alguna duda o preocupación mientras tu auto estaba en el taller? ¿Cuál fue?</li>
+  <li>¿Alguna vez has sentido desconfianza hacia un taller? ¿Qué situación generó eso?</li>
+  <li>¿Te gustaría poder ver el progreso de la reparación de tu auto en tiempo real desde tu celular o computadora? ¿Por qué?</li>
+  <li>¿Qué tipo de información te gustaría ver mientras tu vehículo está en el taller?</li>
+  <li>¿Qué tan cómodo te sientes usando plataformas digitales o aplicaciones para consultar información de servicios?</li>
+  <li>Si existiera una plataforma que te permita ver el estado de tu vehículo, costos y trabajos realizados, ¿la usarías? ¿Qué te gustaría que incluya?</li>  
+</ol>
+
 ## 2.2.2. Registro de entrevistas
 
 #### Entrevista 1: Técnico Independiente 
@@ -482,7 +494,7 @@ Se busca transformar esta percepción mediante transparencia y comunicación.</p
 ---
 **Resumen:**
 <p style="text-align: justify;">
-El entrevistado Gurmecindo de 55 años con aproximadamente 35 años de experiencia, residente en San Juan Bautista, Ayacucho. Su trabajo se centra en la reparación de motores y mantenimiento general de vehículos. En su día a día, realiza diversas tareas mecánicas dependiendo de las fallas que presentan los autos. Actualmente, gestiona la información de sus clientes y vehículos de forma manual, utilizando cuadernos y actas de control donde registra datos como la hora de ingreso, la placa y el tipo de trabajo. En cuanto a la comunicación, suele llamar a los clientes cuando el vehículo está listo o también recibe llamadas de ellos para consultar el estado. Señala que sus clientes confían en su servicio debido a la garantía y puntualidad que ofrece, y sí mantiene un historial de trabajos de manera escrita. Frente a la propuesta de una plataforma digital, muestra una actitud positiva y considera que es necesaria en la actualidad para mejorar la gestión, destacando como funcionalidad importante la incorporación de herramientas como escáner automotriz para diagnosticar fallas electrónicas, lo que facilitaría y modernizaría su trabajo diario.
+El entrevistado Fray Diaz comenta que para el un dia tipico de trabajo es hacer la limpieza previa y orientación al personal antes de abrir el taller. Tambein coenta que no cuenta con registros de ningun cliente ya que no cuenta de ningun medio para registrarlos. No trabaja con ninguna aplicación de terceros como Excel y en general no presenta problemas al momento de realizar su actividad en el taller. Para poder hacer el procedimiento, primero debe diagnosticar bien el problema del vehiculo y mandar al cliente fotos o videos del error para recivir luz verde para el comenzar el mantenimiento. Comenta tambien que varios clientes llaman para ver como va el mantenimiento de su vehiculo pero que con el paso del tiempo se olvida de algunos de ellos debido a la cantidad. Por último menciona que le interesaría usar una plataofrma que le ayude a gestionar sus clientes y que cuente sobre todo con la capacidad de manejar sus ordenes de trabajo.
 </p>
 
 ---
@@ -543,7 +555,7 @@ El entrevistado Antenor Ayala, un mecánico automotriz de 33 años residente en 
 ![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg1-interview3.png)
 
 
-#### Entrevista 7: Cliente - propietario de vehículo
+#### Entrevista 4: Cliente - propietario de vehículo
 
 - **Nombre:** Ruiz Soto 
 - **Edad:** 22
@@ -570,7 +582,7 @@ El entrevistado es Ruiz Soto, un estudiante universitario de 22 años que reside
 ![Entrevista Cliente - propietario de vehículo](../assets/images/chapter-2/interviews/seg3-interview1.png)
 
 
-#### Entrevista 8: Cliente - propietario de vehículos
+#### Entrevista 5: Cliente - propietario de vehículos
 
 - **Nombre:** David Paredes
 - **Edad:** 19  
@@ -597,7 +609,7 @@ El entrevistado David Paredes, un estudiante universitario de 19 años que, aunq
 <img src="../assets/images/chapter-2/interviews/seg3-interview2.png" width="900">
 
 
-#### Entrevista 9: Cliente - propietario de vehículos
+#### Entrevista 6: Cliente - propietario de vehículos
 
 - **Nombre:** Fabio Vallejo  
 - **Edad:** 24  

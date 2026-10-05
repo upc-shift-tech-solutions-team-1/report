@@ -341,7 +341,7 @@ El Lean UX Process permite definir y validar la solución a partir de la compren
 <p><strong>Technical Assumptions</strong></p>
 <ul>
   <li>Uso de tecnologías web (HTML, CSS, JS, APIs)</li>
-  <li>Base de datos con múltiples tablas (15+)</li>
+  <li>Base de datos con múltiples tablas</li>
   <li>Escalabilidad futura (IoT)</li>
   <li>Integración con APIs externas</li>
 </ul>

@@ -282,15 +282,22 @@ A diferencia de un enfoque centrado únicamente en pantallas o acciones CRUD, la
 <td>Aumentar precisión técnica y reducir reclamos por trabajos no explicados.</td>
 <td><b>Given</b> que una orden se encuentra en diagnóstico,<br><b>When</b> el Mecánico registra la evaluación técnica,<br><b>Then</b> la plataforma guarda el diagnóstico y lo relaciona con las tareas recomendadas.</td>
 </tr>
-
 <tr>
+
 <td><b>US-24</b></td>
+
 <td>EP-05 Gestión de órdenes y tareas</td>
-<td>Gestionar tareas de mantenimiento verificables</td>
+
+<td>Registrar tareas de mantenimiento verificables</td>
+
 <td>Administrador / Mecánico</td>
-<td>Como <b>Administrador o Mecánico</b>, quiero registrar y actualizar tareas de mantenimiento con estado y tiempo estimado para controlar el avance real del servicio.</td>
+
+<td>Como <b>Administrador o Mecánico</b>, quiero registrar tareas de mantenimiento con descripción, responsable y tiempo estimado para estructurar el trabajo requerido dentro de una orden.</td>
+
 <td>Convertir la reparación en tareas verificables y mejorar el seguimiento operativo.</td>
-<td><b>Given</b> que existe una orden activa,<br><b>When</b> se registra o actualiza una tarea,<br><b>Then</b> la plataforma solicita descripción, estado, responsable y tiempo estimado, recalculando el progreso de la orden.</td>
+
+<td><b>Given</b> que existe una orden activa,<br><b>When</b> se registra una nueva tarea de mantenimiento,<br><b>Then</b> la plataforma solicita descripción, responsable y tiempo estimado y la incorpora a la orden.</td>
+
 </tr>
 
 <tr>
@@ -444,13 +451,57 @@ A diferencia de un enfoque centrado únicamente en pantallas o acciones CRUD, la
 </tr>
 
 <tr>
+
 <td><b>US-40</b></td>
+
 <td>EP-09 Perfil y configuración</td>
-<td>Gestionar perfil y configuración administrativa</td>
+
+<td>Gestionar perfil y datos del taller</td>
+
 <td>Administrador</td>
-<td>Como <b>Administrador</b>, quiero gestionar mi perfil, configuración del taller, categorías, precios y seguridad para mantener la operación alineada con los servicios ofrecidos.</td>
-<td>Centralizar administración del taller y proteger información crítica del negocio.</td>
-<td><b>Given</b> que el Administrador está autenticado,<br><b>When</b> accede a su perfil administrativo,<br><b>Then</b> la plataforma muestra datos del taller, gestión de personal, configuración, categorías, precios y opciones de seguridad.</td>
+
+<td>Como <b>Administrador</b>, quiero actualizar mi perfil y los datos generales del taller para mantener vigente la información administrativa y de contacto.</td>
+
+<td>Mantener actualizada la información del taller y del responsable administrativo.</td>
+
+<td><b>Given</b> que el Administrador está autenticado,<br><b>When</b> modifica información permitida de su perfil o del taller,<br><b>Then</b> la plataforma valida y almacena los cambios mostrando una confirmación.</td>
+
+</tr>
+
+<tr>
+
+<td><b>US-41</b></td>
+
+<td>EP-09 Perfil y configuración</td>
+
+<td>Configurar categorías y precios de servicios</td>
+
+<td>Administrador</td>
+
+<td>Como <b>Administrador</b>, quiero configurar las categorías y precios de los servicios para mantener el catálogo del taller alineado con su oferta comercial.</td>
+
+<td>Mantener una oferta de servicios organizada y precios actualizados para la operación del taller.</td>
+
+<td><b>Given</b> que el Administrador accede a la configuración del taller,<br><b>When</b> registra o actualiza una categoría o precio de servicio,<br><b>Then</b> la plataforma valida y almacena la configuración para su uso en las operaciones posteriores.</td>
+
+</tr>
+
+<tr>
+
+<td><b>US-42</b></td>
+
+<td>EP-09 Perfil y configuración</td>
+
+<td>Gestionar seguridad de la cuenta administrativa</td>
+
+<td>Administrador</td>
+
+<td>Como <b>Administrador</b>, quiero actualizar las credenciales de seguridad de mi cuenta para proteger el acceso a la información crítica del taller.</td>
+
+<td>Reducir el riesgo de accesos no autorizados a las funciones administrativas de AutoService.</td>
+
+<td><b>Given</b> que el Administrador está autenticado,<br><b>When</b> solicita actualizar sus credenciales de seguridad,<br><b>Then</b> la plataforma valida la información requerida y almacena el cambio de manera segura.</td>
+
 </tr>
 
 </tbody>
@@ -491,14 +542,23 @@ backlog.
 <div align="center">
 
 <table style="margin: auto; text-align: left; width: 100%; border-collapse: collapse;">
+
 <thead>
+
 <tr>
+
 <th style="width: 6%;"># Orden</th>
+
 <th style="width: 8%;">Story Id</th>
+
 <th style="width: 23%;">Título</th>
+
 <th style="width: 53%;">Descripción</th>
+
 <th style="width: 10%;">Story Points</th>
+
 </tr>
+
 </thead>
 
 <tbody>
@@ -570,9 +630,9 @@ backlog.
 <tr>
 <td>9</td>
 <td><b>US-24</b></td>
-<td>Gestionar tareas de mantenimiento verificables</td>
-<td>Como Administrador o Mecánico, quiero registrar y actualizar tareas de mantenimiento con estado y tiempo estimado para controlar el avance real del servicio.</td>
-<td>8</td>
+<td>Registrar tareas de mantenimiento verificables</td>
+<td>Como Administrador o Mecánico, quiero registrar tareas de mantenimiento con descripción, responsable y tiempo estimado para estructurar el trabajo requerido dentro de una orden.</td>
+<td>5</td>
 </tr>
 
 <tr>
@@ -692,7 +752,7 @@ backlog.
 <td><b>US-36</b></td>
 <td>Aprobar costos adicionales antes de ejecutar reparaciones</td>
 <td>Como Cliente, quiero aprobar digitalmente costos adicionales antes de ejecutar reparaciones no contempladas para evitar conflictos posteriores.</td>
-<td>8</td>
+<td>5</td>
 </tr>
 
 <tr>
@@ -708,7 +768,7 @@ backlog.
 <td><b>US-13</b></td>
 <td>Agendar mantenimiento preventivo</td>
 <td>Como Cliente, quiero agendar mantenimiento preventivo seleccionando servicio, fecha, horario y vehículo para asegurar atención oportuna sin coordinación manual.</td>
-<td>8</td>
+<td>5</td>
 </tr>
 
 <tr>
@@ -716,7 +776,7 @@ backlog.
 <td><b>US-14</b></td>
 <td>Consultar asistente virtual de ayuda</td>
 <td>Como Cliente, quiero consultar un asistente virtual con accesos rápidos para resolver dudas sobre estado, costos, tiempo estimado o última revisión sin interrumpir al taller.</td>
-<td>8</td>
+<td>5</td>
 </tr>
 
 <tr>
@@ -748,7 +808,7 @@ backlog.
 <td><b>US-28</b></td>
 <td>Validar reparación antes de entrega</td>
 <td>Como Administrador, quiero validar tareas, evidencias y checklist de calidad antes de cerrar una reparación para asegurar consistencia del servicio y evitar reclamos.</td>
-<td>8</td>
+<td>5</td>
 </tr>
 
 <tr>
@@ -804,7 +864,7 @@ backlog.
 <td><b>US-38</b></td>
 <td>Centralizar comunicación del servicio</td>
 <td>Como Administrador o Cliente, quiero centralizar comunicaciones del servicio para reducir pérdida de información y mantener confianza durante la reparación.</td>
-<td>8</td>
+<td>5</td>
 </tr>
 
 <tr>
@@ -812,18 +872,35 @@ backlog.
 <td><b>US-39</b></td>
 <td>Auditar timeline de cambios de una orden</td>
 <td>Como Administrador o Mecánico, quiero auditar el timeline de cambios de una orden para identificar quién actualizó estados, tareas, evidencias o costos y en qué momento.</td>
-<td>8</td>
+<td>5</td>
 </tr>
 
 <tr>
 <td>40</td>
 <td><b>US-40</b></td>
-<td>Gestionar perfil y configuración administrativa</td>
-<td>Como Administrador, quiero gestionar mi perfil, configuración del taller, categorías, precios y seguridad para mantener la operación alineada con los servicios ofrecidos.</td>
-<td>8</td>
+<td>Gestionar perfil y datos del taller</td>
+<td>Como Administrador, quiero actualizar mi perfil y los datos generales del taller para mantener vigente la información administrativa y de contacto.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>41</td>
+<td><b>US-41</b></td>
+<td>Configurar categorías y precios de servicios</td>
+<td>Como Administrador, quiero configurar las categorías y precios de los servicios para mantener el catálogo del taller alineado con su oferta comercial.</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>42</td>
+<td><b>US-42</b></td>
+<td>Gestionar seguridad de la cuenta administrativa</td>
+<td>Como Administrador, quiero actualizar las credenciales de seguridad de mi cuenta para proteger el acceso a la información crítica del taller.</td>
+<td>3</td>
 </tr>
 
 </tbody>
+
 </table>
 
 </div>
@@ -852,6 +929,19 @@ Link del Jira: https://upc-team-r1plce2k.atlassian.net/jira/software/projects/SS
 ![](/markdown/assets/images/chapter-3/jira-autoservice-2.png)
 ![](/markdown/assets/images/chapter-3/jira-autoservice-3.png)
 ![](/markdown/assets/images/chapter-3/jira-autoservice-4.png)
+
+# 3.3.1. Technical Stories
+
+Las siguientes Technical Stories describen el trabajo técnico realizado para mantener la calidad, integración y verificabilidad de los módulos Work Orders & Tasks y de la aplicación móvil de AutoService.
+
+| ID | Technical Story | Criterios de aceptación | Responsable | Estado |
+|---|---|---|---|---|
+| TS-01 | Como equipo de desarrollo, necesitamos mantener un contrato REST coherente para Work Orders y Tasks, para que Web y Mobile utilicen las mismas operaciones y estructuras. | Los endpoints de creación, consulta, actualización y eliminación requeridos por las aplicaciones cliente se encuentran disponibles en el Backend. | Mario Fernandez | Implementado |
+| TS-02 | Como equipo de desarrollo, necesitamos pruebas unitarias aisladas para detectar regresiones en la lógica de órdenes y tareas. | Existen dos Unit Tests desarrollados con MSTest, Moq y la estructura Arrange-Act-Assert, que comprueban la actualización y persistencia de órdenes y tareas. | Mario Fernandez | Implementado |
+| TS-03 | Como equipo de desarrollo, necesitamos verificar el flujo HTTP de Work Orders & Tasks para comprobar la interacción entre autenticación, routing, controllers y servicios. | Existe una prueba de integración y una prueba de aceptación que cubren la creación de una orden, asignación y actualización de una tarea y consulta del progreso. | Mario Fernandez | Implementado |
+| TS-04 | Como equipo de desarrollo, necesitamos especificar mediante BDD el comportamiento esperado del ciclo de reparación. | Existe una feature escrita en Gherkin con un escenario exitoso y uno alternativo, utilizando Given, When y Then. | Mario Fernandez | Implementado |
+| TS-05 | Como equipo de desarrollo, necesitamos Continuous Integration para Mobile para detectar pruebas o compilaciones defectuosas antes de integrar cambios. | GitHub Actions ejecuta `testDebugUnitTest` y `assembleDebug`, conserva el reporte de pruebas y publica el APK debug como artefacto. | Mario Fernandez | Implementado y ejecutado satisfactoriamente |
+
 
 # 3.4. Impact Mapping
 
