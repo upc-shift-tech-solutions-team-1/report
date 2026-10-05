@@ -79,7 +79,7 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
 | 1 | 16/09/26 | Flores Eusebio, Angel Thyago | **AV1:** |
 | 1 | 16/09/26 | Soto Palacios, Brandon Wilder | **AV1:** |
 | 1 | 16/09/26 | Aquino Solorzano, Daniel Jonatan | **AV1:** |
-| 1 | 16/09/26 | Fernández, Mario Alonso | **AV1:** |
+| 1 | 16/09/26 | Fernández, Mario Alonso | **AV1:** Implementación de Fleet Management e Inventory Management en la aplicación Android, incorporación de pruebas unitarias y validación de los flujos principales en modo demostración. |
 
 # Project Report Collaboration Insights
 
@@ -278,6 +278,11 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Fernandez Seer, Mario Alonso</b><br/>
             <i>AV1</i>
             <p>Participé en la implementación de los módulos Fleet Management e Inventory Management de la aplicación Android. Incorporé 22 pruebas unitarias y comprobé los flujos de registro y edición de vehículos, creación de productos y recepción de existencias en modo demo. Como parte de mi responsabilidad profesional, distinguí los resultados obtenidos con datos de demostración de la integración real con el servidor, que quedó pendiente de validación. Esto permite presentar evidencias verificables y comunicar las limitaciones del avance sin atribuir resultados a pruebas que todavía no se han realizado.</p>
+          <br/>
+<i>TP</i>
+<p>
+Durante el Trabajo Parcial asumí la revisión e implementación del flujo de Work Orders & Tasks de AutoService. Completé la operación REST faltante para eliminar órdenes de trabajo y desarrollé dos pruebas unitarias con MSTest y Moq, una prueba de integración, una especificación BDD con dos escenarios y una prueba de aceptación del flujo principal. También configuré el pipeline de Continuous Integration de la aplicación móvil para ejecutar automáticamente las pruebas unitarias, compilar la aplicación y generar el APK de depuración. Estas actividades permitieron verificar los cambios antes de integrarlos, mantener trazabilidad mediante Git y comunicar de manera transparente el alcance real de las pruebas realizadas.
+</p>
         </td>
     </tr>
     <tr>
@@ -329,6 +334,11 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Fernandez Seer, Mario Alonso</b><br/>
             <i>AV1</i>
             <p>Durante la implementación de Fleet e Inventory consideré la importancia de validar los datos de vehículos y productos, mostrar las existencias disponibles y calcular precios y márgenes de forma consistente. Estas funciones pueden apoyar decisiones de compra y reducir errores en la gestión del taller. Desde una perspectiva social, la claridad de la información puede facilitar el trabajo del personal y la atención al cliente; desde una perspectiva ambiental, un mejor control del inventario podría ayudar a evitar compras innecesarias y desperdicios. Estos beneficios son potenciales y requieren validación con usuarios y datos reales. También incorporé textos en español e inglés para facilitar la adaptación de la interfaz a distintos usuarios.</p>
+          <br/>
+<i>TP</i>
+<p>
+Durante la revisión de Work Orders & Tasks evalué cómo la consistencia de la información sobre el problema reportado, el diagnóstico técnico, la asignación del mecánico, el estado de las tareas y el progreso de la reparación influye en las decisiones del taller. En el ámbito económico, una mejor coordinación puede reducir retrasos, errores y reprocesos; en el ámbito social, proporciona mayor claridad al personal y al cliente; y en el ámbito ambiental, un control más preciso de las tareas y los repuestos puede evitar consumos o reemplazos innecesarios. La automatización de pruebas y del build móvil también permite detectar regresiones con anticipación y reducir el uso innecesario de tiempo y recursos técnicos.
+</p>
         </td>
     </tr>
 </table>
