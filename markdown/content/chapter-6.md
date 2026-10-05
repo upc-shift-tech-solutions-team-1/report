@@ -155,6 +155,23 @@ TaskServiceTest:
 ![](/markdown/assets/images/chapter-6/task-service-test-2.png)
 *Figura 6.22 prueba de task service 2*
 
+#### Work Orders & Tasks — Service Unit Tests
+
+Se incorporaron dos pruebas unitarias en `WorkshopOperationsServiceTests`, utilizando MSTest y Moq. Los repositorios y la unidad de trabajo se sustituyen mediante mocks para evaluar los servicios sin depender de una base de datos.
+
+| Prueba | Comportamiento verificado |
+|---|---|
+| `PatchTaskStatus_WithDiagnosisAndEvidence_ShouldPersistTechnicalProgress` | Actualización del estado, diagnóstico técnico, evidencia y aprobación de una tarea, junto con las llamadas de actualización al repositorio y confirmación de la unidad de trabajo. |
+| `UpdateWorkOrder_WithValidatedChecklist_ShouldPersistClosedOrder` | Actualización de una orden con estado `COMPLETED`, precio y cinco indicadores del checklist, junto con las llamadas al repositorio y a la unidad de trabajo. |
+
+El alcance de estas pruebas comprende la actualización de datos y las llamadas a las dependencias simuladas. No incluye persistencia en una base de datos real ni demuestra que se impida cerrar una orden con un checklist incompleto.
+
+**Archivo:** `AutoServiceAW.API.Tests/WorkshopOperations/Application/Internal/WorkshopOperationsServiceTests.cs`.
+
+![Resultados de las pruebas de Work Orders y Tasks](../assets/images/chapter-6/work-orders-tasks-tests-passed.png)
+
+*Evidencia de ejecución: las dos pruebas de WorkshopOperationsServiceTests aparecen con resultado Success.*
+
 ### 6.1.2. Core Integration Tests
 
 Las pruebas de integración fueron utilizadas para verificar la interacción entre la interfaz HTTP y el servicio de autenticación de la aplicación.
@@ -241,6 +258,22 @@ Por el lado del modulo de Workshop Operations, se contó con 2 pruebas de integr
 ![](/markdown/assets/images/chapter-6/task-api-test-2d.png)
 *Figura 6.31 prueba de integración 2d*
 
+#### Work Orders — HTTP Integration Test
+
+La clase `WorkOrdersIntegrationTests` incorpora la prueba `CreateThenListWorkOrder_ShouldKeepAuthenticatedWorkshopBoundary`.
+
+La prueba utiliza ASP.NET Core `TestServer`, el controller real, una identidad de prueba y un mock de `IWorkOrderService`. Crea una orden mediante `POST /api/v1/workorders` y consulta el listado mediante `GET /api/v1/workorders`.
+
+Se comprueban las respuestas `201 Created` y `200 OK`, la asociación de la orden con el taller autenticado `WS-01` y la descripción registrada en la respuesta. También se verifica que el servicio consulte las órdenes del taller esperado.
+
+La prueba evalúa routing, autenticación de prueba, controller y serialización HTTP con el servicio sustituido. No incluye persistencia real ni demuestra por sí sola el aislamiento completo entre distintos talleres.
+
+**Archivo:** `AutoServiceAW.API.Tests/WorkshopOperations/Interfaces/REST/WorkOrdersIntegrationTests.cs`.
+
+![Resultados de las pruebas de Work Orders y Tasks](../assets/images/chapter-6/work-orders-tasks-tests-passed.png)
+
+*Evidencia de ejecución: CreateThenListWorkOrder_ShouldKeepAuthenticatedWorkshopBoundary aparece con resultado Success.*
+
 ### 6.1.3. Core Behavior-Driven Development
 
 Behavior-Driven Development (BDD) fue utilizado para representar los requisitos de autenticación desde la perspectiva del usuario mediante escenarios escritos en lenguaje Gherkin.
@@ -319,6 +352,34 @@ Scenario: Update a task's status and estimated time
     And the task remains associated with the same work order
 ```
 
+#### Work Orders & Tasks — Lifecycle Specification
+
+El archivo `AutoServiceAW.API.Tests/WorkshopOperations/BDD/Features/WorkOrderTaskLifecycle.feature` especifica dos escenarios del ciclo de vida de órdenes y tareas:
+
+```gherkin
+Feature: Work order and task lifecycle
+
+  As a workshop administrator or mechanic
+  I want to coordinate work orders and their assigned tasks
+  So that the customer can see reliable repair progress
+
+  Scenario: Approved task advances the work order progress
+    Given a work order exists for a customer reported vehicle problem
+    And an approved task is assigned to a mechanic
+    When the mechanic starts and completes the assigned task
+    Then the task status should be "COMPLETED"
+    And the work order progress should show 100 percent
+
+  Scenario: Unapproved task cannot be started
+    Given a work order exists for a customer reported vehicle problem
+    And a pending task has not been approved by an administrator
+    When the mechanic attempts to start the task
+    Then the request should be rejected
+    And no inventory material should be consumed
+```
+
+Estos escenarios describen el comportamiento esperado. No disponen de Step Definitions y no se contabilizan como pruebas automatizadas ejecutadas. El escenario de rechazo de una tarea no aprobada requiere validación adicional.
+
 ### 6.1.4. Core System Tests
 
 La validación actual a nivel de sistema se concentra en los flujos de autenticación y autorización expuestos por la RESTful API de AutoService.
@@ -389,6 +450,28 @@ Por otro lado, para el modulo de mechanic se comporbó el flujo de un mecanico d
 **Captura de la prueba realizada para estos dos contextos**
 ![](/markdown/assets/images/chapter-6/workshop-mechanic-selenium.png)
 *Figura 6.35 prueba de uso de selenium para workshop y mechanic*
+
+#### Work Orders & Tasks — API Acceptance Test
+
+La clase `WorkOrderTaskFlowAcceptanceTests` incorpora la prueba `CreateOrder_AssignAndCompleteTask_ShouldExposeFullProgress`, que ejecuta el siguiente recorrido mediante solicitudes HTTP:
+
+1. Crear una orden con el problema reportado por el cliente.
+2. Crear una tarea aprobada y asignarla a un mecánico.
+3. Actualizar la tarea a `IN_PROGRESS`.
+4. Actualizar la tarea a `COMPLETED`.
+5. Consultar las tareas asociadas a la orden.
+
+La prueba utiliza ASP.NET Core `TestServer`, controllers y servicios de aplicación reales, autenticación de prueba y repositorios sustituidos mediante Moq. Comprueba los códigos HTTP esperados, el mecánico asignado y el estado final de la tarea.
+
+A partir de la respuesta de consulta, la propia prueba calcula el porcentaje de tareas completadas y verifica un resultado del 100 % para el caso preparado.
+
+Su alcance corresponde a una prueba de aceptación del flujo de la API con persistencia simulada. No ejecuta la interfaz Web o Mobile ni comprueba visualmente el progreso mostrado al usuario.
+
+**Archivo:** `AutoServiceAW.API.Tests/WorkshopOperations/Acceptance/WorkOrderTaskFlowAcceptanceTests.cs`.
+
+![Resultados de las pruebas de Work Orders y Tasks](../assets/images/chapter-6/work-orders-tasks-tests-passed.png)
+
+*Evidencia de ejecución: CreateOrder_AssignAndCompleteTask_ShouldExposeFullProgress aparece con resultado Success.*
 
 La distribución actual de las pruebas automatizadas es la siguiente:
 
