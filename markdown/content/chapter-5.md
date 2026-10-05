@@ -1009,3 +1009,5 @@ El uso consistente de Conventional Commits permitió mantener la trazabilidad de
 # 5.3. Video About-the-Product
 
 > PENDIENTE: incorporar la descripción, evidencia, duración y enlaces del video About-the-Product correspondiente al Trabajo Parcial.
+Duracion: 1:07
+Link del video: https://youtu.be/rQcNeHcAdvU
