@@ -76,10 +76,15 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
 | Versión | Fecha | Autor | Descripción de la modificación |
 |---|---|---|---|
 | 1 | 16/09/26 | Sanchez Cuadrado, Juan Antonio | **AV1:** Documentación de los capítulos del informe, integración de la aplicación móvil, configuración de despliegues y elaboración de evidencias técnicas del proyecto AutoService. |
-| 1 | 16/09/26 | Flores Eusebio, Angel Thyago | **AV1:** |
+| 1 | 16/09/26 | Flores Eusebio, Angel Thyago | **AV1:** Documentacion de los capitulos del informe, diseño de mockups para la aplicacion movil y desarrollo de bounded context para la aplicacion movil. |
 | 1 | 16/09/26 | Soto Palacios, Brandon Wilder | **AV1:** |
 | 1 | 16/09/26 | Aquino Solorzano, Daniel Jonatan | **AV1:** |
 | 1 | 16/09/26 | Fernández, Mario Alonso | **AV1:** Implementación de Fleet Management e Inventory Management en la aplicación Android, incorporación de pruebas unitarias y validación de los flujos principales en modo demostración. |
+| 2 | 04/10/26 | Sanchez Cuadrado, Juan Antonio | **TP:** |
+| 2 | 04/10/26 | Flores Eusebio, Angel Thyago | **TP:** Implementación del seguimiento público de órdenes de trabajo en backend y frontend; documentación de sus pruebas unitarias, de integración, BDD y Selenium en el capítulo 6. |
+| 2 | 04/10/26 | Soto Palacios, Brandon Wilder | **TP:** |
+| 2 | 04/10/26 | Aquino Solorzano, Daniel Jonatan | **TP:** |
+| 2 | 04/10/26 | Fernández, Mario Alonso | **TP:** |
 
 # Project Report Collaboration Insights
 
@@ -115,7 +120,31 @@ El historial permite identificar los autores, mensajes de commit y modificacione
 
 ## Trabajo Parcial
 
-> PENDIENTE: incorporar al finalizar el Trabajo Parcial las evidencias actualizadas de colaboración, commits, branches y Pull Requests realizados durante esta entrega.
+Durante el TP, el equipo utilizó el repositorio público del Project Report para trabajar de manera colaborativa en la documentación de AutoService. El historial de Git permitió mantener la trazabilidad de las actualizaciones realizadas y registrar la participación de los integrantes en la elaboración del informe.
+
+### Contributors
+
+La siguiente evidencia corresponde a los analíticos de contribución del repositorio del informe durante el desarrollo del TP.
+
+![TP Report Contributors](./markdown/assets/report-collaboration/tp/tp-report-contributors.png)
+
+Los analíticos permiten observar las contribuciones registradas en el repositorio durante el desarrollo del informe. Esta evidencia complementa el historial de commits y ayuda a mostrar la participación colaborativa del equipo.
+
+### Commit History
+
+La siguiente evidencia muestra parte del historial de commits realizados en el repositorio del Project Report durante el TP.
+
+![TP Report Commits](./markdown/assets/report-collaboration/tp/tp-report-commits.png)
+
+Se incluye una segunda captura para mostrar otras modificaciones registradas durante el trabajo colaborativo.
+
+![TP Report Commit History](./markdown/assets/report-collaboration/tp/tp-report-commit-history-1.png)
+
+Se incluye una tercera captura para mostrar otras modificaciones registradas durante el trabajo colaborativo.
+
+![TP Report Commit History](./markdown/assets/report-collaboration/tp/tp-report-commit-history-2.png)
+
+El historial permite identificar los autores, mensajes de commit y modificaciones incorporadas durante el desarrollo del informe. El uso de Git y GitHub permitió mantener trazabilidad de los cambios y conservar evidencia de la colaboración del equipo durante el TP.
 
 # Contenido
 
