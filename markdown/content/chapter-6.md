@@ -58,6 +58,7 @@ Considerando las pruebas del dominio y las pruebas de `AuthService`, la solució
 Para el módulo de Workshop-Operations se realizaron 2 tipos de pruebas, las que se enfocan en probar los aggregates en solitario y las que se enfocan en probar los servicios del modulo para comprar la conexión y guardado exitoso de datos en la base de datos, usando como referencia los respositories.
 
 ![domain workshop unit test](/markdown/assets/images/chapter-6/workshop-domain-unit-test.png)
+
 *Figura 6.4. Pruebas unitarias de agregados al modulo de workshop operations*
 
 **Aggregates Tests**
@@ -67,48 +68,57 @@ TaskPartTest:
 - Verificar que el artículo conserve sus detalles de inventario y que los costos, el precio de venta y la ganancia se calculen a partir de la cantidad y los precios.
 
 ![](/markdown/assets/images/chapter-6/task-part-test-1.png)
+
 *Figura 6.5. prueba unitaria 1 de task part*
 
 - Verificar los valores predeterminados de los campos opcionales y los totales cuando no se proporciona un precio de compra.
 
 ![](/markdown/assets/images/chapter-6/task-part-test-2.png)
+
 *Figura 6.6 prueba unitaria 2 de task part*
 
 - Verificar que el constructor rechace cantidades cero o negativas, ya que no representan una asignación de piezas válida.
 
 ![](/markdown/assets/images/chapter-6/task-part-test-3.png)
+
 *Figura 6.7 prueba unitaria 3 de task part*
 
 - Verificar que una marca nula se normalice a una cadena vacía y un nivel de calidad en blanco se reemplace por el valor estándar.
 
 ![](/markdown/assets/images/chapter-6/task-part-test-4.png)
+
 *Figura 6.8 prueba unitaria 4 de task part*
 
-TaskTests: 
+TaskTests:
 
 - Verificar que una tarea se inicialice correctamente y que el costo de mano de obra se establezca por defecto en el 50 % del precio de mano de obra cuando no se proporciona un costo explícito.
 
 ![](/markdown/assets/images/chapter-6/task-test-1.png)
+
 *Figura 6.9 prueba unitaria 1 de task*
 
 - Verificar que se utilice un coste de mano de obra proporcionado explícitamente y que se pueda crear una tarea sin un mecánico asignado.
 
 ![](/markdown/assets/images/chapter-6/task-test-2.png)
+
 *Figura 6.10 prueba unitaria 2 de task*
 
 - Verificar que Update reemplace los detalles de la tarea y recalcule el coste de mano de obra cuando no se proporciona un coste explícito.
 
 ![](/markdown/assets/images/chapter-6/task-test-3.png)
+
 *Figura 6.11 prueba unitaria 3 de task*
 
 - Verificar que un estado vacío preserve el estado actual mientras se actualizan los campos técnicos con la información suministrada.
 
 ![](/markdown/assets/images/chapter-6/task-test-4.png)
+
 *Figura 6.12 prueba unitaria 4 de task*
 
-- Verificar que los costes de materiales y una pieza añadida se incluyan en los totales de la tarea, el beneficio bruto y el margen. 
+- Verificar que los costes de materiales y una pieza añadida se incluyan en los totales de la tarea, el beneficio bruto y el margen.
 
 ![](/markdown/assets/images/chapter-6/task-test-5.png)
+
 *Figura 6.13 prueba unitaria 5 de task*
 
 WorkOrderTests:
@@ -116,31 +126,37 @@ WorkOrderTests:
 - Verificar que la orden de trabajo inicialice sus datos, genere un código de seguimiento válido y comience con la fecha de hoy y una lista de comprobación incompleta.
 
 ![](/markdown/assets/images/chapter-6/work-order-test-1.png)
+
 *Figura 6.14 prueba unitaria 1 de work order*
 
 - Verificar que Update modifique la descripción, la fecha estimada y el precio sin cambiar el código de seguimiento ni la fecha de inicio.
 
 ![](/markdown/assets/images/chapter-6/work-order-test-2.png)
+
 *Figura 6.15 prueba unitaria 2 de work order*
 
 - Verificar que UpdateChecklist actualice cada indicador de la lista de comprobación de la orden de trabajo.
 
 ![](/markdown/assets/images/chapter-6/work-order-test-3.png)
+
 *Figura 6.16 prueba unitaria 3 de work order*
 
 - Verificar que los estados nulos y vacíos se ignoren y no reemplacen el último estado válido de la orden de trabajo.
 
 ![](/markdown/assets/images/chapter-6/work-order-test-4.png)
+
 *Figura 6.17 prueba unitaria 4 de work order*
 
 - Verificar que un estado no vacío reemplace el estado actual de la orden de trabajo.
 
 ![](/markdown/assets/images/chapter-6/work-order-test-5.png)
+
 *Figura 6.18 prueba unitaria 5 de work order*
 
 **Service Tests**
 
 ![](/markdown/assets/images/chapter-6/task-service-test.png)
+
 *Figura 6.19 evidencia de prueba de task service exitosa*
 
 TaskServiceTest:
@@ -148,11 +164,13 @@ TaskServiceTest:
 - Verificar que la creación de una tarea la persista a través del repositorio, complete la unidad de trabajo y devuelva la instancia creada.
 
 ![](/markdown/assets/images/chapter-6/task-service-test-1.png)
+
 *Figura 6.20 prueba de task service 1*
 
 - Verifica que la aplicación de parches a los datos técnicos de una tarea actualice la tarea, persista los cambios y complete la unidad de trabajo.
 
 ![](/markdown/assets/images/chapter-6/task-service-test-2.png)
+
 *Figura 6.22 prueba de task service 2*
 
 #### Work Orders & Tasks — Service Unit Tests
@@ -171,6 +189,37 @@ El alcance de estas pruebas comprende la actualización de datos y las llamadas 
 ![Resultados de las pruebas de Work Orders y Tasks](../assets/images/chapter-6/work-orders-tasks-tests-passed.png)
 
 *Evidencia de ejecución: las dos pruebas de WorkshopOperationsServiceTests aparecen con resultado Success.*
+
+#### Public Tracking — Summary Unit Tests
+
+Se incorporaron cuatro métodos de prueba unitaria en `TrackingSummaryFactoryTests`, utilizando MSTest. Estos verifican el cálculo del progreso de la orden, los costos que se muestran al cliente, el registro de cambios de estado y la selección de los datos públicos de las tareas.
+
+| Prueba Unitaria | Comportamiento verificado |
+| --- | --- |
+| `CalculateProgress_ShouldUseCompletedTasksAndHandleEmptyOrders` | Calcula el progreso según la proporción de tareas completadas y contempla órdenes sin tareas. |
+| `Create_ShouldCalculateCustomerCostsWithoutInternalCosts` | Calcula los subtotales de mano de obra y materiales, y el total del cliente, sin incorporar los costos internos de compra. |
+| `UpdateStatus_ShouldRecordOnlyActualStatusChangesWithUtcTimestamps` | Registra los cambios reales de estado con marcas de tiempo UTC y evita registrar como cambio la repetición del mismo estado. |
+| `Create_ShouldExposeCustomerTaskDetailsAndOmitInternalFields` | Incluye información útil para el cliente —como diagnóstico, explicación, evidencia y piezas— y excluye campos internos del taller. |
+
+Estas pruebas son relevantes para que el cliente reciba información clara sobre el avance, los costos y el trabajo realizado, mientras se preserva la información operativa interna del taller. Evalúan lógica unitaria; no comprueban la comunicación HTTP ni la persistencia en una base de datos real.
+
+**Archivo:** `AutoServiceAW.API.Tests/PublicTracking/Application/Internal/TrackingSummaryFactoryTests.cs`.
+
+![](/markdown/assets/images/chapter-6/tracking-test-1.png)
+
+*Figura 6.24 prueba unitaria 1 de public tracking service*
+
+![](/markdown/assets/images/chapter-6/tracking-test-2.png)
+
+*Figura 6.25 prueba unitaria 2 de public tracking service*
+
+![](/markdown/assets/images/chapter-6/tracking-test-3.png)
+
+*Figura 6.26 prueba unitaria 3 de public tracking service*
+
+![](/markdown/assets/images/chapter-6/tracking-test-4.png)
+
+*Figura 6.27 prueba unitaria 4 de public tracking service*
 
 ### 6.1.2. Core Integration Tests
 
@@ -221,7 +270,7 @@ Las pruebas automatizadas correspondientes al módulo IAM, incluyendo los nivele
 
 ![Pruebas de integración y aceptación de la API](../assets/images/chapter-6/chapter-6-api-integration-acceptance-tests-list.png)
 
-*Figura 6.23. Pruebas unitarias, de integración y de aceptación del módulo IAM ejecutadas satisfactoriamente.*
+*Figura 6.28. Pruebas unitarias, de integración y de aceptación del módulo IAM ejecutadas satisfactoriamente.*
 
 
 
@@ -229,34 +278,34 @@ Por el lado del modulo de Workshop Operations, se contó con 2 pruebas de integr
 
 ![](/markdown/assets/images/chapter-6/task-api-integration-test.png)
 
-*Figura 6.24 evidencia de pruebas de integracion exitosas*
+*Figura 6.29. evidencia de pruebas de integracion exitosas*
 
 **TaskApiIntegrationTests:**
 
 - Verificar que la publicación de una solicitud de tarea válida devuelva HTTP 201, persiste la tarea con los valores esperados y completa la unidad de trabajo.
 
 ![](/markdown/assets/images/chapter-6/task-api-test-1a.png)
-*Figura 6.25 prueba de integración 1a*
+*Figura 6.30. prueba de integración 1a*
 
 ![](/markdown/assets/images/chapter-6/task-api-test-1b.png)
-*Figura 6.26 prueba de integración 1b*
+*Figura 6.31. prueba de integración 1b*
 
 ![](/markdown/assets/images/chapter-6/task-api-test-1c.png)
-*Figura 6.27 prueba de integración 1c*
+*Figura 6.32. prueba de integración 1c*
 
 - Verifica que el inicio de una tarea aprobada consuma las existencias asignadas a través del servicio de aplicación de gestión de inventario.
 
 ![](/markdown/assets/images/chapter-6/task-api-test-2a.png)
-*Figura 6.28 prueba de integración 2a*
+*Figura 6.33. prueba de integración 2a*
 
 ![](/markdown/assets/images/chapter-6/task-api-test-2b.png)
-*Figura 6.29 prueba de integración 2b*
+*Figura 6.34. prueba de integración 2b*
 
 ![](/markdown/assets/images/chapter-6/task-api-test-2c.png)
-*Figura 6.30 prueba de integración 2c*
+*Figura 6.35. prueba de integración 2c*
 
 ![](/markdown/assets/images/chapter-6/task-api-test-2d.png)
-*Figura 6.31 prueba de integración 2d*
+*Figura 6.36. prueba de integración 2d*
 
 #### Work Orders — HTTP Integration Test
 
@@ -273,6 +322,26 @@ La prueba evalúa routing, autenticación de prueba, controller y serialización
 ![Resultados de las pruebas de Work Orders y Tasks](../assets/images/chapter-6/work-orders-tasks-tests-passed.png)
 
 *Evidencia de ejecución: CreateThenListWorkOrder_ShouldKeepAuthenticatedWorkshopBoundary aparece con resultado Success.*
+
+#### Public Tracking — Integration Test
+
+Se implementó una prueba de integración para el endpoint de seguimiento público mediante ASP.NET Core `TestServer`. Las dependencias se sustituyen con mocks para validar las respuestas HTTP y la estructura de los datos sin conectarse a una base de datos real.
+
+| Prueba de Integracion | Comportamiento verificado |
+| --- | --- |
+| `GetSummaryByTrackingCodeShouldReturnSafeOrderDataAndRejectIdOnlyTaskAccess` | Comprueba que un código válido permita consultar el resumen, que un código desconocido devuelva `404 Not Found` y que no se puedan consultar tareas usando únicamente el identificador interno de la orden. También verifica que las respuestas omitan datos internos, como costos de compra e identificadores internos. |
+
+Esta prueba es relevante porque verifica que el cliente pueda consultar el estado de su servicio mediante el código de seguimiento y reciba únicamente la información prevista para la vista pública.
+
+Archivo: `AutoServiceAW.API.Tests/PublicTracking/Interfaces/REST/TrackingIntegrationTests.cs`
+
+![](/markdown/assets/images/chapter-6/tracking-test-integration-1.1.png)
+*Figura 6.38. prueba de integración de public tracking service*
+
+![](/markdown/assets/images/chapter-6/tracking-test-integration-1.2.png)
+*Figura 6.39. prueba de integración de public tracking service*
+
+
 
 ### 6.1.3. Core Behavior-Driven Development
 
@@ -380,6 +449,55 @@ Feature: Work order and task lifecycle
 
 Estos escenarios describen el comportamiento esperado. No disponen de Step Definitions y no se contabilizan como pruebas automatizadas ejecutadas. El escenario de rechazo de una tarea no aprobada requiere validación adicional.
 
+####  Public Tracking — Behavior-Driven Development
+
+La especificación BDD del módulo de seguimiento público se encuentra en:
+
+```text
+tests/bdd/features/customer-tracking.feature
+```
+
+La feature describe el comportamiento esperado cuando un cliente consulta una orden mediante su código público de seguimiento:
+
+```gherkin
+Feature: Customer tracks a work order using its public tracking code
+  As a customer
+  I want to search for my service using its tracking code
+  So that I can see its progress without seeing another customer's order
+```
+
+Se establece dos escenarios:
+
+| Escenario | Propósito |
+| --- | --- |
+| `Customer views the public tracking summary for a valid code` | Especificar que un código válido muestre el estado, el progreso calculado por el backend, la fecha estimada, el historial, los detalles de las tareas y el desglose de costos para el cliente. También contempla que no se ofrezcan acciones de pago ni se muestren datos de otras órdenes. |
+| `Customer receives clear feedback for an unknown code`| Especificar que un código inexistente genere un mensaje claro y que no se muestren datos de una orden. |
+
+El escenario positivo de consulta se encuentra especificado de la siguiente manera:
+
+```gherkin
+Scenario: Customer views the public tracking summary for a valid code
+  Given the customer opens the public tracking page
+  When the customer submits a valid tracking code
+  Then the associated order status and backend-calculated service progress are displayed
+  And the estimated delivery date and service history are displayed
+  And the task details and customer-facing cost breakdown are displayed
+  And no payment action or payment receipt is offered
+  And details from unrelated orders are not displayed
+```
+
+Por otro lado, el escenario negativo verifica el comportamiento cuando el cliente ingresa un código que no corresponde a una orden:
+
+```gherkin
+Scenario: Customer receives clear feedback for an unknown code
+  Given the customer opens the public tracking page
+  When the customer submits a code that does not exist
+  Then the page displays the tracking code not found message
+  And no order details are displayed
+```
+
+Estos escenarios describen cómo el cliente consulta el avance y los detalles públicos de su servicio, y qué respuesta recibe cuando el código no existe.
+
 ### 6.1.4. Core System Tests
 
 La validación actual a nivel de sistema se concentra en los flujos de autenticación y autorización expuestos por la RESTful API de AutoService.
@@ -429,19 +547,22 @@ El mecánico realiza correctamente el inicio de sesión y obtiene un JWT válido
 
 La prueba también verifica que el método `AddAsync()` del repositorio no sea ejecutado después del rechazo de autorización. De esta manera se comprueba que una solicitud prohibida no genere efectos secundarios sobre la persistencia.
 
-Para el módulo de Workshop-Operations y Mechanic se utilizó Selenium para realizar las pruebas a nivel de sistema. 
+Para el módulo de Workshop-Operations y Mechanic se utilizó Selenium para realizar las pruebas a nivel de sistema.
 
 **Instalar dependencias de Selenium**
 ![](/markdown/assets/images/chapter-6/selenium-dependencies.png)
-*Figura 6.32 instalacion de dependencias de Selenium*
+
+*Figura 6.40 instalacion de dependencias de Selenium*
 
 **Instalar configuraciones de web driver**
 ![](/markdown/assets/images/chapter-6/web-driver.png)
-*Figura 6.33 instalar config web driver*
+
+*Figura 6.41 instalar config web driver*
 
 **Instalar Vitest**
 ![](/markdown/assets/images/chapter-6/vitest.png)
-*Figura 6.34 instalar vitest*
+
+*Figura 6.42 instalar vitest*
 
 Contemplando el escenario en donde un Administrador del taller se dirige a la pestada de work orders,según el fujo debería poer acceder al forumlario para crear una nueva order de trabajo dado el vehiculo asignado y el mecánico responsable de esta ordén.
 
@@ -449,7 +570,7 @@ Por otro lado, para el modulo de mechanic se comporbó el flujo de un mecanico d
 
 **Captura de la prueba realizada para estos dos contextos**
 ![](/markdown/assets/images/chapter-6/workshop-mechanic-selenium.png)
-*Figura 6.35 prueba de uso de selenium para workshop y mechanic*
+*Figura 6.43 prueba de uso de selenium para workshop y mechanic*
 
 #### Work Orders & Tasks — API Acceptance Test
 
@@ -472,6 +593,33 @@ Su alcance corresponde a una prueba de aceptación del flujo de la API con persi
 ![Resultados de las pruebas de Work Orders y Tasks](../assets/images/chapter-6/work-orders-tasks-tests-passed.png)
 
 *Evidencia de ejecución: CreateOrder_AssignAndCompleteTask_ShouldExposeFullProgress aparece con resultado Success.*
+
+#### Public Tracking — System Tests with Selenium
+
+Para el módulo de seguimiento público se implementaron dos pruebas de sistema con Selenium y TestNG. Estas pruebas recorren la página `/tracking` en un navegador y verifican la respuesta de la interfaz ante un código de seguimiento válido y otro inexistente.
+
+**Prueba: `customerCanViewProgressForTheirTrackingCode`**
+
+Esta prueba ingresa un código de seguimiento válido y verifica que se muestren el estado de la orden, el progreso calculado por el backend, la fecha estimada, el historial, las tareas y el desglose de costos. También comprueba que no se ofrezcan acciones de pago ni se muestre el formulario de búsqueda junto con el resumen.
+
+Es relevante para el negocio porque permite comprobar que el cliente pueda consultar el avance y los detalles de su servicio desde la aplicación web.
+
+![](/markdown/assets/images/chapter-6/tracking-sysyem-test-1.png)
+
+*Figura 6.45. Prueba Selenium para consultar una orden con un código válido.*
+
+**Prueba: `customerReceivesNotFoundMessageForUnknownTrackingCode`**
+
+Esta prueba ingresa un código que no corresponde a una orden y verifica que aparezca el mensaje de no encontrado, que el formulario de búsqueda permanezca disponible y que no se muestren los detalles de una orden.
+
+Es relevante para el negocio porque entrega una respuesta clara cuando el cliente ingresa un código incorrecto y evita mostrar información de una orden no encontrada.
+
+![](/markdown/assets/images/chapter-6/tracking-sysyem-test-2.png)
+
+*Figura 6.46. Prueba Selenium para un código de seguimiento inexistente.*
+
+**Archivo:** `tests/system/src/test/java/system/CustomerTrackingSystemTest.java`
+
 
 La distribución actual de las pruebas automatizadas es la siguiente:
 
