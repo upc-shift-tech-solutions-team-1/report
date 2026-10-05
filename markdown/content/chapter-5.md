@@ -919,6 +919,18 @@ https://autoservice-backend-cnbd.onrender.com
 **API Base URL:**  
 https://autoservice-backend-cnbd.onrender.com/api/v1
 
+### Work Orders & Tasks — Trabajo Parcial
+
+
+Como aporte al Trabajo Parcial, se incorporó al módulo Workshop Operations el endpoint `DELETE /api/v1/workorders/{id}`, definido en `WorkOrdersController`. Esta operación delega la eliminación de la orden al método `DeleteAsync` del servicio de aplicación, manteniendo la separación entre la interfaz REST y la lógica del módulo.
+
+El código de esta contribución se encuentra en la branch `feature/mario-work-orders-tasks-quality` del repositorio Backend:
+
+https://github.com/upc-shift-tech-solutions-team-1/autoservice-backend/tree/feature/mario-work-orders-tasks-quality
+
+Además, se incorporaron pruebas relacionadas con la actualización del diagnóstico y las evidencias técnicas de una tarea, el cierre de una orden con su checklist validado y los flujos HTTP de creación y consulta de órdenes. También se añadió una especificación Gherkin del ciclo de vida de órdenes y tareas. El detalle de estas pruebas y sus evidencias se presenta en el capítulo VI.
+
+Estas contribuciones deben distinguirse del backend actualmente desplegado: su disponibilidad en producción depende de la revisión e integración de la branch y del posterior despliegue. La incorporación del endpoint tampoco demuestra por sí sola la coherencia completa del módulo entre Backend, Web y Mobile, que requiere validación adicional.
 
 ## 5.2.7. RESTful API Documentation
 
