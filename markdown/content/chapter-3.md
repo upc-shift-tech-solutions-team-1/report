@@ -930,6 +930,19 @@ Link del Jira: https://upc-team-r1plce2k.atlassian.net/jira/software/projects/SS
 ![](/markdown/assets/images/chapter-3/jira-autoservice-3.png)
 ![](/markdown/assets/images/chapter-3/jira-autoservice-4.png)
 
+# 3.3.1. Technical Stories
+
+Las siguientes Technical Stories describen el trabajo técnico realizado para mantener la calidad, integración y verificabilidad de los módulos Work Orders & Tasks y de la aplicación móvil de AutoService.
+
+| ID | Technical Story | Criterios de aceptación | Responsable | Estado |
+|---|---|---|---|---|
+| TS-01 | Como equipo de desarrollo, necesitamos mantener un contrato REST coherente para Work Orders y Tasks, para que Web y Mobile utilicen las mismas operaciones y estructuras. | Los endpoints de creación, consulta, actualización y eliminación requeridos por las aplicaciones cliente se encuentran disponibles en el Backend. | Mario Fernandez | Implementado |
+| TS-02 | Como equipo de desarrollo, necesitamos pruebas unitarias aisladas para detectar regresiones en la lógica de órdenes y tareas. | Existen dos Unit Tests desarrollados con MSTest, Moq y la estructura Arrange-Act-Assert, que comprueban la actualización y persistencia de órdenes y tareas. | Mario Fernandez | Implementado |
+| TS-03 | Como equipo de desarrollo, necesitamos verificar el flujo HTTP de Work Orders & Tasks para comprobar la interacción entre autenticación, routing, controllers y servicios. | Existe una prueba de integración y una prueba de aceptación que cubren la creación de una orden, asignación y actualización de una tarea y consulta del progreso. | Mario Fernandez | Implementado |
+| TS-04 | Como equipo de desarrollo, necesitamos especificar mediante BDD el comportamiento esperado del ciclo de reparación. | Existe una feature escrita en Gherkin con un escenario exitoso y uno alternativo, utilizando Given, When y Then. | Mario Fernandez | Implementado |
+| TS-05 | Como equipo de desarrollo, necesitamos Continuous Integration para Mobile para detectar pruebas o compilaciones defectuosas antes de integrar cambios. | GitHub Actions ejecuta `testDebugUnitTest` y `assembleDebug`, conserva el reporte de pruebas y publica el APK debug como artefacto. | Mario Fernandez | Implementado y ejecutado satisfactoriamente |
+
+
 # 3.4. Impact Mapping
 
 En esta sección se presenta el **Impact Mapping** de AutoService, una técnica que permite relacionar de manera visual el objetivo principal del producto con los actores involucrados, los impactos esperados en cada uno de ellos y las funcionalidades que contribuyen a alcanzar dicho objetivo.

@@ -69,17 +69,22 @@ AutoService es una aplicacion web orientada a mejorar la eficiencia de talleres 
 </div>
 
 <h3 align="center"><strong>Periodo 202620</strong></h3>
-<h3 align="center"><strong>Septiembre 2026</strong></h3>
+<h3 align="center"><strong>Octubre 2026</strong></h3>
 
 # Registro de Versiones del informe
 
 | Versión | Fecha | Autor | Descripción de la modificación |
 |---|---|---|---|
 | 1 | 16/09/26 | Sanchez Cuadrado, Juan Antonio | **AV1:** Documentación de los capítulos del informe, integración de la aplicación móvil, configuración de despliegues y elaboración de evidencias técnicas del proyecto AutoService. |
-| 1 | 16/09/26 | Flores Eusebio, Angel Thyago | **AV1:** |
+| 1 | 16/09/26 | Flores Eusebio, Angel Thyago | **AV1:** Documentacion de los capitulos del informe, diseño de mockups para la aplicacion movil y desarrollo de bounded context para la aplicacion movil. |
 | 1 | 16/09/26 | Soto Palacios, Brandon Wilder | **AV1:** |
 | 1 | 16/09/26 | Aquino Solorzano, Daniel Jonatan | **AV1:** |
-| 1 | 16/09/26 | Fernández, Mario Alonso | **AV1:** |
+| 1 | 16/09/26 | Fernández, Mario Alonso | **AV1:** Implementación de Fleet Management e Inventory Management en la aplicación Android, incorporación de pruebas unitarias y validación de los flujos principales en modo demostración. |
+| 2 | 04/10/26 | Sanchez Cuadrado, Juan Antonio | **TP:** |
+| 2 | 04/10/26 | Flores Eusebio, Angel Thyago | **TP:** Implementación del seguimiento público de órdenes de trabajo en backend y frontend; documentación de sus pruebas unitarias, de integración, BDD y Selenium en el capítulo 6. |
+| 2 | 04/10/26 | Soto Palacios, Brandon Wilder | **TP:** |
+| 2 | 04/10/26 | Aquino Solorzano, Daniel Jonatan | **TP:** |
+| 2 | 04/10/26 | Fernández, Mario Alonso | **TP:** |
 
 # Project Report Collaboration Insights
 
@@ -115,7 +120,31 @@ El historial permite identificar los autores, mensajes de commit y modificacione
 
 ## Trabajo Parcial
 
-> PENDIENTE: incorporar al finalizar el Trabajo Parcial las evidencias actualizadas de colaboración, commits, branches y Pull Requests realizados durante esta entrega.
+Durante el TP, el equipo utilizó el repositorio público del Project Report para trabajar de manera colaborativa en la documentación de AutoService. El historial de Git permitió mantener la trazabilidad de las actualizaciones realizadas y registrar la participación de los integrantes en la elaboración del informe.
+
+### Contributors
+
+La siguiente evidencia corresponde a los analíticos de contribución del repositorio del informe durante el desarrollo del TP.
+
+![TP Report Contributors](./markdown/assets/report-collaboration/tp/tp-report-contributors.png)
+
+Los analíticos permiten observar las contribuciones registradas en el repositorio durante el desarrollo del informe. Esta evidencia complementa el historial de commits y ayuda a mostrar la participación colaborativa del equipo.
+
+### Commit History
+
+La siguiente evidencia muestra parte del historial de commits realizados en el repositorio del Project Report durante el TP.
+
+![TP Report Commits](./markdown/assets/report-collaboration/tp/tp-report-commits.png)
+
+Se incluye una segunda captura para mostrar otras modificaciones registradas durante el trabajo colaborativo.
+
+![TP Report Commit History](./markdown/assets/report-collaboration/tp/tp-report-commit-history-1.png)
+
+Se incluye una tercera captura para mostrar otras modificaciones registradas durante el trabajo colaborativo.
+
+![TP Report Commit History](./markdown/assets/report-collaboration/tp/tp-report-commit-history-2.png)
+
+El historial permite identificar los autores, mensajes de commit y modificaciones incorporadas durante el desarrollo del informe. El uso de Git y GitHub permitió mantener trazabilidad de los cambios y conservar evidencia de la colaboración del equipo durante el TP.
 
 # Contenido
 
@@ -236,6 +265,8 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Aquino Solorzano, Daniel Jonatan</b><br/>
             <i>AV1</i>
             <p>Durante el ciclo de desarrollo de AutoService, ejercí la responsabilidad ética y el rigor profesional en múltiples etapas críticas: gestioné el consentimiento informado y la privacidad de los participantes al realizar las entrevistas del segmento Vehicle Owners, garantizando una recolección íntegra de requerimientos sin sesgos intencionales; mantuve la transparencia y autoría técnica veraz del equipo al consolidar y subir los GitHub Collaboration Insights; aseguré la integridad en la entrega de software al configurar el despliegue restringido de los artefactos .apk mediante Firebase App Distribution solo a verificadores autorizados, evitando la exposición de versiones inestables; y apliqué estándares de calidad, mantenibilidad y desacoplamiento arquitectónico al modelar e implementar el Bounded Context "Mechanic" en la aplicación móvil, cumpliendo con el compromiso deontológico de entregar una solución técnica robusta, segura y alineada a las necesidades reales del dominio.</p>
+          <i>TP</i>
+            <p>Durante el desarrollo del proyecto, demostré responsabilidad ética y profesional al priorizar la entrega de software robusto, confiable y seguro mediante la adopción de rigurosas prácticas de aseguramiento de calidad (QA). Diseñé e implementé pruebas unitarias, de servicio y de integración para el módulo de Workshop Operations, asegurando la consistencia lógica de las operaciones críticas y la integridad de los datos procesados. Asimismo, integré pruebas de sistema automatizadas en el frontend con Selenium para los módulos de Workshop y Mechanic, y formulé pruebas Behavior-Driven Development (BDD) en el backend, lo que garantizó que el sistema cumpla fielmente con los requerimientos y expectativas de negocio pactadas. Complementariamente, configuré un flujo de integración continua (CI) en GitHub Actions para la aplicación web, asumiendo el compromiso ético de prevenir despliegues defectuosos y mitigar riesgos técnicos de forma transparente antes de su puesta en producción.</p>
         </td>
         <td rowspan="5">
             <i>AV1</i>
@@ -251,6 +282,10 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Flores Eusebio, Angel Thyago</b><br/>
             <i>AV1</i>
             <p>La refinación de los requisitos, el diseño UX/UI en Figma y el desarrollo de Workshop y Staff me permitieron reconocer que una interfaz funcional también debe ser clara y respetar las responsabilidades de cada rol. Durante el trabajo procuré mantener coherencia entre las User Stories, los prototipos y el frontend móvil, diferenciando las funcionalidades implementadas de las que aún dependen del backend. Esto reforzó la importancia de comunicar con transparencia el estado real del producto y de considerar el acceso adecuado a la información del taller.</p>
+            <br/>
+<i>TP:</i>
+
+<p>En mi participación en AutoService asumí responsabilidad profesional al documentar y validar el módulo con cuatro pruebas unitarias, una de integración, dos de sistema con Selenium y una especificación BDD, además de revisar la automatización de integración y despliegue. En el seguimiento público reconocí que facilitar la consulta del estado del vehículo debe equilibrarse con la protección de los datos. Por ello, identifiqué como mejora pendiente reforzar el control de acceso ante la posible modificación del identificador de seguimiento.</p>
         </td>
     </tr>
     <tr>
@@ -276,6 +311,11 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Fernandez Seer, Mario Alonso</b><br/>
             <i>AV1</i>
             <p>Participé en la implementación de los módulos Fleet Management e Inventory Management de la aplicación Android. Incorporé 22 pruebas unitarias y comprobé los flujos de registro y edición de vehículos, creación de productos y recepción de existencias en modo demo. Como parte de mi responsabilidad profesional, distinguí los resultados obtenidos con datos de demostración de la integración real con el servidor, que quedó pendiente de validación. Esto permite presentar evidencias verificables y comunicar las limitaciones del avance sin atribuir resultados a pruebas que todavía no se han realizado.</p>
+          <br/>
+<i>TP</i>
+<p>
+Durante el Trabajo Parcial asumí la revisión e implementación del flujo de Work Orders & Tasks de AutoService. Completé la operación REST faltante para eliminar órdenes de trabajo y desarrollé dos pruebas unitarias con MSTest y Moq, una prueba de integración, una especificación BDD con dos escenarios y una prueba de aceptación del flujo principal. También configuré el pipeline de Continuous Integration de la aplicación móvil para ejecutar automáticamente las pruebas unitarias, compilar la aplicación y generar el APK de depuración. Estas actividades permitieron verificar los cambios antes de integrarlos, mantener trazabilidad mediante Git y comunicar de manera transparente el alcance real de las pruebas realizadas.
+</p>
         </td>
     </tr>
     <tr>
@@ -286,6 +326,8 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Aquino Solorzano, Daniel Jonatan</b><br/>
             <i>AV1</i>
             <p>A través del diseño de soluciones centrado en el usuario y la modelación técnica, evalué y sinteticé el impacto integral de AutoService en diversas dimensiones: en el ámbito social y de usabilidad, el mapeo de escenarios As-Is y To-Be junto con la grabación del prototipo interactivo en Figma permitieron mitigar la asimetría de información y la desconfianza habitual entre conductores y talleres mediante interfaces claras y accesibles; a nivel económico, la implementación del Bounded Context "Mechanic" en la app móvil optimiza la productividad operativa de los mecánicos, agiliza la gestión de órdenes de trabajo y previene pérdidas por diagnósticos ineficientes; y en los contextos ambiental y global, promover el mantenimiento preventivo oportuno mediante una plataforma digital ayuda a extender la vida útil de los vehículos, reduciendo las emisiones contaminantes generadas por fallas mecánicas desatendidas y eliminando el consumo innecesario de papel en la administración tradicional de los talleres.</p>
+          <i>TP</i>
+            <p>Al tomar decisiones técnicas sobre la arquitectura de pruebas y despliegue, evalué el impacto integral de la solución en múltiples contextos. En el ámbito económico y operativo, la automatización de pruebas con Selenium, el enfoque BDD y el pipeline de CI en GitHub Actions reducen significativamente los costos asociados a fallas imprevistas, mantenimiento correctivo y tiempos de inactividad comercial, optimizando la productividad de los talleres y mecánicos. Desde una perspectiva social y global, contar con un software validado exhaustivamente previene errores en la gestión de servicios mecánicos, lo cual contribuye a la seguridad física de los usuarios finales y conductores. Finalmente, en el contexto ambiental y de sostenibilidad, la detección temprana de defectos y la optimización en los ciclos de compilación y ejecución evitan el consumo redundante de recursos de computación e infraestructura en la nube, promoviendo un ciclo de vida de desarrollo eficiente y responsable.</p>
         </td>
         <td rowspan="5">
             <i>AV1</i>
@@ -300,6 +342,10 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Flores Eusebio, Angel Thyago</b><br/>
             <i>AV1</i>
             <p>Al diseñar los flujos móviles y desarrollar las funciones de órdenes, tareas y personal técnico, analicé cómo AutoService podría mejorar la coordinación del taller y la visibilidad del trabajo realizado. Una gestión más ordenada tiene el potencial de reducir reprocesos y favorecer la atención al cliente, con posibles beneficios económicos y un uso más eficiente de recursos. También consideré que la solución debe ser comprensible para usuarios con distintos niveles de experiencia digital. Estos impactos son potenciales y deberán comprobarse mediante validaciones con usuarios.</p>
+            <br/>
+<i>TP:</i>
+
+<p>Al evaluar la solución, consideré que el seguimiento remoto puede dar mayor transparencia al cliente y reducir consultas repetidas al taller, con posibles beneficios sociales y económicos. La consulta en línea también podría evitar algunos desplazamientos innecesarios, aunque ese impacto ambiental no fue medido. Además, la automatización de pruebas y despliegues ayuda a detectar errores antes de publicar cambios; a la vez, el acceso al servicio depende de la disponibilidad de las plataformas en la nube utilizadas. Estos aspectos permiten valorar beneficios y dependencias sin presentarlos como resultados cuantificados.</p>
         </td>
     </tr>
     <tr>
@@ -325,6 +371,11 @@ El presente apartado evidencia el cumplimiento del ABET – EAC - Student Outcom
             <b>Fernandez Seer, Mario Alonso</b><br/>
             <i>AV1</i>
             <p>Durante la implementación de Fleet e Inventory consideré la importancia de validar los datos de vehículos y productos, mostrar las existencias disponibles y calcular precios y márgenes de forma consistente. Estas funciones pueden apoyar decisiones de compra y reducir errores en la gestión del taller. Desde una perspectiva social, la claridad de la información puede facilitar el trabajo del personal y la atención al cliente; desde una perspectiva ambiental, un mejor control del inventario podría ayudar a evitar compras innecesarias y desperdicios. Estos beneficios son potenciales y requieren validación con usuarios y datos reales. También incorporé textos en español e inglés para facilitar la adaptación de la interfaz a distintos usuarios.</p>
+          <br/>
+<i>TP</i>
+<p>
+Durante la revisión de Work Orders & Tasks evalué cómo la consistencia de la información sobre el problema reportado, el diagnóstico técnico, la asignación del mecánico, el estado de las tareas y el progreso de la reparación influye en las decisiones del taller. En el ámbito económico, una mejor coordinación puede reducir retrasos, errores y reprocesos; en el ámbito social, proporciona mayor claridad al personal y al cliente; y en el ámbito ambiental, un control más preciso de las tareas y los repuestos puede evitar consumos o reemplazos innecesarios. La automatización de pruebas y del build móvil también permite detectar regresiones con anticipación y reducir el uso innecesario de tiempo y recursos técnicos.
+</p>
         </td>
     </tr>
 </table>

@@ -6,8 +6,8 @@ En esta sección se registran los enlaces correspondientes a las exposiciones re
 
 ### AV1
 
-> PENDIENTE: incorporar el enlace de la exposición correspondiente al AV1.
+Link del video: https://youtu.be/VS7eehx8jqM
 
 ### Trabajo Parcial
 
-> PENDIENTE: incorporar el enlace de la exposición correspondiente al Trabajo Parcial una vez finalizada la entrega.
+Link del video: https://youtu.be/6BYPEL05RU0
