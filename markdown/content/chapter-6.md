@@ -33,7 +33,7 @@ En total, se ejecutaron **92 pruebas automatizadas, con 92 aprobadas, 0 fallidas
 
 Las pruebas de integración HTTP se realizaron con componentes reales de la API y dependencias simuladas mediante Moq. Por ello, estos resultados verifican los comportamientos seleccionados, pero no representan una validación completa con una base de datos MySQL real.
 
-Las pruebas correspondientes a las aplicaciones Web y Mobile se documentarán por separado dentro de los siguientes apartados, conforme se implementen sus respectivos casos de prueba.
+Las pruebas del Backend y de la aplicación Mobile se presentan en los siguientes apartados, junto con sus resultados y evidencias correspondientes. Las pruebas de la aplicación Web se documentan en sus respectivas secciones.
 
 
 **Mobile — AutoService Android**
