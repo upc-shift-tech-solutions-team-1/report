@@ -1,4 +1,4 @@
-﻿# 6. Product Verification & Validation
+# 6. Product Verification & Validation
 
 ## 6.1. Testing Suites & Validation
 
@@ -19,6 +19,21 @@ En total, se ejecutaron **92 pruebas automatizadas, con 92 aprobadas, 0 fallidas
 Las pruebas de integración HTTP se realizaron con componentes reales de la API y dependencias simuladas mediante Moq. Por ello, estos resultados verifican los comportamientos seleccionados, pero no representan una validación completa con una base de datos MySQL real.
 
 Las pruebas correspondientes a las aplicaciones Web y Mobile se documentarán por separado dentro de los siguientes apartados, conforme se implementen sus respectivos casos de prueba.
+
+
+**Mobile — AutoService Android**
+
+La aplicación móvil de AutoService se verificó mediante pruebas locales JVM y pruebas instrumentadas ejecutadas en un emulador Android. Para su implementación se emplearon Kotlin, JUnit, Mockito, Kotlin Coroutines Test, Retrofit y MockWebServer, junto con clases de pasos para los escenarios BDD.
+
+La ejecución de la suite local registró **109 pruebas aprobadas, 0 fallidas y 0 omitidas**. Por su parte, la suite instrumentada registró **15 pruebas aprobadas, 0 fallidas y 0 omitidas**. En conjunto, se ejecutaron **124 pruebas automatizadas con resultados satisfactorios**.
+
+Las verificaciones abarcaron Fleet Management, Inventory Management, Customer Tracking, Staff Management, Management, Mechanic y Workshop.
+
+![Resultado general de las pruebas instrumentadas de Mobile](../assets/images/chapter-6/mobile-instrumented-test-summary.png)
+
+*Figura 6.8. Ejecución satisfactoria de las 15 pruebas instrumentadas de AutoService Mobile.*
+
+Las pruebas de integración HTTP utilizaron MockWebServer para simular las respuestas del servidor, por lo que no representan una validación contra el backend desplegado ni contra una base de datos real.
 
 ### 6.1.1. Core Entities Unit Tests
 
@@ -82,6 +97,21 @@ Estas pruebas complementan las verificaciones de dominio y permiten comprobar el
 
 
 
+
+**Mobile — AutoService Android**
+
+Las pruebas locales de la aplicación móvil se desarrollaron con Kotlin y JUnit. Para verificar componentes con dependencias externas se utilizaron Mockito y Kotlin Coroutines Test, siguiendo una organización basada en Arrange, Act, Assert (AAA).
+
+Se evaluaron las reglas de negocio relacionadas con el registro de vehículos, el control de existencias, el cálculo del progreso de mantenimiento y la disponibilidad de los mecánicos. Asimismo, se verificaron los estados y las respuestas de los ViewModels ante operaciones satisfactorias y errores.
+
+Entre los comportamientos evaluados destacan la prevención de placas duplicadas en Fleet Management, el rechazo de salidas con stock insuficiente en Inventory Management, el tratamiento de códigos de seguimiento inexistentes en Customer Tracking y la disponibilidad de mecánicos según sus tareas activas en Staff Management.
+
+La tarea `:app:testDebugUnitTest` ejecutó **109 pruebas locales**, incluyendo pruebas unitarias y pruebas de integración basadas en JVM. Todas finalizaron satisfactoriamente.
+
+![Resultados de las pruebas locales de AutoService Mobile](../assets/images/chapter-6/mobile-unit-test-summary.png)
+
+*Figura 6.9. Ejecución de 109 pruebas locales de AutoService Mobile, con 0 fallidas y 0 omitidas.*
+
 ### 6.1.2. Core Integration Tests
 
 **Backend**
@@ -115,6 +145,47 @@ Las pruebas también permiten verificar respuestas HTTP, como `200 OK`, `201 Cre
 Este enfoque permitió comprobar la integración de los componentes HTTP y la lógica de aplicación para los casos seleccionados. Sin embargo, al utilizar dependencias simuladas, no constituye una prueba de integración completa con la persistencia real en MySQL.
 
 
+
+
+**Mobile — AutoService Android**
+
+Para las pruebas de integración HTTP de la aplicación móvil se utilizaron Retrofit, Gson y MockWebServer. Esta configuración permitió ejecutar los repositorios reales y comprobar las solicitudes HTTP y el procesamiento de sus respuestas, sin depender de un servidor externo.
+
+Se implementaron pruebas de integración para cuatro Bounded Contexts, con tres casos por cada uno:
+
+| Bounded Context | Pruebas | Comportamientos verificados |
+|---|---:|---|
+| Fleet Management | 3 | Consulta de vehículos, normalización de datos durante el registro y propagación de errores del servidor. |
+| Inventory Management | 3 | Consulta del catálogo, registro de recepciones de materiales y manejo de respuestas HTTP de error. |
+| Customer Tracking | 3 | Consulta completa de órdenes, tratamiento de códigos inexistentes y recuperación ante fallas de servicios complementarios. |
+| Staff Management | 3 | Consulta de tareas y disponibilidad de mecánicos, identificación de capacidad máxima y registro de mecánicos. |
+| **Total** | **12** | **Pruebas de integración HTTP con API simulada.** |
+
+**Fleet Management**
+
+![Resultados de integración HTTP de Fleet Management en Mobile](../assets/images/chapter-6/mobile-fleet-integration.png)
+
+*Figura 6.10. Ejecución satisfactoria de tres pruebas de integración HTTP de Fleet Management.*
+
+**Inventory Management**
+
+![Resultados de integración HTTP de Inventory Management en Mobile](../assets/images/chapter-6/mobile-inventory-integration.png)
+
+*Figura 6.11. Ejecución satisfactoria de tres pruebas de integración HTTP de Inventory Management.*
+
+**Customer Tracking**
+
+![Resultados de integración HTTP de Customer Tracking en Mobile](../assets/images/chapter-6/mobile-tracking-integration.png)
+
+*Figura 6.12. Ejecución satisfactoria de tres pruebas de integración HTTP de Customer Tracking.*
+
+**Staff Management**
+
+![Resultados de integración HTTP de Staff Management en Mobile](../assets/images/chapter-6/mobile-staff-integration.png)
+
+*Figura 6.13. Ejecución satisfactoria de tres pruebas de integración HTTP de Staff Management.*
+
+Las doce pruebas finalizaron satisfactoriamente. Estas verificaciones forman parte de las 109 pruebas locales y permiten comprobar la integración del código Android con las interfaces HTTP simuladas.
 
 ### 6.1.3. Core Behavior-Driven Development
 
@@ -178,6 +249,35 @@ La ejecución registró **9 escenarios aprobados, 0 fallidos y 0 omitidos**.
 
 Estas pruebas forman parte de las 92 pruebas automatizadas de la suite del Backend. Su implementación permite verificar los comportamientos seleccionados desde una perspectiva funcional, utilizando los controladores y servicios correspondientes con dependencias simuladas cuando resulta necesario.
 
+
+
+**Mobile — AutoService Android**
+
+En la aplicación móvil se organizaron escenarios de comportamiento mediante archivos `.feature`, redactados con la estructura Given, When y Then. La ejecución automatizada se realizó utilizando JUnit y clases Steps desarrolladas en Kotlin, que invocan los componentes reales de la aplicación con dependencias simuladas.
+
+A diferencia del Backend, donde se utilizó Reqnroll, los archivos Gherkin de Mobile cumplen una función descriptiva y no son interpretados directamente por un motor BDD.
+
+Los escenarios automatizados se distribuyeron de la siguiente manera:
+
+| Bounded Context | Escenarios | Funcionalidades verificadas |
+|---|---:|---|
+| Fleet Management | 2 | Registro de vehículos válidos y rechazo de placas duplicadas. |
+| Inventory Management | 2 | Recepción de materiales y rechazo de consumos con stock insuficiente. |
+| Customer Tracking | 2 | Consulta exitosa del seguimiento y tratamiento de códigos inexistentes. |
+| Staff Management | 2 | Disponibilidad de mecánicos con capacidad libre o completa. |
+| Mechanic | 3 | Escenarios de ejecución de órdenes desarrollados para el módulo de mecánicos. |
+| Workshop | 3 | Escenarios de operaciones del taller desarrollados para el módulo Workshop. |
+| **Total** | **14** | **Escenarios de comportamiento automatizados.** |
+
+Los escenarios se ejecutaron como pruebas instrumentadas en un emulador Android mediante la tarea `:app:connectedDebugAndroidTest`.
+
+![Resultados de los escenarios BDD de AutoService Mobile](../assets/images/chapter-6/mobile-bdd-scenarios.png)
+
+*Figura 6.14. Ejecución satisfactoria de los escenarios BDD automatizados de AutoService Mobile.*
+
+El reporte general registró **15 pruebas instrumentadas aprobadas, 0 fallidas y 0 omitidas**. De estas, 14 corresponden a los escenarios BDD y una a la prueba instrumentada de ejemplo incluida en el proyecto.
+
+Estas verificaciones complementan las pruebas locales y permiten comprobar los comportamientos seleccionados en el entorno de ejecución Android. No constituyen pruebas de navegación de interfaz de usuario de extremo a extremo.
 
 ### 6.1.4. Core System Tests
 
