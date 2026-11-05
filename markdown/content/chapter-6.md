@@ -980,3 +980,41 @@ La ejecución obtuvo **5 pruebas aprobadas, 0 fallidas y 0 omitidas**.
 Estas pruebas forman parte de la suite general de 92 pruebas automatizadas del backend. Debido al uso de dependencias simuladas, los resultados no representan una validación completa del sistema desplegado con una base de datos real.
 
 Las pruebas de interfaz de usuario y navegación de la aplicación Web, incluyendo las realizadas con Selenium, se documentarán posteriormente en este mismo apartado, de forma independiente de las pruebas del Backend.
+
+## 6.2. Static testing & Verification
+
+### 6.2.1. Static Code Analysis
+
+#### 6.2.1.1. Coding standard & Code conventions.
+
+#### 6.2.1.2. Code Quality & Code Security.
+
+### 6.2.2. Reviews
+
+## 6.3. Validation Interviews.
+
+### 6.3.1. Diseño de Entrevistas.
+
+### 6.3.2. Registro de Entrevistas.
+
+### 6.3.3. Evaluacionessegún heurísticas.
+
+## 6.4. Auditoría de Experiencias de Usuario.
+
+### 6.4.1. Auditoría realizada.
+
+#### 6.4.1.1. Información del grupo auditado.
+
+#### 6.4.1.2. Cronograma de auditoría realizada.
+
+#### 6.4.1.3. Contenido de auditoría realizada.
+
+### 6.4.2. Auditoría recibida.
+
+#### 6.4.2.1. Información del grupo auditor.
+
+#### 6.4.2.2. Cronograma de auditoría recibida.
+
+#### 6.4.2.3. Contenido de auditoría recibida.
+
+#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos. 

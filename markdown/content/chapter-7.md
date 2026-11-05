@@ -683,3 +683,13 @@ Healthy
 ```
 
 En consecuencia, el proceso de Continuous Deployment de AutoService conecta la integración de cambios en `main`, la validación automatizada mediante GitHub Actions y el deployment controlado mediante Render. La configuración `After CI Checks Pass` permite que la actualización de producción se realice únicamente después de superar satisfactoriamente las validaciones del pipeline de Continuous Integration.
+
+## 7.4. Continuous Monitoring
+
+### 7.4.1. Tools and Practices
+
+### 7.4.2. Monitoring Pipeline Components
+
+### 7.4.3. Alerting Pipeline Components
+
+### 7.4.4. Notification Pipeline Components. 
