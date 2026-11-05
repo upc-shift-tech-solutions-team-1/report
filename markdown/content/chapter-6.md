@@ -1107,7 +1107,7 @@ El entrevistado mostró una percepción muy positiva de AutoService, destacando 
 - **Duración:** 8:43
 
 **Link:**  
-[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d185_upc_edu_pe/IQBsTXiVzGj0T4r3UmIWg72qAQV_Vxicstb--0zfx1geFyM?e=TbJcnD)
+[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQB_DlrBnlW_QKJTvMc4jaClAQOsXn6-eOK5YW0-fzrZx8A?e=hTHBg9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Resumen:**
 <p style="text-align: justify;">
@@ -1117,7 +1117,7 @@ El entrevistado Robinson destacó que la plataforma resuelve problemas relaciona
 
 **Evidencia:**
 
-![Entrevista Tencnico Taller](docs/assets/interview-validate/inter-validate-m3.png)
+![Entrevista Tencnico Taller](../assets/images/chapter-6/validation-inter-m3.png)
 
 ---
 #### Entrevista 4: Administrador
@@ -1146,7 +1146,7 @@ Como sugerencia de mejora, propuso incorporar reportes de productividad y estad�
 </p>
 
 **Evidencia:** 
-![Entrevista Administrador](docs/assets/interview-validate/inter-validate-admin1.png)
+![Entrevista Administrador](../assets/images/chapter-6/validation-inter-admin1.png)
 
 ---
 #### Entrevista 5: Administrador
@@ -1176,7 +1176,7 @@ Como principal sugerencia de mejora, recomendó incorporar reportes avanzados re
 </p>
 
 **Evidencia:** 
-![Entrevista Administrador](docs/assets/interview-validate/inter-validate-admin2.png)
+![Entrevista Administrador](../assets/images/chapter-6/validation-inter-admin2.png)
 
 
 ---
@@ -1215,7 +1215,7 @@ Finalmente, Jaime Ruiz manifestó que utilizaría AutoService si estuviera dispo
 </p>
 
 **Evidencia:** 
-![Entrevista Administrador](docs/assets/interview-validate/inter-validate-admin3.png)
+![Entrevista Adminsitrador](../assets/images/chapter-6/validation-inter-admin3.png)
 
 ### 6.3.3. Evaluacionessegún heurísticas.
 
@@ -1297,7 +1297,7 @@ Al intentar **editar un cliente** desde la vista "Clientes registrados", el sist
 El mismo patrón se reproduce al intentar **eliminar un cliente**: el modal de confirmación muestra `clientes.eliminar.título`, `clientes.eliminar.descripción`, `clientes.eliminar.cancelar` y `clientes.eliminar.confirma` como texto literal, y la alerta del navegador muestra `Error deleting customer`. Ante este escenario, el usuario no puede comprender qué acción está a punto de confirmar, no sabe si la operación falló o tuvo éxito, y recibe información técnica irrelevante e incomprensible. La combinación de claves de traducción sin resolver y errores en idioma incorrecto impide completamente que el usuario lleve a cabo las operaciones de edición y eliminación.
 
 <p align="center">
-  <img src="docs/assets/App_web_error_alerta_mensaje_tecnico_no-se-sabe-porque-no-se-puede-editar-el-cliente.png" alt="Problema 1" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/1.png" alt="Problema 1" width="500"/>
   <br/><i>Evidencia de heurística 1 </i>
 </p>
  
@@ -1318,7 +1318,7 @@ Resolver de forma inmediata las claves de i18n faltantes en los archivos de trad
 La aplicación web ofrece un selector de idioma en la barra superior con las opciones **"ES ES"** y **"US EN"**. Al seleccionar la opción en inglés, el indicador visual cambia ("US EN" queda activo), generando en el usuario la expectativa de que la interfaz cambiará de idioma. Sin embargo, **toda la interfaz permanece completamente en español**: el sidebar muestra "Panel de control principal", "Clientes", "Vehículos", "Órdenes de trabajo", "Tareas", "Mecánica", "Inventario y piezas"; el panel principal muestra "Panel de control del taller", "Vehículos activos", "Pedidos activos", "Completado", "Ingresos proyectados". La función está presente en la interfaz pero no ejecuta ningún cambio real, lo que constituye una promesa rota al usuario. Un usuario angloparlante que acceda al sistema quedará sin ninguna opción funcional para comprender la plataforma. Adicionalmente, la etiqueta del selector en español aparece como "ES ES" en lugar de simplemente "ES", lo que sugiere un error de configuración en el propio componente.
 
  <p align="center">
-  <img src="docs/assets/App_web_bug_funcion_translate_Ingles_no_cambia_el_texto_a_ingles.png" alt="Problema 2" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/2.png" alt="Problema 2" width="500"/>
   <br/><i>Evidencia de heurística 2 </i>
 </p>
  
@@ -1339,11 +1339,11 @@ Implementar correctamente la integración del servicio de i18n en la aplicación
 El formulario de contacto de la landing page ("Comencemos con tu taller") presenta dos fallos críticos de validación que permiten el envío de datos inútiles para el equipo comercial. Primero, el campo **"Correo de trabajo"** acepta valores que no constituyen una dirección de correo válida: se comprobó que el valor `juanitoperez` (sin símbolo @ ni dominio) es aceptado sin ningún mensaje de error. Segundo, el formulario acepta el envío aunque existan campos marcados como requeridos sin completar, desplegando el mensaje **"¡Mensaje enviado! Nos pondremos en contacto pronto."** ante datos incompletos. El resultado es que el equipo de ventas puede recibir solicitudes sin correo de contacto válido, haciendo imposible el seguimiento del prospecto, que es el objetivo principal del formulario.
 
   <p align="center">
-  <img src="docs/assets/landing_form_sistema-no-detecta-correo-invalido.png" alt="Problema 3.1" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/3.1.png" alt="Problema 3.1" width="500"/>
 </p>
 
 <p align="center">
-  <img src="docs/assets/Landing_formulario_permite-enviar-un-form-sin-haber-llenado-todos-los-campo-necesario.png" alt="Problema 3.2" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/3.2.png" alt="Problema 3.2" width="500"/>
   <br/><i>Evidencia de heurística 3 </i>
 </p>
  
@@ -1365,7 +1365,7 @@ En la vista "Clientes registrados" de la aplicación web, el flujo de registro d
 
 
  <p align="center">
-  <img src="docs/assets/App_web_form_clientes_permite-generar-clientes-vacios.png" alt="Problema 4" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/4.png" alt="Problema 4" width="500"/>
   <br/><i>Evidencia de heurística 4 </i>
 </p>
  
@@ -1386,7 +1386,7 @@ Marcar como obligatorios al menos los campos "Nombre completo" e "ID / DNI" en e
 En el modal "Vehículo nuevo", el campo obligatorio **"Propietario Cliente \*"** se presenta como un dropdown con el placeholder "Seleccione un cliente". Tras seleccionar un cliente del listado, el campo debería actualizar su texto para mostrar el nombre del cliente seleccionado, confirmando visualmente al usuario que la asignación fue realizada. Sin embargo, el campo continúa mostrando el texto placeholder **"Seleccione un cliente"** incluso después de haber realizado la selección, sin ninguna retroalimentación visual que indique qué propietario quedó asignado. El usuario queda en un estado de incertidumbre sobre si la selección fue registrada, lo que puede llevar a intentar seleccionar nuevamente o a guardar el vehículo creyendo que el propietario está asignado cuando en realidad puede no estarlo.
 
   <p align="center">
-  <img src="docs/assets/App_web_form_no-actualiza-el-nombre-del-propietario-una-vez-seleccionado.png" alt="Problema 5" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/5.png" alt="Problema 5" width="500"/>
   <br/><i>Evidencia de heurística 5 </i>
 </p>
  
@@ -1407,7 +1407,7 @@ Corregir el binding reactivo del componente dropdown para que actualice el valor
 La pantalla de acceso a la plataforma ("Registrar Taller" / inicio de sesión) no ofrece ninguna opción de recuperación de contraseña. Un usuario que haya olvidado sus credenciales no tiene ningún camino disponible dentro de la aplicación para recuperar el acceso a su cuenta, quedando completamente bloqueado sin una salida de emergencia. En aplicaciones SaaS de gestión empresarial, donde el acceso puede ser crítico para la operación diaria de un taller, la ausencia de este mecanismo puede resultar en pérdida permanente de acceso a datos y en la necesidad de contactar soporte técnico para una acción que debería ser autoservicio.
 
    <p align="center">
-  <img src="docs/assets/App_web_funcion_olvide_mi_contraseña_inexistente.png" alt="Problema 6" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/6.png" alt="Problema 6" width="500"/>
   <br/><i>Evidencia de heurística 6 </i>
 </p>
 
@@ -1428,7 +1428,7 @@ Implementar un flujo estándar de recuperación de contraseña: agregar un enlac
 Al cambiar el idioma de la landing page a inglés, los textos del navbar y secciones de la página se traducen correctamente ("Home", "Features", "How it Works", "Pricing", "Contact", "Start Free Trial"). Sin embargo, las **capturas de pantalla del producto** embebidas en la sección "Designed for simplicity and real workshop needs" siguen mostrando la interfaz en español: se puede leer claramente **"Gestión de Tareas"** en el screenshot del panel de administración de la aplicación. Esto rompe la coherencia de la experiencia en inglés y genera una disonancia visual que puede hacer dudar al visitante angloparlante sobre si el producto realmente soporta su idioma, afectando directamente la credibilidad de la propuesta de valor internacional del producto.
 
 <p align="center">
-  <img src="docs/assets/Landing_imagenes_no_traducidas_al_cambiar_la_pagina_entre_español_a_ingles.png" alt="Problema 7" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/7.png" alt="Problema 7" width="500"/>
   <br/><i>Evidencia de heurística 7 </i>
 </p>
 
@@ -1450,7 +1450,7 @@ Preparar versiones alternativas de las capturas de pantalla del producto con la 
 El panel de control del taller presenta dos inconsistencias relacionadas con la localización de datos monetarios y temporales. Primero, la tarjeta de **"Ingresos proyectados"** muestra el valor en formato `$ 0,00` (usando el símbolo de dólar), mientras que la sección de **"Ganancias semanales"** muestra `S/. 0` (usando el símbolo de sol peruano). Al tratarse del mismo contexto financiero de un solo taller, la mezcla de dos monedas distintas genera confusión sobre en qué divisa opera el sistema. Segundo, el eje X del gráfico de ganancias semanales muestra los días de la semana en inglés: **FRI, SAT, SUN, MON, TUE, WED**, cuando toda la interfaz del dashboard está en español. Esta inconsistencia de idioma en un componente de datos afecta la credibilidad y profesionalidad de la herramienta ante el usuario final.
 
  <p align="center">
-  <img src="docs/assets/Dashboard.png" alt="Problema 8" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/8.png" alt="Problema 8" width="500"/>
   <br/><i>Evidencia de heurística 8 </i>
 </p>
  
@@ -1471,7 +1471,7 @@ Definir un único formato de moneda a nivel de configuración global de la aplic
 La pantalla de acceso a la plataforma está dividida en dos paneles: el izquierdo contiene una imagen de fondo de vehículos con texto superpuesto ("Comience a gestionar su Taller" y el subtítulo explicativo), y el derecho contiene el formulario de registro o inicio de sesión. El texto del panel izquierdo se superpone visualmente con las partes más detalladas de la imagen de vehículos (capós, ventanas, carrocería de colores), generando bajo contraste y haciendo que el mensaje principal sea difícil de leer. La tipografía blanca sobre un fondo con múltiples tonos claros y oscuros no garantiza legibilidad consistente en todo el ancho del panel. Además, los bloques de texto parecen desalineados respecto al centro visual del panel, creando una composición desequilibrada.
 
   <p align="center">
-  <img src="docs/assets/App_web_texto_junto-lado-izquierdo.png" alt="Problema 9" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/9.png" alt="Problema 9" width="500"/>
   <br/><i>Evidencia de heurística 9 </i>
 </p>
 
@@ -1493,7 +1493,7 @@ Aplicar una capa de superposición semitransparente oscura (`overlay`) sobre la 
 La barra de navegación superior de la landing page ("Inicio", "Funciones", "Cómo funciona", "Precios", "Contacto") mantiene el indicador de sección activa (subrayado azul) únicamente sobre el ítem **"Inicio"** independientemente de la sección de la página en la que se encuentre el usuario. Al hacer scroll hacia las secciones "Funciones", "Cómo funciona", "Precios" o "Contacto", el indicador no se desplaza para reflejar la posición actual de lectura del usuario. Esto priva al visitante de retroalimentación visual sobre su posición dentro de la página, lo cual es especialmente relevante en una landing page de una sola página (one-page) donde la navegación interna por anclas es el mecanismo principal de orientación.
 
 <p align="center">
-  <img src="docs/assets/Landing_nav_bar_secciones_no _animadas_al_entrar___solo inicio.png" alt="Problema 10" width="500"/>
+  <img src="../assets/images/chapter-6/heuristicas/10.png" alt="Problema 10" width="500"/>
   <br/><i>Evidencia de heurística 10 </i>
 </p>
  
