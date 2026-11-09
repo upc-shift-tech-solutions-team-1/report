@@ -1812,20 +1812,131 @@ Implementar detección de sección activa basada en la posición del scroll usan
 
 ## 6.4. Auditoría de Experiencias de Usuario.
 
+Como parte de la evaluación de experiencia de usuario, ShiftTech Solutions revisó los productos digitales de EnergyCore y recibió una auditoría de AutoService realizada por el equipo de Teralume.
+
 ### 6.4.1. Auditoría realizada.
+
+Se realizó una evaluación exploratoria de EnergyCore, producto desarrollado por Teralume. La revisión comprendió la Landing Page, la aplicación web y la aplicación móvil Android. El objetivo fue identificar dificultades de navegación, claridad de la información y respuesta de la interfaz ante las acciones del usuario.
 
 #### 6.4.1.1. Información del grupo auditado.
 
+| Dato | Información |
+|---|---|
+| Startup | Teralume |
+| Producto | EnergyCore |
+| Grupo auditor | ShiftTech Solutions |
+| Tipo de evaluación | Evaluación exploratoria de experiencia de usuario |
+| Productos evaluados | Landing Page, aplicación web y aplicación móvil Android |
+| Fecha de evaluación | 08/11/2026 |
+| Entorno móvil | Emulador Android Pixel 6 |
+| Recursos facilitados | Enlaces de la Landing Page y aplicación web, APK y reporte del proyecto |
+
 #### 6.4.1.2. Cronograma de auditoría realizada.
+
+La auditoría comprendió la revisión del material proporcionado y la exploración de los productos digitales de EnergyCore.
+
+| Actividad | Fecha | Estado |
+|---|---|---|
+| Revisión del reporte y de los recursos proporcionados por Teralume | 08/11/2026 | Realizada |
+| Evaluación de la Landing Page | 08/11/2026 | Realizada |
+| Evaluación de la aplicación web | 08/11/2026 | Realizada |
+| Evaluación de la aplicación móvil Android | 08/11/2026 | Realizada |
+| Consolidación de hallazgos y recomendaciones | 08/11/2026 | Realizada |
 
 #### 6.4.1.3. Contenido de auditoría realizada.
 
+La evaluación se centró en la navegación, la claridad de los mensajes y la correspondencia entre las acciones disponibles y la información presentada. Durante la revisión web se creó una sede, una habitación y un dispositivo con datos de prueba. Posteriormente, se comprobó que estos registros también fueran visibles en la aplicación móvil con la misma cuenta.
+
+| ID | Producto | Hallazgo | Prioridad | Recomendación |
+|---|---|---|---|---|
+| L-01 | Landing Page | No se identificó un enlace visible al acuerdo de servicio o a los términos y condiciones. | Media | Incorporar un enlace visible a las condiciones del servicio. |
+| L-02 | Landing Page | Los botones de los planes conducen al inicio de sesión sin mostrar cuál fue el plan seleccionado. | Baja | Comprobar si la selección se conserva después del acceso y comunicar al usuario el siguiente paso. |
+| W-01 | Aplicación web | Al intentar crear una sede sin nombre, se muestra un mensaje genérico que no indica qué campo debe corregirse. | Media | Identificar el campo obligatorio y mostrar un mensaje de validación claro dentro del formulario. |
+| W-02 | Aplicación web | La vista de consumo sugiere asignar dispositivos a habitaciones aunque ya existe una asignación y no hay lecturas. | Baja | Diferenciar la ausencia de dispositivos asignados de la ausencia de lecturas de consumo. |
+| M-01 | Aplicación móvil | La pestaña de habitaciones aparece truncada y su nombre sugiere una consulta de consumo, aunque permite administrar habitaciones. | Media | Utilizar una etiqueta breve y descriptiva, como «Habitaciones», y comprobar su presentación en diferentes tamaños de pantalla. |
+| M-02 | Aplicación móvil | El botón flotante «Nueva alerta» se superpone a parte del contenido de una tarjeta de notificación. | Baja | Ajustar la ubicación del botón o reservar espacio para evitar que cubra el contenido. |
+
+La Landing Page presenta la propuesta de valor y respondió al cambio de idioma. En la aplicación web se registraron la sede, habitación y dispositivo de prueba, que también se visualizaron en la aplicación móvil.
+
+![Superposición del botón Nueva alerta en EnergyCore móvil](../assets/images/chapter-6/movil-alertas.png)
+
+*Figura: Superposición del botón «Nueva alerta» sobre una notificación.*
+
+![Etiqueta truncada de la pestaña de habitaciones en EnergyCore móvil](../assets/images/chapter-6/movil-etiqueta-habitaciones.png)
+
+*Figura: Etiqueta truncada en la sección de habitaciones.*
+
+
 ### 6.4.2. Auditoría recibida.
+
+Teralume realizó una evaluación heurística de la experiencia pública de AutoService. La revisión examinó la navegación de la Landing Page, el acceso a la aplicación web y la claridad de los elementos de la interfaz.
 
 #### 6.4.2.1. Información del grupo auditor.
 
+| Dato | Información |
+|---|---|
+| Startup auditora | Teralume |
+| Producto del grupo auditor | EnergyCore |
+| Producto evaluado | AutoService |
+| Tipo de evaluación | Inspección heurística de usabilidad, diseño inclusivo y arquitectura de información |
+| Productos evaluados | Landing Page y acceso público a la aplicación web |
+| Fecha de evaluación | 08/11/2026 |
+| Entorno de evaluación | Microsoft Edge 157 en escritorio y vista móvil emulada |
+
+La revisión abarcó la selección de planes, el acceso a la demostración, la navegación móvil, el cambio de idioma y las opciones públicas de inicio de sesión y seguimiento.
+
 #### 6.4.2.2. Cronograma de auditoría recibida.
+
+El equipo auditor registró la inspección el 8 de noviembre de 2026. Durante la sesión se recorrieron las interfaces públicas, se repitieron las interacciones observadas y se revisaron el foco de teclado y los nombres accesibles de los controles.
+
+| Actividad | Fecha | Estado |
+|---|---|---|
+| Inspección de la Landing Page y del acceso público | 08/11/2026 | Realizada |
+| Registro de hallazgos y recomendaciones | 08/11/2026 | Realizada |
+| Recepción del informe de auditoría | 08/11/2026 | Recibido |
 
 #### 6.4.2.3. Contenido de auditoría recibida.
 
-#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos. 
+Teralume identificó cinco hallazgos relacionados con la correspondencia entre los botones y sus destinos, la accesibilidad de los controles y la facilidad para localizar información. La severidad corresponde a la valoración asignada por el equipo auditor.
+
+| ID | Hallazgo | Severidad | Principio asociado | Recomendación |
+|---|---|---|---|---|
+| AS-01 | Los botones de los planes Free y Business devuelven al visitante al inicio de la Landing Page. | 3 | Correspondencia entre la acción y el resultado. | Enlazar cada botón con la acción que anuncia: registro o contacto de ventas. |
+| AS-02 | El campo de contraseña se identifica mediante puntos en el árbol de accesibilidad y su etiqueta visible no enfoca la entrada. | 3 | Diseño inclusivo y experiencia comparable. | Asociar la etiqueta con el campo de entrada en ambos idiomas. |
+| AS-03 | El menú móvil de la Landing Page no ofrece un enlace explícito de inicio de sesión. | 2 | Facilidad para encontrar una ruta. | Incorporar un acceso de inicio de sesión en el menú móvil. |
+| AS-04 | La sección que anuncia una demostración muestra contenido pendiente. | 2 | Utilidad del contenido anunciado. | Publicar una demostración accesible o presentar materiales disponibles. |
+| AS-05 | Al seleccionar español en el acceso web, el idioma principal declarado por el documento permanece en inglés. | 2 | Diseño inclusivo y comunicación del idioma. | Actualizar el idioma declarado según la selección del usuario. |
+
+La inspección también confirmó que el enlace para clientes del taller conduce al portal de seguimiento y que la búsqueda sin código muestra una indicación sobre el dato faltante. La apertura de las pantallas de registro y recuperación verificó su navegación, pero no el resultado de sus procesos.
+
+![Botones de planes en la Landing Page de AutoService](../assets/images/chapter-6/auditoria-teralume/figura-01.png)
+
+*Figura: Planes revisados durante la auditoría de Teralume. Fuente: informe de auditoría recibido.*
+
+![Nombre accesible del campo de contraseña](../assets/images/chapter-6/auditoria-teralume/figura-04.png)
+
+*Figura: Inspección del nombre accesible del campo de contraseña. Fuente: informe de auditoría recibido.*
+
+![Menú móvil de la Landing Page](../assets/images/chapter-6/auditoria-teralume/figura-05.png)
+
+*Figura: Menú de navegación en la vista móvil. Fuente: informe de auditoría recibido.*
+
+![Sección de demostración de AutoService](../assets/images/chapter-6/auditoria-teralume/figura-06.png)
+
+*Figura: Contenido de la sección de demostración durante la evaluación. Fuente: informe de auditoría recibido.*
+
+![Acceso web de AutoService en español](../assets/images/chapter-6/auditoria-teralume/figura-07.png)
+
+*Figura: Pantalla de acceso con español seleccionado. La observación sobre el idioma declarado se obtuvo mediante inspección del navegador. Fuente: informe de auditoría recibido.*
+
+#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos.
+
+El equipo identificó las siguientes acciones a partir de las recomendaciones recibidas. El estado de su implementación requiere comprobación.
+
+| Hallazgo | Modificación propuesta | Estado |
+|---|---|---|
+| AS-01 | Configurar los destinos de los botones de planes de acuerdo con la acción ofrecida. | Pendiente de comprobación. |
+| AS-02 | Asociar correctamente la etiqueta de contraseña con su campo en español e inglés. | Pendiente de comprobación. |
+| AS-03 | Agregar un enlace explícito de inicio de sesión al menú móvil de la Landing Page. | Pendiente de comprobación. |
+| AS-04 | Incorporar una demostración funcional o ajustar la sección para mostrar contenido disponible. | Pendiente de comprobación. |
+| AS-05 | Sincronizar el idioma principal declarado por la página de acceso con el idioma seleccionado. | Pendiente de comprobación. |
