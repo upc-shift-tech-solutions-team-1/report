@@ -981,15 +981,323 @@ Estas pruebas forman parte de la suite general de 92 pruebas automatizadas del b
 
 Las pruebas de interfaz de usuario y navegación de la aplicación Web, incluyendo las realizadas con Selenium, se documentarán posteriormente en este mismo apartado, de forma independiente de las pruebas del Backend.
 
-## 6.2. Static testing & Verification
+
+## 6.2. Static Testing & Verification
+
+Las pruebas estáticas y la verificación de software permiten evaluar la calidad del código fuente sin necesidad de ejecutar la aplicación. Su propósito es identificar posibles errores de programación, problemas de seguridad, incumplimientos de convenciones y dificultades de mantenimiento durante el desarrollo.
+
+En AutoService, este proceso se relaciona con la revisión del código fuente, la aplicación de estándares de programación y el análisis estático mediante SonarQube Cloud.
+
+A diferencia de las pruebas dinámicas, que comprueban el comportamiento del sistema durante su ejecución, la verificación estática examina aspectos relacionados con la estructura, organización y calidad del código.
+
+El análisis estático complementa las pruebas unitarias, de integración y de aceptación, ya que permite detectar problemas que no necesariamente producen fallos visibles durante la ejecución de los casos de prueba.
 
 ### 6.2.1. Static Code Analysis
 
-#### 6.2.1.1. Coding standard & Code conventions.
+El análisis estático de código consiste en examinar el código fuente para detectar posibles defectos, vulnerabilidades, duplicaciones y problemas de mantenibilidad sin ejecutar la aplicación.
 
-#### 6.2.1.2. Code Quality & Code Security.
+En el Backend de AutoService, desarrollado con C# y ASP.NET Core 10, este análisis se realiza mediante SonarQube Cloud, integrado con GitHub para evaluar los cambios incorporados al repositorio.
+
+Los principales aspectos considerados son:
+
+- **Code Quality:** evaluación de posibles errores y problemas que afectan la calidad del código.
+- **Code Security:** identificación de vulnerabilidades y prácticas de programación inseguras.
+- **Maintainability:** detección de estructuras complejas, duplicaciones y otros elementos que dificultan el mantenimiento.
+- **Reliability:** identificación de defectos que podrían provocar un comportamiento incorrecto de la aplicación.
+- **Code Coverage:** medición del código ejecutado durante las pruebas automatizadas.
+- **Code Duplication:** identificación de fragmentos de código repetidos que pueden dificultar futuras modificaciones.
+
+Los resultados del análisis permiten evaluar el estado del código y comprobar el cumplimiento de los criterios establecidos en el Quality Gate.
+
+#### 6.2.1.1. Coding Standard & Code Conventions
+
+Los estándares y convenciones de programación establecen criterios para escribir, organizar y mantener el código fuente de manera consistente. Su aplicación facilita la lectura, revisión y modificación de los componentes de software, especialmente cuando participan varios desarrolladores en un mismo proyecto.
+
+En AutoService se consideran las convenciones propias del lenguaje C# y las prácticas habituales de desarrollo con ASP.NET Core, junto con principios de organización del código que favorecen la separación de responsabilidades.
+
+##### Convenciones de nomenclatura
+
+En C#, los nombres de los elementos del programa siguen convenciones que permiten identificar su propósito y distinguir los diferentes tipos de componentes.
+
+| Elemento | Convención | Ejemplo |
+|---|---|---|
+| Clases | PascalCase | `VehicleService` |
+| Interfaces | Prefijo `I` y PascalCase | `IVehicleRepository` |
+| Métodos | PascalCase | `GetVehicleById()` |
+| Propiedades públicas | PascalCase | `CustomerId` |
+| Variables locales | camelCase | `vehicleId` |
+| Parámetros | camelCase | `customerId` |
+| Métodos asíncronos | Sufijo `Async` | `GetVehiclesAsync()` |
+| Constantes | PascalCase | `MaximumAttempts` |
+
+El uso de nombres descriptivos permite reconocer la función de cada componente sin necesidad de revisar toda su implementación.
+
+Asimismo, se recomienda evitar abreviaturas ambiguas y mantener una nomenclatura uniforme para conceptos utilizados en diferentes capas de la aplicación.
+
+##### Organización del código
+
+El Backend de AutoService utiliza una arquitectura basada en componentes que separan la recepción de solicitudes HTTP, la implementación de reglas de negocio y el acceso a los datos.
+
+Esta separación permite organizar las responsabilidades y reducir el acoplamiento entre los componentes de la aplicación.
+
+Entre las prácticas consideradas se encuentran:
+
+- **Separación de responsabilidades:** cada componente debe concentrarse en una función definida.
+- **Encapsulamiento:** los detalles internos de implementación deben mantenerse separados de las interfaces públicas.
+- **Reutilización de código:** las operaciones comunes deben centralizarse cuando corresponda, evitando implementaciones duplicadas.
+- **Control de dependencias:** los componentes deben utilizar interfaces o abstracciones cuando resulte adecuado.
+- **Validación de entradas:** los datos recibidos desde solicitudes externas deben comprobarse antes de procesarse.
+
+Estas prácticas se relacionan con principios como **SOLID** y **DRY (Don't Repeat Yourself)**, utilizados como referencias para mejorar la organización y mantenibilidad del software.
+
+##### Formato y legibilidad
+
+La legibilidad del código constituye un aspecto importante de la revisión estática. En C#, las convenciones habituales incluyen el uso consistente de indentación, llaves, espacios y separación de bloques.
+
+Por ejemplo, una estructura condicional puede expresarse de la siguiente manera:
+
+```csharp
+if (customerId <= 0)
+{
+    throw new ArgumentException("Invalid customer identifier.");
+}
+```
+
+La organización visual del código facilita la identificación de condiciones, operaciones y bloques de ejecución.
+
+También se consideran las siguientes prácticas:
+
+- Mantener una indentación uniforme.
+- Utilizar llaves para delimitar claramente los bloques de código.
+- Evitar métodos excesivamente extensos.
+- Reducir la complejidad de las estructuras condicionales.
+- Eliminar código innecesario y comentarios obsoletos.
+- Utilizar nombres que describan el propósito de las variables y operaciones.
+
+##### Manejo de errores y validaciones
+
+El manejo de errores debe permitir identificar condiciones inválidas y generar respuestas apropiadas sin exponer información sensible.
+
+En AutoService, las validaciones del Backend incluyen la comprobación de identificadores y la verificación del acceso a recursos asociados a un taller.
+
+Por ejemplo, el campo `CustomerId` debe contener un identificador válido, mientras que las operaciones sobre vehículos deben respetar las restricciones relacionadas con el `WorkshopId` del usuario autenticado.
+
+Estas comprobaciones permiten controlar las solicitudes recibidas y evitar operaciones sobre recursos que no corresponden al contexto autorizado.
+
+El uso adecuado de respuestas HTTP también facilita la interpretación de los resultados de las operaciones de la RESTful API.
+
+##### Convenciones de seguridad
+
+Las prácticas de programación segura consideran tanto el tratamiento de los datos recibidos como la protección de la configuración utilizada por la aplicación.
+
+Entre los criterios relevantes se encuentran:
+
+- Evitar incorporar contraseñas, tokens o claves secretas directamente en el código fuente.
+- Utilizar Environment Variables para las configuraciones sensibles.
+- Validar los datos recibidos desde solicitudes HTTP.
+- Aplicar controles de autenticación y autorización.
+- Restringir el acceso a recursos según el usuario o taller correspondiente.
+- Mantener actualizadas las dependencias utilizadas por la aplicación.
+
+Estas prácticas permiten reducir riesgos asociados al acceso no autorizado, la exposición de información y el uso de configuraciones inseguras.
+
+##### Revisión del código fuente
+
+La revisión mediante Pull Requests permite examinar los cambios propuestos antes de integrarlos en las ramas `develop` y `main`.
+
+Durante esta revisión pueden evaluarse aspectos como la organización de los métodos, la claridad de los nombres, la reutilización de componentes y el cumplimiento de las validaciones necesarias.
+
+El análisis automático de SonarQube Cloud complementa esta revisión mediante reglas que permiten identificar problemas potenciales de calidad, seguridad y mantenibilidad.
+
+La aplicación de convenciones de programación y herramientas de análisis estático proporciona criterios para evaluar la estructura del código del Backend. Los resultados específicos obtenidos mediante SonarQube Cloud se presentan en el apartado **6.2.1.2. Code Quality & Code Security**.
+
+#### 6.2.1.2. Code Quality & Code Security
+
+La calidad y seguridad del código del Backend de AutoService se evaluaron mediante **SonarQube Cloud**, una herramienta de análisis estático que permite identificar errores potenciales, vulnerabilidades de seguridad, problemas de mantenibilidad, duplicación de código y cobertura insuficiente de pruebas.
+
+La herramienta se integró con GitHub Actions para ejecutar análisis automáticos sobre los cambios realizados en el repositorio. De esta forma, los Pull Requests pueden ser evaluados antes de su integración en las ramas principales, considerando los criterios definidos en el Quality Gate.
+
+##### Análisis del código nuevo
+
+Para el análisis del código nuevo se estableció un requisito mínimo de cobertura del **80 %**, utilizado como uno de los criterios de aceptación del Quality Gate.
+
+Después de incorporar las modificaciones de seguridad en la rama `main`, SonarQube Cloud presentó los siguientes resultados:
+
+| Indicador | Resultado |
+|---|---|
+| Quality Gate | Passed |
+| Cobertura del código nuevo | 91.07 % |
+| Cobertura mínima requerida | 80 % |
+| Problemas nuevos | 0 |
+| Nuevos Security Hotspots | 0 |
+| Nuevos riesgos de dependencias | 0 |
+| Duplicación del código nuevo | 0.0 % |
+
+La cobertura obtenida fue de **91.07 %**, superando en 11.07 puntos porcentuales el mínimo establecido. Asimismo, el análisis no registró problemas nuevos, Security Hotspots ni riesgos de dependencias asociados al código incorporado.
+
+El resultado del Quality Gate fue **Passed**, indicando que los cambios evaluados cumplieron con las condiciones de calidad configuradas para el proyecto.
+
+![Resultados del Quality Gate del Backend de AutoService](../assets/images/chapter-6/chapter-6-sonarcloud-quality-gate-main.png)
+
+*Figura: Resultados del análisis de código nuevo y estado del Quality Gate del Backend de AutoService en SonarQube Cloud.*
+
+##### Análisis general del código
+
+También se revisó la sección **Overall Code**, que presenta los indicadores correspondientes al código completo del Backend, incluyendo los componentes desarrollados previamente.
+
+Los resultados fueron los siguientes:
+
+| Indicador | Resultado |
+|---|---|
+| Quality Gate | Passed |
+| Security | 0 problemas abiertos — Calificación A |
+| Reliability | 24 problemas abiertos — Calificación C |
+| Maintainability | 85 problemas abiertos — Calificación A |
+| Cobertura general del código | 47.7 % |
+| Duplicación general del código | 2.0 % |
+| Riesgos de dependencias | 0 |
+
+![Análisis general de calidad del Backend de AutoService](../assets/images/chapter-6/chapter-6-sonarcloud-overall-code-main.png)
+
+*Figura: Indicadores generales de seguridad, confiabilidad, mantenibilidad, cobertura y duplicación del Backend de AutoService.*
+
+En cuanto a seguridad, el análisis reportó **0 problemas abiertos**, con una calificación A. Sin embargo, se identificaron 24 problemas de Reliability y 85 de Maintainability. Estos hallazgos corresponden principalmente a aspectos de confiabilidad y estructura del código que requieren revisión.
+
+La cobertura general fue de **47.7 %**, mientras que la duplicación alcanzó el 2.0 %.
+
+La diferencia entre la cobertura del código nuevo y la cobertura general se debe al alcance de cada indicador:
+
+- **Cobertura del código nuevo (91.07 %):** corresponde al porcentaje de código reciente ejecutado durante las pruebas automatizadas. Este valor cumple con el requisito mínimo del 80 %.
+- **Cobertura general (47.7 %):** considera el código del Backend en su conjunto, incluyendo componentes implementados en etapas anteriores que presentan una menor cobertura de pruebas.
+
+Por lo tanto, la aprobación del Quality Gate corresponde al cumplimiento de los criterios configurados y no implica que todo el código del proyecto alcance una cobertura del 80 %.
+
+##### Seguridad del código
+
+Durante la revisión del Backend se realizaron modificaciones relacionadas con la validación de datos, el control de acceso, la configuración de seguridad y las dependencias utilizadas por la aplicación.
+
+Las principales modificaciones fueron las siguientes:
+
+- **Validación de identificadores:** se incorporó la validación del campo `CustomerId` en las operaciones de creación y actualización de vehículos, rechazando valores menores o iguales a cero y solicitudes donde no se proporciona el identificador requerido.
+- **Aislamiento entre talleres:** se añadieron verificaciones del `WorkshopId` asociado al usuario autenticado para restringir el acceso a vehículos de otros talleres.
+- **Control de operaciones:** los endpoints de creación, consulta, actualización y eliminación de vehículos verifican la relación entre el cliente y el taller antes de realizar la operación solicitada.
+- **Configuración de autenticación:** se revisó el manejo de la clave JWT para utilizar valores de configuración externos en lugar de incorporar credenciales directamente en el código fuente.
+- **Configuración de CORS:** se restringieron los orígenes autorizados mediante la propiedad `Cors:AllowedOrigins`, evitando una política de acceso abierta a cualquier origen.
+- **Actualización de dependencias:** se actualizó `MySqlConnector` a la versión 2.6.1 para corregir vulnerabilidades conocidas en la versión utilizada anteriormente.
+- **Seguridad del contenedor:** se configuró la ejecución de la aplicación dentro de Docker mediante un usuario sin privilegios de administrador.
+
+En el módulo de vehículos, las verificaciones de pertenencia al taller permiten rechazar solicitudes realizadas sobre recursos asociados a otro `WorkshopId`. En estos casos, se utiliza la respuesta HTTP `404 Not Found` para evitar revelar la existencia de recursos ajenos al usuario autenticado.
+
+Estas modificaciones se complementaron con pruebas de integración, BDD y aceptación. Entre los escenarios evaluados se incluyó el intento de acceso de un usuario del taller `WS-02` a un vehículo asociado al taller `WS-01`, comprobando el rechazo de las solicitudes de creación, consulta, actualización y eliminación.
+
+La ejecución del conjunto de pruebas del Backend registró **98 pruebas aprobadas y 0 fallidas**.
+
+##### Resultados del análisis
+
+Los resultados de SonarQube Cloud muestran un Quality Gate aprobado, una cobertura del código nuevo superior al mínimo establecido y ausencia de problemas nuevos en el análisis presentado.
+
+En el código general se mantienen 24 problemas de Reliability, 85 de Maintainability y una cobertura del 47.7 %. Estos valores permiten identificar las principales limitaciones de calidad presentes en los componentes existentes.
+
+El análisis estático y las pruebas automatizadas proporcionan evidencias complementarias sobre el estado del código. No obstante, sus resultados se encuentran limitados a las reglas configuradas en SonarQube Cloud y a los escenarios contemplados por las pruebas ejecutadas.
+
 
 ### 6.2.2. Reviews
+
+Las revisiones de software son actividades de verificación estática que permiten examinar el código fuente y otros elementos del desarrollo para identificar errores, inconsistencias y posibles problemas antes de su integración. A diferencia de las pruebas dinámicas, estas actividades pueden realizarse sin ejecutar directamente las funcionalidades de la aplicación.
+
+En AutoService, las revisiones del Backend se relacionan con el uso de Pull Requests en GitHub, el análisis de los cambios incorporados al repositorio y las verificaciones automáticas mediante GitHub Actions y SonarQube Cloud.
+
+#### Tipos de revisión de software
+
+Las revisiones pueden clasificarse según el nivel de formalidad y la participación de los desarrolladores.
+
+| Tipo de revisión | Descripción |
+|---|---|
+| Code Review | Evaluación del código fuente para identificar errores, problemas de seguridad y dificultades de mantenimiento |
+| Peer Review | Revisión realizada por otro desarrollador para evaluar los cambios propuestos |
+| Walkthrough | Explicación del funcionamiento de un componente o solución para facilitar su comprensión y detectar posibles problemas |
+| Inspection | Revisión formal basada en criterios previamente establecidos y en el registro de los defectos encontrados |
+| Automated Code Review | Análisis mediante herramientas que detectan problemas de calidad, seguridad y cumplimiento de reglas de programación |
+
+Estos mecanismos pueden complementarse entre sí. Las revisiones manuales permiten evaluar aspectos relacionados con la lógica y la organización del software, mientras que las herramientas automáticas facilitan la detección de problemas recurrentes y la verificación de criterios técnicos.
+
+#### Revisión de cambios mediante Pull Requests
+
+El control de versiones de AutoService se realiza mediante GitHub, utilizando ramas de desarrollo para organizar las modificaciones antes de integrarlas en `develop` y `main`.
+
+Los Pull Requests permiten comparar los archivos modificados con la rama de destino, consultar el historial de commits y revisar los resultados de las verificaciones asociadas a cada cambio.
+
+Durante este proceso pueden evaluarse los siguientes aspectos:
+
+- **Correctitud:** correspondencia entre las modificaciones y el comportamiento esperado de la funcionalidad.
+- **Legibilidad:** claridad de los nombres, métodos y estructuras utilizadas.
+- **Mantenibilidad:** organización del código y reducción de duplicaciones innecesarias.
+- **Seguridad:** validación de entradas, controles de acceso y protección de información sensible.
+- **Integración:** compatibilidad de las modificaciones con los componentes existentes.
+- **Pruebas:** resultados de las verificaciones automatizadas relacionadas con los cambios.
+
+En el Backend se utilizaron Pull Requests para integrar modificaciones relacionadas con las pruebas automatizadas y la seguridad de las operaciones sobre vehículos.
+
+Entre los cambios documentados se encuentran:
+
+| Pull Request | Modificaciones principales |
+|---|---|
+| PR #25 | Incorporación de verificaciones relacionadas con el aislamiento de datos entre talleres y ampliación de pruebas automatizadas en `develop` |
+| PR #27 | Integración en `main` de las validaciones de seguridad para restringir operaciones sobre vehículos pertenecientes a otros talleres |
+
+Los cambios incorporados mediante estos Pull Requests permiten identificar las modificaciones realizadas y relacionarlas con las verificaciones ejecutadas durante la integración.
+
+#### Revisión automatizada del código
+
+Las revisiones del Backend también incluyen verificaciones automáticas mediante GitHub Actions y SonarQube Cloud.
+
+GitHub Actions ejecuta el proceso de Continuous Integration, que comprende la restauración de dependencias, compilación de la solución y ejecución de pruebas automatizadas.
+
+En la ejecución correspondiente a las modificaciones recientes del Backend se registraron los siguientes resultados:
+
+| Indicador | Resultado |
+|---|---|
+| Pruebas automatizadas | 98 |
+| Pruebas aprobadas | 98 |
+| Pruebas fallidas | 0 |
+| Estado del workflow | Success |
+
+Estos resultados permiten comprobar que la solución compiló correctamente y que los escenarios incluidos en la suite de pruebas finalizaron sin errores.
+
+Por su parte, SonarQube Cloud analiza el código fuente mediante reglas orientadas a identificar problemas de confiabilidad, mantenibilidad y seguridad.
+
+El análisis del código nuevo de la rama `main` presentó un Quality Gate aprobado, con una cobertura del 91.07 % y sin problemas nuevos reportados.
+
+Los indicadores específicos de SonarQube Cloud se presentan en el apartado 6.2.1.2. Code Quality & Code Security.
+
+#### Revisión de validaciones y seguridad
+
+Las modificaciones de seguridad del Backend incluyeron la revisión de las operaciones relacionadas con el registro y la administración de vehículos.
+
+Uno de los aspectos evaluados fue la validación del identificador `CustomerId`, utilizado para establecer la relación entre un vehículo y su cliente.
+
+También se revisaron las restricciones de acceso basadas en el `WorkshopId`, con el propósito de impedir operaciones sobre recursos pertenecientes a otros talleres.
+
+Las comprobaciones incluyeron los siguientes escenarios:
+
+- Rechazo de solicitudes con identificadores de cliente inválidos.
+- Restricción del registro de vehículos asociados a clientes de otro taller.
+- Restricción de consultas sobre vehículos que no pertenecen al taller autenticado.
+- Rechazo de operaciones de actualización y eliminación sobre vehículos de otros talleres.
+- Verificación de la conservación de los datos después de solicitudes rechazadas.
+
+Estas condiciones fueron incorporadas en los escenarios automatizados del Backend. Entre ellos se evaluó el acceso de un usuario del taller `WS-02` a recursos asociados al taller `WS-01`.
+
+Las pruebas permitieron comprobar el cumplimiento de las restricciones implementadas para los escenarios evaluados.
+
+#### Registro de resultados
+
+GitHub conserva el historial de los Pull Requests y los commits utilizados para integrar las modificaciones. Además, GitHub Actions registra los resultados de los workflows, mientras que SonarQube Cloud presenta los indicadores obtenidos durante el análisis estático.
+
+Estas herramientas proporcionan información para consultar los cambios realizados, identificar ejecuciones fallidas y comprobar el estado de las verificaciones asociadas al código.
+
+Las evidencias disponibles corresponden principalmente a revisiones de cambios mediante Pull Requests y verificaciones técnicas automatizadas. No se cuenta con registros específicos de sesiones formales de Inspection o Walkthrough, ni con actas individuales de revisión por pares.
+
 
 ## 6.3. Validation Interviews.
 
