@@ -1962,8 +1962,8 @@ El equipo identificó las siguientes acciones a partir de las recomendaciones re
 
 | Hallazgo | Modificación propuesta | Estado |
 |---|---|---|
-| AS-01 | Configurar los destinos de los botones de planes de acuerdo con la acción ofrecida. | Pendiente de comprobación. |
-| AS-02 | Asociar correctamente la etiqueta de contraseña con su campo en español e inglés. | Pendiente de comprobación. |
+| AS-01 | Configurar los destinos de los botones de planes de acuerdo con la acción ofrecida. | Completado / Fuera del alcance TB2 |
+| AS-02 | Asociar correctamente la etiqueta de contraseña con su campo en español e inglés. | Completado / Fuera del alcance TB2 |
 | AS-03 | Agregar un enlace explícito de inicio de sesión al menú móvil de la Landing Page. | Pendiente de comprobación. |
 | AS-04 | Incorporar una demostración funcional o ajustar la sección para mostrar contenido disponible. | Pendiente de comprobación. |
 | AS-05 | Sincronizar el idioma principal declarado por la página de acceso con el idioma seleccionado. | Pendiente de comprobación. |
