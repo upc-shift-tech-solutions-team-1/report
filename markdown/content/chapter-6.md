@@ -1359,22 +1359,27 @@ Las evidencias disponibles corresponden principalmente a revisiones de cambios m
 
 ### 6.3.2. Registro de Entrevistas.
 
-#### Entrevista 1: Técnico Independiente
+#### EV01: Entrevista 1: Técnico Independiente
 
 - **Nombre:** David Klisman Paredes
 - **Edad:** 24
 - **Residencia:** Lima, Surco 
 - **Ocupación:** Técnico Mecánico Automotriz  
-- **Fecha:** 18 de junio de 2026  
-- **Inicio:** 0:34 
+- **Fecha:** 2 de Noviembre de 2026  
+- **Inicio:** 0:01
 - **Duración:** 
 
 **Link:**  
-[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQA7Z4MwyJCQT5U_-UuRw-qFAdzxxU4kuwUxGcH8PyyYGmQ?e=GvBrhr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Video EV01](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQA7Z4MwyJCQT5U_-UuRw-qFAdzxxU4kuwUxGcH8PyyYGmQ?e=GvBrhr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Resumen:**
 <p style="text-align: justify;">
-Durante la entrevista, el participante identificó que la plataforma AutoService resuelve principalmente el desorden operativo y la pérdida de tiempo en los talleres, destacando la gestión centralizada de tareas, órdenes de trabajo e inventario. Valoró positivamente la propuesta de control y confianza transmitida en la landing page, así como la estructura visual de la plataforma. Sugirió hacer más visible la creación de órdenes de trabajo mediante accesos directos o favoritos, incorporar autocompletado para tareas repetitivas y facilitar la consulta rápida del stock de repuestos. Los indicadores más relevantes para él son la cantidad de vehículos en el taller, las entradas programadas y los ingresos generados. Respecto a los planes, optaría inicialmente por el plan gratuito para evaluar la herramienta antes de migrar a una opción superior según sus necesidades. Como mejora, recomendó implementar un modo oscuro y reforzar algunas funcionalidades relacionadas con la gestión de inventario y compras.
+El entrevistado, David, identificó que AutoService responde a la necesidad real de reducir el desorden operativo y la pérdida de tiempo en el taller mediante la gestión centralizada de tareas, órdenes de trabajo e inventario. Valoró positivamente el control y confianza que transmite la Landing Page, así como la estructura visual de la plataforma, y señaló como indicadores clave la cantidad de vehículos en el taller, las entradas programadas y los ingresos generados. Para responder mejor a la agilidad operativa diaria, propuso accesos directos o favoritos para crear órdenes, autocompletado en tareas repetitivas y consulta rápida del stock de repuestos, además de sugerir un modo oscuro y mejoras en inventario y compras; respecto a los planes, optaría primero por el gratuito para evaluar la herramienta según sus necesidades.
+</p>
+
+**Sugerencias del participante:**
+<p style="text-align: justify;">
+ Implementar modo oscuro y reforzar funcionalidades de gestión de inventario y compras.
 </p>
 
 **Evidencia:**
@@ -1382,64 +1387,72 @@ Durante la entrevista, el participante identificó que la plataforma AutoService
 ![Entrevista Tencnico Taller](../assets/images/chapter-6/validation-inter-m1.png)
 
 ---
-#### Entrevista 2: Técnico Independiente
+#### EV02: Entrevista 2: Técnico Independiente
 
 - **Nombre:** Antenor Ayala
 - **Edad:** 32
 - **Residencia:** Ayacucho, Huamanga
 - **Ocupación:** Técnico Mecánico Automotriz  
-- **Fecha:** 18 de junio de 2026  
+- **Fecha:** 3 de noviembre de 2026  
 - **Inicio:** 0:24 
 - **Duración:** 8:40
 
 **Link:**  
-[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQBdFgL87OsURr3S0HD4V5dfAX_VfvxvHK8-jDIs5s20rhI?e=hY636B&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Video EV02](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQBdFgL87OsURr3S0HD4V5dfAX_VfvxvHK8-jDIs5s20rhI?e=hY636B&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Resumen:**
 <p style="text-align: justify;">
-El entrevistado mostró una percepción muy positiva de AutoService, destacando que la plataforma puede ayudar a organizar mejor las tareas, el inventario y la gestión diaria del taller. Consideró que el sistema sería útil para complementar el trabajo manual y facilitar el control de repuestos y procesos. Como sugerencia principal, indicó que la plataforma debería ser más accesible y fácil de conocer para usuarios con poca experiencia en herramientas digitales, además de mejorar su difusión. Valoró especialmente la posibilidad de consultar inventarios y propuso funciones como la ubicación exacta de piezas dentro del taller y acceso rápido a proveedores cuando no haya stock disponible. Respecto a los planes, manifestó que inicialmente probaría una versión gratuita, pero estaría dispuesto a migrar al plan Pro si percibe beneficios claros y genera confianza. Finalmente, resaltó que la interfaz es atractiva, organizada e innovadora, aunque considera importante simplificar el acceso para usuarios menos familiarizados con la tecnología y ampliar las funcionalidades del plan básico.
+El participante Antenor mostró una percepción muy positiva de AutoService para responder a la necesidad real de organizar las tareas diarias, el inventario y el control de repuestos como complemento al trabajo manual, haciendo énfasis en que debe ser accesible para usuarios con poca experiencia digital. Destacó la utilidad de consultar inventarios y la interfaz atractiva, organizada e innovadora, pero planteó facilitar la ubicación exacta de piezas en el taller, el acceso rápido a proveedores ante falta de stock, una mayor difusión y simplificación para usuarios menos familiarizados con la tecnología, y ampliar el plan básico. En cuanto a planes, probaría primero una versión gratuita y migraría al plan Pro si percibe beneficios claros y confianza.
 </p>
+
+**Sugerencias del participante:**
+<p style="text-align: justify;">
+Mayor facilidad de acceso/difusión para usuarios con baja experiencia digital, ubicación exacta de piezas en el taller, acceso rápido a proveedores cuando no haya stock y ampliar funcionalidades del plan básico.
+</p>
+
 
 **Evidencia:**
 
 ![Entrevista Tencnico Taller](../assets/images/chapter-6/validation-inter-m2.png)
 
-#### Entrevista 3: Técnico Independiente
+#### EV03: Entrevista 3: Técnico Independiente
 
 - **Nombre:** Robinson Quispe
 - **Edad:** 34
 - **Residencia:** Ayacucho, Huamanga
 - **Ocupación:** Técnico Mecánico Automotriz
-- **Fecha:** 18 de junio de 2026  
+- **Fecha:** 2 de noviembre de 2026  
 - **Inicio:** 0:27
-- **Duración:** 8:43
+- **Duración:** 7:10
 
 **Link:**  
-[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQB_DlrBnlW_QKJTvMc4jaClAQOsXn6-eOK5YW0-fzrZx8A?e=hTHBg9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Video EV03](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217678_upc_edu_pe/IQB_DlrBnlW_QKJTvMc4jaClAQOsXn6-eOK5YW0-fzrZx8A?e=hTHBg9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Resumen:**
 <p style="text-align: justify;">
-El entrevistado Robinson destacó que la plataforma resuelve problemas relacionados con la organización de tareas, el control de inventario y la optimización del tiempo dentro del taller. Consideró que la plataforma es intuitiva, amigable y fácil de utilizar, especialmente para asignar tareas y gestionar el trabajo de los mecánicos. Valoró la posibilidad de visualizar el stock disponible, la compatibilidad de los repuestos con los vehículos y el seguimiento del avance de las órdenes de trabajo. Entre los indicadores más importantes mencionó el estado de los vehículos en reparación, el control de inventario y las tareas pendientes, sugiriendo además incluir métricas de ingresos y facturación. También resaltó la utilidad de las alertas automáticas de stock para evitar faltantes de piezas. Respecto a los planes, indicó que elegiría el plan Pro debido al volumen de trabajo de su taller, aunque le gustaría entender mejor el valor diferencial del plan Business. Como observación final, señaló que la plataforma le parece bien estructurada y útil, aunque considera importante comprender mejor el flujo operativo cuando se maneje un volumen elevado de órdenes y vehículos.
+Robinson señaló que AutoService atiende la necesidad real de organizar tareas, controlar el inventario, optimizar tiempos y asignar o supervisar el trabajo de los mecánicos dentro del taller. Consideró la plataforma intuitiva y amigable para gestionar mecánicos, revisar stock disponible, comprobar compatibilidad de repuestos con vehículos, seguir el avance de órdenes y recibir alertas automáticas de stock para prevenir faltantes, mencionando como indicadores principales el estado de vehículos en reparación, el inventario y las tareas pendientes. Elegiría el plan Pro por su volumen de trabajo, aunque sugirió sumar métricas de ingresos y facturación, aclarar el valor diferencial del plan Business y precisar el flujo operativo cuando se maneja un alto volumen de órdenes y vehículos.</p>
 
-</p>
+**Sugerencias del participante:**
+<p style="text-align: justify;">
+Incorporar métricas de ingresos y facturación, aclarar el valor diferencial del plan Business y detallar/optimizar el flujo ante alto volumen de órdenes.</p>
 
 **Evidencia:**
 
 ![Entrevista Tencnico Taller](../assets/images/chapter-6/validation-inter-m3.png)
 
 ---
-#### Entrevista 4: Administrador
+#### EV04: Entrevista 4: Administrador
 
 - **Nombre y Apellido:** Juan Calisaya
 - **Edad:** 30 años
 - **Distrito de Residencia:** Santa Anita, Lima
 - **Ocupación:** Propietario y Administrador de Taller Automotriz
-- **Fecha:** 18 de junio de 2026
+- **Fecha:** 1 de noviembre de 2026
 - **Inicio de la Entrevista:** 00:01
 - **Duración:** 12:49
 
 **URL del Video (Microsoft Stream):**  
-[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e299_upc_edu_pe/IQAKH0LwbS9hR6iCQO9yvjKpAQVicbqjpS3d1hd_KQnQm9o?e=3eALzP&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Video EV04](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e299_upc_edu_pe/IQAKH0LwbS9hR6iCQO9yvjKpAQVicbqjpS3d1hd_KQnQm9o?e=3eALzP&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 
 
@@ -1448,27 +1461,36 @@ Juan Calisaya es propietario y administrador de un taller automotriz que cuenta 
 
 Durante la validación, comprendió correctamente que AutoService es una solución orientada a la gestión digital de talleres automotrices, permitiendo centralizar la información de clientes, vehículos y órdenes de trabajo. Consideró que el Landing Page comunica adecuadamente la propuesta de valor y facilita la comprensión de los beneficios ofrecidos por la plataforma.
 
-Respecto a la aplicación, destacó la facilidad del proceso de registro y la organización intuitiva de los módulos. Logró identificar sin dificultad los procesos de registro de clientes, vehículos y órdenes de trabajo, así como los mecanismos de asignación de tareas y seguimiento de servicios. Asimismo, comprendió claramente los estados de avance de las órdenes de trabajo y el funcionamiento del sistema de notificaciones para mantener informados a los clientes.
+Respecto a la aplicación, destacó la facilidad del proceso de registro y la organización intuitiva de los módulos. Logró identificar sin dificultad los procesos de registro de clientes, vehículos y órdenes de trabajo, así como los mecanismos de asignación de tareas y seguimiento de servicios Asimismo, comprendió claramente los estados de avance de las órdenes de trabajo y el funcionamiento del sistema de notificaciones para mantener informados a los clientes.
 
-Como sugerencia de mejora, propuso incorporar reportes de productividad y estadísticas operativas para apoyar la toma de decisiones dentro del taller. Finalmente, manifestó que utilizaría AutoService debido a los beneficios relacionados con la centralización de la información, la mejora de la comunicación con los clientes y la optimización de los procesos administrativos.
+Como sugerencia de mejora, propuso incorporar reportes de productividad y estadísticas operativas para apoyar la toma de decisiones dentro del taller. Finalmente, manifestó que
+utilizaría AutoService debido a los beneficios relacionados con la centralización de la información, la mejora de la comunicación con los clientes y la optimización de los procesos
+administrativos.
+</p>
+
+**Sugerencias del participante:**
+<p style="text-align: justify;">
+Incorporar reportes de productividad y estadísticas operativas para apoyar la toma de decisiones. Manifestó que
+utilizaría AutoService debido a los beneficios relacionados con la centralización de la información, la mejora de la comunicación con los clientes y la optimización de los procesos
+administrativos
 </p>
 
 **Evidencia:** 
 ![Entrevista Administrador](../assets/images/chapter-6/validation-inter-admin1.png)
 
 ---
-#### Entrevista 5: Administrador
+#### EV05: Entrevista 5: Administrador
 
 - **Nombre y Apellido:** Sebastián Rojas
 - **Edad:** 24 años
 - **Distrito de Residencia:** Villa El Salvador, Lima
 - **Ocupación:** Administrador y Encargado de Logística de Taller Automotriz
-- **Fecha:** 18 de junio de 2026
+- **Fecha:** 2 de noviembre de 2026
 - **Inicio de la Entrevista:** 00:04
 - **Duración:** 10:55
 
 **URL del Video (Microsoft Stream):** 
-[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e299_upc_edu_pe/IQDAeIojk9-qRp0t-QPDNmzpAb58CmafSrSigXD0jIsM48U?e=nucE9d&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Video EV05](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e299_upc_edu_pe/IQDAeIojk9-qRp0t-QPDNmzpAb58CmafSrSigXD0jIsM48U?e=nucE9d&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 
 <p style="text-align: justify;">
@@ -1483,23 +1505,28 @@ Respecto al monitoreo de servicios, comprendió cómo se actualizan los estados 
 Como principal sugerencia de mejora, recomendó incorporar reportes avanzados relacionados con ingresos, productividad de colaboradores, rendimiento operativo y estadísticas para la toma de decisiones estratégicas. Finalmente, indicó que utilizaría AutoService debido a que ofrece una gestión más colaborativa, organizada y eficiente que las herramientas que emplea actualmente.
 </p>
 
+**Sugerencias del participante:**
+<p style="text-align: justify;">
+Incorporar reportes avanzados de ingresos, productividad de colaboradores, rendimiento operativo y estadísticas para decisiones estratégicas.
+</p>
+
 **Evidencia:** 
 ![Entrevista Administrador](../assets/images/chapter-6/validation-inter-admin2.png)
 
 
 ---
-#### Entrevista 6: Administrador
+#### EV06: Entrevista 6: Administrador
 
 - **Nombre y Apellido:** Jaime Ruiz
 - **Edad:** 30 años
 - **Distrito de Residencia:** Puno, Puno
 - **Ocupación:** Dueño y Administrador de Taller Automotriz
-- **Fecha:** 18 de junio de 2026
+- **Fecha:** 3 de noviembre de 2026
 - **Inicio de la Entrevista:** 00:14
 - **Duración:** 15:18
 
 **URL del Video (Microsoft Stream):** 
-[Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e299_upc_edu_pe/IQASv_VScko6S7Lj2qfoNu1NASDn0X3oJZCkGj95LjlQ0j8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FNLJy0)
+[Video EV06](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e299_upc_edu_pe/IQASv_VScko6S7Lj2qfoNu1NASDn0X3oJZCkGj95LjlQ0j8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FNLJy0)
 
 
 <p style="text-align: justify;">
