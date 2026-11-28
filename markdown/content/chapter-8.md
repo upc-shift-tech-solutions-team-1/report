@@ -591,6 +591,9 @@ Preguntas generales:
 - Hora de inicio: 0:01
 - Duración: 3:05
 
+Link
+[Video EV-TB-01](https://upcedupe-my.sharepoint.com/:v:/r/personal/u202315640_upc_edu_pe/Documents/Entrevista%20Segmento%201.mp4?d=w09c1efd95e44481abb77cac1ab21bade&csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ssf0Ev)
+
 **Resumen**
 
 El entrevistado manifesto su correcta integración y adaptación con el producto, desde la aplicación web y en especial la aplicación móvil, explica que se le facilita realizar las tareas que antes eran complejas o tardadas. Resalta su gusto por funcionalidades como el registro de vehiculos y comunicación directa con los clientes. Admite que una mejora en apartados visuales podría ser más optimo al momento de usarlos por primera vez.
@@ -608,6 +611,9 @@ El entrevistado manifesto su correcta integración y adaptación con el producto
 - Fecha: 26 de noviembre de 2026
 - Hora de inicio: 3:07
 - Duración: 4:04
+
+Link
+[Video EV-TB-02](https://upcedupe-my.sharepoint.com/:v:/r/personal/u202315640_upc_edu_pe/Documents/Entrevista%20Segmento%201.mp4?d=w09c1efd95e44481abb77cac1ab21bade&csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ssf0Ev)
 
 **Resumen**
 
