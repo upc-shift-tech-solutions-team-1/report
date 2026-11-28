@@ -349,13 +349,13 @@ Los incrementos descritos en esta sección corresponden a las siete tarjetas pri
 | — | `EXP-US-05` | `EC-03` | Landing Page (sin intervención técnica) | Histórico de navegación desde planes. | Excluida del incremento técnico TB2. |
 
 
-### 8.3.3. To-Be Sprint
+### 8.3.3. To-Be Product Implementation and Deployment
 
 El To-Be Sprint de AutoService comprende los incrementos funcionales asociados con las siete Experiment Cards seleccionadas para TB2. Las mejoras abarcan el seguimiento público de reparaciones, el registro de órdenes, la gestión de inventario, la priorización de servicios y las tareas del mecánico.
 
 Cada incremento se documenta con su alcance funcional y las evidencias disponibles. Se distingue entre la implementación técnica de una funcionalidad y la validación experimental de su hipótesis, que requiere observaciones de participantes y mediciones de las métricas definidas en 8.2.
 
-### 8.3.3.1. To-Be Sprint Backlog
+#### 8.3.3.1. To-Be Sprint Backlogs
 
 El Sprint Backlog contempla cinco incrementos funcionales agrupados a partir de las siete tarjetas activas.
 
@@ -363,21 +363,59 @@ El Sprint Backlog contempla cinco incrementos funcionales agrupados a partir de 
 |---|---|---|---|
 | Seguimiento detallado de reparaciones | `EC-01`, `EC-05` | Seguimiento público | A documentar por el responsable |
 | Registro de órdenes y corrección de errores | `EC-02`, `EC-06` | Frontend Web | A documentar por el responsable |
-| Suficiencia de repuestos | `EC-04` | Android | A documentar por el responsable |
+| Suficiencia de repuestos | `EC-04` | Android | Implementación y evidencias documentadas |
 | Priorización de órdenes de trabajo | `EC-07` | Frontend Web | Implementación y evidencias documentadas |
 | Identificación y actualización de tareas | `EC-08` | Android Mechanic | A documentar por el responsable |
 
 La columna de evidencias indica el estado de documentación de este capítulo; no determina por sí sola si los demás incrementos se encuentran implementados. Los respectivos responsables incorporarán sus resultados técnicos y las evidencias verificables.
 
-### 8.3.3.2. To-Be Landing Page
+**Desglose del Sprint Backlog correspondiente a EC-04**
+
+El incremento Android de `EC-04`, relacionado con `Q-03` y `EXP-US-03`, permite consultar si las existencias de un repuesto alcanzan para una tarea de reparación.
+
+La siguiente tabla registra retrospectivamente las tareas de este incremento. No sustituye la consolidación del Sprint Backlog general ni acredita una reunión de planificación no documentada.
+
+| Tarea | Responsable | Estado | Evidencia |
+|---|---|---|---|
+| Registrar el inventario anterior al cambio | Mario Fernández | Completada | Captura As-Is |
+| Implementar el cálculo de suficiencia y cantidad faltante | Mario Fernández | Integrada | `StockAvailability.kt`; PR #23 |
+| Consultar órdenes y tareas para la comparación | Mario Fernández | Integrada | `ManagementViewModel.kt`; PR #23 |
+| Incorporar el panel y el selector de tareas en Inventario | Mario Fernández | Integrada | Capturas To-Be; PR #23 |
+| Incorporar textos en inglés y español | Mario Fernández | Integrada | Recursos `stock_availability_strings.xml` |
+| Verificar un caso suficiente con datos del Backend | Mario Fernández | Completada | Captura de Cambio de bujías |
+| Verificar ambos resultados con datos locales controlados | Mario Fernández | Completada | Captura de vista previa interactiva |
+| Evaluar comprensión y solicitudes de asistencia | Mario Fernández | Pendiente | Registro de participantes para `M-06` y `M-04` |
+| Consolidar las tareas de los otros incrementos | Mario Fernández, con aportes del equipo | Pendiente | Información verificable de cada responsable |
+
+La implementación se trabajó en la rama `feature/tb2-ec04-parts-availability` y se integró a `develop` mediante el [Pull Request #23](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/pull/23).
+
+**Desglose del Sprint Backlog correspondiente a EC-07**
+
+El incremento Web de `EC-07`, relacionado con `Q-06` y `EXP-US-07`, introduce clasificación de prioridades, ordenamiento por urgencia y un filtro de atención inmediata en las órdenes de trabajo.
+
+| Tarea | Responsable | Estado | Evidencia |
+|---|---|---|---|
+| Registrar el listado de órdenes antes del cambio | Juan Sánchez | Completada | Captura As-Is |
+| Implementar la clasificación por estado y fecha estimada | Juan Sánchez | Integrada | `work-order-list.vue`; PR Web #29 |
+| Presentar prioridad y motivo en cada orden | Juan Sánchez | Integrada | `WorkOrderCard.vue`; PR Web #29 |
+| Incorporar ordenamiento y filtro de atención inmediata | Juan Sánchez | Integrada | Capturas To-Be; PR Web #29 |
+| Comprobar la presentación con órdenes ficticias equivalentes | Juan Sánchez | Completada | Capturas To-Be con `ECA-701`, `ECA-702` y `ECA-703` |
+| Verificar la compilación de producción | Juan Sánchez | Completada | Ejecución satisfactoria de `npm run build` |
+| Evaluar localización autónoma y solicitudes de asistencia | Juan Sánchez | Pendiente | Registro de participantes para `M-09` y `M-04` |
+
+La implementación se integró en la rama `main` del repositorio Frontend Web mediante el Pull Request #29. No requirió modificaciones al Backend.
+
+Los demás incrementos incorporarán sus propios desgloses de tareas cuando sus responsables proporcionen información verificable.
+
+#### 8.3.3.2. To-Be Landing Page
 
 La Experiment Card `EC-03`, relacionada con la navegación posterior a la comparación de planes, quedó fuera del incremento técnico de TB2. Por esta razón, no se implementó una modificación nueva de la Landing Page como parte de este ciclo.
 
 Las observaciones previas sobre la Landing Page permanecen documentadas en los apartados correspondientes del informe. No se atribuyen resultados experimentales nuevos a `EC-03`.
 
-### 8.3.3.3. To-Be Web Application
+#### 8.3.3.3. To-Be Web Application
 
-#### EC-07 — Implementación de priorización de órdenes de trabajo
+##### EC-07 — Implementación de priorización de órdenes de trabajo
 
 **Objetivo del incremento**
 
@@ -459,3 +497,60 @@ Las capturas As-Is y To-Be permiten documentar el cambio visual y funcional, mie
 Sin embargo, estas evidencias no demuestran todavía que los administradores localicen órdenes urgentes con mayor precisión ni que soliciten menos asistencia.
 
 La hipótesis de `EC-07` se evaluará mediante las métricas `M-09` y `M-04`, utilizando el protocolo experimental establecido en 8.2 y registrando los resultados observados en 8.4.
+
+#### 8.3.3.4. Implemented Native-Mobile Application To-Be Evidence
+
+**EC-04 — Disponibilidad de repuestos para una tarea**
+
+Se implementó en Android la consulta de suficiencia de repuestos asociados a una tarea de reparación. El incremento corresponde a `EXP-US-03` y permite comparar cantidades requeridas con las existencias consultadas en inventario.
+
+**Estado anterior As-Is**
+
+El inventario mostraba existencias, stock mínimo y datos comerciales del producto. Sin embargo, no comparaba esas cantidades con los repuestos requeridos para una tarea específica.
+
+![Inventario anterior al incremento EC-04](../assets/images/chapter-8/ec04-01-inventario-as-is.png)
+
+*Referencia As-Is conservada antes de modificar la pantalla.*
+
+**Panel To-Be integrado en Inventario**
+
+Se añadió un panel con selector de tareas obtenidas de las órdenes del Backend. La consulta mantiene el listado de productos existente y no modifica las cantidades almacenadas.
+
+![Panel de disponibilidad integrado en Inventario](../assets/images/chapter-8/ec04-02-panel-to-be.png)
+
+*Pantalla To-Be con el acceso a la consulta por tarea.*
+
+Para cada repuesto, el panel muestra la cantidad requerida, la disponible y el resultado de la comparación. Cuando el stock es insuficiente, informa cuántas unidades faltan. Si un repuesto aparece varias veces en una tarea, suma sus cantidades requeridas.
+
+La comparación considera suficiente una cantidad disponible mayor o igual que la requerida. Cuando no puede verificar las existencias o encuentra cantidades inválidas, muestra una indicación diferenciada en lugar de afirmar que el stock es suficiente.
+
+**Verificación con datos del Backend**
+
+En el emulador se seleccionó la tarea Cambio de bujías. La tarea requería 1 unidad y el inventario consultado mostraba 19 unidades disponibles. El panel presentó correctamente stock suficiente.
+
+![Consulta de una tarea con stock suficiente](../assets/images/chapter-8/ec04-03-stock-suficiente.png)
+
+*Caso observado en la aplicación conectada al Backend: 19 disponibles frente a 1 requerido.*
+
+**Verificación local de suficiencia e insuficiencia**
+
+Para comprobar ambos resultados sin alterar los registros compartidos, se utilizó una vista previa interactiva temporal de Jetpack Compose. Los datos fueron ficticios y estuvieron identificados como demostración local sin Backend.
+
+| Repuesto de demostración | Disponible | Requerido | Resultado observado |
+|---|---:|---:|---|
+| Bujías | 6 | 4 | Stock suficiente |
+| Filtro de aceite | 1 | 2 | Stock insuficiente; falta 1 |
+
+![Verificación local con datos ficticios identificados](../assets/images/chapter-8/ec04-04-verificacion-local-suficiente-insuficiente.png)
+
+*Comprobación del mismo componente y cálculo mediante datos locales controlados. No representa una ejecución del caso insuficiente contra el Backend. El archivo temporal de la vista previa se retiró antes de entregar el incremento.*
+
+**Alcance y trazabilidad**
+
+La consulta no reserva ni consume existencias. Su resultado corresponde a los datos consultados y no garantiza disponibilidad futura; por ello, la interfaz recomienda actualizar el inventario antes de tomar una decisión operativa.
+
+El cambio está integrado en `develop` y puede revisarse en el [PR #23](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/pull/23).
+
+Las capturas documentan la implementación y su verificación funcional. No constituyen resultados de evaluación con participantes. La recogida de datos de comprensión autónoma (`M-06`) y solicitudes de asistencia (`M-04`) permanece pendiente.
+
+La evidencia del incremento Mechanic `EC-08` se incorporará con el aporte de su responsable, evitando duplicar o atribuir resultados todavía no verificados.
