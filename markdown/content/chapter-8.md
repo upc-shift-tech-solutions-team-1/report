@@ -554,3 +554,87 @@ El cambio está integrado en `develop` y puede revisarse en el [PR #23](https://
 Las capturas documentan la implementación y su verificación funcional. No constituyen resultados de evaluación con participantes. La recogida de datos de comprensión autónoma (`M-06`) y solicitudes de asistencia (`M-04`) permanece pendiente.
 
 La evidencia del incremento Mechanic `EC-08` se incorporará con el aporte de su responsable, evitando duplicar o atribuir resultados todavía no verificados.
+
+
+## 8.4. Experiment Analysis
+
+### 8.4.1. EC-07 — Análisis de la priorización de órdenes de trabajo
+
+**Objetivo del experimento**
+
+Evaluar si la incorporación de prioridades visibles, ordenamiento por urgencia y un filtro de atención inmediata facilita la identificación de órdenes prioritarias en AutoService.
+
+**Resultados de la demostración técnica**
+
+Para comprobar el funcionamiento del incremento To-Be se utilizaron tres órdenes ficticias con diferentes fechas estimadas de entrega.
+
+| Orden | Fecha estimada | Prioridad |
+|---|---|---|
+| `ECA-701` | 28/11/2026 | HIGH — Alta |
+| `ECA-702` | 30/11/2026 | MEDIUM — Media |
+| `ECA-703` | 04/12/2026 | LOW — Baja |
+
+La aplicación Web clasificó las órdenes mediante las reglas implementadas en el Frontend, utilizando el estado y la fecha estimada de entrega proporcionados por la API existente.
+
+La demostración permitió comprobar la visualización de las prioridades HIGH, MEDIUM y LOW, así como el funcionamiento del filtro **Ver atención inmediata**, que presenta únicamente las órdenes clasificadas como HIGH o REVIEW.
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado |
+|---|---|---|
+| `M-09` — Localización y prioridad de órdenes | Al menos 66,7 % de identificación autónoma | No medida con participantes |
+| `M-04` — Solicitudes de asistencia | Reducción mínima de 33,3 puntos porcentuales | No medida con participantes |
+
+**Interpretación de resultados**
+
+La comparación As-Is/To-Be permitió documentar las diferencias funcionales introducidas en la gestión de órdenes de trabajo.
+
+El incremento incorpora clasificación de prioridades, presentación del motivo de urgencia, ordenamiento de órdenes activas y filtrado de atención inmediata.
+
+Sin embargo, estas evidencias no permiten establecer una mejora cuantificada en la identificación autónoma de órdenes ni en la reducción de solicitudes de asistencia.
+
+Por tanto, la hipótesis `H7` permanece pendiente de contrastación empírica.
+
+**Limitaciones**
+
+La demostración utilizó órdenes ficticias y evidencias visuales de ambas versiones. No se realizaron sesiones experimentales con responsables de taller.
+
+En consecuencia, los resultados corresponden a una verificación técnica y no a una validación estadística de las métricas `M-09` y `M-04`.
+
+
+## 8.5. Continuous Learning
+
+### 8.5.1. EC-07 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La implementación de `EC-07` permitió identificar oportunidades para mejorar la organización operativa de las órdenes de trabajo mediante información ya disponible en AutoService.
+
+Los principales aprendizajes técnicos fueron:
+
+- Los datos de estado y fecha estimada permiten calcular prioridades directamente en el Frontend Web.
+- La clasificación HIGH, REVIEW, MEDIUM y LOW distingue diferentes necesidades de atención.
+- El indicador REVIEW permite detectar órdenes activas sin una fecha estimada válida.
+- El filtro de atención inmediata permite consultar únicamente órdenes urgentes o que requieren revisión.
+- La implementación técnica de una mejora no demuestra por sí sola su efectividad sobre la experiencia del usuario.
+
+**Decisión de producto**
+
+Se decidió conservar la funcionalidad implementada en el Frontend Web, manteniendo las opciones previas de búsqueda, filtrado por estado y consulta de órdenes.
+
+La solución no requirió modificar la RESTful API ni la persistencia de datos.
+
+**Próximas acciones**
+
+Se propone realizar una evaluación moderada con tres responsables de taller para recopilar evidencia sobre:
+
+- `M-09`: identificación autónoma de órdenes prioritarias y comprensión del criterio.
+- `M-04`: solicitudes de asistencia durante la identificación de servicios urgentes.
+
+**Conclusión**
+
+EC-07 cuenta con una implementación funcional integrada en el Frontend Web y con evidencias As-Is/To-Be.
+
+La clasificación, el ordenamiento y el filtro de atención inmediata se encuentran implementados.
+
+La hipótesis sobre la mejora de la experiencia de los administradores permanece pendiente de validación con participantes.
