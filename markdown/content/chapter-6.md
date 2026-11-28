@@ -1,98 +1,130 @@
+
 # 6. Product Verification & Validation
 
 ## 6.1. Testing Suites & Validation
 
-La estrategia de verificación y validación de AutoService combina pruebas unitarias, pruebas de integración, especificaciones bajo Behavior-Driven Development (BDD) y pruebas de aceptación con el objetivo de evaluar el correcto funcionamiento de la lógica de dominio y de los mecanismos de autenticación y autorización expuestos por la RESTful API.
+La estrategia de verificación y validación de AutoService comprende pruebas unitarias, de integración, Behavior-Driven Development (BDD), aceptación y sistema. Estas actividades permiten evaluar el comportamiento de los componentes implementados, verificar las reglas de negocio y comprobar los principales flujos de funcionamiento de la plataforma.
 
-La suite automatizada del backend se encuentra distribuida principalmente en dos proyectos de pruebas. `AutoServiceAW.Tests` está orientado a la validación de entidades principales, agregados y reglas de negocio, mientras que `AutoServiceAW.API.Tests` concentra las pruebas relacionadas con el bounded context de IAM y la interacción entre los servicios de aplicación y la interfaz REST.
+AutoService está conformado por tres productos técnicos principales: Backend RESTful API, Frontend Web y Native Mobile Android. Debido a que cada producto utiliza herramientas y entornos de ejecución diferentes, sus pruebas se presentan de manera diferenciada para facilitar la interpretación de los resultados y evitar duplicidades.
 
-La ejecución completa de la suite automatizada contiene actualmente **31 pruebas**, todas ejecutadas satisfactoriamente, con un resultado de **31 correctas, 0 fallidas y 0 omitidas**.
+### Organización de las pruebas por producto
 
-![Resumen de ejecución de la suite de pruebas de AutoService](../assets/images/chapter-6/chapter-6-test-suite-execution-summary.png)
+| Producto | Tecnologías y herramientas | Alcance de las pruebas |
+|---|---|---|
+| **Backend RESTful API** | C#, .NET 10, MSTest, Moq, ASP.NET Core TestServer y Reqnroll | Pruebas unitarias de entidades y servicios, integración HTTP, escenarios BDD, aceptación, autenticación, autorización y reglas de negocio. |
+| **Frontend Web** | Vue.js, Vitest, Selenium y herramientas de automatización web | Verificación de componentes y flujos de navegación, gestión de órdenes de trabajo, interacción con formularios y seguimiento de servicios. |
+| **Native Mobile Android** | Kotlin, JUnit, Mockito, Kotlin Coroutines Test, Retrofit, MockWebServer y pruebas instrumentadas | Pruebas locales de lógica y componentes, integración HTTP simulada y escenarios de comportamiento ejecutados en un emulador Android. |
 
-*Figura 6.1. Ejecución satisfactoria de la suite automatizada de pruebas de AutoService.*
+Los resultados de cada producto se contabilizan por separado. Asimismo, algunas pruebas especializadas forman parte de una suite general y no representan ejecuciones adicionales que deban sumarse nuevamente.
 
+### Resultados documentados del Backend
 
+La solución Backend cuenta con evidencias correspondientes a distintas etapas de desarrollo. Durante estas etapas se amplió progresivamente el alcance de las pruebas automatizadas.
 
-**Resultados adicionales de Backend y Mobile**
+| Evidencia registrada | Pruebas aprobadas | Interpretación |
+|---|---:|---|
+| Ejecución inicial documentada | 31 | Resultado histórico de una versión anterior de la suite. |
+| Ejecución ampliada | 92 | Resultado de una suite posterior que incorporó más pruebas y escenarios BDD. |
+| Ejecución más reciente documentada | 98 | Resultado registrado después de incorporar verificaciones adicionales de seguridad y aislamiento entre talleres. |
 
+La ejecución más reciente consignada en el informe corresponde a **98 pruebas aprobadas y 0 fallidas**, según las evidencias de integración continua y seguridad presentadas en el apartado 6.2.
 
-La estrategia de verificación y validación de AutoService contempla pruebas unitarias, pruebas de integración, pruebas de aceptación y escenarios automatizados mediante Behavior-Driven Development (BDD). Estas pruebas permiten comprobar el funcionamiento de los principales componentes de la aplicación y las reglas de negocio implementadas.
+Los resultados de 31 y 92 pruebas se conservan como antecedentes de la evolución del proceso de verificación, pero no deben interpretarse como el total vigente ni sumarse a las 98 pruebas.
 
-**Backend**
+![Resumen de una ejecución anterior de la suite de pruebas de AutoService](../assets/images/chapter-6/chapter-6-test-suite-execution-summary.png)
 
-Para la verificación del backend se utilizó el proyecto `AutoServiceAW.API.Tests`, desarrollado con C# y .NET 10. Las pruebas fueron implementadas utilizando MSTest, Moq, ASP.NET Core TestServer y Reqnroll.
+*Figura 6.1. Evidencia histórica de una ejecución satisfactoria de 31 pruebas automatizadas.*
 
-La selección de pruebas se realizó considerando la importancia de cada funcionalidad para el negocio, priorizando la gestión de órdenes de trabajo, las tareas de mantenimiento, la autenticación de usuarios y la administración de vehículos. Asimismo, se incorporaron pruebas para los demás Bounded Contexts según los comportamientos que se consideraron relevantes.
+![Resultado de ejecución de la suite ampliada del Backend](../assets/images/chapter-6/chapter-6-backend-suite-summary.png)
 
-En total, se ejecutaron **92 pruebas automatizadas, con 92 aprobadas, 0 fallidas y 0 omitidas**, incluyendo nueve escenarios BDD implementados mediante Reqnroll.
+*Figura 6.2. Evidencia de una ejecución posterior con 92 pruebas automatizadas aprobadas.*
 
-![Resultado de ejecución de la suite automatizada del backend](../assets/images/chapter-6/chapter-6-backend-suite-summary.png)
+Las pruebas HTTP del Backend utilizan ASP.NET Core TestServer y, según el caso evaluado, dependencias simuladas mediante Moq. Por esta razón, los resultados verifican los comportamientos y contratos seleccionados, pero no equivalen a una validación completa con una base de datos MySQL real.
 
-*Figura 6.2. Ejecución satisfactoria de las 92 pruebas automatizadas del Backend de AutoService.*
+### Pruebas del Frontend Web
 
-Las pruebas de integración HTTP se realizaron con componentes reales de la API y dependencias simuladas mediante Moq. Por ello, estos resultados verifican los comportamientos seleccionados, pero no representan una validación completa con una base de datos MySQL real.
+La verificación del Frontend Web se orienta al comportamiento de la interfaz y a los flujos utilizados por los responsables del taller y los clientes.
 
-Las pruebas del Backend y de la aplicación Mobile se presentan en los siguientes apartados, junto con sus resultados y evidencias correspondientes. Las pruebas de la aplicación Web se documentan en sus respectivas secciones.
+Las evidencias incluyen verificaciones con Vitest y pruebas de sistema con Selenium, particularmente en los procesos de órdenes de trabajo, tareas y seguimiento público de reparaciones.
 
+Estas pruebas deben distinguirse de las pruebas de integración HTTP y aceptación del Backend. Una prueba que utiliza TestServer para verificar un endpoint no constituye por sí misma una prueba visual o de navegación de la aplicación Web.
 
-**Mobile — AutoService Android**
+Las evidencias específicas del Frontend Web se presentan en los apartados correspondientes, especialmente en 6.1.4, Core System Tests.
 
-La aplicación móvil de AutoService se verificó mediante pruebas locales JVM y pruebas instrumentadas ejecutadas en un emulador Android. Para su implementación se emplearon Kotlin, JUnit, Mockito, Kotlin Coroutines Test, Retrofit y MockWebServer, junto con clases de pasos para los escenarios BDD.
+No se establece aquí una cifra consolidada para Web, debido a que las evidencias disponibles corresponden a diferentes grupos de pruebas y no presentan un total único verificable.
 
-La ejecución de la suite local registró **109 pruebas aprobadas, 0 fallidas y 0 omitidas**. Por su parte, la suite instrumentada registró **15 pruebas aprobadas, 0 fallidas y 0 omitidas**. En conjunto, se ejecutaron **124 pruebas automatizadas con resultados satisfactorios**.
+### Resultados documentados de Native Mobile Android
 
-Las verificaciones abarcaron Fleet Management, Inventory Management, Customer Tracking, Staff Management, Management, Mechanic y Workshop.
+La aplicación Native Mobile Android se verificó mediante pruebas locales JVM y pruebas instrumentadas ejecutadas en un emulador Android.
+
+Las pruebas utilizaron Kotlin, JUnit, Mockito y Kotlin Coroutines Test. Para las verificaciones de integración HTTP también se utilizaron Retrofit y MockWebServer.
+
+Los resultados documentados son los siguientes:
+
+| Suite Mobile | Pruebas aprobadas | Fallidas | Omitidas |
+|---|---:|---:|---:|
+| Pruebas locales JVM | 109 | 0 | 0 |
+| Pruebas instrumentadas Android | 15 | 0 | 0 |
+| **Total documentado** | **124** | **0** | **0** |
+
+Las 109 pruebas locales incluyen verificaciones unitarias y de integración ejecutadas en la JVM. Las 15 pruebas instrumentadas incluyen 14 escenarios de comportamiento y una prueba instrumentada de ejemplo.
+
+Por consiguiente, las pruebas de integración Mobile y sus escenarios BDD se describen en los apartados correspondientes, pero no deben sumarse nuevamente al total de 124.
 
 ![Resultado general de las pruebas instrumentadas de Mobile](../assets/images/chapter-6/mobile-instrumented-test-summary.png)
 
-*Figura 6.3. Ejecución satisfactoria de las 15 pruebas instrumentadas de AutoService Mobile.*
+*Figura 6.3. Evidencia de las 15 pruebas instrumentadas aprobadas de AutoService Mobile.*
 
-Las pruebas de integración HTTP utilizaron MockWebServer para simular las respuestas del servidor, por lo que no representan una validación contra el backend desplegado ni contra una base de datos real.
+Las pruebas de integración HTTP con MockWebServer utilizan respuestas simuladas, por lo que sus resultados no representan una validación contra el Backend desplegado ni contra una base de datos real.
 
+### Criterio de presentación de evidencias
+
+En los siguientes apartados, las pruebas se organizan según su nivel de verificación: pruebas unitarias (6.1.1), pruebas de integración (6.1.2), Behavior-Driven Development (6.1.3) y pruebas de sistema y aceptación (6.1.4).
+
+Dentro de cada nivel se diferencian las evidencias de Backend, Frontend Web y Native Mobile Android cuando corresponde. Se conserva el material existente, indicando el alcance real de cada prueba y evitando presentar resultados históricos como resultados actuales.
 
 ### 6.1.1. Core Entities Unit Tests
 
-Las pruebas unitarias fueron utilizadas para verificar de manera aislada los comportamientos de las principales entidades, agregados y servicios de aplicación de AutoService. Las pruebas siguen la estructura **Arrange, Act, Assert (AAA)**, separando claramente la preparación de los datos, la ejecución del comportamiento y la comprobación de los resultados esperados.
+Las pruebas unitarias de AutoService permiten verificar de manera aislada las reglas de negocio implementadas en las entidades, agregados y servicios de aplicación.
 
-El proyecto `AutoServiceAW.Tests` contiene **26 pruebas automatizadas**, organizadas en dos grupos principales: 13 pruebas ubicadas bajo el namespace `Unit` y 13 pruebas adicionales orientadas al comportamiento de agregados.
+Para su organización se utiliza el patrón Arrange, Act, Assert (AAA), que distingue la preparación de los datos, la ejecución del comportamiento y la comprobación de los resultados esperados.
 
-![Evidencia de pruebas unitarias de entidades principales](../assets/images/chapter-6/chapter-6-core-entities-unit-tests-evidence.png)
+Las evidencias se presentan separando las pruebas del dominio de las pruebas correspondientes a los servicios de aplicación. Esta distinción evita mezclar los resultados de entidades y agregados con aquellos obtenidos mediante dependencias simuladas.
 
-*Figura 6.4. Ejecución satisfactoria de las pruebas de entidades principales y agregados.*
+#### Backend — Pruebas de entidades y agregados
 
-Las pruebas a nivel unitario cubren los principales comportamientos de negocio implementados en AutoService.
+En una etapa anterior del desarrollo se documentó la ejecución de 26 pruebas automatizadas del proyecto `AutoServiceAW.Tests`, organizadas en pruebas unitarias y verificaciones del comportamiento de agregados.
 
-| Clase de prueba | Cantidad | Principales comportamientos verificados |
-|---|---:|---|
-| `CustomerTests` | 2 | Creación de clientes y actualización de su información |
-| `InventoryItemTests` | 4 | Precio de compra por defecto, reducción de stock, validación de stock insuficiente y aumento de stock |
-| `TaskTests` | 3 | Costo de mano de obra por defecto, actualización del costo de materiales y cálculo de utilidad bruta |
-| `UserTests` | 2 | Creación de usuarios y actualización del hash de contraseña |
-| `VehicleTests` | 2 | Creación de vehículos y actualización de su información |
-| `RemainingAggregatesTests` | 13 | Comportamientos asociados a `TaskPart`, `Mechanic`, `Workshop` y `WorkOrder` |
-| **Total** | **26** | **Comportamientos de entidades y agregados del dominio** |
+![Evidencia histórica de pruebas unitarias del Backend](../assets/images/chapter-6/chapter-6-core-entities-unit-tests-evidence.png)
 
-Las pruebas de agregados verifican reglas adicionales de negocio relacionadas con cantidades válidas e inválidas de `TaskPart`, cálculo de costos y utilidad, actualización de información de mecánicos, generación del identificador de tenant del taller, valores iniciales de una orden de trabajo, generación del código de tracking, actualización del checklist y transiciones de estado de las órdenes de trabajo.
+*Figura 6.4. Evidencia de una ejecución anterior de pruebas de entidades y agregados.*
 
-El listado completo de las pruebas pertenecientes a este proyecto se muestra en la siguiente evidencia.
+Los principales comportamientos evaluados incluyeron la creación y actualización de clientes y vehículos, la modificación de información de usuarios, las operaciones de inventario, el cálculo de costos y los cambios de estado de las órdenes de trabajo.
 
-![Listado de pruebas unitarias de entidades principales](../assets/images/chapter-6/chapter-6-core-entities-unit-tests-list.png)
+![Listado histórico de pruebas unitarias del Backend](../assets/images/chapter-6/chapter-6-core-entities-unit-tests-list.png)
 
-*Figura 6.5. Pruebas de entidades y agregados disponibles en el backend de AutoService.*
+*Figura 6.5. Listado de pruebas de entidades y agregados documentadas en una etapa anterior.*
 
-Además de las 26 pruebas orientadas al dominio, el proyecto de pruebas de IAM incluye dos pruebas unitarias para `AuthService`. Estas pruebas utilizan **Moq** para sustituir las dependencias `IUserRepository` e `IUnitOfWork`, permitiendo verificar el servicio de autenticación sin depender de infraestructura de persistencia.
+Posteriormente, el informe incorporó una distribución ampliada de 28 pruebas unitarias de entidades y agregados. Estas se detallan más adelante en esta misma sección, junto con sus clases de prueba, Bounded Contexts y evidencias de ejecución.
+
+Las cifras de 26 y 28 corresponden a evidencias documentadas en distintas etapas y no deben sumarse como si se tratara de conjuntos independientes.
+
+#### Backend — Pruebas unitarias de servicios de aplicación
+
+Las pruebas de servicios de aplicación verifican las operaciones realizadas por los componentes encargados de coordinar las reglas de negocio y las dependencias del sistema.
+
+En IAM se implementaron pruebas unitarias para `AuthService`, utilizando Moq para sustituir `IUserRepository` e `IUnitOfWork`. Esto permite comprobar los comportamientos del servicio de autenticación sin requerir una conexión real a la base de datos.
 
 | Prueba unitaria | Componente | Comportamiento verificado |
 |---|---|---|
-| `SignUpAsync_WithValidData_ShouldCreateUserWithHashedPassword` | `AuthService.SignUpAsync()` | Normalización del correo y del rol, asociación del usuario con un taller, generación del hash de contraseña mediante BCrypt, registro del usuario y ejecución del `UnitOfWork` |
-| `SignInAsync_WithValidCredentials_ShouldReturnUserAndJwtToken` | `AuthService.SignInAsync()` | Validación de credenciales y generación de un JWT con los valores esperados de issuer, audience, correo, rol e identificador de taller |
+| `SignUpAsync_WithValidData_ShouldCreateUserWithHashedPassword` | `AuthService.SignUpAsync()` | Normalización del correo y del rol, asociación con un taller, generación del hash de contraseña mediante BCrypt y registro del usuario. |
+| `SignInAsync_WithValidCredentials_ShouldReturnUserAndJwtToken` | `AuthService.SignInAsync()` | Validación de credenciales y generación de un JWT con los datos de autenticación esperados. |
 
-La prueba correspondiente al registro verifica adicionalmente que la contraseña original no sea almacenada directamente. El valor contenido en `PasswordHash` debe ser diferente de la contraseña en texto plano y debe poder ser validado correctamente mediante BCrypt.
+La prueba de registro verifica que la contraseña no se almacene directamente en texto plano. La prueba de inicio de sesión comprueba que el JWT contenga los datos necesarios para identificar al usuario autenticado, su rol y su taller.
 
-La prueba correspondiente al inicio de sesión no se limita únicamente a comprobar la existencia del JWT, sino que también analiza su contenido y verifica información relevante como los claims `email`, `role` y `WorkshopId`. Estos valores son posteriormente utilizados por los recursos protegidos de la API para identificar al usuario autenticado y su contexto de taller.
+Estas dos pruebas forman parte de las verificaciones de servicios de aplicación. Por lo tanto, no se suman nuevamente al conteo de pruebas de entidades y agregados.
 
-Considerando las pruebas del dominio y las pruebas de `AuthService`, la solución cuenta actualmente con **28 pruebas automatizadas de nivel unitario**.
+Las pruebas correspondientes a Workshop Operations, Fleet Management y Public Tracking se describen en los siguientes apartados, conservando sus respectivas evidencias.
 
 Para el módulo de Workshop-Operations se realizaron 2 tipos de pruebas, las que se enfocan en probar los aggregates en solitario y las que se enfocan en probar los servicios del modulo para comprar la conexión y guardado exitoso de datos en la base de datos, usando como referencia los respositories.
 
@@ -261,70 +293,45 @@ Estas pruebas son relevantes para que el cliente reciba información clara sobre
 *Figura 6.27 prueba unitaria 4 de public tracking service*
 
 
+#### Backend — Consolidación de pruebas de integración HTTP
 
-**Resultados adicionales de Backend y Mobile**
+Las pruebas de integración del Backend permiten verificar la comunicación entre los controladores REST y los servicios de aplicación de AutoService.
 
+Para estas verificaciones se utilizó ASP.NET Core `TestServer`, que permite procesar solicitudes HTTP en un entorno controlado. Cuando corresponde, se emplean dependencias simuladas mediante Moq, evitando conexiones a una base de datos MySQL real.
 
-**Backend**
+**Resultados de ejecución**
 
-Las pruebas unitarias del backend se desarrollaron para verificar el comportamiento de las entidades, agregados y servicios de aplicación de AutoService. Se utilizó el patrón **Arrange, Act, Assert (AAA)**, que permite organizar cada prueba en tres etapas: preparación de los datos, ejecución de la funcionalidad y verificación del resultado esperado.
+La evidencia disponible registra **15 pruebas de integración seleccionadas mediante el filtro `IntegrationTests`**, con 15 aprobadas, 0 fallidas y 0 omitidas.
 
-Para las pruebas de dominio se evaluaron reglas de negocio relacionadas con la creación y actualización de entidades, el cálculo de costos, la gestión del inventario y los cambios de estado de las órdenes de trabajo.
+![Ejecución de las pruebas de integración HTTP del Backend](../assets/images/chapter-6/chapter-6-backend-integration-tests.png)
 
-Se ejecutaron **28 pruebas unitarias correspondientes a entidades y agregados**, distribuidas entre los diferentes Bounded Contexts. Todas finalizaron satisfactoriamente.
+*Figura 6.41. Ejecución satisfactoria de 15 pruebas de integración HTTP del Backend de AutoService.*
 
-![Pruebas unitarias de dominio del Backend](../assets/images/chapter-6/chapter-6-backend-unit-tests.png)
+Las verificaciones abarcan los siguientes Bounded Contexts:
 
-*Figura 6.28. Ejecución satisfactoria de 28 pruebas unitarias de entidades y agregados del Backend de AutoService.*
+| Bounded Context | Funcionalidades verificadas |
+|---|---|
+| IAM | Autenticación mediante solicitudes HTTP y devolución de los datos de acceso. |
+| Fleet Management | Operaciones de gestión de vehículos mediante la API REST. |
+| Workshop Operations | Registro y actualización de tareas, operaciones sobre órdenes de trabajo e interacción con los servicios correspondientes. |
+| Inventory Management | Recepción de materiales, actualización de existencias y restricciones de acceso según el rol. |
+| Public Tracking | Consulta de información de seguimiento mediante el código público de una orden. |
 
-Adicionalmente, se implementaron pruebas de servicios de aplicación para verificar operaciones relacionadas con autenticación, gestión de vehículos y mantenimiento. Estas pruebas utilizan Moq para simular las dependencias externas y comprobar los resultados de los servicios de manera controlada.
+**Alcance de las verificaciones**
 
+En Workshop Operations se evaluaron las operaciones relacionadas con el registro de tareas, la administración de órdenes de trabajo y el consumo de materiales asociado al mantenimiento.
 
-Las pruebas unitarias de dominio se distribuyeron de la siguiente manera:
+En Inventory Management se documentaron dos verificaciones de recepción de materiales. Una comprueba el registro autorizado de una entrada de cinco unidades, aumentando el stock preparado para el caso de 10 a 15. La otra verifica que un usuario con rol de mecánico reciba una respuesta `403 Forbidden` al intentar realizar una operación reservada para administradores.
 
-| Clase de prueba | Bounded Context | Cantidad | Comportamientos verificados |
-|---|---|---:|---|
-| `CustomerTests` | Customer Management | 2 | Creación y actualización de clientes. |
-| `VehicleTests` | Fleet Management | 2 | Inicialización y actualización de vehículos. |
-| `UserTests` | IAM | 2 | Creación de usuarios y actualización de contraseñas. |
-| `InventoryItemTests` | Inventory Management | 4 | Cálculo del precio de compra, ingreso y consumo de stock, y validación de existencias insuficientes. |
-| `MechanicTests` | Staff Coordination | 2 | Inicialización y actualización de información del mecánico. |
-| `WorkshopTests` | Tenant Management | 1 | Creación del taller y generación de su identificador. |
-| `TaskPartTests` | Workshop Operations | 5 | Validación de cantidades, normalización de información y cálculo de costos de materiales. |
-| `TaskTests` | Workshop Operations | 5 | Inicialización de tareas, actualización de datos técnicos y cálculo de costos y márgenes. |
-| `WorkOrderTests` | Workshop Operations | 5 | Creación de órdenes, actualización del checklist y control de cambios de estado. |
-| **Total** | | **28** | **Pruebas unitarias de entidades y agregados.** |
+Las pruebas también comprueban las respuestas HTTP esperadas en los escenarios seleccionados, incluyendo `200 OK`, `201 Created`, `403 Forbidden` y `404 Not Found`.
 
-En Workshop Operations se concentraron las pruebas de dominio relacionadas con órdenes de trabajo y tareas de mantenimiento. Se verificaron los cálculos de costos, la asignación de materiales, las actualizaciones de información técnica y los cambios de estado de las órdenes.
+**Interpretación de los resultados**
 
-En Inventory Management se evaluó el aumento y disminución de existencias, incluyendo el rechazo de operaciones cuando la cantidad solicitada supera el stock disponible.
+Las 15 pruebas de integración forman parte de las verificaciones automatizadas del Backend y no deben sumarse nuevamente al resultado general de la suite.
 
-**Pruebas de servicios de aplicación**
+Las evidencias individuales de IAM, Workshop Operations y Public Tracking presentadas anteriormente permiten identificar los casos específicos que se ejecutaron.
 
-Adicionalmente, se implementaron pruebas para servicios de aplicación de IAM, Fleet Management y Workshop Operations, así como para la construcción de resúmenes de Public Tracking.
-
-Estas pruebas utilizan Moq cuando es necesario reemplazar las dependencias externas y verificar el comportamiento de los componentes sin establecer una conexión real con MySQL.
-
-| Bounded Context | Clases de prueba | Cantidad |
-|---|---|---:|
-| IAM | `AuthServiceTests` | 2 |
-| Fleet Management | `VehicleServiceTests` | 4 |
-| Workshop Operations | `TaskServiceTests`, `WorkshopOperationsServiceTests` | 9 |
-| Public Tracking | `TrackingSummaryFactoryTests` | 8 |
-| **Total** | | **23** |
-
-En IAM se verificó el registro e inicio de sesión de usuarios, incluyendo la gestión de contraseñas y la generación de tokens JWT.
-
-En Fleet Management se evaluaron operaciones de gestión de vehículos realizadas a través del servicio de aplicación.
-
-En Workshop Operations se verificaron procesos de creación y actualización de tareas y órdenes de trabajo, utilizando repositorios simulados.
-
-Finalmente, en Public Tracking se evaluó la construcción de la información de seguimiento que se presenta al cliente durante el mantenimiento de su vehículo.
-
-Estas pruebas complementan las verificaciones de dominio y permiten comprobar el comportamiento de los servicios y componentes de aplicación de manera controlada.
-
-
-
+Debido al uso de dependencias simuladas, estas pruebas verifican la integración HTTP y los comportamientos de aplicación seleccionados, pero no constituyen una validación completa de la persistencia en MySQL ni del sistema desplegado en producción.
 
 **Mobile — AutoService Android**
 
@@ -462,44 +469,64 @@ Archivo: `AutoServiceAW.API.Tests/PublicTracking/Interfaces/REST/TrackingIntegra
 *Figura 6.40. prueba de integración de public tracking service*
 
 
+#### Backend — Consolidación de pruebas unitarias
 
+Las pruebas unitarias del Backend de AutoService se distribuyen entre las entidades y agregados del dominio y los servicios de aplicación. Esta clasificación permite identificar qué reglas de negocio se verifican de forma aislada y qué operaciones requieren dependencias simuladas.
 
+**Pruebas de entidades y agregados**
 
-**Resultados adicionales de Backend y Mobile**
+La documentación ampliada registra 28 pruebas unitarias de entidades y agregados, distribuidas entre los Bounded Contexts del Backend.
 
+| Clase de prueba | Bounded Context | Cantidad | Comportamientos verificados |
+|---|---|---:|---|
+| `CustomerTests` | Customer Management | 2 | Creación y actualización de clientes. |
+| `VehicleTests` | Fleet Management | 2 | Inicialización y actualización de vehículos. |
+| `UserTests` | IAM | 2 | Creación de usuarios y actualización de contraseñas. |
+| `InventoryItemTests` | Inventory Management | 4 | Cálculo del precio de compra, ingreso y consumo de stock, y validación de existencias insuficientes. |
+| `MechanicTests` | Staff Coordination | 2 | Inicialización y actualización de información del mecánico. |
+| `WorkshopTests` | Tenant Management | 1 | Creación del taller y generación de su identificador. |
+| `TaskPartTests` | Workshop Operations | 5 | Validación de cantidades, normalización de información y cálculo de costos de materiales. |
+| `TaskTests` | Workshop Operations | 5 | Inicialización de tareas, actualización de datos técnicos y cálculo de costos y márgenes. |
+| `WorkOrderTests` | Workshop Operations | 5 | Creación de órdenes, actualización del checklist y control de cambios de estado. |
+| **Total** | | **28** | **Pruebas unitarias de entidades y agregados documentadas.** |
 
-**Backend**
+En Workshop Operations se verifican las reglas relacionadas con órdenes de trabajo, tareas de mantenimiento, costos y materiales. Estas pruebas permiten comprobar el comportamiento de los agregados sin depender de los controladores REST.
 
-Las pruebas de integración del backend se implementaron para verificar la comunicación entre los controladores REST y los servicios de aplicación de AutoService.
+En Inventory Management se incluyen verificaciones sobre el aumento y la disminución de existencias, así como el rechazo de operaciones cuando la cantidad solicitada supera el stock disponible.
 
-Para estas pruebas se utilizó `TestServer` de ASP.NET Core, que permite ejecutar solicitudes HTTP contra una aplicación configurada en memoria. Asimismo, se utilizó Moq para simular repositorios y otras dependencias externas, sin requerir una conexión a la base de datos MySQL.
+![Pruebas unitarias de dominio del Backend](../assets/images/chapter-6/chapter-6-backend-unit-tests.png)
 
-Se ejecutaron **15 pruebas seleccionadas mediante el filtro `IntegrationTests`**, todas aprobadas, con 0 fallidas y 0 omitidas.
+*Figura 6.28. Evidencia de ejecución de 28 pruebas unitarias de entidades y agregados del Backend.*
 
-![Ejecución de las pruebas de integración HTTP del Backend](../assets/images/chapter-6/chapter-6-backend-integration-tests.png)
+**Pruebas de servicios de aplicación**
 
-*Figura 6.41. Ejecución satisfactoria de 15 pruebas de integración HTTP del Backend de AutoService.*
+Además de las pruebas del dominio, se documentan verificaciones de los servicios de aplicación responsables de coordinar operaciones de autenticación, gestión de vehículos, mantenimiento y seguimiento público.
 
-Las pruebas realizadas abarcaron principalmente los siguientes Bounded Contexts:
+Estas pruebas utilizan Moq cuando es necesario reemplazar repositorios y otras dependencias, por lo que no requieren establecer una conexión real con MySQL.
 
-| Bounded Context | Funcionalidades verificadas |
-|---|---|
-| IAM | Inicio de sesión mediante la API REST y devolución de los datos de autenticación. |
-| Fleet Management | Operaciones de gestión de vehículos mediante solicitudes HTTP. |
-| Workshop Operations | Creación y actualización de tareas, operaciones sobre órdenes de trabajo y comunicación con los servicios correspondientes. |
-| Inventory Management | Recepción de materiales y validación de permisos para modificar el inventario. |
-| Public Tracking | Consulta de información de seguimiento mediante la API REST. |
+| Bounded Context | Clases de prueba | Cantidad |
+|---|---|---:|
+| IAM | `AuthServiceTests` | 2 |
+| Fleet Management | `VehicleServiceTests` | 4 |
+| Workshop Operations | `TaskServiceTests`, `WorkshopOperationsServiceTests` | 9 |
+| Public Tracking | `TrackingSummaryFactoryTests` | 8 |
+| **Total** | | **23** |
 
-En Workshop Operations se verificaron operaciones relacionadas con el registro de tareas, la gestión de órdenes de trabajo y el consumo de materiales asociado al mantenimiento de vehículos.
+En IAM se verifican el registro y el inicio de sesión, incluyendo la protección de contraseñas y la generación de tokens JWT.
 
-En Inventory Management se implementaron dos pruebas adicionales para validar la recepción de materiales. La primera comprueba que un administrador pueda registrar una entrada de cinco unidades, aumentando el stock de 10 a 15. La segunda verifica que un usuario con rol de mecánico reciba una respuesta `403 Forbidden` cuando intenta registrar una recepción, sin realizar modificaciones en el inventario.
+En Fleet Management se evalúan las operaciones de gestión de vehículos realizadas mediante servicios de aplicación.
 
-Las pruebas también permiten verificar respuestas HTTP, como `200 OK`, `201 Created`, `403 Forbidden` y `404 Not Found`, según la operación y las condiciones evaluadas.
+En Workshop Operations se comprueban los procesos de creación y actualización de tareas y órdenes de trabajo, utilizando repositorios simulados.
 
-Este enfoque permitió comprobar la integración de los componentes HTTP y la lógica de aplicación para los casos seleccionados. Sin embargo, al utilizar dependencias simuladas, no constituye una prueba de integración completa con la persistencia real en MySQL.
+En Public Tracking se verifican los cálculos y la construcción de la información de seguimiento presentada al cliente, evitando exponer información operativa interna del taller.
 
+**Interpretación de los resultados**
 
+Las 28 pruebas de entidades y agregados y las 23 pruebas de servicios corresponden a la distribución documentada de pruebas unitarias en una etapa del desarrollo. No deben interpretarse como pruebas adicionales a la suite general del Backend.
 
+Asimismo, las pruebas de autenticación, Workshop Operations y Public Tracking descritas previamente en esta sección forman parte de los grupos anteriores. Sus capturas individuales se conservaron para mostrar los comportamientos concretos evaluados.
+
+La ejecución general más reciente consignada en el informe corresponde a 98 pruebas automatizadas aprobadas, incluyendo diferentes niveles de verificación. Por tanto, el resultado general no debe compararse directamente con el subtotal de una categoría de pruebas.
 
 **Mobile — AutoService Android**
 
@@ -594,9 +621,13 @@ Scenario: User signs in with invalid credentials
 
 Estos escenarios representan los comportamientos esperados de autenticación y control de acceso utilizados posteriormente por las aplicaciones Web y Native Mobile de AutoService.
 
-En el estado actual del repositorio, el archivo `.feature` se encuentra implementado como una especificación de comportamiento. Sin embargo, todavía no se han incorporado Step Definitions mediante SpecFlow, Reqnroll o bindings asociados a `[Given]`, `[When]` y `[Then]`.
 
-Por esta razón, los dos escenarios son documentados actualmente como **especificaciones BDD**, pero **no forman parte de las 31 pruebas automatizadas reportadas en la ejecución de la suite de pruebas**.
+Los dos escenarios de IAM se documentaron inicialmente como especificaciones Gherkin. Posteriormente, se incorporó su automatización mediante Reqnroll y MSTest, utilizando Step Definitions para ejecutar los pasos `Given`, `When` y `Then`.
+
+De acuerdo con las evidencias posteriores de este apartado, ambos escenarios forman parte de los nueve escenarios BDD automatizados del Backend. Por tanto, ya no corresponde describirlos como especificaciones pendientes de automatización.
+
+Estos escenarios están incluidos en los resultados generales de la suite Backend y no deben contabilizarse como pruebas adicionales.
+
 
 Para el modulo de Workshop Operations se tiene la siguiente ruta donde está el archivo .feature que le corresponse
 
@@ -646,7 +677,11 @@ Feature: Work order and task lifecycle
     And no inventory material should be consumed
 ```
 
-Estos escenarios describen el comportamiento esperado. No disponen de Step Definitions y no se contabilizan como pruebas automatizadas ejecutadas. El escenario de rechazo de una tarea no aprobada requiere validación adicional.
+
+Estos escenarios especifican los comportamientos esperados durante el ciclo de vida de las órdenes de trabajo y sus tareas asociadas. La documentación posterior registra cuatro escenarios BDD automatizados de Workshop Operations mediante Reqnroll y MSTest, incluyendo la actualización del progreso y la restricción sobre tareas no aprobadas.
+
+Su ejecución se presenta dentro de las evidencias consolidadas del Backend, por lo que no deben describirse como escenarios pendientes de automatización ni contabilizarse por separado.
+
 
 ####  Public Tracking — Behavior-Driven Development
 
@@ -695,9 +730,11 @@ Scenario: Customer receives clear feedback for an unknown code
   And no order details are displayed
 ```
 
-Estos escenarios describen cómo el cliente consulta el avance y los detalles públicos de su servicio, y qué respuesta recibe cuando el código no existe.
+Estos escenarios describen cómo el cliente consulta el avance de su servicio mediante el código público de seguimiento y cómo responde la aplicación cuando dicho código no existe.
 
+La especificación Gherkin de Public Tracking se mantiene documentada como referencia del comportamiento esperado. No se incluye dentro de los nueve escenarios automatizados con Reqnroll del Backend, cuya distribución corresponde a IAM, Fleet Management y Workshop Operations.
 
+Las verificaciones automatizadas específicas de Public Tracking se describen en los apartados de pruebas unitarias, integración y sistema, según corresponda.
 
 **Resultados adicionales de Backend y Mobile**
 
@@ -760,9 +797,7 @@ Los nueve escenarios fueron ejecutados mediante MSTest y Reqnroll, obteniendo re
 
 La ejecución registró **9 escenarios aprobados, 0 fallidos y 0 omitidos**.
 
-Estas pruebas forman parte de las 92 pruebas automatizadas de la suite del Backend. Su implementación permite verificar los comportamientos seleccionados desde una perspectiva funcional, utilizando los controladores y servicios correspondientes con dependencias simuladas cuando resulta necesario.
-
-
+Los nueve escenarios BDD automatizados forman parte de la suite general del Backend, cuya ejecución más reciente documentada registra 98 pruebas aprobadas y 0 fallidas. Estos escenarios verifican comportamientos funcionales de IAM, Fleet Management y Workshop Operations mediante Reqnroll y MSTest, utilizando dependencias simuladas cuando corresponde.
 
 **Mobile — AutoService Android**
 
@@ -916,21 +951,37 @@ Es relevante para el negocio porque entrega una respuesta clara cuando el client
 **Archivo:** `tests/system/src/test/java/system/CustomerTrackingSystemTest.java`
 
 
-La distribución actual de las pruebas automatizadas es la siguiente:
 
-| Nivel de prueba | Pruebas automatizadas |
-|---|---:|
-| Entidades y agregados principales | 29 |
-| Pruebas unitarias del servicio IAM | 2 |
-| Pruebas unitarias del servicio Workshop-Operations | 1 |
-| Pruebas de integración REST | 2 |
-| Acceptance Tests / pruebas de sistema | 3 |
-| **Total de pruebas automatizadas** | **49** |
-| Escenarios BDD especificados en Gherkin | **4** *(aún no automatizados)* |
+#### Consolidación de pruebas de sistema y aceptación
 
-El resultado de ejecución de **49 pruebas correctas, 0 fallidas y 0 omitidas** establece la línea base actual de verificación automatizada del backend de AutoService.
+La verificación de AutoService incluye pruebas de aceptación de la API y pruebas de sistema orientadas a comprobar los principales flujos funcionales de la aplicación.
 
-Los escenarios BDD permanecen como especificaciones de comportamiento y podrán incorporarse posteriormente a la suite de ejecución automatizada una vez que se implementen sus respectivas Step Definitions.
+En el Backend se implementaron pruebas de aceptación utilizando ASP.NET Core `TestServer`, MSTest y dependencias simuladas mediante Moq. Estas pruebas permiten validar recorridos funcionales que involucran solicitudes HTTP, autenticación, autorización y servicios de aplicación.
+
+La documentación registra cinco pruebas de aceptación automatizadas, distribuidas de la siguiente manera:
+
+| Bounded Context | Pruebas de aceptación | Funcionalidades verificadas |
+|---|---:|---|
+| IAM | 2 | Registro de talleres, autenticación JWT y restricciones de acceso según roles. |
+| Fleet Management | 2 | Flujos funcionales relacionados con la gestión de vehículos. |
+| Workshop Operations | 1 | Creación de órdenes, asignación de tareas y actualización de su estado. |
+| **Total** | **5** | **Pruebas de aceptación automatizadas documentadas.** |
+
+Estas cinco pruebas forman parte de la suite general del Backend y no constituyen un conjunto adicional que deba sumarse al total de pruebas automatizadas.
+
+Por otro lado, las pruebas de sistema del Frontend Web utilizan herramientas de automatización como Selenium para comprobar la navegación y la respuesta de la interfaz en escenarios seleccionados de Workshop Operations, Mechanic y Public Tracking.
+
+Las pruebas ejecutadas mediante Selenium deben distinguirse de las pruebas de aceptación de la API: las primeras interactúan con la interfaz Web, mientras que las segundas verifican flujos HTTP del Backend mediante un entorno controlado.
+
+**Interpretación de los resultados**
+
+La ejecución general más reciente documentada para el Backend registra 98 pruebas aprobadas y 0 fallidas. Este resultado comprende diferentes niveles de verificación y no debe confundirse con los subtotales presentados en las secciones anteriores.
+
+Asimismo, la documentación registra nueve escenarios BDD automatizados mediante Reqnroll y MSTest, incluidos dentro de la suite del Backend.
+
+Las especificaciones Gherkin de Public Tracking se presentan como documentación del comportamiento esperado, sin atribuirles resultados automatizados adicionales que no estén respaldados por las evidencias.
+
+Las pruebas de aceptación que utilizan dependencias simuladas no constituyen por sí solas una validación completa del sistema desplegado con persistencia real en MySQL.
 
 
 **Resultados adicionales de Backend**
@@ -977,9 +1028,15 @@ Las cinco pruebas fueron ejecutadas mediante MSTest, utilizando los componentes 
 
 La ejecución obtuvo **5 pruebas aprobadas, 0 fallidas y 0 omitidas**.
 
-Estas pruebas forman parte de la suite general de 92 pruebas automatizadas del backend. Debido al uso de dependencias simuladas, los resultados no representan una validación completa del sistema desplegado con una base de datos real.
 
-Las pruebas de interfaz de usuario y navegación de la aplicación Web, incluyendo las realizadas con Selenium, se documentarán posteriormente en este mismo apartado, de forma independiente de las pruebas del Backend.
+Las cinco pruebas de aceptación forman parte de la suite general del Backend, cuya ejecución más reciente documentada registra 98 pruebas aprobadas y 0 fallidas. Debido al uso de dependencias simuladas, estos resultados verifican los flujos funcionales seleccionados, pero no representan una validación completa del sistema desplegado con una base de datos MySQL real.
+
+
+Las pruebas de interfaz de usuario y navegación del Frontend Web se documentan en este mismo apartado, incluyendo las verificaciones realizadas con Selenium para Workshop Operations, Mechanic y Public Tracking.
+
+Estas pruebas permiten evaluar los flujos de interacción y la respuesta de la interfaz ante acciones del usuario. Su alcance es diferente al de las pruebas de aceptación del Backend, que utilizan ASP.NET Core TestServer para verificar recorridos funcionales mediante solicitudes HTTP.
+
+Por esta razón, las evidencias de Web y Backend se presentan de manera diferenciada y sus resultados no se combinan en un único conteo.
 
 
 ## 6.2. Static Testing & Verification
@@ -1525,7 +1582,7 @@ Finalmente, Jaime Ruiz manifestó que utilizaría AutoService si estuviera dispo
 **Evidencia:** 
 ![Entrevista Adminsitrador](../assets/images/chapter-6/validation-inter-admin3.png)
 
-### 6.3.3. Evaluacionessegún heurísticas.
+### 6.3.3. Evaluación según heurísticas.
 
 ## SITE o APP A EVALUAR
  
