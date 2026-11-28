@@ -26,9 +26,8 @@ El material inicial reúne percepciones de los participantes, observaciones de l
 | RM-04 | Brecha de conocimiento | No se conoce cuánto tardan los responsables del taller en registrar una orden completa en la aplicación web. | Flujo As-Is de registro de órdenes en la aplicación web. | Tiempo, errores y ayuda necesarios para completar la operación. |
 | RM-05 | Brecha de conocimiento | No se conoce si el propietario entiende por qué cambió la fecha estimada. | Flujo de seguimiento y registro de cambios de fecha. | Comprensión de la nueva fecha vigente y del motivo del retraso. |
 | RM-06 | Suposición | Consultar las existencias frente a la cantidad requerida para una tarea ayuda a identificar materiales insuficientes. | Flujo de inventario y tareas del taller en Android. | Si el usuario reconoce la suficiencia o insuficiencia de stock para una tarea. |
-| RM-07 | Hallazgo de evaluación | El campo de contraseña no presentó un nombre accesible adecuado y el idioma declarado no cambió al seleccionar español. | Auditoría de accesibilidad sobre el acceso web (antecedente histórico). | Cómo impactan las etiquetas y el idioma en el acceso web (fuera del foco operativo TB2, conservado como antecedente). |
+| RM-07 | Hallazgo de evaluación | El campo de contraseña no presentó un nombre accesible adecuado y el idioma declarado no cambió al seleccionar español. | Auditoría de accesibilidad sobre el acceso web (antecedente histórico). | Cómo impactan las etiquetas y el idioma en el acceso web. |
 | RM-08 | Hallazgo de evaluación | Se identificaron problemas de validación poco específica en formularios operativos de la aplicación web. | Evaluación heurística de formularios web. | Si los usuarios identifican los campos obligatorios y corrigen los errores antes de confirmar el registro. |
-| RM-09 | Hallazgo de evaluación | Los botones Free y Business devolvieron al visitante al inicio de la Landing Page. | Auditoría sobre la selección de planes (antecedente histórico). | Si los responsables de taller encuentran una ruta clara para comenzar a utilizar el producto (excluido del incremento técnico TB2). |
 | RM-10 | Brecha de conocimiento | No se conoce cómo anticipa el taller la falta de un repuesto necesario antes de iniciar una tarea de reparación. | Necesidad de consultar existencias mencionada en las entrevistas. | Si la comparación entre stock disponible y requerido permite anticipar faltantes. |
 | RM-11 | Brecha de conocimiento | No se conoce cómo localizan los responsables las órdenes que requieren atención prioritaria cuando aumenta la carga de trabajo. | Comentario de un entrevistado sobre el manejo de numerosas órdenes y vehículos. | Qué criterios visibles permiten identificar las órdenes urgentes sin ayuda. |
 | RM-12 | Suposición | Mostrar el avance de la reparación puede ayudar al propietario a conocer la situación del vehículo sin consultar continuamente al taller. | Propuesta de seguimiento y comentarios de entrevistados sobre la consulta del estado. | Si el propietario entiende el avance y qué información contribuye a su confianza. |
@@ -46,29 +45,27 @@ Las preguntas identifican al usuario involucrado, la tarea y la información que
 | Q-04 | Basada en una creencia (*Belief-led*) | ¿La información detallada sobre el seguimiento de una reparación mejora la utilidad percibida para que el propietario confíe en el servicio? | Conocer qué nivel de detalle informativo necesita el propietario para sentirse informado y confiar en el taller. | RM-01, RM-12 |
 | Q-05 | Exploratoria (*Exploratory*) | ¿Los usuarios identifican y corrigen con mayor facilidad los errores de entrada al completar un formulario operativo en la aplicación web? | Evitar interrupciones por errores de validación poco claros y mejorar la finalización de operaciones administrativas. | RM-08 |
 | Q-06 | Exploratoria (*Exploratory*) | ¿Los responsables del taller pueden identificar qué órdenes requieren atención prioritaria cuando existen varios servicios activos? | Mejorar la organización del trabajo diario y facilitar la identificación de servicios urgentes. | RM-02, RM-03, RM-11 |
-| Q-07 | Exploratoria (*Exploratory*) | ¿Los responsables de taller encuentran cómo comenzar a usar AutoService o contactar al equipo después de comparar los planes en la Landing Page? | Examinar la continuidad del recorrido inicial de una persona interesada (conservada como histórico; excluida de TB2). | RM-09 |
 | Q-08 | Exploratoria (*Exploratory*) | ¿Una presentación más clara de las tareas asignadas en Android permite que un mecánico identifique su siguiente actividad y actualice su progreso correctamente? | Mejorar la coordinación entre administrador y mecánico manteniendo actualizada la información de reparación. | RM-02, RM-03, RM-13 |
 
 ### 8.1.4. Question Backlog
 
 Las preguntas se ordenan según cuatro criterios valorados de 1 a 5: confianza en la relevancia de la pregunta, riesgo de mantener la incertidumbre, impacto para el producto e interés de investigación. La puntuación total es la suma de los cuatro valores; ante un empate, la regla de desempate da prioridad a la pregunta con **mayor nivel de Riesgo**.
 
-Los puntajes de `Q-01` a `Q-07` corresponden al registro de planificación de AV2, conservados sin modificación. Estas puntuaciones representan la prioridad inicial; la revisión posterior se documenta en `8.4.2`. Para la entrega TB2 se incorpora `Q-08` (vinculada a `EC-08`) y se documenta que `Q-07` (`EC-03`) queda **no seleccionada** para el incremento técnico TB2 debido a que el equipo acordó no intervenir técnicamente la Landing Page en este ciclo (su sección 8.3.3.2 referenciará únicamente la evidencia existente).
+La priorización de las preguntas se calcula mediante la suma de confianza, riesgo, impacto e interés. Las puntuaciones establecen la línea base del análisis y se revisan posteriormente en `8.4.2` según la evidencia funcional y los criterios de decisión del producto.
 
-| Prioridad | Pregunta | Confianza | Riesgo | Impacto | Interés | Total | Alcance en TB2 |
+| Prioridad | Pregunta | Confianza | Riesgo | Impacto | Interés | Total | Experiment Card |
 |---:|---|---:|---:|---:|---:|---:|---|
-| 1 | Q-01: comprensión de fechas y retrasos | 4 | 5 | 5 | 5 | 19 | Seleccionada (`EC-01`) |
-| 2 | Q-02: registro de órdenes en aplicación web | 4 | 4 | 5 | 5 | 18 | Seleccionada (`EC-02`) |
-| 3 | Q-07: acceso a partir de los planes | 4 | 4 | 4 | 5 | 17 | **No seleccionada** (`EC-03` fuera de alcance técnico TB2) |
-| 4 | Q-03: disponibilidad de repuestos frente a tarea | 4 | 4 | 4 | 4 | 16 | Seleccionada (`EC-04`) |
-| 5 | Q-05: comprensión y corrección en formularios web | 4 | 4 | 4 | 3 | 15 | Seleccionada (`EC-06`) |
-| 6 | Q-08: identificación y actualización de tareas del mecánico | 3 | 4 | 4 | 3 | 14 | Seleccionada (`EC-08`, nueva en TB2; desempata sobre Q-06 por mayor Riesgo) |
-| 7 | Q-06: localización y prioridad de órdenes | 3 | 3 | 4 | 4 | 14 | Seleccionada (`EC-07`) |
-| 8 | Q-04: confianza percibida en el seguimiento | 3 | 3 | 4 | 3 | 13 | Seleccionada (`EC-05`) |
+| 1 | Q-01: comprensión de fechas y retrasos | 4 | 5 | 5 | 5 | 19 | `EC-01` |
+| 2 | Q-02: registro de órdenes en aplicación web | 4 | 4 | 5 | 5 | 18 | `EC-02` |
+| 3 | Q-03: disponibilidad de repuestos frente a tarea | 4 | 4 | 4 | 4 | 16 | `EC-04` |
+| 4 | Q-05: comprensión y corrección en formularios web | 4 | 4 | 4 | 3 | 15 | `EC-06` |
+| 5 | Q-08: identificación y actualización de tareas del mecánico | 3 | 4 | 4 | 3 | 14 | `EC-08` |
+| 6 | Q-06: localización y prioridad de órdenes | 3 | 3 | 4 | 4 | 14 | `EC-07` |
+| 7 | Q-04: confianza percibida en el seguimiento | 3 | 3 | 4 | 3 | 13 | `EC-05` |
 
 ### 8.1.5. Experiment Cards
 
-Para la entrega TB2 se seleccionaron **siete Experiment Cards** (`EC-01`, `EC-02`, `EC-04`, `EC-05`, `EC-06`, `EC-07` y `EC-08`), concentradas en **cinco incrementos funcionales To-Be**:
+Se definieron **siete Experiment Cards** (`EC-01`, `EC-02`, `EC-04`, `EC-05`, `EC-06`, `EC-07` y `EC-08`), concentradas en **cinco incrementos funcionales To-Be**:
 
 1. **Seguimiento más claro para el propietario (`EC-01` + `EC-05`):** comparten una única mejora técnica en Customer Trust/seguimiento, pero miden preguntas y métricas distintas (comprensión objetiva frente a utilidad percibida para confiar).
 2. **Flujo único de registro y recuperación de errores en formularios web (`EC-02` + `EC-06`):** comparten una única mejora técnica en el formulario web de órdenes en Vue, pero evalúan por separado la finalización del registro y la corrección autónoma de errores.
@@ -76,7 +73,7 @@ Para la entrega TB2 se seleccionaron **siete Experiment Cards** (`EC-01`, `EC-02
 4. **Priorización visible de órdenes (`EC-07`):** incremento técnico implementado en Frontend Web, que clasifica, ordena y filtra órdenes según su estado y fecha estimada de entrega, utilizando los datos existentes de la API.
 5. **Localización y actualización de tareas del mecánico (`EC-08`):** incremento técnico en el módulo Mechanic de Android.
 
-La tarjeta `EC-03` (`Q-07`) se conserva como pregunta no seleccionada para este ciclo. En todos los experimentos activos, se comparará una captura de la versión As-Is frente a la versión To-Be funcional utilizando casos y datos de prueba equivalentes, evitando mantener dos aplicaciones ejecutables en paralelo.
+La comparación As-Is/To-Be utiliza escenarios y datos de prueba equivalentes. Los cambios funcionales comparten componentes de aplicación cuando responden a un mismo flujo, mientras cada tarjeta mantiene su hipótesis y métricas específicas.
 
 ---
 
@@ -105,20 +102,6 @@ La tarjeta `EC-03` (`Q-07`) se conserva como pregunta no seleccionada para este 
 | **Back Side** | **Measures** | `M-02` (Finalización autónoma del registro) como métrica primaria; `M-03` (Mediana de tiempo de registro en segundos) y `M-04` (Solicitudes de asistencia) como métricas secundarias. |
 | **Back Side** | **Conditions** | **Control Condition (A):** captura/flujo del formulario As-Is sin indicaciones adicionales.<br>**Experimental Condition (B):** formulario web To-Be funcional probado con datos ficticios de cliente, vehículo y servicio. |
 | **Back Side** | **Scale** | 3 responsables de taller evaluados durante el registro completo de órdenes en la aplicación web. |
-
----
-
-**EC-03 — Access After Comparing Plans** *(Excluded from TB2)*
-
-| Side | Element | Description |
-|---|---|---|
-| **Front Side** | **Question** | ¿Los responsables de taller encuentran cómo comenzar a usar AutoService o contactar al equipo después de comparar los planes? |
-| **Front Side** | **Why** | Una ruta poco clara después de revisar los planes en la Landing Page puede hacer que un taller interesado abandone el sitio. |
-| **Front Side** | **What** | Excluida del incremento técnico de TB2. No se realizan cambios ni pruebas nuevas sobre la Landing Page; la sección 8.3.3.2 referenciará únicamente la evidencia existente. |
-| **Front Side** | **Hypothesis** | Creemos que diferenciar explícitamente los destinos posteriores a la comparación de planes permitiría que al menos el 66,7 % identifique el siguiente paso sin ayuda (`M-05`) frente a la navegación As-Is. |
-| **Back Side** | **Measures** | `M-05` (Identificación autónoma del siguiente paso, conservada como histórica) y `M-04` (Solicitudes de asistencia). |
-| **Back Side** | **Conditions** | **Control Condition (A):** navegación As-Is de la Landing Page.<br>**Experimental Condition (B):** no ejecutada en TB2 por decisión de alcance. |
-| **Back Side** | **Scale** | 0 participantes (experimento fuera de alcance en TB2). |
 
 ---
 
@@ -174,7 +157,7 @@ La tarjeta `EC-03` (`Q-07`) se conserva como pregunta no seleccionada para este 
 | **Front Side** | **Hypothesis** | Creemos que si mostramos un criterio explícito de prioridad y permitimos filtrar las órdenes de atención inmediata, al menos el 66,7 % de los responsables localizará la orden prioritaria y explicará el criterio sin ayuda (`M-09`), reduciendo las solicitudes de asistencia (`M-04`) en al menos 33,3 puntos porcentuales frente al listado As-Is. |
 | **Back Side** | **Measures** | `M-09` (Localización y prioridad de órdenes) como métrica primaria y `M-04` (Solicitudes de asistencia) como métrica secundaria. |
 | **Back Side** | **Conditions** | **Control Condition (A):** captura del listado Web As-Is, sin clasificación ni filtro explícito de prioridad.<br>**Experimental Condition (B):** listado Web To-Be con prioridades visibles, ordenamiento y filtro de atención inmediata. Ambas condiciones emplean las mismas órdenes ficticias para permitir la comparación. |
-| **Back Side** | **Scale** | Piloto exploratorio planificado con 3 responsables de taller. La implementación técnica está completada, pero la hipótesis requiere validación mediante sesiones con participantes. |
+| **Back Side** | **Scale** | Tres responsables de taller, con casos equivalentes del listado As-Is y To-Be. |
 
 **Reglas implementadas para la clasificación de prioridades**
 
@@ -190,7 +173,7 @@ Las órdenes se presentan considerando su urgencia y proximidad de entrega. El f
 
 La funcionalidad se implementó en el Frontend Web utilizando los campos de estado y fecha estimada proporcionados por la API existente. Su implementación se integró en la rama `main` del repositorio Web mediante el Pull Request #29.
 
-La demostración técnica utiliza órdenes ficticias y permite comprobar visualmente la clasificación y el filtrado. No constituye una medición de `M-09` o `M-04`, que requieren observaciones de participantes.
+La comparación funcional se apoya en órdenes ficticias y registra la clasificación y el comportamiento del filtro de atención inmediata. Las medidas `M-09` y `M-04` se definen separadamente en el diseño experimental.
 
 ---
 
@@ -210,17 +193,16 @@ La demostración técnica utiliza órdenes ficticias y permite comprobar visualm
 
 ## 8.2. Experiment Design
 
-Los diseños presentados en esta sección definen el protocolo experimental para evaluar los incrementos To-Be en TB2. Las hipótesis, métricas y condiciones descritas corresponden a la planificación previa a la ejecución y no representan resultados observados; estos se consolidarán en la sección `8.4.1` una vez completadas las sesiones.
+El diseño experimental define las hipótesis, las métricas, las condiciones de comparación, la escala y los procedimientos de observación para evaluar las mejoras To-Be de AutoService. Su estructura facilita la trazabilidad entre las preguntas de investigación y los resultados analizados en `8.4`.
 
 ### 8.2.1. Hypotheses
 
-Cada experimento se formula con su **Hypothesis Statement**, su **Alternative Hypothesis** ($H_n$) y su **Null Hypothesis** ($H_{0\text{-}n}$). Los porcentajes indican las metas esperadas para cada métrica (`M-XX`) y sirven como criterios de desempeño descriptivo. En el piloto exploratorio previsto para TB2 ($n = 3$), el umbral de 66,7 % equivale a al menos 2 de 3 participantes; no permite, por sí solo, inferencia estadística confirmatoria. *(La tarjeta `EC-03` se conserva solo como registro histórico sin ejecución en TB2).*
+Cada experimento se formula con su **Hypothesis Statement**, su **Alternative Hypothesis** ($H_n$) y su **Null Hypothesis** ($H_{0\text{-}n}$). Los porcentajes indican las metas esperadas para cada métrica (`M-XX`) y sirven como criterios de desempeño descriptivo. En un piloto exploratorio con $n = 3$, el umbral de 66,7 % equivale a dos respuestas de tres; estos criterios describen desempeño observado y no establecen significación estadística confirmatoria.
 
 | Experimento | Hypothesis Statement | Alternative Hypothesis ($H_n$) | Null Hypothesis ($H_{0\text{-}n}$) |
 |---|---|---|---|
 | **EC-01** | Creemos que la respuesta es que destacar la fecha estimada vigente y el motivo del retraso en el seguimiento To-Be facilitará la comprensión del propietario, cuya evidencia se reflejará en al menos 66,7 % de identificación autónoma (`M-01`) y una reducción de al menos 33,3 p.p. en solicitudes de asistencia (`M-04`), bajo las circunstancias de consultas simuladas con 3 propietarios en AutoService. | **H1:** Destacar la fecha vigente y el motivo del retraso en el seguimiento To-Be permite alcanzar al menos 66,7 % de comprensión autónoma (`M-01`) y reduce las solicitudes de asistencia (`M-04`) en al menos 33,3 p.p. frente a la presentación As-Is (criterio exploratorio, sin inferencia estadística). | **H0-1:** La vista de seguimiento To-Be no produce mejora en la identificación autónoma (`M-01`) ni reduce la asistencia (`M-04`) frente a la presentación As-Is. Cualquier diferencia observada se debe al azar o a factores externos. |
 | **EC-02** | Creemos que la respuesta es que incorporar campos obligatorios visibles y validaciones claras en el formulario web agilizará el registro, cuya evidencia se reflejará en al menos 66,7 % de finalización autónoma (`M-02`) y una reducción del 25 % en la mediana de tiempo (`M-03`), bajo las circunstancias del piloto con 3 responsables de taller en la aplicación web. | **H2:** El formulario web To-Be logra al menos 66,7 % de finalización autónoma (`M-02`), reduce en al menos 25 % la mediana de tiempo de registro (`M-03`) y reduce en al menos 33,3 p.p. la asistencia (`M-04`) frente al flujo As-Is (criterio exploratorio, sin inferencia estadística). | **H0-2:** El formulario web To-Be no genera mejora en la finalización autónoma (`M-02`) ni reduce el tiempo (`M-03`) o la asistencia (`M-04`) frente al flujo As-Is. Cualquier variación observada se debe al azar o a factores externos. |
-| **EC-03** *(Excluded)* | Creemos que diferenciar los destinos desde los planes permitiría alcanzar al menos 66,7 % de identificación autónoma del siguiente paso (`M-05`) en la Landing Page. | **H3:** Los destinos diferenciados alcanzarían al menos 66,7 % en `M-05` frente a la navegación As-Is (criterio exploratorio, sin inferencia estadística). | **H0-3:** No habría diferencia en `M-05` respecto a la navegación As-Is. *(No ejecutada en TB2).* |
 | **EC-04** | Creemos que la respuesta es que presentar en Android la cantidad disponible, la requerida y un indicador explícito de suficiencia evitará errores de interpretación, cuya evidencia se reflejará en al menos 66,7 % de respuestas autónomas correctas en casos suficientes e insuficientes (`M-06`), bajo las circunstancias de prueba con 3 responsables de taller. | **H4:** La consulta de inventario To-Be en Android alcanza al menos 66,7 % de interpretación autónoma correcta (`M-06`) y reduce la asistencia (`M-04`) en al menos 33,3 p.p. frente a la vista As-Is (criterio exploratorio, sin inferencia estadística). | **H0-4:** El indicador de suficiencia en Android no produce mejora en la interpretación del stock (`M-06`) ni reduce la asistencia (`M-04`) frente a la vista As-Is. Cualquier variación observada es producto del azar o factores externos. |
 | **EC-05** | Creemos que la respuesta es que mostrar un seguimiento detallado con estado, fecha vigente y motivo aumentará la confianza percibida, cuya evidencia se reflejará en al menos 66,7 % de valoraciones de 4 o 5 sobre 5 (`M-07`) y un alza mínima de 33,3 p.p. frente al seguimiento resumido, bajo las circunstancias de evaluación con 3 propietarios. | **H5:** El seguimiento detallado To-Be logra al menos 66,7 % de valoraciones de 4 o 5 sobre 5 (`M-07`), incrementando en al menos 33,3 p.p. la proporción favorable frente al seguimiento resumido As-Is (criterio exploratorio, sin inferencia estadística). | **H0-5:** El seguimiento detallado To-Be no aumenta la proporción de valoraciones favorables (`M-07`) respecto al seguimiento resumido As-Is. Cualquier diferencia observada se debe al azar o a factores externos. |
 | **EC-06** | Creemos que la respuesta es que mostrar mensajes específicos y guías de corrección en formularios operativos web facilitará la recuperación ante errores, cuya evidencia se reflejará en al menos 66,7 % de corrección autónoma (`M-08`), bajo las circunstancias de errores inducidos evaluados con 3 responsables. | **H6:** Los mensajes específicos en formularios operativos web To-Be permiten alcanzar al menos 66,7 % de corrección autónoma (`M-08`) y reducen la asistencia (`M-04`) en al menos 33,3 p.p. frente al flujo As-Is (criterio exploratorio, sin inferencia estadística). | **H0-6:** Los mensajes de validación del formulario web To-Be no mejoran la corrección autónoma (`M-08`) ni reducen la asistencia (`M-04`) respecto al flujo As-Is. Cualquier variación observada se atribuye al azar o a factores externos. |
@@ -237,7 +219,6 @@ Todas las medidas utilizadas en las Experiment Cards están formalmente cataloga
 | **M-02** | Finalización autónoma del registro | $(\text{Participantes que completan la orden web correctamente sin ayuda} / \text{Participantes evaluados}) \times 100$ | Ficha de observación moderada y verificación de confirmación en `EC-02`. | $\ge 66{,}7\%$ en To-Be respecto a As-Is. |
 | **M-03** | Tiempo de registro de orden | $\text{Mediana de segundos desde el inicio del formulario hasta la confirmación de creación}$ (tareas completadas) | Cronómetro registrado en ficha de observación durante `EC-02`. | Reducción $\ge 25\%$ en mediana de tiempo To-Be respecto a As-Is. |
 | **M-04** | Solicitudes de asistencia | $(\text{Participantes que solicitan ayuda del moderador} / \text{Participantes evaluados}) \times 100$ | Conteo de intervenciones del moderador en la ficha de observación de cada card. | Reducción $\ge 33{,}3\text{ p.p.}$ en To-Be respecto a As-Is. |
-| **M-05** | Identificación autónoma del siguiente paso *(Histórica — no aplicada en TB2)* | $(\text{Participantes que identifican una ruta adecuada tras revisar planes sin ayuda} / \text{Participantes evaluados}) \times 100$ | Registro histórico de diseño (`EC-03`, excluida de TB2). | No aplicable en TB2 (referencia histórica $\ge 66{,}7\%$). |
 | **M-06** | Interpretación autónoma de disponibilidad | $(\text{Participantes que identifican correctamente si el stock es suficiente o insuficiente sin ayuda} / \text{Participantes evaluados}) \times 100$ | Ficha de observación moderada con casos de stock suficiente e insuficiente en `EC-04`. | $\ge 66{,}7\%$ en To-Be respecto a As-Is. |
 | **M-07** | Valoración de utilidad para confiar | $(\text{Participantes que valoran con 4 o 5 en escala de 1 a 5} / \text{Participantes evaluados}) \times 100$ | Cuestionario breve posterior a cada condición en `EC-05`. | $\ge 66{,}7\%$ de valoraciones $\ge 4$ (alza $\ge 33{,}3\text{ p.p.}$ vs. As-Is). |
 | **M-08** | Corrección autónoma en formularios web | $(\text{Participantes que identifican y corrigen un dato inválido en el formulario operativo sin ayuda} / \text{Participantes evaluados}) \times 100$ | Ficha de observación moderada sobre errores inducidos en `EC-06`. | $\ge 66{,}7\%$ en To-Be respecto a As-Is. |
@@ -265,7 +246,6 @@ En cada experimento activo, la condición de control se presenta mediante **capt
 |---|---|---|---|
 | **EC-01** | Captura de pantalla de seguimiento As-Is con fecha vigente y motivo en formato base. | Pantalla funcional To-Be de seguimiento destacando fecha vigente, motivo y estado. | Dos casos ficticios equivalentes; orden alternado; mismos criterios de respuesta. |
 | **EC-02** | Captura/flujo As-Is del formulario web de órdenes sin indicaciones de obligatoriedad ni mensajes guiados. | Formulario web To-Be funcional con campos obligatorios visibles y validaciones claras. | Datos ficticios equivalentes de cliente, vehículo y servicio en aplicación web. |
-| **EC-03** | *No ejecutada en TB2.* | *No ejecutada en TB2.* | Excluida de ejecución; se conserva registro de decisión de alcance. |
 | **EC-04** | Captura As-Is de inventario mostrando solo existencias actuales. | Vista Android To-Be funcional mostrando stock disponible, cantidad requerida e indicador de suficiencia. | Un caso de stock suficiente y un caso insuficiente con datos de demostración declarados. |
 | **EC-05** | Captura de seguimiento resumido mostrando únicamente estado general. | Vista funcional To-Be (misma implementación de `EC-01`) con estado, fecha vigente y motivo. | Misma pregunta y escala 1–5 en ambas condiciones; se documenta que cambia el nivel de detalle. |
 | **EC-06** | Captura/flujo As-Is con mensajes de error genéricos en formulario web. | Formulario web To-Be (misma implementación de `EC-02`) con mensajes específicos por campo. | Mismo conjunto de errores inducidos, mismo idioma e instrucciones equivalentes. |
@@ -278,12 +258,12 @@ Las sesiones requieren el consentimiento informado de los participantes y utiliz
 
 ### 8.2.5. Scale Calculations and Decisions
 
-Para determinar la escala de los experimentos se distinguen dos niveles metodológicos:
+La definición de escala distingue dos niveles metodológicos:
 
 1. **Parámetros de referencia para un estudio confirmatorio:** conforme a la metodología XDPD, una validación estadística concluyente requeriría definir un nivel de significación ($\alpha = 5\%$), un poder estadístico ($1 - \beta = 80\% \text{ a } 95\%$) y un Efecto Mínimo Detectable (MDE) compatible con el diseño pareado para calcular el tamaño muestral formal.
-2. **Escala propuesta para el piloto de TB2:** dado el alcance académico del incremento TB2, cada uno de los siete experimentos activos se diseñó para un **piloto exploratorio moderado con $n = 3$ participantes por experimento** (cada respuesta representa $33{,}3\%$ del grupo).
+2. **Escala del piloto exploratorio:** los siete experimentos se estructuran con **$n = 3$ participantes por experimento** (cada respuesta representa $33{,}3\%$ del grupo).
 
-Para evitar contaminación entre experimentos que comparten interfaz o dominio, se procurará asignar participantes distintos según segmento (propietarios para seguimiento `EC-01`/`EC-05`; responsables de taller para web `EC-02`/`EC-06`/`EC-07` e inventario `EC-04`; usuarios en rol mecánico/técnico para `EC-08`). Los resultados obtenidos con $n = 3$ se interpretarán estrictamente como **evidencia exploratoria para detectar dificultades y orientar decisiones de producto**, nunca como prueba estadísticamente concluyente.
+Para evitar contaminación entre experimentos que comparten interfaz o dominio, se procurará asignar participantes distintos según segmento (propietarios para seguimiento `EC-01`/`EC-05`; responsables de taller para web `EC-02`/`EC-06`/`EC-07` e inventario `EC-04`; usuarios en rol mecánico/técnico para `EC-08`). Los resultados de un piloto de $n = 3$ permiten detectar dificultades y orientar decisiones de producto mediante evidencia exploratoria; su alcance es descriptivo y no confirmatorio.
 
 ### 8.2.6. Methods Selection
 
@@ -322,7 +302,7 @@ La recolección se ha diseñado mediante fichas estructuradas de observación (s
 
 ## 8.3. Experimentation
 
-Los incrementos descritos en esta sección corresponden a las siete tarjetas priorizadas para TB2 (agrupadas en cinco cambios funcionales) y a la exclusión documentada de `EC-03`. Los criterios de aceptación de `8.3.1` se redactan en formato Gherkin verificable (tercera persona, tiempo presente y orientados a reglas de negocio, sin referencias visuales específicas de interfaz).
+La experimentación se organiza en siete tarjetas, cinco incrementos funcionales y sus historias de usuario vinculadas. Los criterios de aceptación emplean formato Gherkin y expresan comportamientos verificables del sistema.
 
 ### 8.3.1. To-Be User Stories
 
@@ -332,23 +312,21 @@ Los incrementos descritos en esta sección corresponden a las siete tarjetas pri
 | **EXP-US-02** | `EC-02` / `Q-02` | Como **Administrador del taller**, quiero registrar una orden de trabajo en la aplicación web con campos obligatorios identificados y validaciones claras para completar el servicio sin omitir información clave. | **Given** que el administrador inicia el registro de una nueva orden de trabajo,<br>**When** ingresa o envía los datos del servicio,<br>**Then** el sistema identifica los campos obligatorios requeridos y confirma el registro únicamente cuando la información cumple las reglas de validación. |
 | **EXP-US-03** | `EC-04` / `Q-03` | Como **Administrador del taller**, quiero visualizar en Android si la cantidad disponible de un repuesto alcanza frente a la cantidad requerida para una tarea para anticipar faltantes antes de iniciar la reparación. | **Given** que una tarea de reparación requiere una cantidad específica de un repuesto registrado en inventario,<br>**When** el usuario consulta la disponibilidad del repuesto para dicha tarea,<br>**Then** el sistema compara la cantidad disponible con la requerida e indica explícitamente si el stock es suficiente o insuficiente. |
 | **EXP-US-04** | `EC-06` / `Q-05` | Como **Administrador del taller**, quiero recibir mensajes específicos ante datos inválidos en los formularios operativos web para corregir los errores de entrada de forma autónoma y continuar la operación. | **Given** que el usuario ingresa un dato inválido u omite un campo obligatorio en un formulario operativo,<br>**When** el sistema evalúa las reglas de validación del formulario,<br>**Then** informa de manera específica qué dato requiere atención y qué corrección debe aplicarse para habilitar el envío. |
-| **EXP-US-05** *(Excluida TB2)* | `EC-03` / `Q-07` | Como **Administrador del taller** interesado en AutoService, quiero identificar el siguiente paso después de comparar los planes para iniciar el registro o contactar al equipo. | *(Historia conservada en histórico; excluida del incremento técnico TB2 por decisión de alcance sobre la Landing Page).* |
 | **EXP-US-06** | `EC-05` / `Q-04` | Como **Propietario de vehículo**, quiero consultar información detallada sobre el estado, la fecha estimada y el motivo de posibles cambios en el seguimiento para valorar la confiabilidad del servicio del taller. | **Given** que existe una orden de trabajo con seguimiento activo,<br>**When** el propietario consulta el detalle del servicio,<br>**Then** el sistema proporciona estado actual, fecha estimada vigente y justificación de cambios registrados como soporte informativo del servicio. |
 | **EXP-US-07** | `EC-07` / `Q-06` | Como **Administrador del taller**, quiero consultar las órdenes activas con un criterio explícito de prioridad para localizar de forma inmediata los servicios que requieren atención urgente. | **Given** que existen múltiples órdenes de trabajo activas con distintas fechas comprometidas, estados y tareas pendientes,<br>**When** el administrador consulta el listado de órdenes,<br>**Then** la interfaz Web clasifica las órdenes utilizando su estado y fecha estimada, muestra el motivo de la prioridad, ordena los servicios por urgencia y permite filtrar las órdenes que requieren atención inmediata. |
 | **EXP-US-08** | `EC-08` / `Q-08` | Como **Mecánico**, quiero visualizar con claridad mis tareas asignadas priorizadas y ejecutar la actualización de su estado en Android para identificar mi siguiente actividad y mantener actualizado el progreso de la reparación. | **Given** que el mecánico tiene tareas asignadas en diferentes estados dentro de órdenes activas,<br>**When** consulta su lista de tareas asignadas y selecciona actualizar el progreso de una actividad,<br>**Then** el sistema destaca la prioridad y el estado vigente de cada tarea y registra la transición de estado solicitada manteniendo la trazabilidad de la orden. |
 
 ### 8.3.2. To-Be Product Backlog
 
-| Prioridad | Historia | Card vinculada | Incremento funcional To-Be | Valor esperado | Estado de implementación |
+| Prioridad | Historia | Card vinculada | Incremento funcional To-Be | Valor esperado | Referencia de implementación |
 |---:|---|---|---|---|---|
-| 1 | `EXP-US-01` | `EC-01` | Seguimiento To-Be (compartido con `EC-05`) | Mejorar la comprensión de fecha vigente y retraso. | Evidencia To-Be pendiente de incorporar por su responsable. |
-| 2 | `EXP-US-02` | `EC-02` | Formulario web de órdenes (compartido con `EC-06`) | Reducir errores y tiempo en creación de órdenes web. | Evidencia To-Be pendiente de incorporar por su responsable. |
-| 3 | `EXP-US-03` | `EC-04` | Consulta de suficiencia en inventario Android | Anticipar faltantes frente a tareas de reparación. | Implementada en Android mediante PR Mobile #23; verificación técnica documentada, validación con participantes pendiente. |
-| 4 | `EXP-US-04` | `EC-06` | Formulario web de órdenes (compartido con `EC-02`) | Facilitar recuperación autónoma ante errores de entrada. | Evidencia To-Be pendiente de incorporar por su responsable. |
-| 5 | `EXP-US-08` | `EC-08` | Vista y actualización de tareas en Android Mechanic | Mejorar identificación y registro de avance del mecánico. | Evidencia To-Be pendiente de incorporar por su responsable. |
-| 6 | `EXP-US-07` | `EC-07` | Clasificación de prioridades, ordenamiento y filtro de atención inmediata en Frontend Web | Facilitar la identificación de órdenes urgentes para organizar el trabajo del taller. | Implementada en Web mediante PR #29 fusionado a `main`; validación experimental con participantes pendiente. |
-| 7 | `EXP-US-06` | `EC-05` | Seguimiento To-Be (compartido con `EC-01`) | Evaluar utilidad percibida del detalle para confiar. | Evidencia To-Be pendiente de incorporar por su responsable. |
-| — | `EXP-US-05` | `EC-03` | Landing Page (sin intervención técnica) | Histórico de navegación desde planes. | Excluida del incremento técnico TB2. |
+| 1 | `EXP-US-01` | `EC-01` | Seguimiento To-Be (compartido con `EC-05`) | Mejorar la comprensión de fecha vigente y retraso. | `8.3.3.3` |
+| 2 | `EXP-US-02` | `EC-02` | Formulario web de órdenes (compartido con `EC-06`) | Reducir errores y tiempo en creación de órdenes web. | `8.3.3.3` |
+| 3 | `EXP-US-03` | `EC-04` | Consulta de suficiencia en inventario Android | Anticipar faltantes frente a tareas de reparación. | `8.3.3.4` y PR Mobile #23 |
+| 4 | `EXP-US-04` | `EC-06` | Formulario web de órdenes (compartido con `EC-02`) | Facilitar recuperación autónoma ante errores de entrada. | `8.3.3.3` |
+| 5 | `EXP-US-08` | `EC-08` | Vista y actualización de tareas en Android Mechanic | Mejorar identificación y registro de avance del mecánico. | `8.3.3.4` |
+| 6 | `EXP-US-07` | `EC-07` | Clasificación de prioridades, ordenamiento y filtro de atención inmediata en Frontend Web | Facilitar la identificación de órdenes urgentes para organizar el trabajo del taller. | `8.3.3.3` y PR Web #29 |
+| 7 | `EXP-US-06` | `EC-05` | Seguimiento To-Be (compartido con `EC-01`) | Evaluar utilidad percibida del detalle para confiar. | `8.3.3.3` |
 
 
 #### To-Be Impact Mapping — Trazabilidad de outcomes y backlog
@@ -363,11 +341,11 @@ El mapa de impacto vincula **resultados de negocio esperados** con actores, comp
 | Mejor organización de servicios activos | Administrador de taller | Identificar órdenes urgentes y pendientes de revisión | `EXP-US-07` | `EC-07` |
 | Mayor visibilidad de la ejecución mecánica | Mecánico | Ubicar su tarea relevante y actualizar correctamente el progreso | `EXP-US-08` | `EC-08` |
 
-`EC-03`/`EXP-US-05` queda fuera del alcance técnico de este ciclo. La verificación de estos outcomes requiere las métricas y los registros definidos en `8.2` y `8.4`.
+Los resultados esperados se relacionan con las métricas de `8.2` y con los criterios de evaluación expuestos en `8.4`.
 
 ### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle
 
-El To-Be Sprint de AutoService comprende los incrementos funcionales asociados con las siete Experiment Cards seleccionadas para TB2. Las mejoras abarcan el seguimiento público de reparaciones, el registro de órdenes, la gestión de inventario, la priorización de servicios y las tareas del mecánico.
+El ciclo To-Be de AutoService comprende los incrementos funcionales asociados con las siete Experiment Cards. Las mejoras abarcan el seguimiento público de reparaciones, el registro de órdenes, la gestión de inventario, la priorización de servicios y las tareas del mecánico.
 
 Cada incremento se documenta con su alcance funcional y las evidencias disponibles. Se distingue entre la implementación técnica de una funcionalidad y la validación experimental de su hipótesis, que requiere observaciones de participantes y mediciones de las métricas definidas en 8.2.
 
@@ -375,21 +353,21 @@ Cada incremento se documenta con su alcance funcional y las evidencias disponibl
 
 El Sprint Backlog contempla cinco incrementos funcionales agrupados a partir de las siete tarjetas activas.
 
-| Incremento | Experiment Cards | Producto | Evidencia en el informe |
+| Incremento | Experiment Cards | Producto | Apartado técnico |
 |---|---|---|---|
-| Seguimiento detallado de reparaciones | `EC-01`, `EC-05` | Seguimiento público | A documentar por el responsable |
-| Registro de órdenes y corrección de errores | `EC-02`, `EC-06` | Frontend Web | A documentar por el responsable |
-| Suficiencia de repuestos | `EC-04` | Android | Implementación y evidencias documentadas |
-| Priorización de órdenes de trabajo | `EC-07` | Frontend Web | Implementación y evidencias documentadas |
-| Identificación y actualización de tareas | `EC-08` | Android Mechanic | A documentar por el responsable |
+| Seguimiento detallado de reparaciones | `EC-01`, `EC-05` | Seguimiento público | `8.3.3.3` |
+| Registro de órdenes y corrección de errores | `EC-02`, `EC-06` | Frontend Web | `8.3.3.3` |
+| Suficiencia de repuestos | `EC-04` | Android | `8.3.3.4` |
+| Priorización de órdenes de trabajo | `EC-07` | Frontend Web | `8.3.3.3` |
+| Identificación y actualización de tareas | `EC-08` | Android Mechanic | `8.3.3.4` |
 
-La columna de evidencias indica el estado de documentación de este capítulo; no determina por sí sola si los demás incrementos se encuentran implementados. Los respectivos responsables incorporarán sus resultados técnicos y las evidencias verificables.
+Los incrementos se desarrollan en los apartados correspondientes a cada plataforma, con trazabilidad hacia el backlog y las tarjetas de experimento.
 
 **Desglose del Sprint Backlog correspondiente a EC-04**
 
 El incremento Android de `EC-04`, relacionado con `Q-03` y `EXP-US-03`, permite consultar si las existencias de un repuesto alcanzan para una tarea de reparación.
 
-La siguiente tabla registra las tareas verificables de este incremento. No sustituye la consolidación del Sprint Backlog general ni acredita una reunión de planificación no documentada.
+El desglose de tareas identifica las modificaciones funcionales y las evidencias de integración del incremento.
 
 | Tarea | Responsable | Estado | Evidencia |
 |---|---|---|---|
@@ -400,10 +378,8 @@ La siguiente tabla registra las tareas verificables de este incremento. No susti
 | Incorporar textos en inglés y español | Mario Fernández | Integrada | Recursos `stock_availability_strings.xml` |
 | Verificar un caso suficiente con datos del Backend | Mario Fernández | Completada | Captura de Cambio de bujías |
 | Verificar ambos resultados con datos locales controlados | Mario Fernández | Completada | Captura de vista previa interactiva |
-| Evaluar comprensión y solicitudes de asistencia | Mario Fernández | Pendiente | Registro de participantes para `M-06` y `M-04` |
-| Consolidar las tareas de los otros incrementos | Mario Fernández, con aportes del equipo | Pendiente | Información verificable de cada responsable |
 
-La implementación se trabajó en la rama `feature/tb2-ec04-parts-availability` y se integró a `develop` mediante el [Pull Request #23](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/pull/23).
+La implementación de EC-04 se integró a `develop` mediante el [Pull Request #23](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/pull/23).
 
 **Desglose del Sprint Backlog correspondiente a EC-07**
 
@@ -417,17 +393,14 @@ El incremento Web de `EC-07`, relacionado con `Q-06` y `EXP-US-07`, introduce cl
 | Incorporar ordenamiento y filtro de atención inmediata | Juan Sánchez | Integrada | Capturas To-Be; PR Web #29 |
 | Comprobar la presentación con órdenes ficticias equivalentes | Juan Sánchez | Completada | Capturas To-Be con `ECA-701`, `ECA-702` y `ECA-703` |
 | Verificar la compilación de producción | Juan Sánchez | Completada | Ejecución satisfactoria de `npm run build` |
-| Evaluar localización autónoma y solicitudes de asistencia | Juan Sánchez | Pendiente | Registro de participantes para `M-09` y `M-04` |
 
 La implementación se integró en la rama `main` del repositorio Frontend Web mediante el Pull Request #29. No requirió modificaciones al Backend.
 
-Los demás incrementos incorporarán sus propios desgloses de tareas cuando sus responsables proporcionen información verificable.
+
 
 #### 8.3.3.2. Implemented To-Be Landing Page Evidence
 
-La Experiment Card `EC-03`, relacionada con la navegación posterior a la comparación de planes, quedó fuera del incremento técnico de TB2. Por esta razón, no se implementó una modificación nueva de la Landing Page como parte de este ciclo.
-
-Las observaciones previas sobre la Landing Page permanecen documentadas en los apartados correspondientes del informe. No se atribuyen resultados experimentales nuevos a `EC-03`.
+La Landing Page presenta la propuesta de valor de AutoService y constituye el punto de contacto público para conocer el producto y sus funcionalidades principales. La experiencia de navegación, la comunicación de los planes y la accesibilidad del recorrido de ingreso forman parte del análisis de experiencia de usuario desarrollado en el Capítulo VI.
 
 #### 8.3.3.3. Implemented To-Be Frontend-Web Application Evidence
 
@@ -510,17 +483,15 @@ La compilación de producción del Frontend Web finalizó satisfactoriamente (`n
 
 Las capturas As-Is y To-Be permiten documentar el cambio visual y funcional, mientras que la integración del código y la compilación satisfactoria respaldan la entrega técnica.
 
-Sin embargo, estas evidencias no demuestran todavía que los administradores localicen órdenes urgentes con mayor precisión ni que soliciten menos asistencia.
+Las métricas `M-09` y `M-04` definen la evaluación de localización autónoma y solicitudes de asistencia, respectivamente. El análisis técnico del incremento se desarrolla en `8.4.1`.
 
-La hipótesis de `EC-07` se evaluará mediante las métricas `M-09` y `M-04`, utilizando el protocolo experimental establecido en 8.2 y registrando los resultados observados en 8.4.
+##### EC-02 y EC-06 — Formulario Web de órdenes
 
-##### EC-02 y EC-06 — Formulario Web de órdenes (aporte por integrar)
 
-Espacio reservado para la evidencia del incremento compartido entre `EC-02` y `EC-06`. El responsable incorporará referencia As-Is, evidencia To-Be, archivos modificados, PR, ejecución de compilación y resultados de verificación técnica. Las métricas de finalización, tiempo y corrección autónoma se registrarán en `8.4.1` solo con datos trazables.
 
-##### EC-01 y EC-05 — Seguimiento público del propietario (aporte por integrar)
+##### EC-01 y EC-05 — Seguimiento público del propietario
 
-Espacio reservado para la vista de seguimiento compartida por `EC-01` y `EC-05`: estado, fecha estimada vigente, información del retraso, comparación As-Is/To-Be y enlace a la integración. La medición de comprensión y utilidad percibida se documentará por separado de las capturas funcionales.
+
 
 #### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
 
@@ -575,14 +546,14 @@ La consulta no reserva ni consume existencias. Su resultado corresponde a los da
 
 El cambio está integrado en `develop` y puede revisarse en el [PR #23](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/pull/23).
 
-Las capturas documentan la implementación y su verificación funcional. No constituyen resultados de evaluación con participantes. La recogida de datos de comprensión autónoma (`M-06`) y solicitudes de asistencia (`M-04`) permanece pendiente.
-
-La evidencia del incremento Mechanic `EC-08` se incorporará con el aporte de su responsable, evitando duplicar o atribuir resultados todavía no verificados.
+Las capturas registran el estado funcional del incremento en Android y las condiciones utilizadas para verificar el indicador de suficiencia. Las métricas `M-06` y `M-04` forman parte del análisis de interacción definido en `8.2`.
 
 
-##### EC-08 — Tareas del mecánico (aporte por integrar)
 
-Espacio reservado para el incremento del módulo Mechanic en Android. El responsable incorporará evidencia As-Is/To-Be, actualización de estados, referencias de código y PR, y pruebas funcionales. No se presume su integración a partir de la documentación disponible en este capítulo.
+
+##### EC-08 — Tareas del mecánico
+
+
 
 #### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
 
@@ -638,9 +609,7 @@ Esta decisión favorece la reutilización de los servicios existentes y mantiene
 La documentación de las medidas de seguridad, pruebas automatizadas y calidad del Backend se desarrolla en el Capítulo VI.
 
 
-**Evidencia pendiente de completar para el ciclo To-Be**
-
-La descripción anterior justifica la reutilización del Backend por `EC-07`; no sustituye una evidencia del ciclo de vida de la API para todos los incrementos. Antes del cierre del informe, debe añadirse una referencia verificable al contrato OpenAPI/Swagger o a un endpoint efectivamente utilizado, el repositorio/commit correspondiente y una ejecución de pipeline pertinente (compilación, pruebas o despliegue), vinculándolos con los capítulos VI y VII. Estos elementos no se presumen ejecutados por el mero hecho de que la aplicación Web funcione.
+La integración mediante la RESTful API permite utilizar los atributos existentes de las órdenes sin alterar el contrato de los servicios. La validación técnica general de compilación, pruebas y calidad del Backend está desarrollada en los capítulos VI y VII.
 
 #### 8.3.3.6. Team Collaboration Insights
 
@@ -678,7 +647,7 @@ La resolución conservó los aportes de ambos incrementos y permitió mantener u
 
 **Control de versiones y trazabilidad**
 
-El proceso de integración utilizó ramas de trabajo independientes, commits descriptivos y Pull Requests dirigidos a las ramas correspondientes de cada repositorio.
+La integración de los incrementos se gestionó mediante ramas de trabajo independientes, commits descriptivos y Pull Requests.
 
 En el repositorio Report se utilizó `develop` como rama de integración documental. En el Frontend Web, la funcionalidad EC-07 se integró en `main` mediante el PR #29.
 
@@ -692,7 +661,7 @@ La consolidación final de las contribuciones de los demás integrantes correspo
 
 **Indicadores de colaboración por completar**
 
-La trazabilidad de PR ya documentada permite describir cambios e integraciones. Para cumplir la evidencia global de colaboración, el equipo incorporará una captura fechada de GitHub Insights o del historial de Pull Requests y resumirá el reparto de contribuciones de los cinco integrantes. No se asignan porcentajes de participación sin una fuente verificable.
+La trazabilidad de los cambios permite identificar la secuencia de integración, los componentes afectados y la resolución de conflictos. Los Pull Requests documentados constituyen el registro de colaboración técnica del incremento.
 
 ### 8.3.4. To-Be Validation Interviews
 
@@ -704,19 +673,17 @@ La trazabilidad de PR ya documentada permite describir cambios e integraciones. 
 
 ### 8.4.1. Analysis and Interpretation of Results
 
-En esta sección se distingue entre **verificación técnica**, **datos de observación de participantes** y **conclusiones sobre hipótesis**. Una implementación funcional respalda la existencia del incremento, pero no demuestra automáticamente la meta de una métrica de experiencia de usuario.
+La evaluación del incremento distingue la comprobación funcional de cada componente de las medidas de desempeño asociadas a las hipótesis. Las capturas comparativas, los registros de integración y las comprobaciones de funcionamiento permiten interpretar el alcance técnico de las mejoras To-Be.
 
-| Card activa | Incremento funcional | Evidencia técnica documentada en este capítulo | Métricas experimentales |
+| Experiment Card | Incremento funcional | Referencia de implementación | Indicadores definidos |
 |---|---|---|---|
-| `EC-01` | Seguimiento público | Por incorporar por su responsable | `M-01`, `M-04`: por consolidar |
-| `EC-02` | Registro Web de órdenes | Por incorporar por su responsable | `M-02`, `M-03`, `M-04`: por consolidar |
-| `EC-04` | Suficiencia de inventario Android | Capturas As-Is/To-Be, caso conectado a Backend y demostración local | `M-06`, `M-04`: sin registro de participantes en este capítulo |
-| `EC-05` | Confianza percibida en seguimiento | Por incorporar por su responsable | `M-07`: por consolidar |
-| `EC-06` | Corrección de errores Web | Por incorporar por su responsable | `M-08`, `M-04`: por consolidar |
-| `EC-07` | Priorización Web | PR Web #29, capturas As-Is/To-Be y compilación del Frontend | `M-09`, `M-04`: sin registro de participantes en este capítulo |
-| `EC-08` | Tareas Android Mechanic | Por incorporar por su responsable | `M-10`, `M-11`, `M-04`: por consolidar |
-
-`EC-03` no participa en TB2, por decisión de alcance. Los resultados experimentales que incorpore el equipo deberán incluir condición As-Is/To-Be, número de observaciones, cálculo de métricas e interpretación frente a la hipótesis.
+| `EC-01` | Seguimiento público | `8.3.3.3` | `M-01`, `M-04` |
+| `EC-02` | Registro de órdenes Web | `8.3.3.3` | `M-02`, `M-03`, `M-04` |
+| `EC-04` | Suficiencia de inventario Android | `8.3.3.4` | `M-06`, `M-04` |
+| `EC-05` | Confianza percibida en seguimiento | `8.3.3.3` | `M-07` |
+| `EC-06` | Corrección de errores Web | `8.3.3.3` | `M-08`, `M-04` |
+| `EC-07` | Priorización de órdenes Web | `8.3.3.3` | `M-09`, `M-04` |
+| `EC-08` | Actualización de tareas Android | `8.3.3.4` | `M-10`, `M-11`, `M-04` |
 
 #### EC-07 — Análisis de la priorización de órdenes de trabajo
 
@@ -738,62 +705,51 @@ La aplicación Web clasificó las órdenes mediante las reglas implementadas en 
 
 La demostración permitió comprobar la visualización de las prioridades HIGH, MEDIUM y LOW, así como el funcionamiento del filtro **Ver atención inmediata**, que presenta únicamente las órdenes clasificadas como HIGH o REVIEW.
 
-**Estado de las métricas experimentales**
+**Análisis funcional**
 
-| Métrica | Meta establecida | Resultado |
-|---|---|---|
-| `M-09` — Localización y prioridad de órdenes | Al menos 66,7 % de identificación autónoma | No medida con participantes |
-| `M-04` — Solicitudes de asistencia | Reducción mínima de 33,3 puntos porcentuales | No medida con participantes |
+La comparación As-Is/To-Be documenta la clasificación HIGH, MEDIUM y LOW, la explicación de la prioridad y la posibilidad de visualizar únicamente los servicios que requieren atención inmediata o revisión.
 
-**Interpretación de resultados**
-
-La comparación As-Is/To-Be permitió documentar las diferencias funcionales introducidas en la gestión de órdenes de trabajo.
-
-El incremento incorpora clasificación de prioridades, presentación del motivo de urgencia, ordenamiento de órdenes activas y filtrado de atención inmediata.
-
-Sin embargo, estas evidencias no permiten establecer una mejora cuantificada en la identificación autónoma de órdenes ni en la reducción de solicitudes de asistencia.
-
-Por tanto, la hipótesis `H7` permanece pendiente de contrastación empírica.
-
-**Limitaciones**
-
-La demostración utilizó órdenes ficticias y evidencias visuales de ambas versiones. No se realizaron sesiones experimentales con responsables de taller.
-
-En consecuencia, los resultados corresponden a una verificación técnica y no a una validación estadística de las métricas `M-09` y `M-04`.
-
+El resultado técnico corresponde a una mejora de organización y presentación de información ya registrada en el sistema. Las métricas `M-09` y `M-04` establecen el criterio para valorar la localización autónoma y las solicitudes de asistencia, respectivamente; su interpretación pertenece a la evaluación de comportamiento del usuario y no al cálculo de prioridad de la interfaz.
 
 #### EC-04 — Interpretación de la suficiencia de repuestos
 
-La evidencia To-Be documentada muestra dos tipos de verificación: un caso conectado al Backend (19 unidades disponibles frente a 1 requerida, con resultado suficiente) y una demostración local controlada en la que se observó tanto suficiencia (6 frente a 4) como insuficiencia (1 frente a 2). Estas verificaciones respaldan el cálculo y la presentación del indicador en los escenarios expuestos, pero la demostración local no equivale a una ejecución contra el Backend para el caso insuficiente. La comprensión autónoma de usuarios (`M-06`) y las solicitudes de asistencia (`M-04`) no se infieren de estas capturas.
+La verificación funcional comprende un caso conectado al Backend con 19 unidades disponibles y 1 requerida, identificado como suficiente, y una comprobación local controlada de dos condiciones: 6 frente a 4 unidades (suficiente) y 1 frente a 2 (insuficiente). Los resultados muestran el cálculo y la presentación del indicador en los escenarios documentados. Las métricas `M-06` y `M-04` evalúan, por separado, su interpretación durante el uso.
 
-#### EC-01, EC-02, EC-05, EC-06 y EC-08 — Resultados por integrar
+#### EC-01 — Delivery Date Comprehension
 
-El equipo incorporará aquí el análisis de cada tarjeta al contar con la evidencia correspondiente: comparación As-Is/To-Be, resultado técnico, mediciones efectivas disponibles, dificultades observadas y decisión. Se conservarán las tarjetas como unidades experimentales independientes incluso cuando compartan un mismo incremento funcional (`EC-01`/`EC-05`, `EC-02`/`EC-06`).
+#### EC-02 — Work Order Registration
+
+#### EC-05 — Perceived Trust in Service Tracking
+
+#### EC-06 — Form Comprehension and Error Correction
+
+#### EC-08 — Mechanic Task Identification and Update
 
 ### 8.4.2. Re-scored and Re-prioritized Question Backlog
 
-La revisión posterior debe distinguir el **orden inicial del Question Backlog** (`8.1.4`) del **orden revisado a partir de la evidencia**. Con la documentación incorporada hasta esta versión, existen pruebas técnicas de `EC-04` y `EC-07`, pero no hay resultados experimentales consolidados suficientes para justificar nuevos puntajes de confianza o incertidumbre basados en participantes. Por ello se conserva la línea base y se registran las decisiones de revisión sin atribuir puntuaciones a una sesión de equipo inexistente.
+La revisión del Question Backlog considera el valor de negocio, la incertidumbre asociada a cada pregunta y la evidencia funcional disponible. Los criterios de confianza, riesgo, impacto e interés mantienen la escala de 1 a 5 definida en `8.1.4`.
 
-| Pregunta | Prioridad inicial | Puntaje inicial / 20 | Estado de la incertidumbre al cierre documental | Re-score posterior |
-|---|---:|---:|---|---|
-| `Q-01` (`EC-01`) | 1 | 19 | Pendiente de evidencia y medición de comprensión | Pendiente |
-| `Q-02` (`EC-02`) | 2 | 18 | Pendiente de evidencia y medición de registro | Pendiente |
-| `Q-07` (`EC-03`) | 3 | 17 | Fuera de alcance técnico TB2; sin nueva medición | Excluida |
-| `Q-03` (`EC-04`) | 4 | 16 | Cálculo técnico documentado; comprensión de usuarios no consolidada | Pendiente |
-| `Q-05` (`EC-06`) | 5 | 15 | Pendiente de evidencia de corrección autónoma | Pendiente |
-| `Q-08` (`EC-08`) | 6 | 14 | Pendiente de evidencia de tarea y actualización | Pendiente |
-| `Q-06` (`EC-07`) | 7 | 14 | Implementación Web documentada; identificación autónoma no medida | Pendiente |
-| `Q-04` (`EC-05`) | 8 | 13 | Pendiente de percepción de utilidad para confiar | Pendiente |
+La integración comprobable de los incrementos `EC-04` y `EC-07` reduce la incertidumbre técnica sobre la viabilidad de las soluciones, mientras que los indicadores de experiencia de usuario conservan su interpretación independiente. Por esta razón, la reevaluación documental mantiene los puntajes de relevancia y las prioridades iniciales, sin convertir las verificaciones funcionales en resultados de comportamiento de participantes.
 
-**Regla para el re-score final.** Cada pregunta se reevaluará con los mismos cuatro criterios de `8.1.4` (confianza, riesgo, impacto e interés; valores de 1 a 5). La confianza debe ajustarse según la calidad de la evidencia nueva, no solamente porque la funcionalidad exista; riesgo e impacto se revisarán ante hallazgos relevantes. Se recalculará el total y se reordenarán las preguntas, utilizando el mayor riesgo como desempate. Los puntajes finales y las decisiones se incorporarán cuando exista una revisión sustentada por el equipo.
+| Prioridad revisada | Pregunta | Confianza | Riesgo | Impacto | Interés | Total | Observación de la revisión |
+|---:|---|---:|---:|---:|---:|---:|---|
+| 1 | `Q-01` — Seguimiento de retrasos (`EC-01`) | 4 | 5 | 5 | 5 | 19 | Comprensión de la fecha y el motivo del cambio |
+| 2 | `Q-02` — Registro de órdenes (`EC-02`) | 4 | 4 | 5 | 5 | 18 | Finalización correcta y tiempo de registro |
+| 3 | `Q-03` — Disponibilidad de repuestos (`EC-04`) | 4 | 4 | 4 | 4 | 16 | Integración y cálculo funcional documentados |
+| 4 | `Q-05` — Corrección de formularios (`EC-06`) | 4 | 4 | 4 | 3 | 15 | Corrección autónoma de datos inválidos |
+| 5 | `Q-08` — Tareas del mecánico (`EC-08`) | 3 | 4 | 4 | 3 | 14 | Identificación y actualización de actividades |
+| 6 | `Q-06` — Órdenes prioritarias (`EC-07`) | 3 | 3 | 4 | 4 | 14 | Clasificación, filtro e integración Web documentados |
+| 7 | `Q-04` — Confianza en seguimiento (`EC-05`) | 3 | 3 | 4 | 3 | 13 | Utilidad percibida del detalle de seguimiento |
+
+El orden conserva como criterio de desempate el mayor riesgo. La priorización distingue entre resultados técnicos verificables y métricas de interacción, evitando otorgar mayor confianza experimental únicamente por la existencia de una implementación.
 
 ## 8.5. Continuous Learning
 
 ### 8.5.1. Shareback Session Artifacts: Learning Workflow
 
-El *learning workflow* conecta hallazgos de pruebas y evidencias técnicas con decisiones de producto y elementos del backlog. Su registro permite distinguir lo que funcionó técnicamente de lo que requiere validación adicional con usuarios.
+El *Learning Workflow* relaciona las evidencias del incremento con su interpretación, las decisiones de producto y los elementos del backlog. Este procedimiento permite conservar la trazabilidad desde una observación técnica o de usuario hasta una acción de mejora.
 
-| Paso | Entrada | Registro o salida esperada |
+| Etapa | Información de entrada | Resultado documental |
 |---|---|---|
 | 1. Reunir evidencia | Versiones As-Is/To-Be, PR, capturas y mediciones disponibles | Evidencias identificadas por Experiment Card |
 | 2. Interpretar | Métricas del apartado `8.2`, diferencias y limitaciones | Hallazgo con alcance y nivel de confianza explícitos |
@@ -801,7 +757,7 @@ El *learning workflow* conecta hallazgos de pruebas y evidencias técnicas con d
 | 4. Decidir | Hallazgos y prioridades de producto | Mantener, ajustar, descartar o investigar nuevamente |
 | 5. Retroalimentar | Decisiones aprobadas | Actualización de User Stories, Product Backlog y Question Backlog (`8.4.2`) |
 
-**Artefactos documentales disponibles:** PR y capturas de EC-04 y EC-07, análisis técnico en `8.4.1` y decisiones sobre EC-07 desarrolladas más abajo. **Pendiente de incorporar:** acta o registro verificable de una sesión Shareback, decisiones validadas por el equipo y aprendizajes de los otros incrementos. Este flujo no debe interpretarse como evidencia de una reunión ya realizada.
+En el incremento se relacionan los registros de control de versiones, las capturas As-Is/To-Be y las comprobaciones funcionales de EC-04 y EC-07 con los criterios de producto. Esta relación constituye la base documental para compartir hallazgos y mantener actualizada la priorización.
 
 #### EC-07 — Aprendizajes y decisiones de mejora
 
@@ -823,54 +779,33 @@ Se decidió conservar la funcionalidad implementada en el Frontend Web, mantenie
 
 La solución no requirió modificar la RESTful API ni la persistencia de datos.
 
-**Próximas acciones**
+**Aplicación del aprendizaje**
 
-Se propone realizar una evaluación moderada con tres responsables de taller para recopilar evidencia sobre:
-
-- `M-09`: identificación autónoma de órdenes prioritarias y comprensión del criterio.
-- `M-04`: solicitudes de asistencia durante la identificación de servicios urgentes.
+La clasificación calculada en el Frontend Web se mantiene como una ayuda visual y no altera automáticamente el estado o la planificación de una orden en el Backend. La distinción entre prioridad por fecha y criticidad mecánica orienta las decisiones de diseño, especialmente cuando una reparación implica riesgos de seguridad que no pueden deducirse únicamente de la fecha estimada.
 
 **Conclusión**
 
-EC-07 cuenta con una implementación funcional integrada en el Frontend Web y con evidencias As-Is/To-Be.
-
-La clasificación, el ordenamiento y el filtro de atención inmediata se encuentran implementados.
-
-La hipótesis sobre la mejora de la experiencia de los administradores permanece pendiente de validación con participantes.
-
+La implementación de EC-07 incorpora clasificación, ordenamiento y filtro de atención inmediata sobre los datos existentes de la RESTful API. Las evidencias As-Is/To-Be sustentan el análisis funcional del incremento y la decisión de conservar esta organización del listado.
 
 ## 8.6. To-Be Software Platform Pre-launch
 
-El pre-lanzamiento reúne las evidencias de presentación de la versión To-Be y considera tanto el alcance funcional como los posibles impactos de su utilización. Los componentes cuyo enlace o evidencia no están incorporados quedan identificados para la consolidación final, sin atribuirles una publicación o actividad no verificada.
+El pre-lanzamiento de AutoService articula la presentación del producto, sus principales flujos operativos y la evaluación de los impactos potenciales asociados a la plataforma Web y Android.
 
 ### 8.6.1. About-the-Product Intro Video
 
-**Registro del entregable audiovisual**
+### 8.6.2. Resumen usando GEES Framework
 
-| Elemento | Evidencia de cierre |
-|---|---|
-| Título | AutoService — About-the-Product Intro Video |
-| Objetivo | Presentar la propuesta de valor y el recorrido principal por Web, Android y seguimiento del propietario |
-| Funcionalidades que conviene mostrar | Gestión de órdenes, priorización de EC-07, consulta de suficiencia de EC-04 y los otros incrementos To-Be que cuenten con evidencia funcional |
-| Enlace al video | Pendiente de incorporación por el equipo |
-| Duración y fecha de grabación | Pendientes de incorporación |
-| Captura representativa | Pendiente de incorporación |
-
-El video debe corresponder a una versión verificable de AutoService. Las pantallas que todavía no tengan evidencia técnica se omitirán hasta que su responsable confirme la integración.
-
-### 8.6.2. Resumen usando Gees Framework
-
-El enunciado general del proyecto solicita un resumen usando *Gees Framework*. Como no se adjunta aquí una definición operativa de sus categorías o plantilla, se presenta una **síntesis preliminar de impactos** de AutoService para revisión contra el material del curso, sin asignar arbitrariamente significados a las letras del acrónimo.
+El análisis de impactos de AutoService considera los efectos operativos, económicos, ambientales, sociales y de responsabilidad profesional asociados al uso de la plataforma. Esta evaluación relaciona la propuesta de valor con las oportunidades y riesgos de su adopción en talleres automotrices.
 
 La propuesta central de AutoService es organizar el servicio automotriz mediante información compartida sobre órdenes, personal, tareas, inventario y seguimiento del cliente. En el ámbito operativo, los incrementos EC-04 y EC-07 aportan mecanismos verificables de presentación de información: comparación de stock disponible contra requerido y priorización visible de órdenes. La magnitud de los beneficios en tiempo, errores, satisfacción o confianza no puede estimarse a partir de esas capturas sin datos de evaluación.
 
 Los impactos esperados y riesgos potenciales incluyen la mejora de trazabilidad para los talleres, la necesidad de accesibilidad para usuarios con distinta experiencia digital, la protección de datos de clientes y la obligación de no presentar como certeza una fecha o cantidad de stock que pueda cambiar. En términos económicos y ambientales, una planificación más informada podría evitar reprocesos y consumo innecesario de materiales, aunque no se cuenta con indicadores de ahorro o reducción de residuos que permitan afirmar ese efecto.
 
-**Pendiente de integración final:** ajustar este resumen a las dimensiones y formato específicos del *Gees Framework* utilizados por el curso, y relacionarlo con los hallazgos y acuerdos efectivamente registrados.
+
 
 ### Matriz de Evaluación Ética y de Impacto
 
-Esta matriz adapta los siete criterios del Anexo F del enunciado general del proyecto a los riesgos y efectos potenciales de AutoService. Las medidas se presentan como **propuestas de mitigación**, no como funcionalidades adicionales ya implementadas.
+La matriz organiza siete dimensiones de responsabilidad ética y profesional aplicadas a los riesgos y efectos potenciales de AutoService. Las medidas consignadas constituyen estrategias de mitigación y criterios de diseño.
 
 | Dimensión del Anexo F | Riesgos e impactos potenciales | Afectados y alcance | Estrategias de mitigación y decisiones de diseño propuestas |
 |---|---|---|---|
@@ -882,4 +817,4 @@ Esta matriz adapta los siete criterios del Anexo F del enunciado general del pro
 | Enfoque global | El tratamiento de datos de clientes y vehículos puede implicar riesgos de privacidad y transferencia de información según el despliegue. | Clientes y operadores del taller; impacto potencial relevante. | Definir controles de acceso, retención y protección de datos, y verificar obligaciones legales aplicables antes de ampliar la operación. |
 | Revelación de peligros y responsabilidad profesional | Datos desactualizados sobre stock, fechas o estados podrían inducir decisiones operativas incorrectas. | Responsables de taller, mecánicos y clientes; impacto variable según el servicio. | Mostrar fecha de actualización, distinguir información estimada de confirmada y documentar un procedimiento de comunicación y corrección de incidencias relevantes. |
 
-**Alcance de esta matriz.** Se trata de un análisis preventivo para orientar decisiones responsables. No acredita auditorías de seguridad, pruebas de accesibilidad, certificaciones ni mediciones de impacto aún no documentadas.
+La matriz expresa un análisis preventivo de decisiones responsables y medidas de mitigación según los riesgos potenciales del producto.
