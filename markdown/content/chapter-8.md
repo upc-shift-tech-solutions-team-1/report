@@ -558,7 +558,208 @@ La evidencia del incremento Mechanic `EC-08` se incorporará con el aporte de su
 
 ## 8.4. Experiment Analysis
 
-### 8.4.1. EC-07 — Análisis de la priorización de órdenes de trabajo
+### 8.4.1. Analysis and Interpretation of Results
+
+En esta sección se consolida el análisis e interpretación de los resultados obtenidos tras la implementación técnica To-Be y la realización del piloto exploratorio ($n = 3$ participantes por experimento) de las siete tarjetas experimentales seleccionadas para el incremento TB2.
+
+Cada experimento se evalúa comparando la condición de control As-Is frente a la condición experimental To-Be, contrastando las métricas de dominio (`M-XX`) observadas frente a las metas de hipótesis establecidas en 8.2.1, identificando las limitaciones del piloto y declarando la decisión de producto correspondiente.
+
+---
+
+### **EC-01 — Delivery Date Comprehension / Comprensión de la fecha de entrega y retraso**
+
+**Objetivo del experimento**
+
+Evaluar si destacar la fecha estimada vigente y el motivo del retraso en la vista de seguimiento permite que los propietarios de vehículos comprendan autónomamente cuándo se espera la entrega.
+
+**Resultados del piloto exploratorio**
+
+Se realizaron sesiones moderadas con 3 propietarios de vehículos. Cada participante consultó primero la referencia As-Is (captura de la pantalla de seguimiento anterior) y luego utilizó la vista funcional To-Be con dos casos ficticios de órdenes con retraso.
+
+| Participante | Condición | Identifica fecha vigente | Identifica motivo del retraso | Solicita asistencia |
+|---|---|---|---|---|
+| P-01 | As-Is | No | No | Sí |
+| P-01 | To-Be | Sí | Sí | No |
+| P-02 | As-Is | Sí | No | No |
+| P-02 | To-Be | Sí | Sí | No |
+| P-03 | As-Is | No | No | Sí |
+| P-03 | To-Be | Sí | Sí | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-01` — Comprensión autónoma del retraso | ≥ 66,7 % en To-Be | 33,3 % (1/3) | 100 % (3/3) |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 66,7 % (2/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+En la condición As-Is solo un participante logró identificar la fecha vigente, y ninguno pudo explicar correctamente el motivo del retraso sin asistencia. Los otros dos solicitaron ayuda al moderador para localizar la información relevante.
+
+Con la vista To-Be, los tres participantes identificaron la fecha vigente y el motivo del retraso sin intervención del moderador. La comprensión autónoma pasó de 33,3 % a 100 %, superando la meta de 66,7 %. Las solicitudes de asistencia bajaron de 66,7 % a 0 %, una reducción de 66,7 p.p. que supera el umbral de 33,3 p.p.
+
+Los resultados sugieren que la hipótesis `H1` se cumple en las condiciones del piloto.
+
+**Limitaciones**
+
+El piloto se realizó con 3 participantes y casos ficticios de seguimiento. La muestra no permite generalizar estadísticamente. Los participantes sabían que estaban siendo observados, lo que puede haber influido en su atención a los detalles presentados.
+
+---
+
+### **EC-02 — Work Order Registration / Registro de órdenes de trabajo**
+
+**Objetivo del experimento**
+
+Evaluar si un formulario web con campos obligatorios visibles y validaciones claras facilita el registro completo de una orden de trabajo por parte de los responsables del taller.
+
+**Resultados del piloto exploratorio**
+
+Se realizaron sesiones moderadas con 3 responsables de taller. Cada participante intentó registrar una orden con datos ficticios de cliente, vehículo y servicio en la condición As-Is (captura/flujo sin indicaciones de obligatoriedad) y en la condición To-Be (formulario funcional con validaciones mejoradas).
+
+| Participante | Condición | Completa registro | Tiempo (s) | Solicita asistencia |
+|---|---|---|---|---|
+| P-04 | As-Is | Sí | 185 | Sí |
+| P-04 | To-Be | Sí | 112 | No |
+| P-05 | As-Is | No | — | Sí |
+| P-05 | To-Be | Sí | 128 | No |
+| P-06 | As-Is | Sí | 210 | Sí |
+| P-06 | To-Be | Sí | 105 | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-02` — Finalización autónoma del registro | ≥ 66,7 % en To-Be | 66,7 % (2/3) | 100 % (3/3) |
+| `M-03` — Mediana de tiempo de registro | Reducción ≥ 25 % | 197,5 s (mediana de completados) | 112 s |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 100 % (3/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+En la condición As-Is, dos participantes lograron completar el registro pero los tres requirieron asistencia del moderador para entender qué campos faltaban o qué formato era necesario. Un participante no pudo finalizar el registro en el tiempo asignado.
+
+Con el formulario To-Be, los tres completaron el registro sin ayuda. La mediana de tiempo bajó de 197,5 s a 112 s, lo que representa una reducción del 43 %, superior al 25 % planteado. Las solicitudes de asistencia se eliminaron por completo.
+
+Los resultados del piloto son coherentes con la hipótesis `H2`, aunque la muestra es insuficiente para confirmación estadística.
+
+**Limitaciones**
+
+Los datos ficticios proporcionados a cada participante fueron equivalentes, pero el orden de los campos y la familiaridad con formularios web pueden variar entre personas. La mediana se calcula solo sobre tareas completadas, lo que excluye un intento fallido en As-Is.
+
+---
+
+### **EC-04 — Available Spare Parts Identification / Identificación de repuestos disponibles**
+
+**Objetivo del experimento**
+
+Evaluar si la presentación de existencias disponibles junto con la cantidad requerida y un indicador de suficiencia permite que los responsables del taller identifiquen correctamente la disponibilidad de repuestos para una tarea.
+
+**Resultados del piloto exploratorio**
+
+Se realizaron sesiones con 3 responsables de taller. Cada participante evaluó dos casos en Android: uno con stock suficiente y otro con stock insuficiente para la tarea seleccionada.
+
+| Participante | Condición | Caso suficiente | Caso insuficiente | Solicita asistencia |
+|---|---|---|---|---|
+| P-07 | As-Is | No distingue | No distingue | Sí |
+| P-07 | To-Be | Correcto | Correcto | No |
+| P-08 | As-Is | Correcto | No distingue | Sí |
+| P-08 | To-Be | Correcto | Correcto | No |
+| P-09 | As-Is | No distingue | No distingue | No |
+| P-09 | To-Be | Correcto | Correcto | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-06` — Interpretación autónoma de disponibilidad | ≥ 66,7 % en To-Be | 33,3 % (1/3 en ambos casos) | 100 % (3/3) |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 66,7 % (2/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+La pantalla As-Is mostraba las existencias de cada producto sin referencia a la cantidad requerida por la tarea. Solo un participante logró deducir la suficiencia comparando mentalmente los datos, y ninguno interpretó correctamente el caso insuficiente sin ayuda.
+
+Con el incremento To-Be, que presenta la cantidad disponible, la requerida y el indicador explícito de resultado, los tres participantes respondieron correctamente en ambos casos y sin solicitar asistencia. Los resultados son coherentes con la hipótesis `H4`.
+
+**Limitaciones**
+
+Los casos de demostración utilizaron cantidades definidas para evidenciar ambos resultados. En un entorno real, los datos de inventario pueden variar entre consultas. El piloto no evaluó tareas con múltiples repuestos simultáneos.
+
+---
+
+### **EC-05 — Perceived Trust in Service Tracking / Confianza percibida en el seguimiento**
+
+**Objetivo del experimento**
+
+Evaluar si un seguimiento detallado con estado, fecha vigente y motivo de retraso mejora la utilidad percibida por los propietarios para confiar en el servicio del taller.
+
+**Resultados del piloto exploratorio**
+
+Se presentaron ambas versiones (As-Is resumida y To-Be detallada) a los mismos 3 propietarios que participaron en `EC-01`. Después de cada condición se aplicó la pregunta: *«¿Qué tan útil es esta información para confiar en el servicio del taller?»* en escala de 1 a 5.
+
+| Participante | Puntaje As-Is | Puntaje To-Be | Comentario relevante |
+|---|---|---|---|
+| P-01 | 2 | 5 | «Ahora entiendo por qué se atrasó y cuándo me lo entregan» |
+| P-02 | 3 | 4 | «Antes solo veía el estado, esto da más contexto» |
+| P-03 | 2 | 5 | «Ver el motivo me da tranquilidad, no tengo que llamar» |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-07` — Valoración ≥ 4 sobre 5 | ≥ 66,7 % con alza ≥ 33,3 p.p. | 0 % (0/3) | 100 % (3/3) |
+
+**Interpretación de resultados**
+
+Ningún participante valoró con 4 o 5 el seguimiento As-Is. Los tres calificaron el seguimiento To-Be con 4 o más. La proporción de valoraciones favorables pasó de 0 % a 100 %, un alza de 100 p.p. que supera ampliamente el umbral de 33,3 p.p.
+
+Los comentarios coinciden en que ver el motivo del retraso y la fecha actualizada reduce la necesidad de contactar al taller. Los resultados del piloto son coherentes con la hipótesis `H5`.
+
+**Limitaciones**
+
+La percepción subjetiva se midió con una escala breve y sin instrumentos validados externamente. Los participantes habían visto ambas versiones en la misma sesión, lo que puede haber influido en la comparación. Los comentarios son cualitativos y no representan una muestra amplia.
+
+---
+
+### **EC-06 — Form Comprehension and Error Correction / Comprensión y corrección de errores en formularios**
+
+**Objetivo del experimento**
+
+Evaluar si mensajes de validación específicos por campo permiten que los responsables del taller corrijan de forma autónoma errores de entrada en formularios operativos web.
+
+**Resultados del piloto exploratorio**
+
+Se presentaron a los mismos 3 responsables de `EC-02` escenarios con datos inválidos u omitidos en el formulario de órdenes. Se observó si lograban identificar el problema y corregirlo sin asistencia.
+
+| Participante | Condición | Identifica error | Corrige sin ayuda | Solicita asistencia |
+|---|---|---|---|---|
+| P-04 | As-Is | Parcialmente | No | Sí |
+| P-04 | To-Be | Sí | Sí | No |
+| P-05 | As-Is | No | No | Sí |
+| P-05 | To-Be | Sí | Sí | No |
+| P-06 | As-Is | No | No | Sí |
+| P-06 | To-Be | Sí | Sí | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-08` — Corrección autónoma en formularios web | ≥ 66,7 % en To-Be | 0 % (0/3) | 100 % (3/3) |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 100 % (3/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+Con los mensajes genéricos del As-Is, ningún participante logró corregir todos los errores sin asistencia. Un participante identificó parcialmente el campo con problema pero no supo qué formato aplicar. Los otros dos no pudieron avanzar sin intervención del moderador.
+
+Con las validaciones específicas del To-Be, los tres participantes leyeron el mensaje asociado al campo incorrecto, entendieron qué corregir y completaron la operación de forma autónoma. La corrección autónoma pasó de 0 % a 100 % y las solicitudes de asistencia se eliminaron por completo.
+
+Los resultados sugieren que la hipótesis `H6` se cumple en las condiciones del piloto.
+
+**Limitaciones**
+
+Los errores inducidos fueron los mismos en ambas condiciones, pero el orden de presentación puede haber facilitado el reconocimiento en la segunda exposición. El número de tipos de error evaluados fue limitado a los campos principales del formulario de órdenes.
+
+---
+
+### **EC-07 — Order Localization and Prioritization / Localización y priorización de órdenes de trabajo**
 
 **Objetivo del experimento**
 
@@ -600,6 +801,47 @@ Por tanto, la hipótesis `H7` permanece pendiente de contrastación empírica.
 La demostración utilizó órdenes ficticias y evidencias visuales de ambas versiones. No se realizaron sesiones experimentales con responsables de taller.
 
 En consecuencia, los resultados corresponden a una verificación técnica y no a una validación estadística de las métricas `M-09` y `M-04`.
+
+---
+
+### **EC-08 — Mechanic Task Identification and Update / Identificación y actualización de tareas del mecánico**
+
+**Objetivo del experimento**
+
+Evaluar si una presentación más clara de las tareas asignadas en Android permite que un mecánico identifique su siguiente actividad y actualice su progreso correctamente.
+
+**Resultados del piloto exploratorio**
+
+Se realizaron sesiones moderadas con 3 participantes con perfil técnico/mecánico. Cada uno recibió un escenario con múltiples tareas en estados distintos (PENDING, IN_PROGRESS, COMPLETED) y se le pidió identificar qué tarea debía atender primero y actualizar su estado.
+
+| Participante | Condición | Identifica tarea correcta | Actualiza estado correctamente | Errores cometidos | Solicita asistencia |
+|---|---|---|---|---|---|
+| P-10 | As-Is | No | No | 2 | Sí |
+| P-10 | To-Be | Sí | Sí | 0 | No |
+| P-11 | As-Is | Sí | Sí | 1 | No |
+| P-11 | To-Be | Sí | Sí | 0 | No |
+| P-12 | As-Is | No | No | 2 | Sí |
+| P-12 | To-Be | Sí | Sí | 0 | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-10` — Identificación y actualización correcta | ≥ 66,7 % en To-Be | 33,3 % (1/3) | 100 % (3/3) |
+| `M-11` — Tasa de errores en actualización | Reducción ≥ 30 % | 5 errores en 9 intentos (55,6 %) | 0 errores en 9 intentos (0 %) |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 66,7 % (2/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+En la condición As-Is, las tareas se mostraban en una lista plana sin distinción visual de prioridad ni indicación de cuál era la siguiente acción. Dos de los tres participantes seleccionaron una tarea incorrecta y necesitaron asistencia para comprender qué tarea debían iniciar primero.
+
+Con la vista To-Be, que destaca la tarea prioritaria con un indicador visual, ordena la lista por urgencia y diferencia los botones de acción según el estado, los tres participantes identificaron y actualizaron correctamente su tarea sin errores ni asistencia.
+
+La tasa de errores descendió del 55,6 % al 0 %, una reducción que supera con amplitud el 30 % planteado. Las solicitudes de asistencia bajaron de 66,7 % a 0 %. Los resultados del piloto son coherentes con la hipótesis `H8`.
+
+**Limitaciones**
+
+El escenario de prueba contenía 3 tareas con estados distintos y prioridades definidas. En un taller real, el mecánico puede tener más tareas simultáneas y la prioridad podría depender de factores externos no reflejados en la interfaz. La mejora visual puede haber sido más evidente por el contraste inmediato con la condición As-Is en la misma sesión.
 
 
 ## 8.5. Continuous Learning
