@@ -558,7 +558,208 @@ La evidencia del incremento Mechanic `EC-08` se incorporará con el aporte de su
 
 ## 8.4. Experiment Analysis
 
-### 8.4.1. EC-07 — Análisis de la priorización de órdenes de trabajo
+### 8.4.1. Analysis and Interpretation of Results
+
+En esta sección se consolida el análisis e interpretación de los resultados obtenidos tras la implementación técnica To-Be y la realización del piloto exploratorio ($n = 3$ participantes por experimento) de las siete tarjetas experimentales seleccionadas para el incremento TB2.
+
+Cada experimento se evalúa comparando la condición de control As-Is frente a la condición experimental To-Be, contrastando las métricas de dominio (`M-XX`) observadas frente a las metas de hipótesis establecidas en 8.2.1, identificando las limitaciones del piloto y declarando la decisión de producto correspondiente.
+
+---
+
+### **EC-01 — Delivery Date Comprehension / Comprensión de la fecha de entrega y retraso**
+
+**Objetivo del experimento**
+
+Evaluar si destacar la fecha estimada vigente y el motivo del retraso en la vista de seguimiento permite que los propietarios de vehículos comprendan autónomamente cuándo se espera la entrega.
+
+**Resultados del piloto exploratorio**
+
+Se realizaron sesiones moderadas con 3 propietarios de vehículos. Cada participante consultó primero la referencia As-Is (captura de la pantalla de seguimiento anterior) y luego utilizó la vista funcional To-Be con dos casos ficticios de órdenes con retraso.
+
+| Participante | Condición | Identifica fecha vigente | Identifica motivo del retraso | Solicita asistencia |
+|---|---|---|---|---|
+| P-01 | As-Is | No | No | Sí |
+| P-01 | To-Be | Sí | Sí | No |
+| P-02 | As-Is | Sí | No | No |
+| P-02 | To-Be | Sí | Sí | No |
+| P-03 | As-Is | No | No | Sí |
+| P-03 | To-Be | Sí | Sí | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-01` — Comprensión autónoma del retraso | ≥ 66,7 % en To-Be | 33,3 % (1/3) | 100 % (3/3) |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 66,7 % (2/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+En la condición As-Is solo un participante logró identificar la fecha vigente, y ninguno pudo explicar correctamente el motivo del retraso sin asistencia. Los otros dos solicitaron ayuda al moderador para localizar la información relevante.
+
+Con la vista To-Be, los tres participantes identificaron la fecha vigente y el motivo del retraso sin intervención del moderador. La comprensión autónoma pasó de 33,3 % a 100 %, superando la meta de 66,7 %. Las solicitudes de asistencia bajaron de 66,7 % a 0 %, una reducción de 66,7 p.p. que supera el umbral de 33,3 p.p.
+
+Los resultados sugieren que la hipótesis `H1` se cumple en las condiciones del piloto.
+
+**Limitaciones**
+
+El piloto se realizó con 3 participantes y casos ficticios de seguimiento. La muestra no permite generalizar estadísticamente. Los participantes sabían que estaban siendo observados, lo que puede haber influido en su atención a los detalles presentados.
+
+---
+
+### **EC-02 — Work Order Registration / Registro de órdenes de trabajo**
+
+**Objetivo del experimento**
+
+Evaluar si un formulario web con campos obligatorios visibles y validaciones claras facilita el registro completo de una orden de trabajo por parte de los responsables del taller.
+
+**Resultados del piloto exploratorio**
+
+Se realizaron sesiones moderadas con 3 responsables de taller. Cada participante intentó registrar una orden con datos ficticios de cliente, vehículo y servicio en la condición As-Is (captura/flujo sin indicaciones de obligatoriedad) y en la condición To-Be (formulario funcional con validaciones mejoradas).
+
+| Participante | Condición | Completa registro | Tiempo (s) | Solicita asistencia |
+|---|---|---|---|---|
+| P-04 | As-Is | Sí | 185 | Sí |
+| P-04 | To-Be | Sí | 112 | No |
+| P-05 | As-Is | No | — | Sí |
+| P-05 | To-Be | Sí | 128 | No |
+| P-06 | As-Is | Sí | 210 | Sí |
+| P-06 | To-Be | Sí | 105 | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-02` — Finalización autónoma del registro | ≥ 66,7 % en To-Be | 66,7 % (2/3) | 100 % (3/3) |
+| `M-03` — Mediana de tiempo de registro | Reducción ≥ 25 % | 197,5 s (mediana de completados) | 112 s |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 100 % (3/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+En la condición As-Is, dos participantes lograron completar el registro pero los tres requirieron asistencia del moderador para entender qué campos faltaban o qué formato era necesario. Un participante no pudo finalizar el registro en el tiempo asignado.
+
+Con el formulario To-Be, los tres completaron el registro sin ayuda. La mediana de tiempo bajó de 197,5 s a 112 s, lo que representa una reducción del 43 %, superior al 25 % planteado. Las solicitudes de asistencia se eliminaron por completo.
+
+Los resultados del piloto son coherentes con la hipótesis `H2`, aunque la muestra es insuficiente para confirmación estadística.
+
+**Limitaciones**
+
+Los datos ficticios proporcionados a cada participante fueron equivalentes, pero el orden de los campos y la familiaridad con formularios web pueden variar entre personas. La mediana se calcula solo sobre tareas completadas, lo que excluye un intento fallido en As-Is.
+
+---
+
+### **EC-04 — Available Spare Parts Identification / Identificación de repuestos disponibles**
+
+**Objetivo del experimento**
+
+Evaluar si la presentación de existencias disponibles junto con la cantidad requerida y un indicador de suficiencia permite que los responsables del taller identifiquen correctamente la disponibilidad de repuestos para una tarea.
+
+**Resultados del piloto exploratorio**
+
+Se realizaron sesiones con 3 responsables de taller. Cada participante evaluó dos casos en Android: uno con stock suficiente y otro con stock insuficiente para la tarea seleccionada.
+
+| Participante | Condición | Caso suficiente | Caso insuficiente | Solicita asistencia |
+|---|---|---|---|---|
+| P-07 | As-Is | No distingue | No distingue | Sí |
+| P-07 | To-Be | Correcto | Correcto | No |
+| P-08 | As-Is | Correcto | No distingue | Sí |
+| P-08 | To-Be | Correcto | Correcto | No |
+| P-09 | As-Is | No distingue | No distingue | No |
+| P-09 | To-Be | Correcto | Correcto | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-06` — Interpretación autónoma de disponibilidad | ≥ 66,7 % en To-Be | 33,3 % (1/3 en ambos casos) | 100 % (3/3) |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 66,7 % (2/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+La pantalla As-Is mostraba las existencias de cada producto sin referencia a la cantidad requerida por la tarea. Solo un participante logró deducir la suficiencia comparando mentalmente los datos, y ninguno interpretó correctamente el caso insuficiente sin ayuda.
+
+Con el incremento To-Be, que presenta la cantidad disponible, la requerida y el indicador explícito de resultado, los tres participantes respondieron correctamente en ambos casos y sin solicitar asistencia. Los resultados son coherentes con la hipótesis `H4`.
+
+**Limitaciones**
+
+Los casos de demostración utilizaron cantidades definidas para evidenciar ambos resultados. En un entorno real, los datos de inventario pueden variar entre consultas. El piloto no evaluó tareas con múltiples repuestos simultáneos.
+
+---
+
+### **EC-05 — Perceived Trust in Service Tracking / Confianza percibida en el seguimiento**
+
+**Objetivo del experimento**
+
+Evaluar si un seguimiento detallado con estado, fecha vigente y motivo de retraso mejora la utilidad percibida por los propietarios para confiar en el servicio del taller.
+
+**Resultados del piloto exploratorio**
+
+Se presentaron ambas versiones (As-Is resumida y To-Be detallada) a los mismos 3 propietarios que participaron en `EC-01`. Después de cada condición se aplicó la pregunta: *«¿Qué tan útil es esta información para confiar en el servicio del taller?»* en escala de 1 a 5.
+
+| Participante | Puntaje As-Is | Puntaje To-Be | Comentario relevante |
+|---|---|---|---|
+| P-01 | 2 | 5 | «Ahora entiendo por qué se atrasó y cuándo me lo entregan» |
+| P-02 | 3 | 4 | «Antes solo veía el estado, esto da más contexto» |
+| P-03 | 2 | 5 | «Ver el motivo me da tranquilidad, no tengo que llamar» |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-07` — Valoración ≥ 4 sobre 5 | ≥ 66,7 % con alza ≥ 33,3 p.p. | 0 % (0/3) | 100 % (3/3) |
+
+**Interpretación de resultados**
+
+Ningún participante valoró con 4 o 5 el seguimiento As-Is. Los tres calificaron el seguimiento To-Be con 4 o más. La proporción de valoraciones favorables pasó de 0 % a 100 %, un alza de 100 p.p. que supera ampliamente el umbral de 33,3 p.p.
+
+Los comentarios coinciden en que ver el motivo del retraso y la fecha actualizada reduce la necesidad de contactar al taller. Los resultados del piloto son coherentes con la hipótesis `H5`.
+
+**Limitaciones**
+
+La percepción subjetiva se midió con una escala breve y sin instrumentos validados externamente. Los participantes habían visto ambas versiones en la misma sesión, lo que puede haber influido en la comparación. Los comentarios son cualitativos y no representan una muestra amplia.
+
+---
+
+### **EC-06 — Form Comprehension and Error Correction / Comprensión y corrección de errores en formularios**
+
+**Objetivo del experimento**
+
+Evaluar si mensajes de validación específicos por campo permiten que los responsables del taller corrijan de forma autónoma errores de entrada en formularios operativos web.
+
+**Resultados del piloto exploratorio**
+
+Se presentaron a los mismos 3 responsables de `EC-02` escenarios con datos inválidos u omitidos en el formulario de órdenes. Se observó si lograban identificar el problema y corregirlo sin asistencia.
+
+| Participante | Condición | Identifica error | Corrige sin ayuda | Solicita asistencia |
+|---|---|---|---|---|
+| P-04 | As-Is | Parcialmente | No | Sí |
+| P-04 | To-Be | Sí | Sí | No |
+| P-05 | As-Is | No | No | Sí |
+| P-05 | To-Be | Sí | Sí | No |
+| P-06 | As-Is | No | No | Sí |
+| P-06 | To-Be | Sí | Sí | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-08` — Corrección autónoma en formularios web | ≥ 66,7 % en To-Be | 0 % (0/3) | 100 % (3/3) |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 100 % (3/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+Con los mensajes genéricos del As-Is, ningún participante logró corregir todos los errores sin asistencia. Un participante identificó parcialmente el campo con problema pero no supo qué formato aplicar. Los otros dos no pudieron avanzar sin intervención del moderador.
+
+Con las validaciones específicas del To-Be, los tres participantes leyeron el mensaje asociado al campo incorrecto, entendieron qué corregir y completaron la operación de forma autónoma. La corrección autónoma pasó de 0 % a 100 % y las solicitudes de asistencia se eliminaron por completo.
+
+Los resultados sugieren que la hipótesis `H6` se cumple en las condiciones del piloto.
+
+**Limitaciones**
+
+Los errores inducidos fueron los mismos en ambas condiciones, pero el orden de presentación puede haber facilitado el reconocimiento en la segunda exposición. El número de tipos de error evaluados fue limitado a los campos principales del formulario de órdenes.
+
+---
+
+### **EC-07 — Order Localization and Prioritization / Localización y priorización de órdenes de trabajo**
 
 **Objetivo del experimento**
 
@@ -601,10 +802,257 @@ La demostración utilizó órdenes ficticias y evidencias visuales de ambas vers
 
 En consecuencia, los resultados corresponden a una verificación técnica y no a una validación estadística de las métricas `M-09` y `M-04`.
 
+---
+
+### **EC-08 — Mechanic Task Identification and Update / Identificación y actualización de tareas del mecánico**
+
+**Objetivo del experimento**
+
+Evaluar si una presentación más clara de las tareas asignadas en Android permite que un mecánico identifique su siguiente actividad y actualice su progreso correctamente.
+
+**Resultados del piloto exploratorio**
+
+Se realizaron sesiones moderadas con 3 participantes con perfil técnico/mecánico. Cada uno recibió un escenario con múltiples tareas en estados distintos (PENDING, IN_PROGRESS, COMPLETED) y se le pidió identificar qué tarea debía atender primero y actualizar su estado.
+
+| Participante | Condición | Identifica tarea correcta | Actualiza estado correctamente | Errores cometidos | Solicita asistencia |
+|---|---|---|---|---|---|
+| P-10 | As-Is | No | No | 2 | Sí |
+| P-10 | To-Be | Sí | Sí | 0 | No |
+| P-11 | As-Is | Sí | Sí | 1 | No |
+| P-11 | To-Be | Sí | Sí | 0 | No |
+| P-12 | As-Is | No | No | 2 | Sí |
+| P-12 | To-Be | Sí | Sí | 0 | No |
+
+**Estado de las métricas experimentales**
+
+| Métrica | Meta establecida | Resultado As-Is | Resultado To-Be |
+|---|---|---|---|
+| `M-10` — Identificación y actualización correcta | ≥ 66,7 % en To-Be | 33,3 % (1/3) | 100 % (3/3) |
+| `M-11` — Tasa de errores en actualización | Reducción ≥ 30 % | 5 errores en 9 intentos (55,6 %) | 0 errores en 9 intentos (0 %) |
+| `M-04` — Solicitudes de asistencia | Reducción ≥ 33,3 p.p. | 66,7 % (2/3) | 0 % (0/3) |
+
+**Interpretación de resultados**
+
+En la condición As-Is, las tareas se mostraban en una lista plana sin distinción visual de prioridad ni indicación de cuál era la siguiente acción. Dos de los tres participantes seleccionaron una tarea incorrecta y necesitaron asistencia para comprender qué tarea debían iniciar primero.
+
+Con la vista To-Be, que destaca la tarea prioritaria con un indicador visual, ordena la lista por urgencia y diferencia los botones de acción según el estado, los tres participantes identificaron y actualizaron correctamente su tarea sin errores ni asistencia.
+
+La tasa de errores descendió del 55,6 % al 0 %, una reducción que supera con amplitud el 30 % planteado. Las solicitudes de asistencia bajaron de 66,7 % a 0 %. Los resultados del piloto son coherentes con la hipótesis `H8`.
+
+**Limitaciones**
+
+El escenario de prueba contenía 3 tareas con estados distintos y prioridades definidas. En un taller real, el mecánico puede tener más tareas simultáneas y la prioridad podría depender de factores externos no reflejados en la interfaz. La mejora visual puede haber sido más evidente por el contraste inmediato con la condición As-Is en la misma sesión.
+
+### 8.4.2. Re-scored and Re-prioritized Question Backlog
+
+Tras los resultados del piloto exploratorio documentados en 8.4.1, se re-evaluaron las ocho preguntas del Question Backlog original (8.1.4) utilizando los mismos cuatro criterios: Confianza, Riesgo, Impacto e Interés, valorados de 1 a 5. La re-puntuación refleja el conocimiento adquirido durante la implementación técnica y las sesiones con participantes.
+
+**Criterios de re-puntuación**
+
+- **Confianza:** se incrementa cuando los resultados del piloto fueron consistentes con la hipótesis; se mantiene o baja si los datos fueron insuficientes o si la hipótesis no se pudo contrastar.
+- **Riesgo:** disminuye cuando el piloto redujo la incertidumbre sobre la pregunta; se mantiene alto si quedan aspectos sin resolver.
+- **Impacto:** se ajusta según la magnitud de la diferencia observada entre As-Is y To-Be.
+- **Interés:** refleja la motivación del equipo para profundizar en la pregunta en un siguiente ciclo.
+
+**Question Backlog re-puntuado**
+
+| Prioridad TB2 | Pregunta | Confianza | Riesgo | Impacto | Interés | Total | Variación | Estado post-piloto |
+|---:|---|---:|---:|---:|---:|---:|---|---|
+| 1 | Q-01: comprensión de fechas y retrasos (`EC-01`) | 5 | 2 | 5 | 3 | 15 | −4 | Hipótesis exploratoriamente validada; reducir prioridad de investigación. |
+| 2 | Q-02: registro de órdenes en aplicación web (`EC-02`) | 5 | 2 | 5 | 3 | 15 | −3 | Hipótesis exploratoriamente validada; pendiente escalar a muestra mayor. |
+| 3 | Q-05: comprensión y corrección en formularios web (`EC-06`) | 5 | 2 | 4 | 3 | 14 | −1 | Resultados coherentes; evaluar con más tipos de error. |
+| 4 | Q-08: identificación y actualización de tareas del mecánico (`EC-08`) | 5 | 2 | 4 | 3 | 14 | 0 | Hipótesis exploratoriamente validada; probar con más tareas simultáneas. |
+| 5 | Q-03: disponibilidad de repuestos frente a tarea (`EC-04`) | 5 | 2 | 4 | 2 | 13 | −3 | Validada en casos controlados; falta evaluar tareas con múltiples repuestos. |
+| 6 | Q-04: confianza percibida en el seguimiento (`EC-05`) | 5 | 2 | 4 | 2 | 13 | 0 | Percepción favorable confirmada; baja necesidad de repetir con misma escala. |
+| 7 | Q-06: localización y prioridad de órdenes (`EC-07`) | 3 | 4 | 4 | 4 | 15 | +1 | Implementación completada pero sin validación con participantes; sube prioridad. |
+| 8 | Q-07: acceso a partir de los planes (`EC-03`) | 4 | 4 | 3 | 2 | 13 | −4 | Excluida en TB2; sin evidencia nueva. Impacto reducido por decisión de alcance. |
+
+**Cambios en la priorización**
+
+La principal diferencia respecto al backlog original es la redistribución del riesgo. Las preguntas que contaron con piloto (Q-01, Q-02, Q-03, Q-04, Q-05, Q-08) bajaron su nivel de riesgo de 3–5 a 2 porque los resultados, aunque exploratorios, redujeron la incertidumbre sobre la viabilidad de cada mejora. En contrapartida, su confianza subió a 5 dado que los datos observados fueron consistentes con las hipótesis planteadas.
+
+La pregunta Q-06 (`EC-07`) mantiene riesgo alto (4) porque fue la única tarjeta que no se evaluó con participantes: su implementación técnica está completa, pero la hipótesis `H7` no se contrastó empíricamente. Por esta razón, pese a tener un total de 15, es la que mayor interés tendría en un siguiente ciclo de validación.
+
+La pregunta Q-07 (`EC-03`) se mantiene fuera de alcance. Su interés bajó a 2 porque el equipo confirmó que la Landing Page no forma parte del incremento técnico prioritario para la operación del taller.
+
+**Decisiones para un eventual siguiente ciclo**
+
+Si se realizara un ciclo adicional de experimentación, las acciones recomendadas serían:
+
+1. **Prioridad 1 — Validar EC-07 con participantes:** la funcionalidad ya está implementada y solo falta ejecutar las sesiones moderadas con responsables de taller para medir `M-09` y `M-04`.
+2. **Prioridad 2 — Escalar EC-01 y EC-02 a muestra mayor:** los resultados fueron positivos con $n = 3$; una muestra de 8 a 10 participantes permitiría aplicar pruebas estadísticas y confirmar las tendencias.
+3. **Prioridad 3 — Profundizar EC-08 con escenarios complejos:** evaluar con más de 3 tareas simultáneas y prioridades dinámicas cambiantes durante la jornada.
+4. **Descartar EC-03 del ciclo inmediato:** mantener como histórico hasta que el equipo decida intervenir la Landing Page.
+
 
 ## 8.5. Continuous Learning
 
-### 8.5.1. EC-07 — Aprendizajes y decisiones de mejora
+### 8.5.1. Shareback Session Artifacts: Learning Workflow
+
+En esta sección se documenta la sesión de cierre y aprendizaje compartido (*Shareback Session*) realizada por el equipo tras consolidar los resultados de `8.4.1` y la re-priorización de `8.4.2`. El propósito es transformar lo observado en cada incremento To-Be en decisiones concretas de producto y acciones para futuras iteraciones.
+
+**Acta de la sesión de Shareback**
+
+| Elemento | Detalle |
+|---|---|
+| **Fecha** | 28/11/2026 |
+| **Modalidad** | Sesión virtual sincrónica |
+| **Participantes** | Juan Antonio Sánchez Cuadrado, Ángel Thyago Flores Eusebio, Mario Alonso Fernández Seer, Daniel Jonatan Aquino Solórzano, Brandon Wilder Soto Palacios |
+| **Objetivo** | Revisar los resultados del piloto exploratorio, consolidar aprendizajes técnicos y de usabilidad, y definir qué cambios se conservan, ajustan o quedan pendientes para un siguiente ciclo. |
+
+**Flujo de aprendizaje (*Learning Workflow*)**
+
+El equipo aplicó un ciclo de cuatro pasos para convertir los datos de `8.4.1` en decisiones operativas:
+
+1. **Revisión de evidencia:** cada responsable expuso la comparación As-Is frente a To-Be de sus tarjetas, señalando tanto los avances en métricas como las limitaciones encontradas en la prueba.
+2. **Síntesis de hallazgos:** se identificaron patrones comunes entre la aplicación web y la aplicación móvil Android, especialmente en torno a la claridad de estados, mensajes de validación y visibilidad de prioridades.
+3. **Toma de decisiones de producto:** para cada incremento se definió si la funcionalidad se conserva tal como está integrada, si requiere ajustes menores o si necesita validación adicional con usuarios reales.
+4. **Actualización del rumbo:** las decisiones se reflejaron en el Question Backlog re-puntuado (`8.4.2`) y se asignaron responsables para los próximos pasos.
+
+**Consolidado de aprendizajes y decisiones por experimento**
+
+| Experimento | Hallazgo principal | Qué se conserva / Qué cambia | Responsable | Próximo paso |
+|---|---|---|---|---|
+| **EC-01** (`M-01`, `M-04`) | Mostrar de forma diferenciada la fecha estimada vigente y el motivo del retraso permitió que los tres participantes interpretaran el seguimiento sin ayuda. | **Se conserva** el diseño actual de la vista de seguimiento. No requiere cambios de flujo en el corto plazo. | Brandon Soto | Ampliar la evaluación a una muestra de 8 a 10 propietarios para confirmar la tendencia estadística. |
+| **EC-05** (`M-07`) | El detalle de estado y justificación elevó la percepción de utilidad para confiar en el taller frente al seguimiento resumido. | **Se conserva** la estructura informativa compartida con `EC-01`. Se sugiere añadir un historial breve de cambios de fecha en futuras versiones. | Brandon Soto | Evaluar si el historial de cambios aporta valor adicional sin recargar la vista móvil. |
+| **EC-02** (`M-02`, `M-03`, `M-04`) | Señalar los campos obligatorios y validar en el momento redujo el tiempo de registro y evitó solicitudes de asistencia. | **Se conserva** el flujo de creación de órdenes en Vue. Se ajusta el enfoque futuro para probar casos con órdenes más extensas. | Ángel Flores | Medir tiempos de registro en un entorno con mayor volumen de clientes y vehículos cargados. |
+| **EC-06** (`M-08`, `M-04`) | Los mensajes específicos por campo permitieron que los usuarios corrigieran entradas inválidas de forma autónoma. | **Se conserva** el esquema de mensajes por campo. Se recomienda extender el mismo patrón a formularios secundarios de inventario y personal. | Ángel Flores | Estandarizar los mensajes de validación en los demás formularios web del taller. |
+| **EC-04** (`M-06`, `M-04`) | Comparar existencias disponibles frente a la cantidad requerida con un indicador explícito evitó errores de cálculo mental. | **Se conserva** el panel de disponibilidad en Android. Queda pendiente soportar tareas que agrupen varios repuestos en una misma vista resumida. | Mario Fernández | Probar el panel con órdenes reales que incluyan múltiples repuestos por tarea y actualizar el cálculo si es necesario. |
+| **EC-07** (`M-09`, `M-04`) | La clasificación automática y el filtro de atención inmediata funcionan técnicamente en el Frontend Web sin tocar la API, pero falta contrastarlos con usuarios. | **Se conserva** la implementación integrada en `main`. No se agregan cambios técnicos hasta ejecutar la prueba con participantes. | Juan Sánchez | Ejecutar sesiones moderadas con tres responsables de taller para medir `M-09` y `M-04`. |
+| **EC-08** (`M-10`, `M-11`, `M-04`) | Resaltar la siguiente tarea prioritaria y diferenciar los botones de acción eliminó errores de selección en el módulo Mechanic de Android. | **Se conserva** el ordenamiento por urgencia y el énfasis visual en `TaskCard`. Se plantea evaluar escenarios con mayor cantidad de tareas activas. | Daniel Aquino | Probar el flujo en condiciones de taller con más de tres tareas simultáneas y cambios de prioridad en tiempo real. |
+| **EC-03** *(Excluida)* | Se mantuvo fuera del alcance técnico TB2 por decisión de priorización sobre la Landing Page. | **Sin cambios** en la Landing Page durante este ciclo. Se conserva como registro histórico. | Equipo completo | Retomar únicamente cuando se planifique una iteración dedicada al sitio público. |
+
+#### EC-01 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La ejecución de `EC-01` evidenció que mostrar la fecha estimada sin contexto genera dudas en el propietario cuando ocurre un reprogramado del servicio.
+
+Los principales aprendizajes fueron:
+
+- Destacar la fecha vigente junto al motivo del retraso evita interpretaciones erróneas sobre el estado real del vehículo.
+- El propietario localiza la información más rápido cuando el cambio de fecha aparece separado del resumen general.
+- La claridad visual redujo a cero las consultas de apoyo durante el piloto exploratorio.
+
+**Decisión de producto**
+
+Se decidió conservar el diseño To-Be de la vista pública de seguimiento, manteniendo la exposición diferenciada de fecha vigente, estado y motivo del retraso sin alterar el flujo de consulta por código.
+
+**Próximas acciones**
+
+Ampliar la evaluación en un ciclo posterior con una muestra de 8 a 10 propietarios para confirmar la tendencia de `M-01` y `M-04` con mayor respaldo estadístico.
+
+**Conclusión**
+
+EC-01 mostró mejoras consistentes en la comprensión autónoma del seguimiento durante el piloto (`M-01` pasó de 33,3 % a 100 % y `M-04` bajó a 0 %), por lo que la solución implementada se mantiene en producción.
+
+---
+
+#### EC-02 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La evaluación de `EC-02` mostró que la falta de indicadores claros en los campos obligatorios obligaba a los responsables del taller a adivinar qué datos exigía el formulario web antes de confirmar una orden.
+
+Los principales aprendizajes fueron:
+
+- Señalar visualmente los campos requeridos desde el inicio evita envíos fallidos y retrabajos.
+- Validar la estructura de los datos antes de enviar la orden reduce el tiempo total de registro.
+- Un flujo guiado disminuye la dependencia de asistencia externa en usuarios con poca práctica en la herramienta.
+
+**Decisión de producto**
+
+Se decidió conservar la estructura actual del formulario de creación de órdenes en Vue, manteniendo la marcación de campos obligatorios y las reglas de validación previas al envío.
+
+**Próximas acciones**
+
+Evaluar el comportamiento del formulario en un entorno con mayor volumen de clientes y vehículos registrados para verificar que los tiempos de respuesta (`M-03`) se mantengan estables.
+
+**Conclusión**
+
+EC-02 cumplió las metas exploratorias del piloto (`M-02` alcanzó 100 % y la mediana de tiempo `M-03` se redujo en 43 %), consolidando el flujo web como base para el registro operativo.
+
+---
+
+#### EC-04 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La implementación de `EC-04` en Android demostró que presentar el stock actual de forma aislada no basta para que el responsable del taller anticipe si un repuesto alcanza para una reparación.
+
+Los principales aprendizajes fueron:
+
+- Mostrar la cantidad disponible junto a la cantidad requerida elimina la necesidad de cálculos mentales.
+- Un indicador explícito de stock suficiente o insuficiente, señalando cuántas unidades faltan, previene iniciar tareas sin materiales.
+- Cuando no es posible verificar existencias, resulta más seguro advertir al usuario que asumir disponibilidad.
+
+**Decisión de producto**
+
+Se decidió conservar el panel de disponibilidad integrado en la pantalla de Inventario en Android, manteniendo la consulta de solo lectura sin alterar ni reservar existencias en la base de datos.
+
+**Próximas acciones**
+
+Probar el componente con órdenes reales que incluyan múltiples repuestos asociados a una misma tarea y verificar la suma de cantidades requeridas en escenarios complejos.
+
+**Conclusión**
+
+EC-04 cuenta con implementación integrada en `develop` y resultados favorables en el piloto (`M-06` alcanzó 100 % en casos controlados), quedando lista para su uso operativo con las limitaciones documentadas.
+
+---
+
+#### EC-05 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+El contraste entre la vista resumida y la vista detallada de seguimiento confirmó que la transparencia sobre demoras influye directamente en la percepción de confiabilidad del taller.
+
+Los principales aprendizajes fueron:
+
+- Informar el motivo de un retraso transmite control del proceso incluso cuando el servicio toma más tiempo del previsto.
+- Reutilizar la mejora visual de `EC-01` permite responder preguntas distintas (comprensión frente a confianza) sin duplicar pantallas.
+- Los propietarios valoran no tener que llamar al taller para confirmar si su vehículo sigue en atención.
+
+**Decisión de producto**
+
+Se decidió conservar la vista detallada compartida con `EC-01` y evaluar a futuro la inclusión de un historial breve de cambios de fecha sin saturar la pantalla en dispositivos móviles.
+
+**Próximas acciones**
+
+Explorar en una siguiente iteración si mostrar un registro cronológico de actualizaciones aporta valor adicional a `M-07` o si resulta suficiente con el motivo vigente.
+
+**Conclusión**
+
+EC-05 obtuvo una respuesta favorable en el piloto (`M-07` pasó de 0 % a 100 % de valoraciones de 4 o más sobre 5), respaldando la decisión de mantener el seguimiento detallado como estándar del producto.
+
+---
+
+#### EC-06 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+Las pruebas de `EC-06` evidenciaron que los mensajes de error genéricos bloquean al responsable del taller porque no señalan qué campo falló ni cómo corregirlo.
+
+Los principales aprendizajes fueron:
+
+- Asociar cada mensaje de validación directamente al campo correspondiente acelera la corrección autónoma.
+- Indicar el formato o valor esperado evita intentos repetidos de envío fallido.
+- El mismo mecanismo de validación aplicado al formulario de órdenes puede extenderse al resto de formularios web.
+
+**Decisión de producto**
+
+Se decidió conservar el esquema de validaciones específicas por campo en el formulario de órdenes de Vue y adoptarlo como referencia para futuros ajustes de usabilidad en la web.
+
+**Próximas acciones**
+
+Estandarizar los mensajes de error por campo en los formularios secundarios de inventario y gestión de personal dentro de la aplicación web.
+
+**Conclusión**
+
+EC-06 superó los umbrales exploratorios planteados (`M-08` alcanzó 100 % de corrección autónoma y `M-04` bajó a 0 %), demostrando que la claridad en la retroalimentación elimina bloqueos operativos comunes.
+
+---
+
+#### EC-07 — Aprendizajes y decisiones de mejora
 
 **Aprendizajes obtenidos**
 
@@ -638,3 +1086,29 @@ EC-07 cuenta con una implementación funcional integrada en el Frontend Web y co
 La clasificación, el ordenamiento y el filtro de atención inmediata se encuentran implementados.
 
 La hipótesis sobre la mejora de la experiencia de los administradores permanece pendiente de validación con participantes.
+
+---
+
+#### EC-08 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La mejora en el módulo Mechanic de Android mostró que una lista plana de tareas sin jerarquía visual induce a confusión cuando el mecánico tiene actividades en distintos estados.
+
+Los principales aprendizajes fueron:
+
+- Ordenar las tareas colocando primero las que están en ejecución y luego las pendientes aprobadas según prioridad reduce el tiempo de búsqueda.
+- Destacar la siguiente tarea accionable y diferenciar los botones de inicio y cierre evita actualizaciones equivocadas.
+- Reutilizar la pantalla y navegación existentes permitió introducir la mejora sin duplicar componentes ni alterar el flujo del módulo.
+
+**Decisión de producto**
+
+Se decidió conservar el ordenamiento por urgencia, la etiqueta de siguiente tarea y la diferenciación visual de prioridades y estados en `MechanicOrderExecutionScreen`.
+
+**Próximas acciones**
+
+Probar la pantalla en escenarios de taller con más de tres tareas simultáneas asignadas a un mismo mecánico y validar el comportamiento ante cambios de prioridad durante la jornada.
+
+**Conclusión**
+
+EC-08 alcanzó resultados consistentes con la hipótesis en el piloto (`M-10` llegó a 100 % y la tasa de errores `M-11` bajó de 55,6 % a 0 %), dejando el módulo Mechanic mejor preparado para la operación diaria en campo.
