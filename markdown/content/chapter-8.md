@@ -887,7 +887,172 @@ Si se realizara un ciclo adicional de experimentación, las acciones recomendada
 
 ## 8.5. Continuous Learning
 
-### 8.5.1. EC-07 — Aprendizajes y decisiones de mejora
+### 8.5.1. Shareback Session Artifacts: Learning Workflow
+
+En esta sección se documenta la sesión de cierre y aprendizaje compartido (*Shareback Session*) realizada por el equipo tras consolidar los resultados de `8.4.1` y la re-priorización de `8.4.2`. El propósito es transformar lo observado en cada incremento To-Be en decisiones concretas de producto y acciones para futuras iteraciones.
+
+**Acta de la sesión de Shareback**
+
+| Elemento | Detalle |
+|---|---|
+| **Fecha** | 28/11/2026 |
+| **Modalidad** | Sesión virtual sincrónica |
+| **Participantes** | Juan Antonio Sánchez Cuadrado, Ángel Thyago Flores Eusebio, Mario Alonso Fernández Seer, Daniel Jonatan Aquino Solórzano, Brandon Wilder Soto Palacios |
+| **Objetivo** | Revisar los resultados del piloto exploratorio, consolidar aprendizajes técnicos y de usabilidad, y definir qué cambios se conservan, ajustan o quedan pendientes para un siguiente ciclo. |
+
+**Flujo de aprendizaje (*Learning Workflow*)**
+
+El equipo aplicó un ciclo de cuatro pasos para convertir los datos de `8.4.1` en decisiones operativas:
+
+1. **Revisión de evidencia:** cada responsable expuso la comparación As-Is frente a To-Be de sus tarjetas, señalando tanto los avances en métricas como las limitaciones encontradas en la prueba.
+2. **Síntesis de hallazgos:** se identificaron patrones comunes entre la aplicación web y la aplicación móvil Android, especialmente en torno a la claridad de estados, mensajes de validación y visibilidad de prioridades.
+3. **Toma de decisiones de producto:** para cada incremento se definió si la funcionalidad se conserva tal como está integrada, si requiere ajustes menores o si necesita validación adicional con usuarios reales.
+4. **Actualización del rumbo:** las decisiones se reflejaron en el Question Backlog re-puntuado (`8.4.2`) y se asignaron responsables para los próximos pasos.
+
+**Consolidado de aprendizajes y decisiones por experimento**
+
+| Experimento | Hallazgo principal | Qué se conserva / Qué cambia | Responsable | Próximo paso |
+|---|---|---|---|---|
+| **EC-01** (`M-01`, `M-04`) | Mostrar de forma diferenciada la fecha estimada vigente y el motivo del retraso permitió que los tres participantes interpretaran el seguimiento sin ayuda. | **Se conserva** el diseño actual de la vista de seguimiento. No requiere cambios de flujo en el corto plazo. | Brandon Soto | Ampliar la evaluación a una muestra de 8 a 10 propietarios para confirmar la tendencia estadística. |
+| **EC-05** (`M-07`) | El detalle de estado y justificación elevó la percepción de utilidad para confiar en el taller frente al seguimiento resumido. | **Se conserva** la estructura informativa compartida con `EC-01`. Se sugiere añadir un historial breve de cambios de fecha en futuras versiones. | Brandon Soto | Evaluar si el historial de cambios aporta valor adicional sin recargar la vista móvil. |
+| **EC-02** (`M-02`, `M-03`, `M-04`) | Señalar los campos obligatorios y validar en el momento redujo el tiempo de registro y evitó solicitudes de asistencia. | **Se conserva** el flujo de creación de órdenes en Vue. Se ajusta el enfoque futuro para probar casos con órdenes más extensas. | Ángel Flores | Medir tiempos de registro en un entorno con mayor volumen de clientes y vehículos cargados. |
+| **EC-06** (`M-08`, `M-04`) | Los mensajes específicos por campo permitieron que los usuarios corrigieran entradas inválidas de forma autónoma. | **Se conserva** el esquema de mensajes por campo. Se recomienda extender el mismo patrón a formularios secundarios de inventario y personal. | Ángel Flores | Estandarizar los mensajes de validación en los demás formularios web del taller. |
+| **EC-04** (`M-06`, `M-04`) | Comparar existencias disponibles frente a la cantidad requerida con un indicador explícito evitó errores de cálculo mental. | **Se conserva** el panel de disponibilidad en Android. Queda pendiente soportar tareas que agrupen varios repuestos en una misma vista resumida. | Mario Fernández | Probar el panel con órdenes reales que incluyan múltiples repuestos por tarea y actualizar el cálculo si es necesario. |
+| **EC-07** (`M-09`, `M-04`) | La clasificación automática y el filtro de atención inmediata funcionan técnicamente en el Frontend Web sin tocar la API, pero falta contrastarlos con usuarios. | **Se conserva** la implementación integrada en `main`. No se agregan cambios técnicos hasta ejecutar la prueba con participantes. | Juan Sánchez | Ejecutar sesiones moderadas con tres responsables de taller para medir `M-09` y `M-04`. |
+| **EC-08** (`M-10`, `M-11`, `M-04`) | Resaltar la siguiente tarea prioritaria y diferenciar los botones de acción eliminó errores de selección en el módulo Mechanic de Android. | **Se conserva** el ordenamiento por urgencia y el énfasis visual en `TaskCard`. Se plantea evaluar escenarios con mayor cantidad de tareas activas. | Daniel Aquino | Probar el flujo en condiciones de taller con más de tres tareas simultáneas y cambios de prioridad en tiempo real. |
+| **EC-03** *(Excluida)* | Se mantuvo fuera del alcance técnico TB2 por decisión de priorización sobre la Landing Page. | **Sin cambios** en la Landing Page durante este ciclo. Se conserva como registro histórico. | Equipo completo | Retomar únicamente cuando se planifique una iteración dedicada al sitio público. |
+
+#### EC-01 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La ejecución de `EC-01` evidenció que mostrar la fecha estimada sin contexto genera dudas en el propietario cuando ocurre un reprogramado del servicio.
+
+Los principales aprendizajes fueron:
+
+- Destacar la fecha vigente junto al motivo del retraso evita interpretaciones erróneas sobre el estado real del vehículo.
+- El propietario localiza la información más rápido cuando el cambio de fecha aparece separado del resumen general.
+- La claridad visual redujo a cero las consultas de apoyo durante el piloto exploratorio.
+
+**Decisión de producto**
+
+Se decidió conservar el diseño To-Be de la vista pública de seguimiento, manteniendo la exposición diferenciada de fecha vigente, estado y motivo del retraso sin alterar el flujo de consulta por código.
+
+**Próximas acciones**
+
+Ampliar la evaluación en un ciclo posterior con una muestra de 8 a 10 propietarios para confirmar la tendencia de `M-01` y `M-04` con mayor respaldo estadístico.
+
+**Conclusión**
+
+EC-01 mostró mejoras consistentes en la comprensión autónoma del seguimiento durante el piloto (`M-01` pasó de 33,3 % a 100 % y `M-04` bajó a 0 %), por lo que la solución implementada se mantiene en producción.
+
+---
+
+#### EC-02 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La evaluación de `EC-02` mostró que la falta de indicadores claros en los campos obligatorios obligaba a los responsables del taller a adivinar qué datos exigía el formulario web antes de confirmar una orden.
+
+Los principales aprendizajes fueron:
+
+- Señalar visualmente los campos requeridos desde el inicio evita envíos fallidos y retrabajos.
+- Validar la estructura de los datos antes de enviar la orden reduce el tiempo total de registro.
+- Un flujo guiado disminuye la dependencia de asistencia externa en usuarios con poca práctica en la herramienta.
+
+**Decisión de producto**
+
+Se decidió conservar la estructura actual del formulario de creación de órdenes en Vue, manteniendo la marcación de campos obligatorios y las reglas de validación previas al envío.
+
+**Próximas acciones**
+
+Evaluar el comportamiento del formulario en un entorno con mayor volumen de clientes y vehículos registrados para verificar que los tiempos de respuesta (`M-03`) se mantengan estables.
+
+**Conclusión**
+
+EC-02 cumplió las metas exploratorias del piloto (`M-02` alcanzó 100 % y la mediana de tiempo `M-03` se redujo en 43 %), consolidando el flujo web como base para el registro operativo.
+
+---
+
+#### EC-04 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La implementación de `EC-04` en Android demostró que presentar el stock actual de forma aislada no basta para que el responsable del taller anticipe si un repuesto alcanza para una reparación.
+
+Los principales aprendizajes fueron:
+
+- Mostrar la cantidad disponible junto a la cantidad requerida elimina la necesidad de cálculos mentales.
+- Un indicador explícito de stock suficiente o insuficiente, señalando cuántas unidades faltan, previene iniciar tareas sin materiales.
+- Cuando no es posible verificar existencias, resulta más seguro advertir al usuario que asumir disponibilidad.
+
+**Decisión de producto**
+
+Se decidió conservar el panel de disponibilidad integrado en la pantalla de Inventario en Android, manteniendo la consulta de solo lectura sin alterar ni reservar existencias en la base de datos.
+
+**Próximas acciones**
+
+Probar el componente con órdenes reales que incluyan múltiples repuestos asociados a una misma tarea y verificar la suma de cantidades requeridas en escenarios complejos.
+
+**Conclusión**
+
+EC-04 cuenta con implementación integrada en `develop` y resultados favorables en el piloto (`M-06` alcanzó 100 % en casos controlados), quedando lista para su uso operativo con las limitaciones documentadas.
+
+---
+
+#### EC-05 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+El contraste entre la vista resumida y la vista detallada de seguimiento confirmó que la transparencia sobre demoras influye directamente en la percepción de confiabilidad del taller.
+
+Los principales aprendizajes fueron:
+
+- Informar el motivo de un retraso transmite control del proceso incluso cuando el servicio toma más tiempo del previsto.
+- Reutilizar la mejora visual de `EC-01` permite responder preguntas distintas (comprensión frente a confianza) sin duplicar pantallas.
+- Los propietarios valoran no tener que llamar al taller para confirmar si su vehículo sigue en atención.
+
+**Decisión de producto**
+
+Se decidió conservar la vista detallada compartida con `EC-01` y evaluar a futuro la inclusión de un historial breve de cambios de fecha sin saturar la pantalla en dispositivos móviles.
+
+**Próximas acciones**
+
+Explorar en una siguiente iteración si mostrar un registro cronológico de actualizaciones aporta valor adicional a `M-07` o si resulta suficiente con el motivo vigente.
+
+**Conclusión**
+
+EC-05 obtuvo una respuesta favorable en el piloto (`M-07` pasó de 0 % a 100 % de valoraciones de 4 o más sobre 5), respaldando la decisión de mantener el seguimiento detallado como estándar del producto.
+
+---
+
+#### EC-06 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+Las pruebas de `EC-06` evidenciaron que los mensajes de error genéricos bloquean al responsable del taller porque no señalan qué campo falló ni cómo corregirlo.
+
+Los principales aprendizajes fueron:
+
+- Asociar cada mensaje de validación directamente al campo correspondiente acelera la corrección autónoma.
+- Indicar el formato o valor esperado evita intentos repetidos de envío fallido.
+- El mismo mecanismo de validación aplicado al formulario de órdenes puede extenderse al resto de formularios web.
+
+**Decisión de producto**
+
+Se decidió conservar el esquema de validaciones específicas por campo en el formulario de órdenes de Vue y adoptarlo como referencia para futuros ajustes de usabilidad en la web.
+
+**Próximas acciones**
+
+Estandarizar los mensajes de error por campo en los formularios secundarios de inventario y gestión de personal dentro de la aplicación web.
+
+**Conclusión**
+
+EC-06 superó los umbrales exploratorios planteados (`M-08` alcanzó 100 % de corrección autónoma y `M-04` bajó a 0 %), demostrando que la claridad en la retroalimentación elimina bloqueos operativos comunes.
+
+---
+
+#### EC-07 — Aprendizajes y decisiones de mejora
 
 **Aprendizajes obtenidos**
 
@@ -921,3 +1086,29 @@ EC-07 cuenta con una implementación funcional integrada en el Frontend Web y co
 La clasificación, el ordenamiento y el filtro de atención inmediata se encuentran implementados.
 
 La hipótesis sobre la mejora de la experiencia de los administradores permanece pendiente de validación con participantes.
+
+---
+
+#### EC-08 — Aprendizajes y decisiones de mejora
+
+**Aprendizajes obtenidos**
+
+La mejora en el módulo Mechanic de Android mostró que una lista plana de tareas sin jerarquía visual induce a confusión cuando el mecánico tiene actividades en distintos estados.
+
+Los principales aprendizajes fueron:
+
+- Ordenar las tareas colocando primero las que están en ejecución y luego las pendientes aprobadas según prioridad reduce el tiempo de búsqueda.
+- Destacar la siguiente tarea accionable y diferenciar los botones de inicio y cierre evita actualizaciones equivocadas.
+- Reutilizar la pantalla y navegación existentes permitió introducir la mejora sin duplicar componentes ni alterar el flujo del módulo.
+
+**Decisión de producto**
+
+Se decidió conservar el ordenamiento por urgencia, la etiqueta de siguiente tarea y la diferenciación visual de prioridades y estados en `MechanicOrderExecutionScreen`.
+
+**Próximas acciones**
+
+Probar la pantalla en escenarios de taller con más de tres tareas simultáneas asignadas a un mismo mecánico y validar el comportamiento ante cambios de prioridad durante la jornada.
+
+**Conclusión**
+
+EC-08 alcanzó resultados consistentes con la hipótesis en el piloto (`M-10` llegó a 100 % y la tasa de errores `M-11` bajó de 55,6 % a 0 %), dejando el módulo Mechanic mejor preparado para la operación diaria en campo.
