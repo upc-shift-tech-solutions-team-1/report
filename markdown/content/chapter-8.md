@@ -331,3 +331,119 @@ Los incrementos descritos en esta sección corresponden a las siete tarjetas pri
 | 6 | `EXP-US-07` | `EC-07` | Priorización de órdenes en Backend y Web | Organizar atención de órdenes urgentes. | Planificada para ejecución To-Be. |
 | 7 | `EXP-US-06` | `EC-05` | Seguimiento To-Be (compartido con `EC-01`) | Evaluar utilidad percibida del detalle para confiar. | Planificada para ejecución To-Be. |
 | — | `EXP-US-05` | `EC-03` | Landing Page (sin intervención técnica) | Histórico de navegación desde planes. | Excluida del incremento técnico TB2. |
+
+### 8.3.3. To-Be Product Implementation and Deployment
+
+#### 8.3.3.1. To-Be Sprint Backlogs
+
+El incremento Android de `EC-04`, relacionado con `Q-03` y
+`EXP-US-03`, permite consultar si las existencias de un repuesto
+alcanzan para una tarea de reparación.
+
+La siguiente tabla registra retrospectivamente las tareas de este
+incremento. No sustituye la consolidación del Sprint Backlog general
+ni acredita una reunión de planificación no documentada.
+
+| Tarea | Responsable | Estado | Evidencia |
+|---|---|---|---|
+| Registrar el inventario anterior al cambio | Mario Fernández | Completada | Captura As-Is |
+| Implementar el cálculo de suficiencia y cantidad faltante | Mario Fernández | Integrada | StockAvailability.kt; PR #23 |
+| Consultar órdenes y tareas para la comparación | Mario Fernández | Integrada | ManagementViewModel.kt; PR #23 |
+| Incorporar el panel y el selector de tareas en Inventario | Mario Fernández | Integrada | Capturas To-Be; PR #23 |
+| Incorporar textos en inglés y español | Mario Fernández | Integrada | Recursos stock_availability_strings.xml |
+| Verificar un caso suficiente con datos del Backend | Mario Fernández | Completada | Captura de Cambio de bujías |
+| Verificar ambos resultados con datos locales controlados | Mario Fernández | Completada | Captura de vista previa interactiva |
+| Evaluar comprensión y solicitudes de asistencia | Mario Fernández | Pendiente | Registro de participantes para M-06 y M-04 |
+| Consolidar las tareas de los otros incrementos | Mario Fernández, con aportes del equipo | Pendiente | Información verificable de cada responsable |
+
+La implementación se trabajó en la rama
+`feature/tb2-ec04-parts-availability` y se integró a `develop` mediante
+el [Pull Request #23](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/pull/23).
+
+#### 8.3.3.4. Implemented Native-Mobile Application To-Be Evidence
+
+**EC-04 — Disponibilidad de repuestos para una tarea**
+
+Se implementó en Android la consulta de suficiencia de repuestos
+asociados a una tarea de reparación. El incremento corresponde a
+`EXP-US-03` y permite comparar cantidades requeridas con las
+existencias consultadas en inventario.
+
+**Estado anterior As-Is**
+
+El inventario mostraba existencias, stock mínimo y datos comerciales
+del producto. Sin embargo, no comparaba esas cantidades con los
+repuestos requeridos para una tarea específica.
+
+![Inventario anterior al incremento EC-04](../assets/images/chapter-8/ec04-01-inventario-as-is.png)
+
+*Referencia As-Is conservada antes de modificar la pantalla.*
+
+**Panel To-Be integrado en Inventario**
+
+Se añadió un panel con selector de tareas obtenidas de las órdenes
+del Backend. La consulta mantiene el listado de productos existente
+y no modifica las cantidades almacenadas.
+
+![Panel de disponibilidad integrado en Inventario](../assets/images/chapter-8/ec04-02-panel-to-be.png)
+
+*Pantalla To-Be con el acceso a la consulta por tarea.*
+
+Para cada repuesto, el panel muestra la cantidad requerida, la
+disponible y el resultado de la comparación. Cuando el stock es
+insuficiente, informa cuántas unidades faltan. Si un repuesto
+aparece varias veces en una tarea, suma sus cantidades requeridas.
+
+La comparación considera suficiente una cantidad disponible mayor
+o igual que la requerida. Cuando no puede verificar las existencias
+o encuentra cantidades inválidas, muestra una indicación diferenciada
+en lugar de afirmar que el stock es suficiente.
+
+**Verificación con datos del Backend**
+
+En el emulador se seleccionó la tarea Cambio de bujías. La tarea
+requería 1 unidad y el inventario consultado mostraba 19 unidades
+disponibles. El panel presentó correctamente stock suficiente.
+
+![Consulta de una tarea con stock suficiente](../assets/images/chapter-8/ec04-03-stock-suficiente.png)
+
+*Caso observado en la aplicación conectada al Backend: 19 disponibles
+frente a 1 requerido.*
+
+**Verificación local de suficiencia e insuficiencia**
+
+Para comprobar ambos resultados sin alterar los registros compartidos,
+se utilizó una vista previa interactiva temporal de Jetpack Compose.
+Los datos fueron ficticios y estuvieron identificados como demostración
+local sin Backend.
+
+| Repuesto de demostración | Disponible | Requerido | Resultado observado |
+|---|---:|---:|---|
+| Bujías | 6 | 4 | Stock suficiente |
+| Filtro de aceite | 1 | 2 | Stock insuficiente; falta 1 |
+
+![Verificación local con datos ficticios identificados](../assets/images/chapter-8/ec04-04-verificacion-local-suficiente-insuficiente.png)
+
+*Comprobación del mismo componente y cálculo mediante datos locales
+controlados. No representa una ejecución del caso insuficiente contra
+el Backend. El archivo temporal de la vista previa se retiró antes
+de entregar el incremento.*
+
+**Alcance y trazabilidad**
+
+La consulta no reserva ni consume existencias. Su resultado corresponde
+a los datos consultados y no garantiza disponibilidad futura; por ello,
+la interfaz recomienda actualizar el inventario antes de tomar una
+decisión operativa.
+
+El cambio está integrado en `develop` y puede revisarse en el
+[PR #23](https://github.com/upc-shift-tech-solutions-team-1/autoservice-mobile/pull/23).
+
+Las capturas documentan la implementación y su verificación funcional.
+No constituyen resultados de evaluación con participantes. La recogida
+de datos de comprensión autónoma (`M-06`) y solicitudes de asistencia
+(`M-04`) permanece pendiente.
+
+La evidencia del incremento Mechanic `EC-08` se incorporará con el
+aporte de su responsable, evitando duplicar o atribuir resultados
+todavía no verificados.
