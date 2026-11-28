@@ -555,6 +555,67 @@ Las capturas documentan la implementación y su verificación funcional. No cons
 
 La evidencia del incremento Mechanic `EC-08` se incorporará con el aporte de su responsable, evitando duplicar o atribuir resultados todavía no verificados.
 
+### 8.3.4. To-Be Validation Interviews
+
+#### 8.3.4.1. Diseño de Entrevistas
+
+Preguntas generales:
+
+- ¿Cuál es tu nombre?
+- ¿Cuántos años tienes?
+
+**Sector 1: Mecánicos Independientes**
+
+1. Al revisar tus tareas en Android, ¿identificas con claridad cuál atender primero y cómo actualizar su estado?
+2. ¿Qué parte de la vista de tareas te resulta más práctica o qué te genera dudas al registrar tu avance?
+3. ¿Qué información adicional o cambio breve haría más clara tu experiencia en este flujo?
+
+**Sector 2: Administradores/Dueños de Talleres**
+
+1. ¿Qué tan claro te resulta identificar las órdenes urgentes y el motivo de su prioridad en el listado actual?
+2. Al crear una orden en la web, ¿qué te pareció más útil o qué mejorarías de las validaciones y mensajes de error?
+3. En el módulo de inventario de Android, ¿entiendes fácilmente si los repuestos alcanzan para una tarea y cuánto falta?
+4. ¿Qué cambios de esta versión To-Be facilitan más la coordinación diaria de tu equipo?
+5. ¿Qué ajuste puntual harías antes de usar estos flujos de forma continua en tu taller?
+
+
+#### 8.3.4.2. Registro de entrevistas
+
+#### EV-TB-01: Entrevista To-Be 1 — [Sector: Mecánico Independiente]
+
+- Nombre y Apellido: David Klisman Paredes
+- Edad: 24
+- Distrito / Ciudad de Residencia: Surco, Lima
+- Rol / Ocupación: Técnico Mecánico Automotriz  
+- Fecha: 27 de noviembre de 2026
+- Hora de inicio: 0:01
+- Duración: 3:05
+
+**Resumen**
+
+El entrevistado manifesto su correcta integración y adaptación con el producto, desde la aplicación web y en especial la aplicación móvil, explica que se le facilita realizar las tareas que antes eran complejas o tardadas. Resalta su gusto por funcionalidades como el registro de vehiculos y comunicación directa con los clientes. Admite que una mejora en apartados visuales podría ser más optimo al momento de usarlos por primera vez.
+
+**Evidencia:**
+
+![Entrevista Mecanico - 1](../assets/images/chapter-8/tobe-inter-1.png)
+
+#### EV-TB-02: Entrevista To-Be 2 — [Sector: Dueño de taller]
+
+- Nombre y Apellido: Antenor Ayala
+- Edad: 33
+- Distrito / Ciudad de Residencia: Ayacucho, Huamanga
+- Rol / Ocupación: Mecánico Automotriz  
+- Fecha: 26 de noviembre de 2026
+- Hora de inicio: 3:07
+- Duración: 4:04
+
+**Resumen**
+
+El entrevistado admite que gracias a nuestro producto se le facilita de extrema manera la organización de órdenes y actividades a realizar. Le parece útil la interfaz y lo facil de entender la web, con las que realiza de manera rápida su urganización de órdenes. Además, señala que el apartado móvil esta muy bien integrado y es versatil para su uso diario, en espcial con las tareas a realizar y el inventario de repuestos. Realizaría cambios a los apartados de  
+
+**Evidencia:**
+
+![Entrevista Mecanico - 2](../assets/images/chapter-8/tobe-inter-2.png)
 
 ## 8.4. Experiment Analysis
 
