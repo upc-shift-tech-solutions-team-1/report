@@ -453,6 +453,9 @@ El presente apartado evidencia el cumplimiento del **ABET – EAC – Student Ou
             <br/>
             <i>AV2</i>
             <p>En el AV2 continué con la revisión de los procesos de Work Orders & Tasks y su relación con las pruebas de software documentadas en el capítulo VI. Se consideraron las validaciones de las operaciones principales, el manejo de estados y la consistencia de los datos. Asimismo, participé en la revisión de las historias de usuario y funcionalidades propuestas para el capítulo VIII, tomando como referencia los procesos operativos del taller y las necesidades previamente identificadas.</p>
+            <br/>
+            <i>TB2</i>
+            <p>Durante el TB2 implementé la mejora EC-04 en Android para comparar los repuestos requeridos por una tarea con las existencias disponibles. Como parte de mi responsabilidad profesional, incorporé advertencias que aclaran que esta consulta no reserva ni consume stock y que la disponibilidad puede cambiar. Asimismo, diferencié las evidencias obtenidas con el Backend de la demostración local con datos ficticios. Verifiqué la compilación y ejecución de la suite existente de pruebas, y mantuve la trazabilidad de los cambios mediante una rama feature y el Pull Request #23, sin presentar la demostración como una validación con usuarios.</p>
         </td>
     </tr>
     <tr>
@@ -526,6 +529,9 @@ El presente apartado evidencia el cumplimiento del **ABET – EAC – Student Ou
             <br/>
             <i>AV2</i>
             <p>Durante el AV2 consideré la relación entre la verificación de órdenes de trabajo, las necesidades del taller y las funcionalidades propuestas para el producto. La consistencia de los estados y registros puede contribuir a disminuir errores operativos y facilitar el seguimiento de los servicios. Asimismo, la revisión del Product Backlog permite valorar las funcionalidades según su utilidad para los usuarios y su impacto potencial en los recursos disponibles, sin asumir beneficios que todavía no han sido medidos.</p>
+            <br/>
+            <i>TB2</i>
+            <p>Al desarrollar EC-04 consideré que conocer la suficiencia de repuestos antes de iniciar una reparación puede apoyar la planificación del taller. En el ámbito económico, esta información podría ayudar a anticipar faltantes y reducir interrupciones; en el ámbito social, los indicadores textuales permiten comunicar con mayor claridad la disponibilidad al personal; y, en el ámbito ambiental, una mejor planificación podría evitar compras innecesarias y desperdicios. Estos beneficios son potenciales, no resultados medidos. La implementación constituye la base para evaluar posteriormente la interpretación de disponibilidad y las solicitudes de asistencia mediante las medidas M-06 y M-04.</p>
         </td>
     </tr>
 </table>
