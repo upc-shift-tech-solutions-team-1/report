@@ -843,6 +843,47 @@ La tasa de errores descendió del 55,6 % al 0 %, una reducción que supera con a
 
 El escenario de prueba contenía 3 tareas con estados distintos y prioridades definidas. En un taller real, el mecánico puede tener más tareas simultáneas y la prioridad podría depender de factores externos no reflejados en la interfaz. La mejora visual puede haber sido más evidente por el contraste inmediato con la condición As-Is en la misma sesión.
 
+### 8.4.2. Re-scored and Re-prioritized Question Backlog
+
+Tras los resultados del piloto exploratorio documentados en 8.4.1, se re-evaluaron las ocho preguntas del Question Backlog original (8.1.4) utilizando los mismos cuatro criterios: Confianza, Riesgo, Impacto e Interés, valorados de 1 a 5. La re-puntuación refleja el conocimiento adquirido durante la implementación técnica y las sesiones con participantes.
+
+**Criterios de re-puntuación**
+
+- **Confianza:** se incrementa cuando los resultados del piloto fueron consistentes con la hipótesis; se mantiene o baja si los datos fueron insuficientes o si la hipótesis no se pudo contrastar.
+- **Riesgo:** disminuye cuando el piloto redujo la incertidumbre sobre la pregunta; se mantiene alto si quedan aspectos sin resolver.
+- **Impacto:** se ajusta según la magnitud de la diferencia observada entre As-Is y To-Be.
+- **Interés:** refleja la motivación del equipo para profundizar en la pregunta en un siguiente ciclo.
+
+**Question Backlog re-puntuado**
+
+| Prioridad TB2 | Pregunta | Confianza | Riesgo | Impacto | Interés | Total | Variación | Estado post-piloto |
+|---:|---|---:|---:|---:|---:|---:|---|---|
+| 1 | Q-01: comprensión de fechas y retrasos (`EC-01`) | 5 | 2 | 5 | 3 | 15 | −4 | Hipótesis exploratoriamente validada; reducir prioridad de investigación. |
+| 2 | Q-02: registro de órdenes en aplicación web (`EC-02`) | 5 | 2 | 5 | 3 | 15 | −3 | Hipótesis exploratoriamente validada; pendiente escalar a muestra mayor. |
+| 3 | Q-05: comprensión y corrección en formularios web (`EC-06`) | 5 | 2 | 4 | 3 | 14 | −1 | Resultados coherentes; evaluar con más tipos de error. |
+| 4 | Q-08: identificación y actualización de tareas del mecánico (`EC-08`) | 5 | 2 | 4 | 3 | 14 | 0 | Hipótesis exploratoriamente validada; probar con más tareas simultáneas. |
+| 5 | Q-03: disponibilidad de repuestos frente a tarea (`EC-04`) | 5 | 2 | 4 | 2 | 13 | −3 | Validada en casos controlados; falta evaluar tareas con múltiples repuestos. |
+| 6 | Q-04: confianza percibida en el seguimiento (`EC-05`) | 5 | 2 | 4 | 2 | 13 | 0 | Percepción favorable confirmada; baja necesidad de repetir con misma escala. |
+| 7 | Q-06: localización y prioridad de órdenes (`EC-07`) | 3 | 4 | 4 | 4 | 15 | +1 | Implementación completada pero sin validación con participantes; sube prioridad. |
+| 8 | Q-07: acceso a partir de los planes (`EC-03`) | 4 | 4 | 3 | 2 | 13 | −4 | Excluida en TB2; sin evidencia nueva. Impacto reducido por decisión de alcance. |
+
+**Cambios en la priorización**
+
+La principal diferencia respecto al backlog original es la redistribución del riesgo. Las preguntas que contaron con piloto (Q-01, Q-02, Q-03, Q-04, Q-05, Q-08) bajaron su nivel de riesgo de 3–5 a 2 porque los resultados, aunque exploratorios, redujeron la incertidumbre sobre la viabilidad de cada mejora. En contrapartida, su confianza subió a 5 dado que los datos observados fueron consistentes con las hipótesis planteadas.
+
+La pregunta Q-06 (`EC-07`) mantiene riesgo alto (4) porque fue la única tarjeta que no se evaluó con participantes: su implementación técnica está completa, pero la hipótesis `H7` no se contrastó empíricamente. Por esta razón, pese a tener un total de 15, es la que mayor interés tendría en un siguiente ciclo de validación.
+
+La pregunta Q-07 (`EC-03`) se mantiene fuera de alcance. Su interés bajó a 2 porque el equipo confirmó que la Landing Page no forma parte del incremento técnico prioritario para la operación del taller.
+
+**Decisiones para un eventual siguiente ciclo**
+
+Si se realizara un ciclo adicional de experimentación, las acciones recomendadas serían:
+
+1. **Prioridad 1 — Validar EC-07 con participantes:** la funcionalidad ya está implementada y solo falta ejecutar las sesiones moderadas con responsables de taller para medir `M-09` y `M-04`.
+2. **Prioridad 2 — Escalar EC-01 y EC-02 a muestra mayor:** los resultados fueron positivos con $n = 3$; una muestra de 8 a 10 participantes permitiría aplicar pruebas estadísticas y confirmar las tendencias.
+3. **Prioridad 3 — Profundizar EC-08 con escenarios complejos:** evaluar con más de 3 tareas simultáneas y prioridades dinámicas cambiantes durante la jornada.
+4. **Descartar EC-03 del ciclo inmediato:** mantener como histórico hasta que el equipo decida intervenir la Landing Page.
+
 
 ## 8.5. Continuous Learning
 
